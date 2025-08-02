@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+*{
+    text-decoration: none;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
+}
+
+header{
+    padding: 0 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9.5px;
+    width: 74.52%;
+}
+
+.login{
+    background-color: #3692FF;
+    padding: 12px 43px;
+    border-radius: 8px;
+}
+
+.login span{
+    font-size: 1rem;
+     font-weight: 600;
+     color: #F3F4F6;
+}
+
+/* ------------섹션1 영역------------- */
+
+.main{
+    height: 540px;
+    width: 100%;
+    background-color: #CFE5FF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.main_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_txt{
+    margin-bottom: 112px;
+    margin-right: 7px;
+}
+
+h2{
+    color: #374151;
+    font-size: 2.5rem;
+    margin-bottom: 44px;
+    font-weight: 700;
+}
+
+.item{
+    padding: 12px 124px;
+    font-size: 1.25rem;
+    background-color: #3692FF;
+    color: #F9FAFB;
+    border-radius: 40px;
+}
+
+
+/* ------------섹션1------------ */
+
+.section_01{
+    height: 720px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_01_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 444px;
+    padding: 0 23.5px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+}
+
+.section_01 img{
+    margin-right: 64px;
+}
+
+
+.sec_01_badge{
+    color: #3692FF;
+    font-weight: 800;
+}
+
+.section_01_span{
+    color: #374151;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* -----------섹션2---------------- */
+
+.section_02{
+    height: 720px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_02_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 444px;
+    padding: 0 23.5px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+}
+
+.section_02 img{
+    margin-left: 64px;
+}
+
+.sec_02_badge{
+    color: #3692FF;
+    font-weight: 800;
+}
+
+.section_02_span{
+    color: #374151;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* ----------섹션3----------------- */
+
+.section_03{
+    height: 720px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 138px;
+}
+
+.section_03_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 444px;
+    padding: 0 23.5px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+}
+
+.section_03 img{
+    margin-right: 64px;
+}
+
+.sec_03_badge{
+    color: #3692FF;
+    font-weight: 800;
+}
+
+.section_03_span{
+    color: #374151;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* ------------------섹션4----------------------- */
+
+.section_04{
+    background-color: #CFE5FF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 540px; 
+    width: auto;
+}
+
+.section_04_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_04_txt{
+    margin-right: 69px;
+    margin-bottom: 60px;
+}
+
+/* --------------footer--------------- */
+
+.footer{
+    height: 160px;
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 58.33%;
+    margin-top: 32px;
+}
+
+.footer_txt_01{
+    color: #9CA3AF;
+}
+
+.footer_txt_02 a{
+    color: #E5E7EB;
+}
+
+.footer_txt_02 a:nth-child(2){
+    margin-left: 30px;
+}
+
+.sns_icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sns_icon img{
+    margin-right: 12px;
+}
+
+.sns_icon img:nth-child(4){
+    margin-right: 0;
+}
