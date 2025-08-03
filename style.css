@@ -124,3 +124,19 @@ header {
   padding: 112.5px 0;
   line-height: 140%;
 }
+
+footer {
+  background-color: #111827;
+  padding: 32.5px 0 108.5px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3af;
+}
+
+/* .footer-info-mid {
+  display: flex;
+  justify-content: space-between;
+} */
