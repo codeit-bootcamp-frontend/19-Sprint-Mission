@@ -23,6 +23,9 @@ header {
 
 .header {
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 1120px;
     justify-content: space-between;
     align-items: center;
 }
@@ -31,16 +34,20 @@ header {
     display: flex;
     align-items: center;
     gap: 8.59px;
+}
+
+.site-logo a {
     color: #3692ff;
     font-family: 'ROKAF Sans';
     font-size: 25.63px;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .login-button {
     background-color: #3692ff;
     padding: 12px 23px;
-    border-radius: 16px;
+    border-radius: 8px;
     width: 128px;
     text-align: center;
 }
@@ -62,6 +69,9 @@ header {
 .home-bottom-inside {
   display: flex;
   justify-content: space-between;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 1120px;
   font-size: 40px;
   font-weight: 700;
 }
@@ -69,12 +79,14 @@ header {
 .home-top-explain {
   padding: 40px 0;
   line-height: 140%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .home-top-button {
   background: #3692ff;
   border-radius: 40px;
-  padding: 16px 124px;
   text-align: center;
 }
 
@@ -86,18 +98,28 @@ header {
 }
 
 .home-mid {
-  padding: 138px 466px;
+  margin: 0 auto;
+  padding: 138px 0;
 }
 
 .home-mid-inside {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-grow: 1;
   flex-shrink: 0;
+  min-width: 1120px;
+  align-items: center;
   background-color: #fcfcfc;
 }
 
+.last {
+  margin-bottom: 138px;
+}
+
 .home-mid-explain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   padding: 0 23.5px;
 }
 
@@ -137,12 +159,18 @@ footer {
   color: #9ca3af;
 }
 
-.footer-info-mid {
+.footer-info-left,
+.footer-info-right {
   display: flex;
   justify-content: space-between;
 }
 
-.footer-info-right {
+.footer-info a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-info-icon {
   display: flex;
   gap: 12px;
 }
