@@ -1,0 +1,259 @@
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.contentsLayout {
+  width: 100%;
+  max-width: 1120px;
+}
+
+/* 배너 공통 */
+.bannerContainer {
+  width: 100%;
+  background-color: #cfe5ff;
+}
+
+.bannerContents {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bannerTitle {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* 버튼 공통 */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3692ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* 헤더 스타일 */
+.headerContainer {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+}
+
+.gnb {
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 51px;
+}
+
+.logoImg {
+  width: 153px;
+  height: 51px;
+}
+
+.login {
+  width: 128px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #f3f4f6;
+  border-radius: 8px;
+}
+
+/* 메인 배너 스타일 */
+.mainBannerContents {
+  padding-top: 200px;
+}
+
+.mainBannerTextArea {
+  padding-bottom: 60px;
+}
+
+.viewMoreItems {
+  margin-top: 32px;
+  width: 357px;
+  height: 56px;
+  font-size: 20px;
+  line-height: 32px;
+  color: #f9fafb;
+  border-radius: 40px;
+}
+
+.mainBannerImg {
+  width: 746px;
+  height: 340px;
+}
+
+/* 오버뷰 스타일 */
+.overviewContainer {
+  padding: 138px 0 276px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 276px;
+}
+
+.overviewContents {
+  width: 100%;
+  max-width: 988px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+}
+
+.overviewImg {
+  width: 579px;
+  height: 100%;
+}
+
+.overviewTag {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 800;
+  color: #3692ff;
+}
+
+.overviewTitle {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #374151;
+}
+
+.overviewDesc {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.overviewRight {
+  text-align: right;
+  order: -1;
+}
+
+/* 하단 배너 스타일 */
+.bottomBannerContents {
+  padding-top: 143px;
+}
+
+.bottomBannerTitle {
+  padding-bottom: 60px;
+}
+
+.bottomBannerImg {
+  width: 746px;
+  height: 397px;
+}
+
+/* footer */
+.footerContainer {
+  width: 100%;
+  height: 160px;
+  background-color: #111827;
+}
+
+.footerContents {
+  margin: 0 auto;
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerCompanyInfo {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.footerLinkArea {
+  display: flex;
+  gap: 30px;
+}
+
+.footerLink {
+  font-size: 16px;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footerSNSArea {
+  display: flex;
+  gap: 12px;
+}
+
+@media screen and (max-width: 1919px) {
+  .gnb {
+    padding: 0 200px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .gnb {
+    padding: 0 24px;
+  }
+  .bannerTitle {
+    font-size: 32px;
+    text-align: center;
+  }
+  .bannerContents {
+    flex-direction: column;
+  }
+
+  .overviewContainer {
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .overviewContents {
+    width: 100%;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .overviewImg {
+    width: 100%;
+  }
+
+  .overviewTextArea {
+    width: 100%;
+  }
+
+  .overviewRight {
+    order: 0;
+  }
+
+  .overviewTitle {
+    font-size: 32px;
+  }
+
+  .overviewDesc {
+    font-size: 20px;
+  }
+}
