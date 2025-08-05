@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <title>판다마켓 로그인 페이지</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="signin.css">
 </head>
 
 <body>
@@ -24,6 +24,14 @@
         </div>
         <div class="input_container">
             <div class="input_title">
+                닉네임
+            </div>
+            <div>
+                <input type="text" class="input_box">
+            </div>
+        </div>
+        <div class="input_container">
+            <div class="input_title">
                 비밀번호
             </div>
             <div class="password_input">
@@ -31,9 +39,18 @@
                 <img id="password_eye" src="login-img/btn_visibility_off_24px.png">
             </div>
         </div>
-        <div class="login_button">
-            <button id="login_button">
-                로그인
+        <div class="input_container">
+            <div class="input_title">
+                비밀번호 확인
+            </div>
+            <div class="password_input">
+                <input type="password" class="input_box">
+                <img id="password_eye" src="login-img/btn_visibility_off_24px.png">
+            </div>
+        </div>
+        <div class="signin_button">
+            <button id="signin_button">
+                회원가입
             </button>
         </div>
         <div class="simple_container">
@@ -49,8 +66,8 @@
                 </a>
             </div>
         </div>
-        <div class="go_singin">
-            판다마켓이 처음이신가요? <a href="singin.html" id="singin">회원가입</a>
+        <div class="go_login">
+            이미 회원이신가요? <a href="login.html" id="login">로그인</a>
         </div>  
     </div>
 

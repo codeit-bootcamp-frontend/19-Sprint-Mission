@@ -7,9 +7,11 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0px;
     width: 100%;
     height: 70px;
-    /* background-color: rgb(235, 235, 253); */
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
