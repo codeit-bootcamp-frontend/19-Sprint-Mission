@@ -4,7 +4,7 @@
 /*================================================== main ==================================================*/
 .main .top,
 .main .btm{
-  height: 28.125vw;
+  height: 540px;
   background: #CFE5FF;
 }
 .main .top .inner,
@@ -16,15 +16,15 @@
 }
 .main .top .inner{
   padding-top: 15rem;
-  background: url(./../img/main/img_home_top.png) no-repeat 100% 100% / 38.854vw auto;
+  background: url(./../img/main/img_home_top.png) no-repeat 100% 100%;
 }
 .main .btm .inner{
   padding-top: 15.9375rem;
-  background: url(./../img/main/img_home_bottom.png) no-repeat 100% 100% / 38.854vw auto;
+  background: url(./../img/main/img_home_bottom.png) no-repeat 100% 100%;
 }
 .main .top .btn.lg{
   margin-top: 2rem;
-  width: 18.593vw;
+  width: 357px;
 }
 .main .cont {
   padding: 8.625rem 0;
@@ -34,19 +34,16 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  width: 51.458vw;
-  border-radius: 0.625vw;
+  width: 988px;
+  border-radius: 12px;
   background-color: #FCFCFC;
 }
 .main .cont.reverse .inner{
   flex-direction: row-reverse;
   text-align: right;
 }
-.main .cont .imgCont img{
-  width: 30.156vw;
-}
 .main .cont .txtCont{
-  min-width: 15.625vw;
+  min-width: 300px;
 }
 .main .type{
   margin-bottom: 0.75rem;
