@@ -15,22 +15,24 @@
 
 ### 심화
 
-- [ ] 사용자의 브라우저가 크고 작아짐에 따라 페이지의 요소간 간격, 요소의 크기, font-size 등 모든 크기와 관련된 값이 크고 작아지도록 설정해 보세요.(설정값은 자유입니다)
+- [x] 사용자의 브라우저가 크고 작아짐에 따라 페이지의 요소간 간격, 요소의 크기, font-size 등 모든 크기와 관련된 값이 크고 작아지도록 설정해 보세요.(설정값은 자유입니다)
 
 ## 주요 변경사항
 
 - 
--
 
 ## 스크린샷
 
-![image](이미지url)
+일반 pc
+![image](img/capture/sprint1_capture1.png)
+
+반응형 pc
+![image](img/capture/sprint1_capture2.png)
 
 ## 주강사님에게
 
 - 기본 요구사항의 3,4번을 제가 잘 이해하고 적용한 건지 잘 모르겠습니다. (너비 1920px 관련)
--
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
 배포 링크
-https://www.codeit.kr/learn/5309(아직 X)
+[배포 링크](https://roaring-duckanoo-ccd586.netlify.app/)
