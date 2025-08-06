@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+
+/*================================================== main ==================================================*/
+.main .top,
+.main .btm{
+  height: 540px;
+  background: #CFE5FF;
+}
+.main .top .inner,
+.main .btm .inner{
+  height: 100%;
+}
+.main .btm{
+  margin-top: 8.625rem;
+}
+.main .top .inner{
+  padding-top: 15rem;
+  background: url(./../img/main/img_home_top.png) no-repeat 100% 100%;
+}
+.main .btm .inner{
+  padding-top: 15.9375rem;
+  background: url(./../img/main/img_home_bottom.png) no-repeat 100% 100%;
+}
+.main .top .btn.lg{
+  margin-top: 2rem;
+  width: 357px;
+}
+.main .cont {
+  padding: 8.625rem 0;
+}
+.main .cont .inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 988px;
+  border-radius: 12px;
+  background-color: #FCFCFC;
+}
+.main .cont.reverse .inner{
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.main .cont .txtCont{
+  min-width: 300px;
+}
+.main .type{
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #3692FF;
+  line-height: 1.625rem;
+}
+.main .title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #374151;
+  line-height: 1.4;
+}
+.main .text{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
