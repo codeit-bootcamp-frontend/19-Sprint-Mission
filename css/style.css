@@ -1,12 +1,5 @@
-/* 공통 스타일 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Pretendard', sans-serif;
+  margin-top: 70px;
 }
 
 .contents-layout {
@@ -35,18 +28,11 @@ body {
   color: #374151;
 }
 
-/* 버튼 공통 */
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3692ff;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 /* 헤더 스타일 */
 .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0 200px;
   width: 100%;
   height: 70px;
