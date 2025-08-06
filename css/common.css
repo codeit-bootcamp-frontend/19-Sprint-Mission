@@ -1,0 +1,21 @@
+/* Common */
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  @media (max-width: 1024px) {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
