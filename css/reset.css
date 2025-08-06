@@ -20,7 +20,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section, summary {display:block;}
 audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
 
-html {font-size:16px;}
+html {font-size:0.833vw;}
 html,
 pre {font-family:'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif; font-weight:300;}
 body {color:#374151; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none;}
