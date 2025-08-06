@@ -24,9 +24,11 @@
 ## 스크린샷
 
 일반 pc
+
 ![image](img/capture/sprint1_capture1.png)
 
 반응형 pc
+
 ![image](img/capture/sprint1_capture2.png)
 
 ## 주강사님에게
