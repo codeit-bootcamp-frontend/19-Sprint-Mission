@@ -8,6 +8,47 @@
     box-sizing: border-box;
 }
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 a {
     color: #000;
     text-decoration: none;
@@ -15,7 +56,7 @@ a {
 
 /* btn */
 .btn {
-    display: block;
+    display: inline-block;
     padding: 11px 43px;
     color: #fff;
     border-radius: 8px;
@@ -41,11 +82,13 @@ header {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s all;
 }
 
 header h1 a {
     display: block;
     height: 52px;
+    flex-shrink: 0;
 }
 
 /* banner */
@@ -76,10 +119,10 @@ header h1 a {
     margin-bottom: 40px;
 }
 
+/* 사이트 설명 */
 .desc_list {
     width: 988px;
     margin: 138px auto 0;
-
 }
 
 .desc_list li {
@@ -100,7 +143,7 @@ header h1 a {
 }
 
 .desc_list li:first-child {
-    padding-left: 24px;
+    padding-left: 23px;
 }
 
 .desc_list li:last-child img {
@@ -108,11 +151,16 @@ header h1 a {
 }
 
 .desc_list li > div {
-    padding: 0 47px 0 64px; 
+    margin-right: 47px;
 }
 
 .desc_list li.right div {
-   padding: 0 64px 0 24px; 
+    margin-left: 24px;
+    margin-right: 0;
+}
+
+.desc_list li:last-child div {
+    margin-right: 24px;
 }
 
 .desc_list li > div span {
@@ -135,6 +183,7 @@ header h1 a {
     font-weight: 500;
 }
 
+/* footer */
 footer {
     background-color: #111827;
 }
@@ -166,12 +215,128 @@ footer .page_area li ~ li {
 
 footer ul a {
     color: #fff;
+    transition: 0.5s color;
+}
+
+footer ul a:hover {
+    color: #3691ff;
+}
+
+footer ul a img {
+    transition: 0.5s filter;
+}
+
+footer ul a:hover img {
+    filter: brightness(0.5);
 }
 
 
-
+/* 1920px */
 @media (max-width: 1920px) {
+    /* header */
     header {
+        max-width: 100%;
         padding: 11px 200px;
     }
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+    /* header */
+    header {
+        padding: 11px 20px;
+    }
+
+    /* banner */
+    .banner {
+        padding-top: 50px;
+    }
+
+    .banner.bottom {
+        margin-top: 50px;
+    }
+
+    .banner .inner {
+        display: block;
+        max-width: 700px;
+        width: 100%;
+        line-height: 0.9;
+    }
+
+    .banner .inner .text_area {
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .banner .inner .text_area p {
+        font-size: 30px;
+    }
+
+    .banner .inner img {
+        width: 100%;
+    }
+
+    /* 사이트 설명 */
+    .desc_list {
+        margin-top: 50px;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+    }
+
+    .desc_list li {
+        display: block;
+    }
+
+    .desc_list li ~ li {
+        margin-top: 80px;
+    }
+
+    .desc_list li:first-child {
+        padding-left: 0;
+    }
+
+    .desc_list li.right {
+        padding-right: 0;
+    }
+
+    .desc_list li:last-child div {
+        margin-right: 0;
+    }
+
+    .desc_list li > div {
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .desc_list li.right div {
+        margin-left: 0;
+    }
+
+    .desc_list li > div strong {
+        font-size: 20px;
+    }
+
+    .desc_list li > div p {
+        font-size: 16px;
+    }
+
+    .desc_list li img {
+        width: 100%;
+    }
+
+    /* footer */
+    footer > div {
+        padding: 32px 0 50px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    footer ul {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
 }
