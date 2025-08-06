@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden; 
+  font-family: 'Pretendard', sans-serif;
 }
 
 body, h1, h2, p, ul, li {
@@ -138,7 +139,7 @@ body, h1, h2, p, ul, li {
   align-items: stretch;
   max-width: 980px;
   margin: 0 auto;
-  padding: 80px 60px 100px;
+  padding: 80px 0 100px;
 }
 
 .featured-container.right {
@@ -175,9 +176,9 @@ body, h1, h2, p, ul, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 998px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 100px 10px 0;
+  padding: 60px 60px 0;
 }
 
 .keyvisual-info {
@@ -194,37 +195,29 @@ body, h1, h2, p, ul, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 100px 40px;
+  padding: 20px 50px 40px;
 }
 
 .footer-copyright {
   display: flex;
-  align-items: center;
-  text-align: left;
   font-weight: 400;
   font-size: 16px;
+  text-align: center;
   color: #9CA3AF;
-  flex: 0 0 110px;
-
 }
 
-.footer-menu {
+.footer-social-icons {
   display: flex;
-  align-items: center;
-  flex: 0 0 170px;
+  gap: 20px;
 }
 
 .footer-menu ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 400;
   font-size: 16px;
+  gap: 20px;
   color: #ffffff;
   list-style: none;
-  gap: 30px;
 }
 
 .footer-menu a { 
@@ -238,12 +231,6 @@ body, h1, h2, p, ul, li {
   color: #bbbbbb;
 }
 
-.footer-social-icons {
-  display: flex;  
-  align-items: center;
-  gap: 20px;        
-}
-
 .footer-social-icons img {
   width: 20px;
   height: 20px;
@@ -255,21 +242,11 @@ body, h1, h2, p, ul, li {
 
 /* 반응형 */
 
-@media (max-width: 600px) { 
+@media (max-width: 800px) { 
   body {
     overflow-x: hidden; 
     margin: 0;
     padding: 0;
-  }
-
-  .section-title {
-     font-size: 26px;
-  
-  }
-
-  .section-title br {
-    font-size: 26px;
-    display: none;
   }
 
   .landing {
@@ -286,7 +263,6 @@ body, h1, h2, p, ul, li {
     gap: 120px;
   }
 
- 
   .featured-container,
   .featured-container.right,
   .keyvisual-container {
@@ -323,45 +299,29 @@ body, h1, h2, p, ul, li {
     padding: 80px;
   }
 
-  .footer-container
-  .footer-bottom,
-  .footer-menu {
-    flex: 0;
-  }
-
-  .footer {
-    display: block;
-  }
-  .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  }
-
-  .footer-menu,
-  .footer-bottom {
-    display: block;
-  }
-
-  .footer-menu ul {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .footer-social-icons {
-    display: flex;
+.footer-container {
+    flex-direction: row; 
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    padding: 20px 30px 40px;
   }
 
-  .footer-social-icons img {
-    width: 20px;
-    height: 20px;
-  }
-
-
+.footer-menu, .footer-social-icons {
+  margin-top: 0;  
 }
- 
+
+.footer-menu ul {
+  gap: 20px;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.footer-social-icons img {
+  width: 20px;
+  height: 20px;
+}
+}
