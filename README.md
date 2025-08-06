@@ -36,5 +36,4 @@
 - 기본 요구사항의 3,4번을 제가 잘 이해하고 적용한 건지 잘 모르겠습니다. (너비 1920px 관련)
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
-배포 링크
-[배포 링크](https://roaring-duckanoo-ccd586.netlify.app/)
+링크 제출 : [배포 링크](https://roaring-duckanoo-ccd586.netlify.app/)
