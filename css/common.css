@@ -10,6 +10,11 @@ body {
   font-family: 'Pretendard', sans-serif;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+}
+
 .button {
   display: flex;
   justify-content: center;
