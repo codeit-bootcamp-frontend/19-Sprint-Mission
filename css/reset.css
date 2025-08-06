@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*================================================== Reset ==================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0; padding:0; border:0; vertical-align:baseline; box-sizing:border-box;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section, summary {display:block;}
+audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
+
+html {font-size:16px;}
+html,
+pre {font-family:'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif; font-weight:300;}
+body {color:#374151; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none;}
+h1,h2,h3,h4,h5,h6 {color:#374151; font-size:inherit; font-weight:700;}
+a {color:#374151; text-decoration: none; cursor:pointer;}
+address {font-style:normal;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+pre {overflow:auto;}
+sub {vertical-align:sub; line-height:0;}
+sup {vertical-align:super; line-height:0;}
+b, em, strong {font-weight:500;}
+i, em {font-style:normal;}
+img, fieldset {vertical-align:middle;}
+ol, ul, li {list-style:none;}
+table {width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; word-break:normal;}
+th, td {text-align:center; vertical-align:middle;}
+th {font-weight:500;}
+caption, legend {position:static; width:1px; height:1px; clip:rect(0 0 0 0); overflow:hidden;}
+fieldset, legend {background-color:transparent;}
+hr {height:0; border:0; background-color:transparent;}
