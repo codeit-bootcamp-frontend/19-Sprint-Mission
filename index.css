@@ -20,12 +20,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1920px;
+  /* width: 1920px; */
   height: 70px;
-  padding: 9px 400px;
+  padding: 9px px;
   gap: 10px;
   border-bottom: 1px solid #dfdfdf;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .logo_img {
@@ -48,7 +48,6 @@ nav {
 }
 
 /* header */
-/* <header> 태그와 클래스 명 바꿔야함 */
 
 .top_header {
   display: flex;
@@ -136,36 +135,31 @@ nav {
 
 /* section */
 
-section {
-}
-
 .section_inner {
   display: inline-block;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: 5px dashed red; /*테스트용*/
+  border: 5px dashed rgb(173, 235, 145); /*테스트용*/
   gap: 50px;
-  background-color: #d6cece; /*일부로 진하게 넣음*/
+  background-color: #fcfcfc;
 }
 
 .section_div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 1920px;
-  /* width: 100% */
+  width: 100%;
   height: 720px;
   padding: 138px 466px;
   gap: 10px;
-  border: 5px dashed red; /*테스트용*/
+  border: 2px dashed red; /*테스트용*/
 }
 
 .section_img_box {
   width: 579px;
-  /* height: 444px */
+  height: 444px;
 }
 
 .section_text_box {
@@ -186,7 +180,6 @@ section {
 
 .section_tag {
   color: #3692ff;
-  font-style: ;
   font-size: 20px;
   font-weight: 800;
   /* width: 72px;
