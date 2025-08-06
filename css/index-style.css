@@ -10,7 +10,7 @@ body {
 /* 배너 공통 */
 .banner-container {
   width: 100%;
-  background-color: #cfe5ff;
+  background-color: var(--background-100);
 }
 
 .banner-contents {
@@ -25,7 +25,7 @@ body {
   font-size: 40px;
   line-height: 1.4;
   font-weight: 700;
-  color: #374151;
+  color: var(--gray-700);
 }
 
 /* 헤더 스타일 */
@@ -36,7 +36,7 @@ body {
   padding: 0 200px;
   width: 100%;
   height: 70px;
-  background-color: #fff;
+  background-color: var(--gray-0);
 }
 
 .gnb {
@@ -61,7 +61,7 @@ body {
   height: 48px;
   font-size: 16px;
   line-height: 26px;
-  color: #f3f4f6;
+  color: var(--gray-100);
   border-radius: 8px;
 }
 
@@ -80,7 +80,7 @@ body {
   height: 56px;
   font-size: 20px;
   line-height: 32px;
-  color: #f9fafb;
+  color: var(--gray-50);
   border-radius: 40px;
 }
 
@@ -107,7 +107,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 64px;
-  background-color: #fcfcfc;
+  background-color: var(--background-50);
   border-radius: 12px;
 }
 
@@ -120,7 +120,7 @@ body {
   font-size: 18px;
   line-height: 26px;
   font-weight: 800;
-  color: #3692ff;
+  color: var(--primary-100);
 }
 
 .overview-title {
@@ -129,14 +129,14 @@ body {
   font-size: 40px;
   line-height: 1.4;
   font-weight: 700;
-  color: #374151;
+  color: var(--gray-700);
 }
 
 .overview-desc {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
-  color: #374151;
+  color: var(--gray-700);
 }
 
 .overview-right {
@@ -162,7 +162,7 @@ body {
 .footer-container {
   width: 100%;
   height: 160px;
-  background-color: #111827;
+  background-color: var(--gray-900);
 }
 
 .footer-contents {
@@ -176,7 +176,7 @@ body {
 .footer-company-info {
   font-size: 16px;
   font-weight: 400;
-  color: #9ca3af;
+  color: var(--gray-400);
 }
 
 .footer-link-area {
@@ -186,7 +186,7 @@ body {
 
 .footer-link {
   font-size: 16px;
-  color: #e5e7eb;
+  color: var(--gray-200);
   text-decoration: none;
 }
 
