@@ -50,7 +50,8 @@
 
 ## 주강사님에게
 
-- 
+- 리뷰 잘 부탁드립니다~!
+- 비밀번호 확인 부분은 아직 type password인데, 비밀번호 확인 아이콘 클릭시에는 type text로 바뀌는 걸까요? 
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
-링크 제출 : [배포 링크](https://roaring-duckanoo-ccd586.netlify.app/) (아직 X)
+링크 제출 : [배포 링크](https://elegant-toffee-589e5d.netlify.app/)
