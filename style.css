@@ -1,3 +1,16 @@
+/* 변수 선언 */
+:root {
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+  --blue: #3692ff;
+}
 
 /* reset */
 * { 
@@ -7,7 +20,6 @@
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     box-sizing: border-box;
 }
-
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -38,27 +50,36 @@ footer, header, hgroup, menu, nav, section {
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 
 a {
     color: #000;
     text-decoration: none;
 }
 
-/* btn */
+button {
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* btn 공통 */
 .btn {
     display: inline-block;
     padding: 11px 43px;
     color: #fff;
+    font-weight: 600;
+    text-align: center;
     border-radius: 8px;
     background-color: #3691ff;
     transition: opacity 0.5s;
@@ -73,15 +94,60 @@ a {
     border-radius: 40px;
 }
 
+/* input 공통 */
+.input_group > label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--gray800);
+}
+
+input[type="text"], 
+input[type="email"],
+input[type="password"] {
+    color: var(--gray800);
+    background-color: var(--gray100);
+    outline: none;
+    border: none;
+    padding: 16px 24px 14px;
+    border-radius: 12px;
+}
+
+input::placeholder {
+    color: var(--gray400);
+}
+
+.input_group.password {
+    position: relative;
+}
+
+input[type="password"] + .password_visibility {
+    position: absolute;
+    right: 24px;
+    bottom: 12px;
+    width: 24px;
+    height: 24px;
+    background: url('img/ico_password_visibility.png');
+    background-size: 24px;
+}
+
+input[type="password"] + .password_visibility.on {
+    background-image: url('img/ico_password_visibility_on.png');
+}
+
 /* header */
 header {
+    position: sticky;
+    top: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 11px 0;
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #fff;
     transition: 0.5s all;
 }
 
@@ -164,7 +230,7 @@ header h1 a {
 }
 
 .desc_list li > div span {
-    color: #3692ff;
+    color: var(--blue);
     font-size: 18px;
     font-weight: 800;
 }
@@ -185,7 +251,7 @@ header h1 a {
 
 /* footer */
 footer {
-    background-color: #111827;
+    background-color: var(--gray900);
 }
 
 footer > div {
@@ -198,7 +264,7 @@ footer > div {
 }
 
 footer span {
-    color: #9ca3af
+    color: var(--gray400)
 }
 
 footer ul {
@@ -228,6 +294,88 @@ footer ul a img {
 
 footer ul a:hover img {
     filter: brightness(0.5);
+}
+
+
+/* 로그인, 회원가입 */
+.join_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 231px;
+}
+.join_area .inner {
+    width: 640px;
+}
+
+.join_area h1 {
+    text-align: center;
+}
+
+.join_area h1 a {
+    display: block;
+}
+
+.join_area .btn.large {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.join_area .easy_login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding: 16px 23px;
+    border-radius: 8px;
+    background-color: #e6f2ff;
+}
+
+.join_area .easy_login p {
+    color: var(--gray800);
+    font-weight: 500;
+}
+
+.join_area .easy_login ul {
+    display: flex;
+    gap: 16px
+}
+
+.join_area .easy_login a img {
+    transition: 0.5s filter;
+}
+
+.join_area .easy_login a:hover img {
+    filter: brightness(0.5);
+}
+
+.join_area .join_desc {
+    margin-top: 24px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.join_area .join_desc a {
+    color: var(--blue);
+    text-decoration: underline;
+    transition: 0.5s color;
+}
+
+.join_area .join_desc a:hover {
+    color: var(--gray800);
+}
+
+.input_list {
+    margin-top: 40px;
+}
+
+
+.input_list li ~ li {
+    margin-top: 24px;
+}
+
+.input_list input {
+    width: 100%;
 }
 
 
