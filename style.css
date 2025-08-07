@@ -35,6 +35,7 @@ header {
 #logo {
     width: 151px;
     height: 51px;
+    cursor: pointer;
 }
 .login-button {
     width: 128px;
@@ -42,6 +43,7 @@ header {
     font-size: 16px;
     border-radius: 8px;
     color: #F3F4F6;
+    cursor: pointer;
 }
 
 
@@ -80,6 +82,7 @@ header {
     border-radius: 40px;
     font-size: 20px;
     color: #F9FAFB;
+    cursor: pointer;
 }
 
 #landing-image {
@@ -361,6 +364,7 @@ footer {
     .link {
         color: #E5E7EB;
         text-decoration: none;
+        cursor: pointer;
     }
 
     #sns-container {
