@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcfcfc;
+  margin: 0;
+  width: 100vw;
+}
+
+/* header */
+header {
+  width: 100%;
+  padding: 9.5px 400px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+.headerwrapper {
+  height: 51px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoimg {
+  width: 153px;
+}
+.loginbtn {
+  background-color: #3692ff;
+  color: #ffffff;
+  display: inline-block;
+  width: 128px;
+  height: 48px;
+  line-height: 26px;
+  border-radius: 8px;
+  padding: 11px 43px;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 10;
+  cursor: pointer;
+}
+
+/* 상단 배너 부분 */
+.banner-top {
+  background-color: #cfe5ff;
+  width: 100%;
+  height: 540px;
+  /* padding: 200px 405px 0 405px; */
+  display: flex;
+  align-items: flex-end;
+}
+.bannerwrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1110px;
+  height: 340px;
+}
+.banner-top-items {
+  width: 357px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 40px auto;
+}
+.slogan {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #374151;
+}
+.surfbtn {
+  width: 357px;
+  height: 56px;
+  background-color: #3692ff;
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 12px 124px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.banner-top-img {
+  width: 746px;
+}
+
+/* main */
+.hot_item {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.search {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.register {
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 988px;
+  height: 444px;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+}
+#main-img {
+  width: 579px;
+  margin: 0 23.5px;
+}
+.texts {
+  width: 298px;
+  height: 238px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 103px auto;
+}
+.title_en {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+.title_ko {
+  width: 274px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #374151;
+}
+.title_ko-big {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+}
+.title_ko-small {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+.search .texts.righttext {
+  align-items: flex-end;
+  text-align: right;
+  width: 317px;
+  height: 238px;
+}
+.search .title_ko {
+  width: 293px;
+}
+.register .title_ko {
+  width: 359px;
+}
+.register #main-img {
+  margin: 0;
+}
+
+/* banner-bottom */
+.banner-bottom {
+  background-color: #cfe5ff;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  align-items: flex-end;
+}
+.banner-bottom .bannerwrapper {
+  height: 397px;
+}
+.banner-bottom .slogan {
+  height: 112px;
+  margin-bottom: 50px;
+}
+.banner-bottom-img {
+  width: 746px;
+  height: 397px;
+}
+
+/* register와 bottom banner 사이의 공간 */
+.space {
+  width: 100%;
+  height: 138px;
+  margin: 0 auto;
+}
+
+/* footer */
+footer {
+  background-color: #111827;
+  color: #ffffff;
+  width: 100%;
+  height: 160px;
+  padding: 32px 400px 108px;
+}
+.footer-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #9ca3af;
+}
+.info {
+  width: 159px;
+  display: flex;
+  justify-content: space-between;
+  color: #e5e7eb;
+}
+.info a {
+  text-decoration: none;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+.icons {
+  width: 116px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  cursor: pointer;
+}
+.icons img {
+  width: 20px;
+}
