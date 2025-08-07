@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 공통 메인 속성 */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 라벨과 인풋 */
+
+label {
+  color: #1f2937;
+  font-size: 18px;
+  font-weight: 700;
+
+  margin: 16px;
+}
+
+input {
+  display: flex;
+  background-color: #f3f4f6;
+  border: 2px solid #f3f4f6;
+  border-radius: 10px;
+
+  padding: 20px;
+
+  width: 640px;
+  height: 56px;
+  margin: 16px;
+}
+
+/* 로그인 버튼 */
+.login_button {
+  color: #f3f4f6;
+  font-size: 20px;
+  font-weight: 600;
+
+  width: 640px;
+  height: 56px;
+
+  text-align: center;
+
+  border-radius: 999px;
+  background-color: #3692ff;
+  padding: 16px 124px;
+  margin: 16px;
+}
+
+/* 간편 로그인하기 */
+
+.Easy_login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6f2ff;
+  border-radius: 10px;
+  margin: 16px;
+  padding: 16px 23px;
+}
+
+.Easy_login_menu {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 판다마켓이 처음이신가요? */
+
+.first_time {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 16px;
+}
+
+a.sign_up {
+  color: #3692ff;
+}
