@@ -5,16 +5,16 @@ html {
     font-size: 56.25%; /* 1rem = 9px */
   }
 }
-
 * {
+  font-family: "Pretendard", sans-serif;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  color: var(--gray800);
 }
 a {
   text-decoration: none;
 }
 .inner {
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;

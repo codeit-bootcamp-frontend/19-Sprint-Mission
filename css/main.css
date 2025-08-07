@@ -12,7 +12,6 @@
 }
 
 .section-main h2 {
-  font-family: Pretendard;
   font-weight: 700;
   font-size: 4rem; /* 40px */
   line-height: 1.4;
@@ -52,19 +51,14 @@
   background-color: #fcfcfc;
   padding: 0 2.35rem; /* 23.5px */
   border-radius: 1.2rem; /* 12px */
-}
-
-.section-cont:nth-child(2n) .text-box {
-  padding-left: 6.4rem; /* 64px */
+  gap: 6.4rem;
 }
 
 .section-cont:nth-child(2n-1) .text-box {
-  padding-right: 6.4rem;
   text-align: right;
 }
 
 .section-cont .text-box h3 {
-  font-family: "Abhaya Libre ExtraBold";
   font-weight: 800;
   font-style: normal;
   font-size: 1.8rem;
@@ -74,7 +68,6 @@
 }
 
 .section-cont .text-box h2 {
-  font-family: Pretendard;
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.4;
@@ -86,7 +79,6 @@
 }
 
 .section-cont .text-box p {
-  font-family: Pretendard;
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -136,16 +128,18 @@
     padding: 0;
   }
   .section-cont > .inner {
+    max-width: 100%;
     flex-flow: column;
     padding: 0 4rem;
     background: rgba(0, 0, 0, 0);
+    gap: 0;
   }
   .section-cont .text-box {
     background: #fff;
     border-radius: 2rem;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
     width: 100%;
-    padding: 4rem 4rem !important;
+    padding: 4rem 4rem;
   }
   .section-cont .text-box h3 {
     font-size: 1.6rem;
