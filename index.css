@@ -20,12 +20,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 1920px;
+  /* width: 1920px; */
   height: 70px;
-  padding: 9px 400px;
+  padding: 9px px;
   gap: 10px;
   border-bottom: 1px solid #dfdfdf;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .logo_img {
@@ -48,7 +48,6 @@ nav {
 }
 
 /* header */
-/* <header> 태그와 클래스 명 바꿔야함 */
 
 .top_header {
   display: flex;
@@ -69,8 +68,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 357px;
-  height: 260px; */
   padding-bottom: 60px;
   gap: 32px;
 }
@@ -92,8 +89,8 @@ nav {
   background-color: #3692ff;
   border: #f3f4f6;
   border-radius: 30px;
-  width: 357px;
   height: 56px;
+  width: 357px;
   /* padding: 16px 124px;
   gap: 10px; */
 }
@@ -122,8 +119,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 357px;
-  height: 260px; */
   padding-bottom: 60px;
   gap: 32px;
 }
@@ -136,36 +131,31 @@ nav {
 
 /* section */
 
-section {
-}
-
 .section_inner {
-  display: inline-block;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  border: 5px dashed red; /*테스트용*/
-  gap: 50px;
-  background-color: #d6cece; /*일부로 진하게 넣음*/
+  /* border: 5px dashed rgb(173, 235, 145); 테스트용 */
+  gap: 64px;
+  background-color: #fcfcfc;
+  width: 998px;
 }
 
 .section_div {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 1920px;
-  /* width: 100% */
+  width: 100%;
   height: 720px;
-  padding: 138px 466px;
+  padding: 138px 0px;
   gap: 10px;
-  border: 5px dashed red; /*테스트용*/
+  /* border: 2px dashed red; 테스트용 */
 }
 
 .section_img_box {
   width: 579px;
-  /* height: 444px */
+  height: 444px;
 }
 
 .section_text_box {
@@ -173,8 +163,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 298px;
-  height: 238px;
   padding-right: 24px;
   gap: 12px;
 }
@@ -186,7 +174,6 @@ section {
 
 .section_tag {
   color: #3692ff;
-  font-style: ;
   font-size: 20px;
   font-weight: 800;
   /* width: 72px;
