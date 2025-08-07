@@ -1,26 +1,19 @@
-/* 공통 스타일 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Pretendard', sans-serif;
+  margin-top: 70px;
 }
 
-.contentsLayout {
+.contents-layout {
   width: 100%;
   max-width: 1120px;
 }
 
 /* 배너 공통 */
-.bannerContainer {
+.banner-container {
   width: 100%;
-  background-color: #cfe5ff;
+  background-color: var(--background-200);
 }
 
-.bannerContents {
+.banner-contents {
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -28,28 +21,22 @@ body {
   align-items: center;
 }
 
-.bannerTitle {
+.banner-title {
   font-size: 40px;
   line-height: 1.4;
   font-weight: 700;
-  color: #374151;
-}
-
-/* 버튼 공통 */
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #3692ff;
-  font-weight: 600;
-  text-decoration: none;
+  color: var(--gray-700);
 }
 
 /* 헤더 스타일 */
-.headerContainer {
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 200px;
   width: 100%;
   height: 70px;
-  background-color: #fff;
+  background-color: var(--gray-0);
 }
 
 .gnb {
@@ -64,7 +51,7 @@ body {
   height: 51px;
 }
 
-.logoImg {
+.logo-img {
   width: 153px;
   height: 51px;
 }
@@ -74,36 +61,36 @@ body {
   height: 48px;
   font-size: 16px;
   line-height: 26px;
-  color: #f3f4f6;
+  color: var(--gray-100);
   border-radius: 8px;
 }
 
 /* 메인 배너 스타일 */
-.mainBannerContents {
+.main-banner-contents {
   padding-top: 200px;
 }
 
-.mainBannerTextArea {
+.main-banner-text-area {
   padding-bottom: 60px;
 }
 
-.viewMoreItems {
+.view-more-items {
   margin-top: 32px;
   width: 357px;
   height: 56px;
   font-size: 20px;
   line-height: 32px;
-  color: #f9fafb;
+  color: var(--gray-50);
   border-radius: 40px;
 }
 
-.mainBannerImg {
+.main-banner-img {
   width: 746px;
   height: 340px;
 }
 
 /* 오버뷰 스타일 */
-.overviewContainer {
+.overview-container {
   padding: 138px 0 276px;
   width: 100%;
   display: flex;
@@ -113,72 +100,72 @@ body {
   gap: 276px;
 }
 
-.overviewContents {
+.overview-contents {
   width: 100%;
   max-width: 988px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 64px;
-  background-color: #fcfcfc;
+  background-color: var(--background-50);
   border-radius: 12px;
 }
 
-.overviewImg {
+.overview-img {
   width: 579px;
   height: 100%;
 }
 
-.overviewTag {
+.overview-tag {
   font-size: 18px;
   line-height: 26px;
   font-weight: 800;
-  color: #3692ff;
+  color: var(--primary-100);
 }
 
-.overviewTitle {
+.overview-title {
   margin-top: 12px;
   margin-bottom: 24px;
   font-size: 40px;
   line-height: 1.4;
   font-weight: 700;
-  color: #374151;
+  color: var(--gray-700);
 }
 
-.overviewDesc {
+.overview-desc {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
-  color: #374151;
+  color: var(--gray-700);
 }
 
-.overviewRight {
+.overview-right {
   text-align: right;
   order: -1;
 }
 
 /* 하단 배너 스타일 */
-.bottomBannerContents {
+.bottom-banner-contents {
   padding-top: 143px;
 }
 
-.bottomBannerTitle {
+.bottom-banner-title {
   padding-bottom: 60px;
 }
 
-.bottomBannerImg {
+.bottom-banner-img {
   width: 746px;
   height: 397px;
 }
 
 /* footer */
-.footerContainer {
+.footer-container {
   width: 100%;
   height: 160px;
-  background-color: #111827;
+  background-color: var(--gray-900);
 }
 
-.footerContents {
+.footer-contents {
   margin: 0 auto;
   padding-top: 32px;
   display: flex;
@@ -186,74 +173,68 @@ body {
   align-items: center;
 }
 
-.footerCompanyInfo {
+.footer-company-info {
   font-size: 16px;
   font-weight: 400;
-  color: #9ca3af;
+  color: var(--gray-400);
 }
 
-.footerLinkArea {
+.footer-link-area {
   display: flex;
   gap: 30px;
 }
 
-.footerLink {
+.footer-link {
   font-size: 16px;
-  color: #e5e7eb;
+  color: var(--gray-200);
   text-decoration: none;
 }
 
-.footerSNSArea {
+.footer-sns-area {
   display: flex;
   gap: 12px;
-}
-
-@media screen and (max-width: 1919px) {
-  .gnb {
-    padding: 0 200px;
-  }
 }
 
 @media screen and (max-width: 1020px) {
   .gnb {
     padding: 0 24px;
   }
-  .bannerTitle {
+  .banner-title {
     font-size: 32px;
     text-align: center;
   }
-  .bannerContents {
+  .banner-contents {
     flex-direction: column;
   }
 
-  .overviewContainer {
+  .overview-container {
     padding: 32px 16px;
     gap: 24px;
   }
 
-  .overviewContents {
+  .overview-contents {
     width: 100%;
     flex-direction: column;
     gap: 32px;
   }
 
-  .overviewImg {
+  .overview-img {
     width: 100%;
   }
 
-  .overviewTextArea {
+  .overview-text-area {
     width: 100%;
   }
 
-  .overviewRight {
+  .overview-right {
     order: 0;
   }
 
-  .overviewTitle {
+  .overview-title {
     font-size: 32px;
   }
 
-  .overviewDesc {
+  .overview-desc {
     font-size: 20px;
   }
 }

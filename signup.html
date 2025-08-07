@@ -6,7 +6,7 @@
     <link rel="icon" href="./images/favicon.svg" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/auth-style.css" />
-    <title>판다마켓 - 로그인</title>
+    <title>판다마켓 - 회원가입</title>
   </head>
   <body>
     <main class="auth-container">
@@ -19,6 +19,10 @@
           <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." />
         </div>
         <div class="auth-input-area">
+          <label for="nickname" class="auth-label">닉네임</label>
+          <input id="nickname" class="auth-input" type="text" placeholder="닉네임을 입력해주세요." />
+        </div>
+        <div class="auth-input-area">
           <label for="password" class="auth-label">비밀번호</label>
           <div class="password-input-area">
             <input id="password" class="auth-input" type="password" placeholder="비밀번호를 입력해주세요." />
@@ -28,7 +32,21 @@
             </button>
           </div>
         </div>
-        <button type="submit" class="button auth-button">로그인</button>
+        <div class="auth-input-area">
+          <label for="confirm-password" class="auth-label">비밀번호 확인</label>
+          <div class="password-input-area">
+            <input
+              id="confirm-password"
+              class="auth-input"
+              type="password"
+              placeholder="비밀번호를 한 번 더 입력해주세요."
+            />
+            <button class="show-password-button" type="button">
+              <img src="./images/auth/btn_visibility_on.svg" alt="비밀번호 보기" />
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="button auth-button">회원가입</button>
       </form>
       <div class="sns-login-area">
         <span class="sns-login-text">간편 로그인하기</span>
@@ -40,8 +58,7 @@
         </a>
       </div>
       <div class="auth-guide-area">
-        <span class="auth-guide-text">판다마켓이 처음이신가요?</span
-        ><a class="auth-guide-link" href="./signup.html">회원가입</a>
+        <span class="auth-guide-text">이미 회원이신가요?</span><a class="auth-guide-link" href="./login.html">로그인</a>
       </div>
     </main>
   </body>
