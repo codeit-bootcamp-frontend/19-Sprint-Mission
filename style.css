@@ -138,8 +138,12 @@ input[type="password"] + .password_visibility.on {
 
 /* header */
 header {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+}
+
+header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,7 +151,6 @@ header {
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
-    background-color: #fff;
     transition: 0.5s all;
 }
 
@@ -159,12 +162,13 @@ header h1 a {
 
 /* banner */
 .banner {
-    padding-top: 200px;
+    padding-top: 274px;
     background-color: #cfe5ff;
 }
 
 .banner.bottom {
     margin-top: 276px;
+    padding-top: 200px;
 }
 
 .banner .inner {
@@ -382,7 +386,7 @@ footer ul a:hover img {
 /* 1920px */
 @media (max-width: 1920px) {
     /* header */
-    header {
+    header .inner {
         max-width: 100%;
         padding: 11px 200px;
     }
@@ -391,7 +395,7 @@ footer ul a:hover img {
 /* 1200px */
 @media (max-width: 1200px) {
     /* header */
-    header {
+    header .inner {
         padding: 11px 20px;
     }
 
