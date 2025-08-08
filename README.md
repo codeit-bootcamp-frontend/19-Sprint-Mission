@@ -1,32 +1,28 @@
 ## 기본 요구사항
 
-- [x] Github에 PR(Pull Request)을 만들어서 미션을 제출합니다.
-- [x] Netlify에 파일 배포가 아닌 포크한 Github 레포지토리로 연결합니다.
-- [x] 피그마 디자인에 맞게 페이지를 만들어 주세요.
-- [x] React와 같은 UI 라이브러리를 사용하지 않고 진행합니다.
+- [ ] 
+
 
 ### 기본
 
 공통
 
-- [x] 아래로 스크롤 해도 상단 네비게이션 바(Global Navigation Bar)가 최상단에 고정됩니다.
-- [x] "판다마켓" 클릭 시 루트 페이지("/")로 이동합니다.(새로고침)
-- [x] 로그인 페이 지, 회원가입 페이지 모두 로고 위 상단  여백이 동일합니다.
-- [x] SNS 아이콘들은 클릭시 각각 실제 서비스 홈페이지로 이동합니다.
+- [ ]
 
 로그인 페이지
 
-- [x] "회원가입"버튼 클릭 시 "/signup" 페이지로 이동합니다.
+- [ ] 
 
 회원가입 페이지
 
-- [x] "로그인"버튼 클릭 시 "/login" 페이지로 이동합니다.
+- [ ] 
 
 
 ### 심화
 
-- [x] palette에 있는 color값들을 css 변수로 등록하고 사용해 주세요.
-- [x] 비밀번호 input 요소 위에 비밀번호를 확인할 수 있는 아이콘을 추가해 주세요.
+- [ ] 페이스북, 카카오톡, 디스코드, 트위터 등 SNS에서 Linkbrary 랜딩 페이지(“/”) 공유 시 좌측 예시와 같은 미리보기를 볼 수 있도록 랜딩 페이지 메타 태그를 설정해 주세요.
+- [ ] 미리보기에서 제목은 “판다 마켓”, 설명은 “일상의 모든 물건을 거래해보세요”로 설정합니다.
+- [ ] 주소와 이미지는 자유롭게 설정하세요.
 
 ## 주요 변경사항
 
@@ -36,22 +32,21 @@
 
 메인 화면
 
-![image](img/capture/sprint2_capture1.png)
+<!-- ![image](img/capture/sprint2_capture1.png) -->
 
 로그인 화면
 
-![image](img/capture/sprint2_capture2.png)
+<!-- ![image](img/capture/sprint2_capture2.png) -->
 
 회원가입 화면
 
-![image](img/capture/sprint2_capture3.png)
+<!-- ![image](img/capture/sprint2_capture3.png) -->
 
 
 
 ## 주강사님에게
 
 - 리뷰 잘 부탁드립니다~!
-- 비밀번호 확인 부분은 아직 type password인데, 비밀번호 확인 아이콘 클릭시에는 type text로 바뀌는 걸까요? 
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
-링크 제출 : [배포 링크](https://elegant-toffee-589e5d.netlify.app/)
+링크 제출 : [배포 링크](https://elegant-toffee-589e5d.netlify.app/) (아직 배포 X)
