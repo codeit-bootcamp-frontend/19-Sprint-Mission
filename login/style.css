@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Pretendard ,Arial, sans-serif;
+}
+
+.login-box {
+  display: flex;
+  width: 640px;
+  /* margin: 231px auto; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15.25px;
+}
+
+.login-logo div {
+  color: #3692ff;
+  font-family: 'ROKAF Sans';
+  font-size: 66.344px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
