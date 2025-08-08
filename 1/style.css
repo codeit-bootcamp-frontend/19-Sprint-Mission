@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+  color: #374151;
+}
+
+html {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  word-break: keep-all;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+} /* 전체 너비 조정 */
+
+.header-logo { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  max-width: 1120px;
+  height: 70px;
+}
+
+header button {
+  width: 128px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+}
+
+h1 h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+}
+
+.contents-detail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.badge {
+  color: #3692FF;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.landing button {
+  width: 357px;
+  height: 56px;
+  border-radius: 40px;
+  border: none;
+}
+
+button {
+  font-weight: 600;
+  background-color: #3692FF;
+  color: #F3F4F6
+}
+
+.container.landing {
+  width: 100%;
+  height: 540px;
+  background-color: #cfe5ff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.cards-landing {
+  display: flex;
+  justify-content: center;
+  height: 340px;
+}
+
+.container.main {
+  width: 100%;
+  max-width: 1120px;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 988px;
+  height: 444px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #fcfcfc;
+  padding: 0 23.5px;
+  flex-direction: row-reverse;}
+
+.cards.reverse {
+  flex-direction: row;
+}
+
+.text.reverse {
+  text-align: right;
+}
+
+.text {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cards-landing.bottom {
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/*
+.cards-landing.bottom > h2 {
+  margin-top: 112.5px; 
+  margin-right: 69px; 
+} */
+
+footer {
+  width: 100%;
+  max-width: 1120px;
+  height: 160px;
+}
+
+footer.container {
+  background-color: #111827;
+  color: #E5E7EB;
+  font-size: 16px;
+}
+
+.footer-contents { 
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 32px;
+}
+
+.legal-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 159px;
+  height: 19px;
+}
+
+#copyright {
+  color: #9CA3AF;
+}
+
+button:hover {
+	cursor : pointer
+}
