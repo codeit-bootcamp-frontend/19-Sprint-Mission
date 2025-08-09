@@ -39,7 +39,7 @@ header button {
   border: none;
 }
 
-h1 h2 {
+h1, h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 140%;
