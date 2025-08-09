@@ -411,12 +411,13 @@ footer {
   margin-bottom: 24px;
   text-align: center;
   white-space: nowrap;
-}
-.login__btn > a {
+  cursor: pointer;
   color: var(--gray100);
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+  display: block;
+  width: 100%;
 }
 .login-easy {
   margin-bottom: 24px;
