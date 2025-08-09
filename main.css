@@ -1,0 +1,316 @@
+:root {
+    --main-color: #3692FF ;
+    --btn-hover-color: #1967D6 ;
+    --btn-click-color: #1251AA ;
+    --gray-color: #9CA3AF ;
+    --text-color: #374151;
+    --bgPoint-color: #CFE5FF ;
+}
+/* @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} */
+
+
+/* COMMON */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+body {
+    background-color: #fff;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn {
+    background-color: var(--main-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+.round {
+    border-radius: 40px;
+}
+.banner {
+    width: 100vw;
+    height: 540px;
+    background-color: var(--bgPoint-color);
+}
+.bgtext {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.discription {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+/* header */
+
+header {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a img{
+    width: 153px;
+    height: 51px;
+    margin-left: 200px;
+}
+header .login {
+    padding: 12px 23px 12px;
+    margin-right: 200px;
+}
+
+
+/* .banner */
+
+.banner {
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+.banner .inner {
+    display: flex;
+    align-items: flex-end;
+}
+.banner .inner .sightseeing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 340px;
+    gap: 32px;
+    margin-left: 200px;
+    padding-bottom: 60px;
+    word-break: keep-all;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+}
+.banner .inner .sightseeing .bgtext {
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+}
+.banner .inner .sightseeing .go {
+    text-align: center;
+    width: 357px;
+    height: 56px;
+    padding: 16px 0 16px;
+}
+.banner .inner .top-image {
+    width: 746px;
+    height: 340px;
+    margin-right: 200px;
+    position: absolute;
+    right: 0;
+}
+.banner .inner .top-image img {
+    margin-right: 200px;
+}
+
+
+/* .hot-item */
+
+.hot-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 138px 0 138px;
+}
+.hot-item .inner {
+    position: relative;
+    display: flex;
+    width: 988px;
+    border-radius: 12px;
+    background-color: #FCFCFC;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.hot-item .inner img {
+    position: relative;
+    left: 9px;
+    width: 588px;
+    height: 444px;
+}
+.hot-item .inner .text {
+    padding-right: 24px;
+    word-break: keep-all;
+}
+.hot-item .inner .text .tag {
+    font-family: "Abhaya Libre ExtraBold";
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 12px;
+}
+.hot-item .inner .text .bgtext {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+}
+.hot-item .inner .text .discription {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* .search */
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 138px 0 138px;
+
+}
+.search .inner {
+    position: relative;
+    display: flex;
+    width: 988px;
+    border-radius: 12px;
+    background-color: #FCFCFC;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.search .inner img {
+    position: relative;
+    right: 9px;
+    width: 588px;
+    height: 444px;
+}
+.search .inner .text {
+    padding-right: 24px;
+    word-break: keep-all;
+    text-align: right;
+}
+.search .inner .text .tag {
+    font-family: "Abhaya Libre ExtraBold";
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 12px;
+}
+.search .inner .text .bgtext {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+}
+.search .inner .text .discription {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* .register */
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 138px 0 138px;
+}
+.register .inner {
+    position: relative;
+    display: flex;
+    width: 988px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.register .inner img {
+    position: relative;
+    left: 9px;
+    width: 588px;
+    height: 444px;
+}
+.register .inner .text {
+    padding-right: 24px;
+    word-break: keep-all;
+}
+.register .inner .text .tag {
+    font-family: "Abhaya Libre ExtraBold";
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 12px;
+}
+.register .inner .text .bgtext {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+}
+.register .inner .text .discription {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/* .bottom-banner  */
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.bottom-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+}   
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 160px;
+    padding-top: 32px;
+    background-color: #111827;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #ffffff;
+}
+footer .ask {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+footer .ask a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer .sns img {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+}
