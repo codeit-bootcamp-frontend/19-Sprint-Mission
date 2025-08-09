@@ -393,6 +393,9 @@ footer {
   width: 640px;
   height: 618px;
 }
+.login.new {
+  height: 857px;
+}
 .login > a {
   display: flex;
   justify-content: center;
@@ -407,6 +410,7 @@ footer {
   padding: 12px 294px;
   margin-bottom: 24px;
   text-align: center;
+  white-space: nowrap;
 }
 .login__btn > a {
   color: var(--gray100);
