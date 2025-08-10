@@ -35,19 +35,31 @@ body {
 .logo {
     width: 396px;
     height: auto;
+    align-items: center;
+    margin-top: 231px;
+    gap: 40px;
+    width: 100%;
+}
+
+/* logo */
+.logo {
+    width: 396px;
 }
 
 /* logins */
 .logins {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
+    width: 100%;
 }
 
 /* login form */
 .login-form-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
 }
 .input-container {
@@ -70,7 +82,9 @@ input {
     background-color: var(--gray100);
     border: none;
     border-radius: 12px;
-
+}
+.input::placeholder {
+    color: var(--gray400);
 }
 input:focus {
     border: 2px solid var(--blue);
