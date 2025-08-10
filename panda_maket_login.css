@@ -12,6 +12,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 231px 640px;
+}
+
+/* 로고이미지 */
+
+.logo_img {
+  margin-bottom: 40px;
 }
 
 /* 라벨과 인풋 */
@@ -37,8 +44,18 @@ input {
   margin: 16px;
 }
 
+#password {
+  background-image: url(img_panda/btn_visibility_on_24px.png);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
 /* 로그인 버튼 */
 .login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #f3f4f6;
   font-size: 20px;
   font-weight: 600;
@@ -46,8 +63,9 @@ input {
   width: 640px;
   height: 56px;
 
-  text-align: center;
+  /* text-align: center; */
 
+  border: 1px solid #ffffff;
   border-radius: 999px;
   background-color: #3692ff;
   padding: 16px 124px;
