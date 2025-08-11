@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+/* reset css */
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Pretendard', sans-serif;}
+ul,ol,li{list-style: none}
+a{text-decoration: none;color: #000}
+address{font-style: normal}
+table{border-collapse: collapse}
+caption,legend{display: none}
+fieldset{border:none}
+.clearfix::after{content: '';display: block;clear: both}
+img{vertical-align: top}
+
+/* color variable */
+:root {
+    --blue100: #3692ff;
+    --gray900: #111827;
+    --gray800: #1f2937;
+    --gray700: #374151;
+    --gray600: #4b5563;
+    --gray500: #6b7280;
+    --gray400: #9ca3af;
+    --gray200: #e5e7eb;
+    --gray100: #f3f4f6;
+    --gray50: #f9fafb;     
+}
