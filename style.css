@@ -334,7 +334,7 @@ footer ul a:hover img {
     background-color: #e6f2ff;
 }
 
-.join_area .easy_login p {
+.join_area .easy_login strong {
     color: var(--gray800);
     font-weight: 500;
 }
