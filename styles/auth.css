@@ -1,41 +1,21 @@
-:root {
-    --blue: #3692FF;
-    --gray900: #111827;
-    --gray800: #1f2937;
-    --gray700: #374151;
-    --gray600: #4B5563;
-    --gray500: #6B7280;
-    --gray400: #9CA3AF;
-    --gray200: #E5E7EB;
-    --gray100: #F3F4F6;
-    --gray50: #F9FAFB;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Pretendard', sans-serif;
-}
 body {
     display: flex;
     justify-content: center;
+    padding-top: 70px;
 }
-.login-container {
+
+.auth-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 231px;
     gap: 40px;
     width: 100%;
 }
-
-/* logo */
 .logo {
     width: 396px;
 }
 
-/* logins */
-.logins {
+.auths {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,13 +23,13 @@ body {
     width: 100%;
 }
 
-/* login form */
-.login-form-container {
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
+
 .input-container {
     display: flex;
     flex-direction: column;
@@ -70,11 +50,9 @@ input {
     background-color: var(--gray100);
     border: none;
     border-radius: 12px;
-}
-.input::placeholder {
+}.input::placeholder {
     color: var(--gray400);
-}
-input:focus {
+}input:focus {
     border: 2px solid var(--blue);
 }
 
@@ -82,34 +60,25 @@ input:focus {
     position: relative;
     width: 100%;
 }
-.visibility {
+.icon-button.visibility {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     right: 16px;
-    top: 16px;
-    width: 24px;
-    cursor: pointer;
 }
-
-.login-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button.submit {
     width: 640px;
     height: 56px;
     font-weight: 600;
     font-size: 20px;
     color: #FFF;
     background-color: var(--gray400);
-    border: none;
     border-radius: 40px;
-    cursor: pointer;
     pointer-events: none;
-}
-form:valid .login-button {
+}form:valid .button.submit {
     pointer-events: auto;
     background-color: var(--blue);
 }
-
 
 /* easy-login */
 .easy-login {
@@ -120,7 +89,7 @@ form:valid .login-button {
     height: 74px;
     border-radius: 8px;
     padding: 16px 23px;
-    background-color: #E6F2FF;
+    background-color: var(--light-blue);
 }
 .easy-login span {
     font-weight: 500;
@@ -133,23 +102,25 @@ form:valid .login-button {
 }
 
 /* signup link */
-.to-signup {
+.auth-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.to-signup span {
+.auth-toggle span {
     font-weight: 500;
     font-size: 14px;
     color: var(--gray800);
 }
-.to-signup a {
+.auth-toggle a {
     font-weight: 500;
     font-size: 14px;
     color: var(--blue);
 }
+
+
 @media (max-width:727px) {
-    .login-container {
+    .auth-container {
         margin-top: 80px;
         margin-inline: 16px;
         gap: 24px;
@@ -161,7 +132,7 @@ form:valid .login-button {
     }
 
     /* login form */
-    .login-form-container {
+    .form-container {
         gap: 16px;
     }
     .input-container {
@@ -175,11 +146,11 @@ form:valid .login-button {
         font-weight: 400;
         font-size: 16px;
     }
-    .visibility {
+    .icon-button.visibility {
         right: 24px;
     }
 
-    .login-button {
+    .button.submit {
         max-width: 400px;
         font-weight: 600;
         font-size: 20px;
