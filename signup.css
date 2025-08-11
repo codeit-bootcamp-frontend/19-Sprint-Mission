@@ -1,0 +1,131 @@
+/* log-in and sign-up page css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    font-size: clamp(14px, 1vw, 18px);
+    margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.sign-wrap {    
+    width: 640px;
+    margin: 230px auto;
+}
+
+.login-input-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sign-wrap .login-logo {
+    display: flex;
+    justify-content: center;
+}
+
+
+.login-id form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.login-id span {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 26px;
+    color: #1F2937;
+}
+
+.login-id input {
+    width: 640px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 0 20px;
+    background-color: #F3F4F6;
+}
+
+.login-btn { 
+    width: 640px;
+    height: 56px;
+    background-color: #3692FF;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .login-pw {
+    position:relative;
+  }
+
+  .show-pw {
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .password-check {
+    position: relative
+  }
+  .show-pw-check {
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .easy-login {
+    width: 640px;
+    height: 74px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 23px;
+    background-color: #E6F2FF;
+  }
+
+  .easy-login > span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: #1F2937;
+  }
+
+  .login-signup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 5px;
+  }
+
+  .easy-login .sns-logo a{
+    margin-right: 10px;
+  }
+  
+  .login-signup .underline {
+    text-decoration: underline;
+  }
