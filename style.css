@@ -48,7 +48,7 @@ header {
 .top-description {
     display: flex;
     flex-direction: column;
-    width: 357px;
+    width: auto;
     height: 260px;
 }
 .top-title {
@@ -60,10 +60,11 @@ header {
     color: var(--gray700);
 }
 .button.items {
-    padding: 16px 124px;
+    padding: 16px;
     border-radius: 40px;
     font-size: 20px;
     color: var(--gray50);
+    width: 100%;
 }
 .top-image {
     width: 746px;
@@ -209,13 +210,12 @@ footer {
     .top-contents {
         flex-direction: column;
         justify-content: center;
-        padding: 84px 116px 0px 116px;
+        padding-top: 84px 116px 0px 116px;
         width: 100%;
         gap: 221px;
     }
     .top-description {
         align-items: center;
-        width: 100%;
         gap: 24px;
     }
     .top-title {
@@ -315,8 +315,6 @@ footer {
     /* top */
     .top-contents {
         padding-top:48px;
-        width: 100%;
-        height: auto;
         gap: 132px;
     }
     .top-description {
@@ -328,8 +326,7 @@ footer {
         text-align: center;
         margin: 0;
     }
-    .items-button {
-        width: 100%;
+    .button.items {
         height: 48px;
         font-size: 18px;
     }
