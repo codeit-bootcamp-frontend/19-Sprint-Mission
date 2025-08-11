@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 70px;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.banner {
+  height: 540px;
+  background: #CFE5FF;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.content {
+  background: #ffffff;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background: #111827;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px;
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  height: 340px;
+  gap: 7px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 988px;
+  height: 444px;
+  background: #fcfcfc;
+  border-radius: 12px;
+}
+
+.footer-container {
+  width: 1120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-info {
+  width: 357px;
+  height: 260px;
+}
+
+.content-info {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-info.reverse {
+  text-align: right; /* 오른쪽 정렬 */
+}
+
+.footer-link {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.login {
+  width: 128px;
+  height: 48px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  background: #3692FF;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login:hover {
+  background: #1967D6;
+}
+
+.login:active {
+  background: #1251AA;
+}
+
+.banner-text {
+  margin-top: 0px;
+  font-family: Pretendard;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: clamp(20px, 3vw, 40px);
+  line-height: 140%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.banner-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  gap: 10px;
+  width: 100%;
+  border-radius: 40px;
+  border: none;
+  background: #3692FF;
+  font-family: Pretendard;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: #F9FAFB;
+  text-decoration: none;
+}
+
+.banner-button:hover {
+  background: #1967D6;
+}
+
+.banner-button:active {
+  background: #1251AA;
+}
+
+.banner-container.bottom img {
+  margin-bottom: 50px;
+}
+
+.content-text-01 {
+  font-family: Abhaya Libre ExtraBold;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(12px, 1.5vw, 18px);
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #3692FF;
+}
+
+.content-text-02 {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-family: Pretendard;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: clamp(20px, 3vw, 40px);
+  line-height: 140%;
+  letter-spacing: 2%;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.content-text-03 {
+  font-family: Pretendard;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #374151;
+}
+
+.copyright {
+  font-family: Pretendard;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #9CA3AF;
+
+}
+
+.footer-menu {
+  font-family: Pretendard;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #E5E7EB;
+  text-decoration: none;
+}
