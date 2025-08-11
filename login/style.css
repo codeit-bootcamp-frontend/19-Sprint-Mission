@@ -23,31 +23,31 @@ body {
 .login-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 231px;
     gap: 40px;
+    width: 100%;
 }
 
 /* logo */
-.logo-link {
-    display: flex;
-    justify-content: center;
-}
 .logo {
     width: 396px;
-    height: auto;
 }
 
 /* logins */
 .logins {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
+    width: 100%;
 }
 
 /* login form */
 .login-form-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 24px;
 }
 .input-container {
@@ -70,7 +70,9 @@ input {
     background-color: var(--gray100);
     border: none;
     border-radius: 12px;
-
+}
+.input::placeholder {
+    color: var(--gray400);
 }
 input:focus {
     border: 2px solid var(--blue);
@@ -89,17 +91,25 @@ input:focus {
 }
 
 .login-button {
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 640px;
     height: 56px;
-    padding: 16px 124px;
     font-weight: 600;
     font-size: 20px;
-    color: var(--gray100);
-    background-color: var(--blue);
+    color: #FFF;
+    background-color: var(--gray400);
     border: none;
     border-radius: 40px;
+    cursor: pointer;
+    pointer-events: none;
 }
+form:valid .login-button {
+    pointer-events: auto;
+    background-color: var(--blue);
+}
+
 
 /* easy-login */
 .easy-login {
@@ -126,8 +136,7 @@ input:focus {
 .to-signup {
     display: flex;
     justify-content: center;
-    align-items: center;;
-    gap: 4px;
+    align-items: center;
 }
 .to-signup span {
     font-weight: 500;
@@ -139,5 +148,46 @@ input:focus {
     font-size: 14px;
     color: var(--blue);
 }
+@media (max-width:727px) {
+    .login-container {
+        margin-top: 80px;
+        margin-inline: 16px;
+        gap: 24px;
+    }
 
+    /* logo */
+    .logo {
+        width: 198px;
+    }
 
+    /* login form */
+    .login-form-container {
+        gap: 16px;
+    }
+    .input-container {
+        gap: 8px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input {
+        max-width: 400px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .visibility {
+        right: 24px;
+    }
+
+    .login-button {
+        max-width: 400px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    /* easy-login */
+    .easy-login {
+        max-width: 400px;
+        width: 100%;
+    }
+}
