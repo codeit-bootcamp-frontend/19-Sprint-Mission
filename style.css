@@ -327,6 +327,7 @@ footer {
         margin: 0;
     }
     .button.items {
+        width: 100%;
         height: 48px;
         font-size: 18px;
     }
