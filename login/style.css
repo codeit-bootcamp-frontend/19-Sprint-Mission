@@ -148,3 +148,46 @@ form:valid .login-button {
     font-size: 14px;
     color: var(--blue);
 }
+@media (max-width:727px) {
+    .login-container {
+        margin-top: 80px;
+        margin-inline: 16px;
+        gap: 24px;
+    }
+
+    /* logo */
+    .logo {
+        width: 198px;
+    }
+
+    /* login form */
+    .login-form-container {
+        gap: 16px;
+    }
+    .input-container {
+        gap: 8px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input {
+        max-width: 400px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .visibility {
+        right: 24px;
+    }
+
+    .login-button {
+        max-width: 400px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    /* easy-login */
+    .easy-login {
+        max-width: 400px;
+        width: 100%;
+    }
+}
