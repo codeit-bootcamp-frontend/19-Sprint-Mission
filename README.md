@@ -60,7 +60,9 @@
 
 ## 주강사님에게
 
-- 테스트
+- netlify 사이트 배포라서 그런건지 모르겠는데 meta name="twitter:site", meta property="og:url" 의 기능이 활성화되지 않는 것 같습니다.
+- 트위터 meta 정보를 입력하였음에도 이미지가 출력되지 않습니다.
+- meta 태그 관련 된 내용을 gpt를 통해 작성하였으나 많이 부족한 것 같습니다. 혹시 관련해서 추천할 만한 사이트나 정보를 알려주시면 추가로 공부해보도록 하겠습니다. 🙇‍♂️
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
-링크 제출 : [배포 링크](https://elegant-toffee-589e5d.netlify.app/) (아직 배포 X)
+링크 제출 : [배포 링크](https://sparkly-narwhal-80e76d.netlify.app/)
