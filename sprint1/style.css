@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main,
+header,
+footer {
+  width: 100%;
+}
+
+footer {
+  height: 160px;
+  background-color: #111827;
+  color: #9ca3af;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  width: 100%;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-box {
+  justify-content: space-between;
+  height: 70px;
+  padding-inline: clamp(0px, calc((1320px - 100vw) / 2), 200px);
+}
+
+.header-title-img {
+  width: 153px;
+  height: 51px;
+  vertical-align: bottom;
+}
+
+.header-loginBtn {
+  width: 128px;
+  height: 48px;
+  padding: auto;
+  border-radius: 16px;
+  background-color: #3692ff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.ads {
+  overflow: hidden;
+  background-color: #cfe5ff;
+  width: 100%;
+}
+
+.ads > .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    ". . ."
+    "c i i"
+    "c i i";
+}
+
+.ads-content {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ads-content > span {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: #374151;
+}
+
+.ads-content > a {
+  text-decoration: none;
+  width: clamp(220px, 30vw, 357px);
+  height: clamp(40px, 5vw, 56px);
+  background-color: #3692ff;
+  color: #f9fafb;
+  font-size: clamp(16px, 1.5vw, 20px);
+  border-radius: clamp(8px, 1vw, 16px);
+  margin-bottom: 40px;
+}
+
+.ads-img {
+  grid-area: i;
+}
+
+.card-content {
+  justify-content: space-between;
+  padding: 103px 0;
+  gap: 64px;
+}
+
+.card-content > img {
+  min-width: 0;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 400px;
+  gap: 24px;
+}
+
+.card-text h2 {
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 800;
+  color: #3592ff;
+}
+
+.card-text .card-catchphrase {
+  font-size: clamp(24px, 2.8vw, 40px);
+  font-weight: 700;
+  color: #374151;
+}
+
+.card-text .card-info {
+  font-size: clamp(16px, 1.5vw, 24px);
+  font-weight: 500;
+  color: #374151;
+}
+
+footer > .container {
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-content > a {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+.footer-sns > div {
+  display: flex;
+  gap: 12px;
+}
