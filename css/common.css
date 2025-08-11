@@ -1,3 +1,18 @@
+:root {
+  --primary-100: #3692FF;
+  --primary-200: #1967D6;
+  --primary-300: #1251AA;
+  --secondary-900: #111827;
+  --secondary-800: #1F2937;
+  --secondary-700: #374151;
+  --secondary-600: #4B5563;
+  --secondary-500: #6B7280;
+  --secondary-400: #9CA3AF;
+  --secondary-300: #E5E7EB;
+  --secondary-200: #F3F4F6;
+  --secondary-100: #F9FAFB;
+}
+
 body {
   color: #374151;
   font-family: "Pretendard", sans-serif;
@@ -10,6 +25,10 @@ header{
  width: 100%;
  height: 70px;
  background-color:#fff;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
 }
 
 .wrapper {
@@ -19,11 +38,27 @@ header{
 }
 
 footer {
-  background-color: #111827;
+  background-color: var(--secondary-900);
   display: flex;
   justify-content: space-between;
   height: 160px;
   padding: 32px 200px;
-  color: #9ca3af;
+  color:var(--secondary-400);
 }
 
+.button{
+  background-color: var(--primary-100);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-200);
+}
+
+.button:focus {
+  background-color: var(--primary-300);
+}

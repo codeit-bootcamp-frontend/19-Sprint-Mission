@@ -6,28 +6,43 @@
   <meta http-equiv="Expires" content="0"/>
   <meta http-equiv="Cache-Control" content="no-cache"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로그인하기</title>
+  <title>회원가입하기</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/form_common.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-  <div class="login_container">
-    <a href="/" id="login_logo">
+  <div class="signup_container">
+    <a href="/" id="signup_logo">
       <img src="images/logo/panda-market-logo.png" alt="판다마켓 홈페이지">
     </a>
-    <form id="login_form">
+    <form id="signup_form">
       <div class="input_box">
         <label for="email">이메일</label>
-        <input id="login_email" type="email" name="email" placeholder="이메일을 입력해 주세요"/>
+        <input id="signup_email" type="email" name="email" placeholder="이메일을 입력해 주세요"/>
+      </div>
+      <div class="input_box">
+        <label for="nickname">닉네임</label>
+        <input id="signup_nickname" type="text" name="nickname" placeholder="닉네임을 입력해 주세요"/>
       </div>
       <div class="input_box">
         <label for="password">비밀번호</label>
         <div class="input-wrapper">
-          <input id="login_password" type="password" name="password" placeholder="비밀번호를 입력해 주세요"/>
+          <input id="signup_password" type="password" name="password" placeholder="비밀번호를 입력해 주세요"/>
+          <img
+              src="images/input/invisible_input.svg"
+              alt="비밀번호 숨기기"
+              class="password-toggle"
+            />
+        </div>
+      </div>
+      <div class="input_box">
+        <label for="confirm_password">비밀번호 확인</label>
+        <div class="input-wrapper">
+          <input id="signup_confirm_password" type="password" name="confirm_password" placeholder="비밀번호를 입력해 주세요"/>
           <img
               src="images/input/invisible_input.svg"
               alt="비밀번호 숨기기"
@@ -37,9 +52,9 @@
       </div>
       <button type="submit" class="button submitBtn">로그인</button>
     </form>
-    <div id="quickLogin_container">
+    <div id="quicklogin_container">
       <p>간편 로그인하기</p>
-      <div class="quickLogin_btn_area">
+      <div class="quicklogin_btn_area">
         <a href="https://www.google.com/" target="_blank">
           <img src="images/sns/google-icon.png" alt="구글 로그인">
         </a>
@@ -48,9 +63,9 @@
         </a>
       </div>
     </div>
-    <p id="navigateToSignup">
-      판다마켓은 처음이신가요?
-      <a href="signup.html">회원가입</a>
+    <p id="navigateToLogin">
+      이미 회원이신가요?
+      <a href="login.html">로그인</a>
     </p>
   </div>
   </div>
