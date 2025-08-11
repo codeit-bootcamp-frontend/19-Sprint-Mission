@@ -97,7 +97,8 @@ header{
   display: flex;
   align-items: center;
   max-width: 998px;
-  justify-content: space-evenly;
+  gap:64px;
+  justify-content: center;
   margin:138px auto;
   background-color: #FCFCFC;
   border-radius: 8px;
