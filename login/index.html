@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>판다 마켓</title>
+  <title>판다마켓</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="login-box">
     <div class = "login-logo">
       <img src="../images/panda_logo_big.svg" alt="logo">
-      <div>판다마켓</div> 
+      <div><a href="../index.html">판다마켓</a></div> 
     </div>
     <div class = "login-info">
-      <div class = "login-email">
+      <form>
+        <div class = "login-email">
         <label for = email>이메일</label>
         <div>
           <input type = "text" id="email">
@@ -25,7 +26,8 @@
           <input type = "password" id="pwd">
         </div>
       </div>
-      <button class = "login-button">로그인</button>
+      <button type="submit" class = "login-button">로그인</button>
+      </form>
       <div class = "login-easy">
         <div>간편 로그인하기</div>
         <div class = "icon">

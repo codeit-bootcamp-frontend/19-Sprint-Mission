@@ -29,16 +29,23 @@ body {
   gap: 15.25px;
 }
 
-.login-logo div {
+.login-logo div > a {
   color: #3692ff;
   font-family: 'ROKAF Sans';
   font-size: 66.344px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-decoration: none;
 }
 
-.login-info {
+.login-logo div > a:visited {
+  text-decoration: none;
+  color: #3692ff;
+}
+
+.login-info,
+.login-info > form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,14 +53,18 @@ body {
 }
 
 .login-email,
-.login-pass {
+.login-nick,
+.login-pass,
+.login-pass-again {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .login-email > label,
-.login-pass > label {
+.login-nick > label,
+.login-pass > label,
+.login-pass-again > label {
   font-size: 18px;
   font-style: normal;
   font-weight: 700; 
@@ -61,7 +72,9 @@ body {
 }
 
 .login-email > div,
-.login-pass > div {
+.login-nick > div,
+.login-pass > div,
+.login-pass-again > div {
   background-color: #f3f4f6;
   border: 2px solid rgba(49, 130, 246, 0);
   border-radius: 12px;
@@ -71,7 +84,9 @@ body {
 }
 
 .login-email > div > input,
-.login-pass > div > input {
+.login-nick > div > input,
+.login-pass > div > input,
+.login-pass-again > div > input {
   border: none;
   background-color: #f3f4f6;
   width: 600px;
@@ -81,7 +96,7 @@ input:focus {
   outline: none;
 }
 
-.login-button {
+.signup-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,8 +112,9 @@ input:focus {
   font-style: normal;
 }
 
-.login-button:hover {
+.signup-button:hover {
   background-color: #1c4d87;
+  cursor: pointer
 }
 
 .login-easy {
@@ -117,13 +133,13 @@ input:focus {
   gap: 16px;
 }
 
-.login-to-signup {
+.signup-to-login {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
 }
 
-.login-to-signup > a {
+.signup-to-login > a {
   color: #3692ff
 }
