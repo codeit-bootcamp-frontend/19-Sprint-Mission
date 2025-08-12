@@ -49,27 +49,27 @@
 
 메인 화면 (pc)
 
-<!-- ![image](img/capture/sprint3_main_pc.png) -->
+![image](img/capture/sprint3_main_pc.png)
 
 메인 화면 (tablet)
 
-<!-- ![image](img/capture/sprint3_main_tablet.png) -->
+![image](img/capture/sprint3_main_tablet.png)
 
 메인 화면 (mobile)
 
-<!-- ![image](img/capture/sprint3_main_m.png) -->
+![image](img/capture/sprint3_main_m.png)
 
 회원가입 화면 (pc)
 
-<!-- ![image](img/capture/sprint3_join_pc.png) -->
+![image](img/capture/sprint3_join_pc.png)
 
 회원가입 화면 (tablet)
 
-<!-- ![image](img/capture/sprint3_join_tablet.png) -->
+![image](img/capture/sprint3_join_tablet.png)
 
 회원가입 화면 (mobile)
 
-<!-- ![image](img/capture/sprint3_join_m.png) -->
+![image](img/capture/sprint3_join_m.png)
 
 facebook 미리보기
 
