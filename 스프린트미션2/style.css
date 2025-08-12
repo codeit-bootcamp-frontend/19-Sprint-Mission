@@ -1,0 +1,161 @@
+ @charset "utf-8";
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pretendard', sans-serif;
+    height: 100vh;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+form{
+    margin: 0 auto;
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------------logo------------------- */
+
+.logo_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12.98px 4.23px 15.14px 0; 
+    margin-bottom: 40px;
+    
+}
+
+.logo_area h1{
+    font-family: 'ROKAF-Sans';
+    font-weight: 700;     
+    font-size: 66.34px;
+    color: #3692FF;
+    margin-left: 22.24px;
+}
+/* -------------input------------------ */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main label{
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+    color: #1F2937;
+}
+
+main input{
+    width: 640px;
+    background-color: #F3F4F6;
+    padding: 16px 0 14px 24px;
+    border: 0;
+    margin-bottom: 24px;
+    border-radius: 1rem;
+    height: 56px;
+}
+
+
+.id_area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.password_area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.password_box{
+    position: relative;
+}
+
+.security,.public{
+    position: absolute;
+    right: 24px;
+    bottom: 40px;
+}
+
+.public{
+    display: none;
+}
+
+.public.active{
+    display: block;
+}
+
+.security.active{
+    display: none;
+}
+
+/* -----------button------------ */
+
+button{
+    align-items: center;
+    width: 100%;
+    background-color: #3692FF;
+    font-size: 1.25rem;
+    border-radius: 2.5rem;
+    padding: 12px 0;
+    border: 0;
+    color: #F3F4F6;
+    margin-bottom: 24px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* -------------btn------------------ */
+
+.social_login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6F2FF;
+    width: 100%;
+    padding: 16px 23px;
+    border-radius: 8px;
+    height: 74px;
+    margin-bottom: 24px;
+}
+
+.icon_login a:nth-child(1){
+    margin-right: 16px;
+}
+
+
+.social_login p{
+    color: #1F2937;
+    font-weight: 500;
+}
+
+/* --------------footer---------------- */
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+footer p{
+    font-weight: 500;
+    color: #1F2937;
+}
+
+footer a{
+    color: #3692FF;
+}

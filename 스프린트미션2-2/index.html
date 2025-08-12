@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./mission.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="signup_container">
+        <header>
+            <a href="../스프린트미션/index.html" class="logo_area">
+            <img src="./logo.png" alt="로고이미지">
+            <h1>판다마켓</h1>
+        </a>
+        </header>
+        
+
+        <main>
+            <div class="email_box">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" placeholder="codeit@email.com" required>
+            </div>
+            <div class="nickname_box">
+                <label for="nickname">닉네임</label>
+                <input type="text" id="nickname" name="nickname" placeholder="판다" required>
+            </div>
+            <div class="password_box">
+                <label for="password">비밀번호</label>
+                <div class="password_with_icon">
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요." required>
+                    <div class="password_icon_img">
+                        <img class="security" src="./eyes_icon.png" alt="안보이는 이미지">
+                        <img class="public" src="./eyes_icon2.png" alt="보이는 이미지">
+                    </div>    
+                </div>
+            </div>
+            <div class="password_check_box">
+                <label for="password_check">비밀번호확인</label>
+                <div class="password_check_with_icon">
+                    <input type="password" id="password_check" name="password_check" placeholder="비밀번호를 입력하세요." required>
+                    <div class="password_check_icon_img">
+                        <img class="security_check" src="./eyes_icon.png" alt="안보이는 이미지">
+                        <img class="public_check" src="./eyes_icon2.png" alt="보이는 이미지">
+                    </div>    
+                </div>
+            </div>
+        </main>
+
+        <button class="signup_box">회원가입</button>
+
+        <div class="social_login">
+            <p>간편 로그인하기</p>
+            <div class="icon_login">
+                <a href="https://www.google.com"><img src="./google.png" alt="구글로그인"></a>
+                <a href="https://www.kakao.com"><img src="./kakao.png" alt="카카오로그인"></a>
+            </div>
+        </div>
+
+        <footer>
+            <p>이미 회원이신가요?</p>
+            <a href="../스프린트미션2/index.html">로그인</a>
+        </footer>
+    </div>
+</body>
+</html>
