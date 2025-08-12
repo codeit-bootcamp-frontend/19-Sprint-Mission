@@ -52,13 +52,13 @@
   margin-bottom: 0.75rem;
   font-size: 1.125rem;
   font-weight: 800;
-  color: #3692FF;
+  color: var(--blue);
   line-height: 1.625rem;
 }
 .main .title{
   font-size: 2.5rem;
   font-weight: 700;
-  color: #374151;
+  color: var(--gray700);
   line-height: 1.4;
 }
 .main .text{
@@ -66,4 +66,100 @@
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2rem;
+}
+
+/*================================================== join & login ==================================================*/
+.formWrap {
+  width: 640px;
+  margin: 60px auto 0;
+}
+.formWrap .logo {
+  margin-bottom: 40px; 
+}
+.formWrap .logo a{
+  margin: auto;
+  display: block;
+  width: 396px;
+  height: 132px;
+  background: url(./../img/common/logo_lg.png) no-repeat 0 0;   
+}
+.formWrap .ipt{
+  position: relative;
+}
+.formWrap .ipt + .ipt{
+  margin-top: 24px;
+}
+.formWrap .ipt label{
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray800);
+}
+.formWrap .ipt input{
+  width: 100%;
+  height: 56px;
+  padding: 16px 24px 14px 24px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--gray800);
+  background-color: var(--gray100);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.formWrap .ipt .btnEye{
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../img/content/btn_visibility_off.png) no-repeat 0 0;
+}
+.formWrap .ipt .btnEye.on{
+  background: url(../img/content/btn_visibility_on.png) no-repeat 0 0;
+}
+.formWrap .btn.lg{
+  margin-top: 24px;
+  height: 56px;
+}
+.formWrap .socialBtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 16px 23px;
+  background-color: #E6F2FF;
+  border-radius: 8px;
+}
+.formWrap .socialBtn .tit{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray800);
+}
+.formWrap .socialBtn .btns{
+  font-size: 0;
+  word-spacing: 0;
+}
+.formWrap .socialBtn a{
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin-left: 16px;
+}
+.formWrap .guideBtn{
+  margin-top: 24px;
+  text-align: center;
+}
+.formWrap .guideBtn .tit{
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray800);
+}
+.formWrap .guideBtn .btnTxt{
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: underline;
 }
