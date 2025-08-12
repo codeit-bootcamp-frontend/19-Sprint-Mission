@@ -1,0 +1,29 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: var(--gray100);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn:hover { background-color: var(--blue-hover); }
+
+.btn.rounded { border-radius: 999px; }
+
+.btn.large {
+  padding: 12px 124px;
+  font-size: 20px;
+  white-space: nowrap;
+  max-width: 357px;
+}
+
+.btn.medium {
+  width: 128px;
+  height: 48px;
+  font-size: 14px;
+}
+
