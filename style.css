@@ -118,14 +118,15 @@ input::placeholder {
     color: var(--gray400);
 }
 
-.input_group.password {
+.input_body.password {
     position: relative;
 }
 
 input[type="password"] + .password_visibility {
     position: absolute;
     right: 24px;
-    bottom: 12px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 24px;
     height: 24px;
     background: url('img/ico_password_visibility.png');
@@ -197,9 +198,10 @@ header h1 a {
 
 .desc_list li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 64px;
     border-radius: 12px;
+    overflow: hidden;
     background-color: #fcfcfc;
 }
 
@@ -208,29 +210,8 @@ header h1 a {
 }
 
 .desc_list li.right {
-    padding-right: 24px;
+    justify-content: flex-end;
     text-align: right;
-}
-
-.desc_list li:first-child {
-    padding-left: 23px;
-}
-
-.desc_list li:last-child img {
-    border-radius: 12px 0 0 12px;
-}
-
-.desc_list li > div {
-    margin-right: 47px;
-}
-
-.desc_list li.right div {
-    margin-left: 24px;
-    margin-right: 0;
-}
-
-.desc_list li:last-child div {
-    margin-right: 24px;
 }
 
 .desc_list li > div span {
@@ -248,7 +229,7 @@ header h1 a {
 }
 
 .desc_list li > div p {
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.4;
     font-weight: 500;
 }
@@ -386,17 +367,17 @@ footer ul a:hover img {
 /* 1920px */
 @media (max-width: 1920px) {
     /* header */
-    header .inner {
-        max-width: 100%;
-        padding: 11px 200px;
-    }
+    /* header .inner { */
+        /* max-width: 100%; */
+        /* padding: 11px 200px; */
+    /* } */
 }
 
 /* 1200px */
 @media (max-width: 1200px) {
     /* header */
-    header .inner {
-        padding: 11px 20px;
-    }
+    /* header .inner { */
+        /* padding: 11px 20px; */
+    /* } */
     
 }
