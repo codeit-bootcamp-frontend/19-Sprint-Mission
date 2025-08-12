@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Pretendard, sans-serif; "ROKAFSans";
+    word-break: keep-all;
+}
+
+body {
+    min-width: 1920px;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1920px;
+    border-bottom: 1px solid #DFDFDF;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1120px;
+    height: 51px;
+    margin: 0 200px;
+}
+
+.title-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 51px;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25.63px;
+    font-weight: 700;
+    text-align: center;
+    color: #3692FF;
+}
+
+.main-image {
+    background-size: auto;
+    background-color: #cfe5ff;
+    height: 540px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.main-text {
+    gap: 32px;
+    padding-bottom: 60px;
+    margin-top: 150px;
+}
+
+.panda-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40.14px;
+}
+
+.login {
+    display: inline-block;
+    padding: 12px 23px;
+    background-color: #3692FF;
+    color: #F3F4F6;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 128px;
+    height: 48px;
+}
+
+.login:hover {
+    background-color: #1967D6;
+}
+
+.more-watch {
+    border-radius: 40px;
+    padding: 16px 124px;
+    text-decoration: none;
+    color: #F9FAFB;
+    background-color: #3692FF;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+#top-img {
+    margin-top: 199px;
+}
+
+.big-text {
+    font-size:40px;
+    font-weight: 700;
+    color: #374151;
+    height: 112px;
+    margin: 0 0;
+}
+
+.descriptions {
+    width: 1920px;
+}
+
+
+.description {
+    padding-top: 138px;
+    padding-bottom: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#reverse-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.body-text {
+    text-align: left;
+    justify-content: center;
+    padding-right: 24px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    height: 444px;
+    padding-left: 20px;
+}
+
+#trust-panda {
+    color: #374151;
+}
+
+#last-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfe5ff;
+    width: 1920px;
+    height: 540px;
+}
+
+.last-panda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1110px;
+    height: 397px;
+}
+
+#codeit, #FAQ {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Pretendard;
+}
+
+#codeit {
+    color: #9CA3AF;
+}
+
+.FAQ {
+    word-spacing: 30px;
+}
+
+a {
+    color: #E5E7EB;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #111827;
+    padding: 32px 400px;
+    gap: 10px;
+    width: 1920px;
+    height: 160px;
+}
+
+.footer {
+    width: 1120px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge {
+    font-size:18px;
+    font-weight:800;
+    color: #3692ff;
+    font-family: Abhaya Libre ExtraBold;
+}
+
+.introduce {
+    font-size:24px;
+    font-weight: 500;
+    color: #374151;
+    font-family: Pretendard;
+}
