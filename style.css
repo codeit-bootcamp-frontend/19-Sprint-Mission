@@ -272,7 +272,7 @@ footer span {
 }
 
 footer ul {
-    display: flex;;
+    display: flex;
 }
 
 footer .link_area li ~ li {
@@ -398,97 +398,5 @@ footer ul a:hover img {
     header .inner {
         padding: 11px 20px;
     }
-
-    /* banner */
-    .banner {
-        padding-top: 50px;
-    }
-
-    .banner.bottom {
-        margin-top: 50px;
-    }
-
-    .banner .inner {
-        display: block;
-        max-width: 700px;
-        width: 100%;
-        line-height: 0.9;
-    }
-
-    .banner .inner .text_area {
-        margin-top: 0;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .banner .inner .text_area p {
-        font-size: 30px;
-    }
-
-    .banner .inner img {
-        width: 100%;
-    }
-
-    /* 사이트 설명 */
-    .desc_list {
-        margin-top: 50px;
-        width: 100%;
-        max-width: 600px;
-        padding: 0 20px;
-    }
-
-    .desc_list li {
-        display: block;
-    }
-
-    .desc_list li ~ li {
-        margin-top: 80px;
-    }
-
-    .desc_list li:first-child {
-        padding-left: 0;
-    }
-
-    .desc_list li.right {
-        padding-right: 0;
-    }
-
-    .desc_list li:last-child div {
-        margin-right: 0;
-    }
-
-    .desc_list li > div {
-        margin-right: 0;
-        padding: 20px;
-    }
-
-    .desc_list li.right div {
-        margin-left: 0;
-    }
-
-    .desc_list li > div strong {
-        font-size: 20px;
-    }
-
-    .desc_list li > div p {
-        font-size: 16px;
-    }
-
-    .desc_list li img {
-        width: 100%;
-    }
-
-    /* footer */
-    footer > div {
-        padding: 32px 0 50px;
-        width: 100%;
-        display: block;
-        text-align: center;
-    }
-
-    footer ul {
-        margin-top: 20px;
-        justify-content: center;
-    }
-
+    
 }
