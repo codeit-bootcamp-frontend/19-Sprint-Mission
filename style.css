@@ -210,7 +210,7 @@ footer {
     .top-contents {
         flex-direction: column;
         justify-content: center;
-        padding-top: 84px 116px 0px 116px;
+        margin-top: 84px;
         width: 100%;
         gap: 221px;
     }
@@ -314,7 +314,7 @@ footer {
     
     /* top */
     .top-contents {
-        padding-top:48px;
+        margin-top:48px;
         gap: 132px;
     }
     .top-description {
