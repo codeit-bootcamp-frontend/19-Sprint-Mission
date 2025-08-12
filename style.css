@@ -15,6 +15,12 @@ body {
     margin: 0 auto;
 }
 
+.mid-wrap {
+  width: 100%;
+  max-width: 988px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1920px) {
   .header {
     padding: 20px 200px;
@@ -38,7 +44,8 @@ body {
 header {
     background-color: #ffffff;
     padding: 9.5px 0;
-
+    position: sticky;
+    top: 0
 }
 
 .header {
@@ -58,7 +65,7 @@ header {
 
 .site-logo a {
     color: #3692ff;
-    font-family: 'ROKAF Sans';
+    font-family: 'ROKAFSansMedium';
     font-size: 25.63px;
     font-weight: 700;
     text-decoration: none;
@@ -129,10 +136,10 @@ header {
 
 .home-mid-inside {
   display: flex;
-  justify-content: space-between;
+  gap: 64px;
   flex-grow: 1;
   flex-shrink: 0;
-  min-width: 1120px;
+  min-width: 988px;
   align-items: center;
   background-color: #fcfcfc;
 }
@@ -144,8 +151,13 @@ header {
 .home-mid-explain {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 24px;
   padding: 0 23.5px;
+}
+
+.right {
+  text-align: end;
 }
 
 .home-mid-explain-top {
