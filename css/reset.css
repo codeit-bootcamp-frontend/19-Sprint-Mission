@@ -89,6 +89,10 @@ body {
     transition: opacity 0.5s;
 }
 
+.btn:disabled {
+    background-color: var(--gray400);
+}
+
 .btn:hover {
     opacity: 0.8;
 }
