@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Pragma" content="no-cache"/>
@@ -25,35 +25,37 @@
         <input id="signup_email" type="email" name="email" placeholder="이메일을 입력해 주세요"/>
       </div>
       <div class="input_box">
-        <label for="nickname">닉네임</label>
+        <label for="signup_nickname">닉네임</label>
         <input id="signup_nickname" type="text" name="nickname" placeholder="닉네임을 입력해 주세요"/>
       </div>
       <div class="input_box">
-        <label for="password">비밀번호</label>
+        <label for="signup_password">비밀번호</label>
         <div class="input-wrapper">
           <input id="signup_password" type="password" name="password" placeholder="비밀번호를 입력해 주세요"/>
-          <img
-              src="images/input/invisible_input.svg"
-              alt="비밀번호 숨기기"
-              class="password-toggle"
-            />
+            <botton class="password-toggle-button" aria-label="비밀번호 표시/숨기기">
+              <img
+                src="images/input/invisible_input.svg"
+                alt="비밀번호 숨기기"
+              />
+            </botton>
         </div>
       </div>
       <div class="input_box">
-        <label for="confirm_password">비밀번호 확인</label>
+        <label for="signup_confirm_password">비밀번호 확인</label>
         <div class="input-wrapper">
           <input id="signup_confirm_password" type="password" name="confirm_password" placeholder="비밀번호를 입력해 주세요"/>
-          <img
-              src="images/input/invisible_input.svg"
-              alt="비밀번호 숨기기"
-              class="password-toggle"
-            />
+            <botton class="password-toggle-button" aria-label="비밀번호 표시/숨기기">
+              <img
+                src="images/input/invisible_input.svg"
+                alt="비밀번호 숨기기"
+              />
+            </botton>
         </div>
       </div>
       <button type="submit" class="button submitBtn">로그인</button>
     </form>
     <div id="quicklogin_container">
-      <p>간편 로그인하기</p>
+      <h3>간편 로그인하기</h3>
       <div class="quicklogin_btn_area">
         <a href="https://www.google.com/" target="_blank">
           <img src="images/sns/google-icon.png" alt="구글 로그인">

@@ -21,7 +21,7 @@
 
 /* signup-quicklogin */
 #quicklogin_container{
-  width: calc(100% - 46px);
+  width: 100%;
   background-color:#E6F2FF;
   height: 74px;
   padding: 0 23px;
@@ -30,8 +30,10 @@
   margin-bottom: 24px;
 }
 
-#quicklogin_container>p{
+#quicklogin_container>h3{
   line-height: 74px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .quicklogin_btn_area{

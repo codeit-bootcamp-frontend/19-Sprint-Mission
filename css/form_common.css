@@ -17,7 +17,7 @@
 }
 
 .input_box input{
-  width: calc(100% - 48px);
+  width: 100%;
   height: 56px;
   border-radius: 12px;
   border: 2px solid rgba(49, 130, 246, 0.00);
@@ -36,7 +36,7 @@
   position: relative;
 }
 
-.input-wrapper>img{
+.input-wrapper .password-toggle-button{
   position: absolute;
   top:16px;
   right:24px;
