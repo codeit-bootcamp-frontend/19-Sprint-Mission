@@ -1,7 +1,7 @@
 body {
     display: flex;
+    padding-top: 60px;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: #FCFCFC;
@@ -9,7 +9,6 @@ body {
 
 .signup-container {
     width: 640px;
-    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +37,7 @@ body {
 .email, .name, 
 .password-box, .password-repeat-box {
     gap: 16px;
-    font: 18px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 26px;
     color: var(--gray800);
@@ -98,7 +97,6 @@ body {
     padding: 16px 23px;
     display: flex;
     align-items: center;
-    justify-items: center;
     justify-content: space-between;
     border-radius: 8px;
     background-color: #E6F2FF;
