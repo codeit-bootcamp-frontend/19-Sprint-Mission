@@ -88,6 +88,7 @@ body {
 .login-pass-again > div {
   display: flex;
   justify-content: space-between;
+  /* align-items: flex-start; */
 }
 
 .login-email > div > input,
@@ -101,6 +102,17 @@ body {
 
 input:focus {
   outline: none;
+}
+
+.show-hide-button {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/btn_visibility_off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
 }
 
 .signup-button,
