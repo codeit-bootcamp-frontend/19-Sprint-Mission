@@ -7,10 +7,6 @@ body {
     background-color: #FCFCFC;
 }
 
-.logo a{
-    cursor: pointer;
-}
-
 .login-container {
     width: 640px;
     margin: auto;
