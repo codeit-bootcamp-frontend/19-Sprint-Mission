@@ -37,7 +37,6 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #DFDFDF;
-  background-color: #fff;
 }
 .header .inner{
   display: flex;
@@ -54,7 +53,7 @@
   font-size: 0;
   text-indent: -9999px;
   color: transparent;
-  background: url(./../img/common/logo.png) no-repeat 0 0 / cover;
+  background: url(./../img/common/logo.png) no-repeat 0 0;
 }
 .footer{
   font-size: 1rem;
@@ -81,8 +80,7 @@
   align-items: center;
   gap: 12px;
 }
-.footer .sns a,
-.footer .sns a img{
+.footer .sns a{
   display: inline-block;
   width: 20px;
   height: 20px;
