@@ -4,33 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="assets/css/commom.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/commom.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <div>
-        <img src="../assets/images/panda_logo_L.svg" alt="로고">
-        <form class="login-wrap" action="/login" method="POST"> 
-            <div class="login-box">
-                <div class="email">
-                    <label for="user-email">이메일</label>
-                    <input type="email" id="user-email" placeholder="codeit@email.com">
+    <div class="login-container">
+        <a href="../index.html">
+            <img src="../assets/images/panda_logo_L.svg" alt="로고">
+        </a>
+        <div class="login-wrap">
+            <form class="login-box" action="/login" method="POST"> 
+                <div class="input-box">
+                    <div class="email">
+                        <label for="user-email">이메일</label>
+                        <input type="email" id="user-email" placeholder="codeit@email.com">
+                    </div>
+                    <div class="password">
+                        <label for="user-password">비밀번호</label>
+                        <div class="password-input">
+                            <input type="password" id="user-password" placeholder="비밀번호">
+                            <img src="../assets/images/eye.svg" alt="비밀번호 보이기/숨기기" class="password-toggle-icon" id="passwordToggle">
+                        </div>
+                    </div>
                 </div>
-                <div class="password">
-                    <label for="user-password">비밀번호</label>
-                    <input type="password" id="user-password" placeholder="비밀번호">
-                </div>
-            </div>
-            <button type="submit" class="login-button">로그인</button>
-        </form>
-        <div class="login-option-box">
+                <button type="submit" class="login-button">로그인</button>
+            </form>
             <div class="login-option">
                 <h3>간편 로그인하기</h3>
-                <button><img src="../assets/images/google_lg.svg" alt="구글"></button>
-                <button><img src="../assets/images/kakao_lg.svg" alt="카카오"></button>
+                <div class="login-option-button">
+                    <a href="https://www.google.com/">
+                        <img src="../assets/images/google_lg.svg" alt="구글">
+                    </a>
+                    <a href="https://www.kakaocorp.com/page/">
+                        <img src="../assets/images/kakao_lg.svg" alt="카카오">
+                    </a>
+                </div>
             </div>
+            <p class="signup">판다마켓이 처음이신가요? <a href="../page/signup.html">회원가입</a></p>
         </div>
-        <p class="signup">판다마켓이 처음이신가요? <a href="../page/signup.html">회원가입</a></p>
     </div>
 </body>
 </html>
