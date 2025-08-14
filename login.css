@@ -1,13 +1,28 @@
-.wrap{
+/*body {
+    display: flex;
+    justify-content: center;
+    /* 가로 중앙 정렬 }*/
+
+.wrap {
+    display: flex;
+    max-width: 1920px;
+    /* 최대 폭 */
+    margin: 0 auto;
+    /* 가운데 정렬 */
+    padding: 231px 20px;
+    /* 좌우 패딩은 고정값 대신 최소 여백 */
+}
+
+/*.wrap{
     display: flex;
     width: 1920px;
     padding: 231px 640px;
     justify-content: center;
     align-items: center;
     background: #FCFCFC;
-}
+}*/
 
-.formWrap{
+.formWrap {
     display: flex;
     width: 640px;
     flex-direction: column;
@@ -20,31 +35,31 @@ a,
 a:visited,
 a:hover,
 a:active {
-  text-decoration: none;  
-  color: inherit;          
+    text-decoration: none;
+    color: inherit;
 }
 
 .input-common {
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
-  border-radius: 12px;
-  background: #F3F4F6;
-  border: 2px solid rgba(49, 130, 246, 0.00);
-  box-sizing: border-box;
-  font-size: 16px;
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
 
-.panda_logo{
+.panda_logo {
     display: flex;
     align-items: center;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     width: 396px;
     height: 132px;
 }
 
-.logo{
+.logo {
     color: var(--brand-blue, #3692FF);
     font-family: "ROKAF Sans";
     font-size: 66.344px;
@@ -56,7 +71,7 @@ a:active {
 
 
 
-.formWrap.panda_logo.blind{
+.formWrap.panda_logo.blind {
     color: var(--brand-blue, #3692FF);
     font-family: "ROKAF Sans";
     font-size: 66.344px;
@@ -66,7 +81,7 @@ a:active {
 
 }
 
-.authForm.socialBtn-main.guideBtn{
+.authForm.socialBtn-main.guideBtn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,14 +90,14 @@ a:active {
 }
 
 
-.panda_face{
+.panda_face {
     width: 103.529px;
     height: 103.88px;
     flex-shrink: 0;
     margin: auto;
 }
 
-.btn_lg{
+.btn_lg {
     display: flex;
     width: 640px;
     height: 56px;
@@ -99,10 +114,11 @@ a:active {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 160% */
+    line-height: 32px;
+    /* 160% */
 }
 
-.btnTxt{
+.btnTxt {
     color: var(--Primary-100, #3692FF);
     font-family: Pretendard;
     font-size: 14px;
@@ -117,7 +133,7 @@ a:active {
     text-underline-position: from-font;
 }
 
-.socialBtn-main{
+.socialBtn-main {
     display: flex;
     height: 74px;
     flex-direction: column;
@@ -131,7 +147,7 @@ a:active {
     background: #E6F2FF;
 }
 
-.socialBtn{
+.socialBtn {
     display: flex;
     width: 594px;
     justify-content: space-between;
@@ -139,7 +155,7 @@ a:active {
 }
 
 
-.socialBtn-box-google img{
+.socialBtn-box-google img {
     display: flex;
     width: 22px;
     height: 22px;
@@ -148,7 +164,8 @@ a:active {
     flex-shrink: 0;
     margin: 10px 10px 10px 10px;
 }
-.socialBtn-box-google{
+
+.socialBtn-box-google {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
@@ -157,23 +174,23 @@ a:active {
 }
 
 
-.socialBtn-box-kakao img{
+.socialBtn-box-kakao img {
     width: 26px;
     height: 24px;
     flex-shrink: 0;
     margin: 10px 8px 8px 8px;
 }
 
-.socialBtn-box-kakao{
+.socialBtn-box-kakao {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
     background-color: #F5E14B;
     border-radius: 100%;
-    
+
 }
 
-#user-email{
+#user-email {
     display: flex;
     width: 640px;
     height: 56px;
@@ -190,7 +207,7 @@ a:active {
     border: 2px solid rgba(49, 130, 246, 0.00);
 }
 
-#user-pw{
+#user-pw {
     display: flex;
     width: 640px;
     height: 56px;
@@ -202,22 +219,23 @@ a:active {
     background: var(--Cool-Gray-100, #F3F4F6);
 }
 
-#user-pw.login_eyes{
+#user-pw.login_eyes {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
 }
 
-.tit{
+.tit {
     text-align: center;
     color: var(--Secondary-800, #1F2937);
-/* pretendard/lg-16px-medium */
+    /* pretendard/lg-16px-medium */
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 26px; /* 162.5% */
+    line-height: 26px;
+    /* 162.5% */
 }
 
 .ipt-email,
@@ -228,14 +246,14 @@ a:active {
     gap: 16px;
 }
 
-.authForm{
+.authForm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,33 +262,33 @@ a:active {
 }
 
 .pw-box {
-  display: flex;
-  align-items: center;
-  width: 640px;
-  height: 56px;
-  padding: 0 16px;
-  border-radius: 12px;
-  background: #F3F4F6;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .input-common {
-  flex: 1; 
-  border: none;
-  background: transparent;
-  font-size: 16px;
-  height: 100%;
-  outline: none;
-  padding-left: 16px;
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    height: 100%;
+    outline: none;
+    padding-left: 16px;
 }
 
 .icon-wrapper {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
