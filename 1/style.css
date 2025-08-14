@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", "Noto Sans KR", sans-serif;
   word-break: keep-all;
 }
 
@@ -32,11 +32,12 @@ header {
   height: 70px;
 }
 
-header button {
+header .button {
   width: 128px;
   height: 48px;
   border-radius: 8px;
   border: none;
+  flex-shrink: 0;
 }
 
 h1, h2 {
@@ -57,14 +58,17 @@ h1, h2 {
   font-weight: 800;
 }
 
-.landing button {
+.landing .button {
   width: 357px;
   height: 56px;
   border-radius: 40px;
   border: none;
 }
 
-button {
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
   background-color: #3692FF;
   color: #F3F4F6
@@ -82,6 +86,7 @@ button {
 .cards-landing {
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   height: 340px;
 }
 
@@ -99,12 +104,14 @@ button {
   height: 444px;
   border-radius: 12px;
   display: flex;
-  justify-content: space-between;
+  gap: 0 64px;
   align-items: center;
+  justify-content: center;
   flex-wrap: nowrap;
   background-color: #fcfcfc;
-  padding: 0 23.5px;
-  flex-direction: row-reverse;}
+  flex-direction: row-reverse;
+  flex-shrink: 0;
+}
 
 .cards.reverse {
   flex-direction: row;
@@ -118,6 +125,15 @@ button {
   height: 260px;
   display: flex;
   flex-direction: column;
+}
+
+.cards-landing .text {
+  height: 100%;
+  gap: 32px;
+  padding-top: 40px;
+}
+
+.cards .text {
   justify-content: space-around;
 }
 
@@ -125,21 +141,13 @@ button {
   height: 400px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
-/*
-.cards-landing.bottom > h2 {
-  margin-top: 112.5px; 
-  margin-right: 69px; 
-} */
 
 footer {
   width: 100%;
-  max-width: 1120px;
   height: 160px;
-}
-
-footer.container {
   background-color: #111827;
   color: #E5E7EB;
   font-size: 16px;
@@ -148,8 +156,9 @@ footer.container {
 .footer-contents { 
   display: flex;
   justify-content: space-between;
-  height: 100%;
   padding-top: 32px;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .legal-links {
@@ -158,6 +167,11 @@ footer.container {
   align-items: center;
   width: 159px;
   height: 19px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #copyright {
