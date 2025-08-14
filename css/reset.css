@@ -23,9 +23,9 @@ audio, canvas, progress, video {display:inline-block; vertical-align:baseline;}
 html {font-size:16px;}
 html,
 pre {font-family:'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif; font-weight:300;}
-body {color:#374151; line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none;}
-h1,h2,h3,h4,h5,h6 {color:#374151; font-size:inherit; font-weight:700;}
-a {color:#374151; text-decoration: none; cursor:pointer;}
+body {color:var(--gray700); line-height:1.5; word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none; text-size-adjust:none;}
+h1,h2,h3,h4,h5,h6 {color:var(--gray700); font-size:inherit; font-weight:700;}
+a {display:inline-block; color:var(--gray700); text-decoration: none; cursor:pointer;}
 address {font-style:normal;}
 blockquote, q {quotes:none;}
 blockquote:before, blockquote:after,
@@ -43,3 +43,18 @@ th {font-weight:500;}
 caption, legend {position:static; width:1px; height:1px; clip:rect(0 0 0 0); overflow:hidden;}
 fieldset, legend {background-color:transparent;}
 hr {height:0; border:0; background-color:transparent;}
+
+
+button {display:inline-block; margin:0; padding:0; border:0; background-color:transparent; text-align:center; overflow:visible; box-sizing:border-box;}
+button,
+input[type=button], input[type=reset], input[type=submit] {vertical-align:middle; cursor:pointer; -webkit-appearance:button;}
+button[disabled], button[disabled]:hover, input[disabled] {cursor:default;}
+
+button, input, select, option, optgroup, textarea {border-radius:0; color:var(--gray800); font-family:'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'gulim', '굴림', Helvetica, sans-serif; font-size:1rem; }
+button, select {text-transform:none;}
+input, select {border:none; -webkit-appearance:none; -moz-appearance:none; -ms-appearance:none; -o-appearance:none; appearance:none; -webkit-border-radius:0;}
+
+input::placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
+input::-webkit-input-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
+input::-moz-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
+input:-ms-input-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
