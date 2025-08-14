@@ -10,17 +10,19 @@
     transition: opacity 0.5s;
 }
 
-.btn:disabled {
-    background-color: var(--gray400);
-}
-
 .btn:hover {
     opacity: 0.8;
 }
 
+/* 버튼 large 버전 */
 .btn.large {
     padding:12px 124px;
     border-radius: 40px;
+}
+
+/* 버튼 비활성화 */
+.btn:disabled {
+    background-color: var(--gray400);
 }
 
 /* input 공통 */
@@ -41,12 +43,34 @@ input[type="password"] {
     border: none;
     padding: 16px 24px 14px;
     border-radius: 12px;
+    border: 1px solid var(--gray100);
+    transition: 0.5s border;
 }
 
 input::placeholder {
     color: var(--gray400);
 }
 
+/* input 완료 */
+input.complete {
+    border-color : var(--blue);
+}
+
+/* input 에러 */
+input.error {
+    border-color: var(--error);
+}
+
+.input_group .error_text {
+    display: block;
+    margin-top: 8px;
+    text-indent: 16px;
+    color: var(--error);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* 비밀번호 */
 .input_body.password {
     position: relative;
 }
