@@ -58,10 +58,10 @@ input[type="password"] + .password_visibility {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background: url('img/ico_password_visibility.png');
+    background: url('../img/ico_password_visibility.png');
     background-size: 24px;
 }
 
 input[type="password"] + .password_visibility.on {
-    background-image: url('img/ico_password_visibility_on.png');
+    background-image: url('../img/ico_password_visibility_on.png');
 }
