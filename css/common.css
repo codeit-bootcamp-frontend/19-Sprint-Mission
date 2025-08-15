@@ -7,7 +7,7 @@
     text-align: center;
     border-radius: 8px;
     background-color: #3691ff;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, background 0.5s;
 }
 
 .btn:hover {
@@ -78,8 +78,7 @@ input.error {
 input[type="password"] + .password_visibility {
     position: absolute;
     right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13px;
     width: 24px;
     height: 24px;
     background: url('../img/ico_password_visibility.png');
