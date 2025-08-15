@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --blue: #3692ff;
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+}
+
+html {
+    font-family: Pretendard, sans-serif; "ROKAFSans";
+    word-break: keep-all;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin: 167px auto;
+}
+
+.panda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22.24px;
+}
+
+.panda-logo {
+    width: 103px;
+    height: 103px;
+}
+
+.panda-market {
+    font-size: 66.34px;
+    font-weight: 700;
+    color: #3692FF;
+    text-align: center;
+}
+
+.signup-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.email-text, .alias-text, .password-text, .verify-password-text {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: top;
+    color: #1F2937;
+}
+
+.email, .alias, .password, .verify-password {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.alias {
+
+}
+
+.password {
+
+}
+
+.verify-password {
+
+}
+
+input {
+    border: 2px solid #F3F4F6;
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: Regular; 
+    gap: 10px;
+    text-align: left;
+    padding: 16px 24px;
+}
+
+input::placeholder{
+ 	color: #1F2937
+}
+
+form {
+    width: 640px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.open {
+    position: relative;
+    display: inline-block;
+}
+
+.close {
+    position: relative;
+    display: inline-block;
+}
+
+.open-eye, .close-eye {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.signup-button {
+    display: inline-block;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #3692FF;
+    width: 100%;
+    height: 56px;
+    padding: 16px 124px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #F3F4F6;
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: #1967D6;
+}
+
+.easy-login-container {
+    border: 1px solid #e6f2ff;
+    background-color: #E6F2FF;
+    width: 100%;
+    height: 100%;
+    padding: 16px 23px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.easy-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.easy-login-text {
+    font-size:  16px;
+    font-weight: 500;
+    color: #1F2937;
+}
+
+.web-link {
+    text-align: left;
+    vertical-align: top;
+    gap: 16px;
+}
+
+.user-login {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}

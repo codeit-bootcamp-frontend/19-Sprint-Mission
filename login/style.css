@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --blue: #3692ff;
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+}
+
+html {
+    font-family: Pretendard, sans-serif; "ROKAFSans";
+    word-break: keep-all;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+}
+
+header {
+
+}
+
+footer {
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 167px auto;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22.24px;
+}
+
+.panda-logo {
+    width: 103px;
+    height: 103px;
+}
+
+.title-text {
+    font-family: ROKAF Sans;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 66.34px;
+    display: flex;
+    align-items: center;
+    top: 23.98px;
+    color: #3692FF;
+}
+
+.login-menu {
+    width: 640px;
+    text-align: center;
+    vertical-align: top;
+    gap: 40px;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    vertical-align: top;
+    gap: 24px;
+}
+
+.email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.email-password {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.email-text, .password-text {
+    font-size: 18px;
+    font-weight: 700;
+    font-style: bold;
+    font-family: Pretendard;
+    color: #1F2937;
+    margin: 0 0;
+}
+
+form {
+    width: 640px;
+    height: 56px;
+}
+
+.box-eye {
+    position: relative;
+    display: inline-block;
+}
+
+#eye {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    cursor: pointer;
+}
+
+input {
+    border: 2px solid #F3F4F6;
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: Regular; 
+    gap: 10px;
+    text-align: left;
+    padding: 16px 24px;
+}
+
+input::placeholder{
+ 	color: #1F2937
+}
+
+.email-text {
+
+}
+
+.password-text {
+
+}
+
+.login {
+    display: inline-block;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #3692FF;
+    width: 100%;
+    height: 56px;
+    padding: 16px 124px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #F3F4F6;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: #1967D6;
+}
+
+.easy-login-container {
+    border: 1px solid #e6f2ff;
+    background-color: #E6F2FF;
+    width: 100%;
+    height: 100%;
+    padding: 16px 23px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.easy-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.easy-login-text {
+    font-size:  16px;
+    font-weight: 500;
+    color: #1F2937;
+}
+
+.web-link {
+    text-align: left;
+    vertical-align: top;
+    gap: 16px;
+}
+
+.signup {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}

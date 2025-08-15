@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>login</title>
+        <title>로그인</title>
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/login/style.css">
     </head>
-    <body>
-
-    </body>
+        <body>
+            <div class="container">
+                <div class="login-menu">
+                    <div class="page-title">
+                        <a href="/"><img src="../images/logo.png" class="panda-logo" alt="판다 로고"></a>
+                        <h1 class="title-text">판다마켓</h1>
+                    </div>
+                    <div class="main-menu">
+                        <div class="login-input">
+                            <div class="email-password">
+                                <div class="email-container">
+                                    <span class="email-text">
+                                        이메일
+                                    </span>
+                                    <form>
+                                        <input class="email" name="email" type="email" placeholder="codeit@email.com">
+                                    </div>
+                                    <div class="password-container">
+                                        <span class="password-text">
+                                            비밀번호
+                                        </span>
+                                        <div class="box-eye">
+                                            <input class="password" name="password" type="password" placeholder="●●●●●●●">
+                                            <img src="../images/closed-Eye.png" id="eye" alt="비밀번호 보기 눈 모양 아이콘">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <span class="login">
+                                로그인
+                            </span>
+                        </div>
+                        <div class="easy-login-container">
+                            <div class="easy-login">
+                                <div class="easy-login-text"> 간편 로그인하기 </div>
+                                <div class="web-link">
+                                    <a href="https://www.google.com/"><img src="../images/google.png" alt="구글 이미지"></a>
+                                    <a href="https://www.kakaocorp.com/page/"><img src="../images/kakaotalk.png" alt="카카오 이미지"></a>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="signup">
+                            <span>판다마켓이 처음이신가요?</span>
+                            <a href="../signup/signup.html" class="create-account">회원가입</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
 </html>
