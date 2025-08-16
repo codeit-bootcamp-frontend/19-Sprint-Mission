@@ -16,7 +16,7 @@
         <img src="/images/logo-big.png" alt="홈 페이지로 돌아가기" />
       </a>
       <div class="login__box">
-        <div>
+        <form>
           <label for="user-email">이메일</label>
           <input
             type="email"
@@ -24,8 +24,8 @@
             id="user-email"
             placeholder="codeit@example.com"
           />
-        </div>
-        <div>
+        </form>
+        <form>
           <label for="user-nickname">닉네임</label>
           <input
             type="text"
@@ -33,26 +33,26 @@
             id="user-nickname"
             placeholder="홍길동"
           />
-        </div>
-        <div>
+        </form>
+        <form>
           <label for="user-pwd">비밀번호</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd" />
-            <button class="turn-visible-btn">
+            <button type="button" class="turn-visible-btn">
               <img src="/images/unvisible.png" alt="비밀번호 표시 버튼" />
             </button>
           </div>
-        </div>
-        <div>
+        </form>
+        <form>
           <label for="user-pwd-check">비밀번호 확인</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd-check" />
-            <button class="turn-visible-btn off">
+            <button type="button" class="turn-visible-btn off">
               <img src="/images/visible.png" alt="비밀번호 숨기기 버튼" />
             </button>
           </div>
-        </div>
-        <a href="" class="login__btn">회원가입</a>
+        </form>
+        <button class="login__btn">회원가입</button>
 
         <!-- 간편 로그인 -->
         <div class="login-easy">
