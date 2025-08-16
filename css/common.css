@@ -75,7 +75,8 @@ input.error {
     position: relative;
 }
 
-input[type="password"] + .password_visibility {
+input[type="password"] + .password_visibility,
+input[type="text"] + .password_visibility {
     position: absolute;
     right: 24px;
     top: 13px;
@@ -85,6 +86,7 @@ input[type="password"] + .password_visibility {
     background-size: 24px;
 }
 
-input[type="password"] + .password_visibility.on {
+input[type="password"] + .password_visibility.on,
+input[type="text"] + .password_visibility {
     background-image: url('../img/ico_password_visibility_on.png');
 }

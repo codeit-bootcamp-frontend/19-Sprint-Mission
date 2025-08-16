@@ -142,6 +142,21 @@
 
         }
         joinArea.addEventListener('focusout',focusoutAction);
+
+        // 비밀번호 가려짐 여부 체크
+        const passwordVisibilityBtn = document.querySelector('.password_visibility');
+        
+        function passwordVisibility(e){
+            if(!e.target.classList.contains('on')){
+                e.target.previousElementSibling.setAttribute('type','text');
+                e.target.setAttribute('aria-label','비밀번호 가리기');
+            }else {
+                e.target.previousElementSibling.setAttribute('type','password');
+                e.target.setAttribute('aria-label','비밀번호 확인하기');
+            }
+            e.target.classList.toggle('on')
+        }
+        passwordVisibilityBtn.addEventListener('click',passwordVisibility);
     </script>
 </body>
 </html>
