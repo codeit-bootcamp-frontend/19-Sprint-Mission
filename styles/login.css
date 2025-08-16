@@ -179,6 +179,7 @@ body {
 .login__btn {
   background-color: var(--blue);
   border-radius: 40px;
+  border: none;
   padding: 12px 294px;
   margin-bottom: 24px;
   text-align: center;
