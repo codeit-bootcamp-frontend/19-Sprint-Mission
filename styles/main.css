@@ -336,48 +336,104 @@ footer {
 }
 
 /* media query */
-/* 1920px */
-@media (max-width: 1920px) {
+/* 1200px ~ */
+@media (min-width: 1200px) {
   header {
     width: 100%;
     padding: 9.5px 400px;
   }
+  .bigScreen-only {
+    display: inline;
+  }
 }
 
-/* 1400px */
-@media (max-width: 1600px) {
-  header {
-    width: 100%;
-    padding: 9.5px 200px;
+/* 768px ~ 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: #fcfcfc;
   }
-  .footer__wrapper {
+  header {
+    padding: 9px 24px;
+  }
+  .banner {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    white-space: nowrap;
-  }
-}
-
-/* 1200px */
-@media (max-width: 1100px) {
-  header {
-    padding: 9.5px 50px;
-  }
-  .banner__wrapper {
     justify-content: center;
     align-items: center;
+  }
+  .bigScreen-only {
+    display: none;
+  }
+  .banner.top {
+    margin-top: 0;
+  }
+  .banner__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner__items {
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+    height: 136px;
+    margin: 0 0 211px 0;
+    gap: 24px;
+  }
+  .main li {
+    margin: 24px 24px 0 24px;
   }
   .main__wrapper {
     flex-direction: column;
     padding: 0;
   }
+  .main__img {
+    width: 100%;
+    max-width: 744px;
+  }
+  .texts {
+    margin: 24px 0;
+  }
   .texts__en {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
   }
   .texts__ko-big {
-    font-size: 30px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 42px;
   }
   .texts__ko-small {
     font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
   }
+  /* nth-child(2)로 register 부분 선택 */
+  .main li:nth-child(2) .main__wrapper {
+    flex-direction: column-reverse;
+  }
+  .main li:nth-child(2) .main__img {
+    margin: 0 auto;
+  }
+  .main li:nth-child(2) .texts {
+    margin: 24px 0;
+  }
+  .banner.bottom {
+    margin-top: 56px;
+    text-align: center;
+  }
+  footer {
+    padding: 32px 50px 64px;
+  }
+  .footer__wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* 375px ~ 767px */
+@media (min-width: 375px) and (max-width: 767px) {
 }
