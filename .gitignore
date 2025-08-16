@@ -1,0 +1,13 @@
+# macOS 파일
+.DS_Store
+
+# 윈도우에서 만든 이미지 미리보기 캐시 파일
+Thumbs.db
+
+# 환경 변수
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
