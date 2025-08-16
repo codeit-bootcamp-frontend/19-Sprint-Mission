@@ -191,6 +191,9 @@ header {
 
 .description-box {
     padding: 138px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -201,6 +204,8 @@ header {
     gap: 64px;
     background-color: #FCFCFC;
     border-radius: 12px;
+    width: 998px;
+    height: 444px;
 }
 
 .middle-content {
@@ -213,6 +218,10 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     gap: 64px;
+    background-color: #fcfcfc;
+    border-radius: 12px;
+    width: 998px;
+    height: 444px;
 }
 
 .reverse-body-text {
