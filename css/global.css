@@ -1,0 +1,22 @@
+/* font area */
+.intro .cont-wrap span{font-family: "Abhaya Libre", serif;}
+.head .login,
+.section .wrap,
+.intro .padding-box strong,
+.intro .padding-box p,
+.foot .foot-wrap,
+.foot .foot-copyright,
+.login-area form,
+.login-area .Easy-login,
+.login-area p{
+    font-family: 'Pretendard-Regular';
+}
+
+
+
+.intro span{color: #3692ff; font-size: 18px; font-weight: 800; line-height: 26px;}
+.intro strong, .foot .foot-wrap p{font-size: 40px; font-weight: 700; line-height: 56px;}
+.intro p{font-size: 24px; font-weight: 500; line-height: 32px;}
+.foot-copyright:nth-child(1){color: #9ca3af; min-width: 112px;}
+.foot-copyright li:nth-child(2){color: #e5e7eb;}
+header{position: sticky; top: 0; left: 0; background-color: #ffffff; border-bottom: 1px solid #dfdfdf;}
