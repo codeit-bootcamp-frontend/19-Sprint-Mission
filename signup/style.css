@@ -32,6 +32,13 @@ input{
   font-weight: 700;
   line-height: 26px;
 }
+.hide-text{
+  background-image: url(../images/btn_visibility_off_24px.png);
+  background-position-x: 592px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
 .input-wrapper input{
   background-color: #F3F4F6;
   padding: 10px;
