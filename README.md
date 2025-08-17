@@ -73,4 +73,4 @@
 - 중복되는 코드를 더 줄일 수 있을 것 같은데 아직은 무리인 것 같습니다. 조그마한 팁을 주신다면 더 줄여보도록 노력하겠습니다.
 - 셀프 코드 리뷰를 통해 질문 이어가겠습니다.
 
-링크 제출 : [배포 링크](https://sparkly-narwhal-80e76d.netlify.app/) (아직 배포X)
+링크 제출 : [배포 링크](https://mellifluous-crepe-258320.netlify.app/signup)
