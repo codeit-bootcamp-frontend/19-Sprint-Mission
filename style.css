@@ -21,6 +21,8 @@ p{
 header{
   padding: 9px 200px;
   background-color: #ffffff;
+  position: sticky;
+  top:0px;
 }
 .logo{
   width:153px;
