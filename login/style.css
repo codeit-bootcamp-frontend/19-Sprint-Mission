@@ -40,6 +40,12 @@ input{
   height: 56px;
   border: 0px;
 }
+.hide-text{
+  background-image: url(../images/btn_visibility_off_24px.png);
+  background-position-x: 592px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
 
 ::placeholder{
   color:#1F2937;
