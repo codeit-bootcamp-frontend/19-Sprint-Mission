@@ -138,6 +138,7 @@ a {
   --gray100: #f3f4f6;
   --gray50: #f9fafb;
   --blue: #3692ff;
+  --secondary400: #9ca3af;
 }
 
 * {
@@ -185,6 +186,7 @@ body {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+  background-color: var(--secondary400);
   color: var(--gray100);
   font-size: 20px;
   font-weight: 600;
@@ -257,4 +259,20 @@ input {
 .turn-visible-btn > img {
   width: 24px;
   height: 24px;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .login {
+    max-width: 350px;
+    margin-bottom: 231px;
+  }
+  .login__btn {
+    width: 100%;
+    padding: 16px 124px;
+  }
+  .login > a > img {
+    width: 196px;
+    height: auto;
+    margin-bottom: 24px;
+  }
 }
