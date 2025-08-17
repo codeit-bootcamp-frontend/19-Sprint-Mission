@@ -4,7 +4,7 @@
 
 main{
   width:640px;
-  height: 618px;
+  height: 857px;
   margin: 231px auto;
   font-family: Pretendard;
 }
@@ -82,13 +82,13 @@ button{
   height: 42px;
 }
 
-.signup{
+.login-link{
   text-align: center;
   width:100%;
   font-size: 14px;
   font-weight: 500;
   color:#1F2937;
 }
-.signup a{
+.login-link a{
   color:#3692FF;
 }
