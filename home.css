@@ -19,6 +19,17 @@
   --gray50: #f9fafb;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.top-banner-section,
+.main-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* 버튼 2개 호버 */
 a.button:hover {
   background-color: #1251aa;
@@ -34,6 +45,7 @@ a.button:hover {
 
   width: 100%;
   border-bottom: 1px solid #dfdfdf;
+  background-color: #ffffff;
 }
 
 /* 버튼 */
@@ -167,4 +179,52 @@ a.button:hover {
   justify-content: center;
   align-items: flex-start;
   gap: 12px;
+}
+
+/* .br_text {
+  display: none;
+} */
+
+/* 태블릿 사이즈 */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .br_text {
+    display: none;
+  }
+
+  .top-banner-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-background {
+    width: 100%;
+    height: 771px;
+  }
+  .top-banner-textbox {
+    display: flex;
+    justify-content: start;
+    padding: 84px 551px;
+  }
+
+  .main-section-color {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .main-section-color.reverse {
+    display: flex;
+    align-items: end;
+    flex-direction: column-reverse;
+  }
+
+  .main-section-textbox.reverse {
+    display: flex;
+    text-align: end;
+  }
+}
+
+/* 모바일 사이즈 */
+
+@media (min-width: 375px) and (max-width: 767px) {
 }
