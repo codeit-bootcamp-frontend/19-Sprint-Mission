@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판다마켓-회원가입페이지</title>
+  <link rel="stylesheet" href="./css/style.css?=${date()getTime()}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="container_login">
+      <h1 class="logo">
+        <img src="./img/logo_big.png" alt="판다마켓">
+      </h1>
+      <form action="/login" method="post">
+        <div class="input_box">
+          <label for="email">이메일</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div class="input_box">
+          <label for="name">닉네임</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input_box">
+          <label for="password">비밀번호</label>
+          <div class="password_box">
+            <input type="password" id="password" name="password" required>
+            <button type="button" class="password-toggle" id="passwordToggle">눈 아이콘</button>
+          </div>
+        </div>
+        <div class="input_box">
+          <label for="password_confirm">비밀번호 확인</label>
+          <div class="password_box">
+            <input type="password" id="password_confirm" name="password_confirm" required>
+            <button type="button" class="password-toggle" id="passwordToggle">눈 아이콘</button>
+          </div>
+        </div>
+        <button type="submit" class="submit">회원가입</button>
+        <div class="login_sns">
+          <p>간편 로그인하기</p>
+          <div class="btn_wrap">
+            <button type="button" class="google">구글</button>
+            <button type="button" class="kakao">카카오톡</button>
+          </div>
+        </div>
+      </form>
+      <p class="exception">이미 회원이신가요?<a href="./login.html">로그인</a></p>
+    </div>
+  </div>
+</body>
+</html>
