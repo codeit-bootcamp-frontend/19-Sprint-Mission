@@ -2,13 +2,57 @@
     box-sizing: border-box;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 html {
     font-family: Pretendard, sans-serif; "ROKAFSans";
     word-break: keep-all;
 }
 
 body {
-    min-width: 100%;
+    width: 100%;
     height: 100%;
 }
 
@@ -45,13 +89,21 @@ header {
     font-weight: 700;
     text-align: center;
     color: #3692FF;
-    vertical-align: bottom;
 }
 
 .main-image {
-    background-size: auto;
     background-color: #cfe5ff;
+    width: 100%;
     height: 540px;
+    gap: 7px;
+    position: relative;
+}
+
+.position-box {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    right: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,14 +112,13 @@ header {
 .main-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 32px;
     text-align: left;
+    padding-bottom: 60px;
 }
 
 .panda-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40px;
     height: 40.14px;
 }
@@ -90,27 +141,44 @@ header {
     background-color: #1967D6;
 }
 
-.more-watch {
-    border-radius: 40px;
-    padding: 16px 124px;
-    text-decoration: none;
-    color: #F9FAFB;
-    background-color: #3692FF;
+.item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
     font-size: 20px;
     font-weight: 600;
-    display: inline-block;
+    padding: 16px 124px;
+    border-radius: 40px;
+    background-color: #3692FF;
+    color: #f9fafb;
+    text-decoration: none;
+    white-space: nowrap;
     gap: 10px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #1967D6;
 }
 
 #top-img {
-    margin-top: 199px;
+    
 }
 
 .big-text {
     font-size:40px;
     font-weight: 700;
     color: #374151;
-    margin: 0 0;
+    text-align: left;
+}
+
+#trust-panda {
+    padding-bottom: 60px;
+    white-space: nowrap;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .text {
@@ -123,6 +191,10 @@ header {
 
 .description-box {
     padding: 138px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .description {
@@ -130,6 +202,10 @@ header {
     justify-content: center;
     align-items: center;
     gap: 64px;
+    background-color: #FCFCFC;
+    border-radius: 12px;
+    width: 998px;
+    height: 444px;
 }
 
 .middle-content {
@@ -142,6 +218,10 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     gap: 64px;
+    background-color: #fcfcfc;
+    border-radius: 12px;
+    width: 998px;
+    height: 444px;
 }
 
 .reverse-body-text {
@@ -171,25 +251,14 @@ header {
     flex-direction: column;
 }
 
-#trust-panda {
-    color: #374151;
-}
-
-#last-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #cfe5ff;
-    width: 1920px;
-    height: 540px;
-}
-
 .last-panda {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1110px;
-    height: 397px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    right: 50%;
 }
 
 .codeit, .privacy, .FAQ {
@@ -231,7 +300,7 @@ a {
 }
 
 .footer {
-    width: 1120px;
+    width: 100%;
     height: 20px;
     display: flex;
     justify-content: space-between;
