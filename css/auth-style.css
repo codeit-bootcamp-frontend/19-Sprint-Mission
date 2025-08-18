@@ -10,9 +10,9 @@
 }
 
 .logo-img {
-  display: block;
   width: 396px;
   height: 132px;
+  display: block;
 }
 
 /* 로그인, 회원가입 폼 */
@@ -38,13 +38,13 @@
 }
 
 .auth-input {
-  width: 100%;
   padding: 16px 24px;
-  font-size: 16px;
-  line-height: 26px;
-  background-color: var(--gray-100);
   border: none;
   border-radius: 12px;
+  width: 100%;
+  background-color: var(--gray-100);
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .auth-input::placeholder {
@@ -59,39 +59,38 @@
   position: absolute;
   top: 50%;
   right: 24px;
+  transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  transform: translateY(-50%);
   cursor: pointer;
 }
 
 .auth-button {
   padding: 12px;
+  border-radius: 40px;
   font-size: 20px;
   line-height: 32px;
   color: var(--gray-100);
-  border-radius: 40px;
   cursor: pointer;
 }
 
 /* 하단 영역 */
 .sns-login-area {
   padding: 16px 23px;
+  border-radius: 8px;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 16px;
   align-items: center;
+  gap: 16px;
   background-color: var(--background-100);
-  border-radius: 8px;
 }
 
 .sns-login-text {
   flex-grow: 1;
   font-size: 16px;
-  line-height: 26px;
   font-weight: 500;
+  line-height: 26px;
   color: var(--gray-800);
 }
 
@@ -106,8 +105,8 @@
 
 .auth-guide-area {
   font-size: 14px;
-  line-height: 24px;
   font-weight: 500;
+  line-height: 24px;
 }
 
 .auth-guide-text {
