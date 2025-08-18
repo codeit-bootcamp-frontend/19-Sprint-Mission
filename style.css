@@ -1,0 +1,314 @@
+/* reset.css v2.0 | 20110126 | License: public domain */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+header {
+  padding: 0 200px;
+  min-width: 10px;
+  max-width: 1120px;
+}
+
+header .wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+}
+
+header a {
+  cursor: pointer;
+}
+
+.main_img_box {
+  background-color: #cfe5ff;
+  height: 540px;
+}
+
+.main_img_box .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.main_img_box .wrap .img_box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main_img_box .wrap .img_box img {
+  margin-top: auto;
+}
+
+.main_img_box .text_btn_box h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.main_img_box .text_btn_box a {
+  width: 100%;
+  display: block;
+  background-color: #3692ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 357px;
+  height: 56px;
+  margin-top: 32px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 40px;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 988px;
+}
+
+article span {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+article h1 {
+  margin: 24px 0 12px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+article p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+article.best_selling_item {
+  margin: 135px auto;
+}
+
+article.best_selling_item .text_box {
+  margin-left: 64px;
+}
+
+article.register_item {
+  margin: 135px auto;
+}
+
+article.register_item .text_box {
+  margin-left: 64px;
+}
+
+article.search_item {
+  margin: 0 auto;
+}
+
+article.search_item .text_box {
+  margin-right: 64px;
+}
+
+footer {
+  background-color: #111827;
+  height: 160px;
+}
+
+footer .text_icon_box {
+  margin: 0 auto;
+  width: 1120px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-top: 32px;
+}
+
+footer .center {
+  display: flex;
+  gap: 30px;
+}
+
+footer .center a:first-child {
+  width: 100px;
+}
+
+footer .center a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e7eb;
+}
+
+footer .icons {
+  display: flex;
+  gap: 12px;
+}
+
+footer .text_icon_box a.facebook {
+  background-image: url(./images/ic_facebook.png);
+}
+
+footer .text_icon_box a.twitter {
+  background-image: url(./images/ic_twitter.png);
+}
+
+footer .text_icon_box a.youtube {
+  background-image: url(./images/ic_youtube.png);
+}
+
+footer .text_icon_box a.instagram {
+  background-image: url(./images/ic_instagram.png);
+}
+
+footer .text_icon_box a {
+  /* color: #fff; */
+  text-decoration: none;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+
+.text_icon_box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9ca3af;
+}
