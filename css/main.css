@@ -50,21 +50,21 @@ p{
 }
 
 /* main - section - mainTopBanner */
-#mainTobBanner, #mainBottomBanner{
+#mainTopBanner, #mainBottomBanner{
   height: 540px;
   background-color: #cfe5ff;
   display: flex;
   align-items: center;
 }
 
-#mainTobBanner{
+#mainTopBanner{
   background-image: url(../images/main/main-top-banner-img.png);
   background-repeat: no-repeat;
   background-position: 68% bottom;
   background-size: 43%;
 }
 
-.mainBtn{
+.main-btn{
   padding: 16px 124px;
   font-size: 20px;
   font-weight: 600;
