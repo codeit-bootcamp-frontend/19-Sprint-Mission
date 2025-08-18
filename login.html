@@ -8,15 +8,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/login.css" />
   </head>
   <body>
     <div class="login">
       <a href="/">
-        <img src="/images/logo-big.png" alt="홈 페이지로 돌아가기" />
+        <img src="/images/main_logo.png" alt="홈 페이지로 돌아가기" />
       </a>
       <div class="login__box">
-        <div>
+        <form>
           <label for="user-email">이메일</label>
           <input
             type="email"
@@ -24,17 +24,17 @@
             id="user-email"
             placeholder="codeit@example.com"
           />
-        </div>
-        <div>
+        </form>
+        <form>
           <label for="user-pwd">비밀번호</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd" />
-            <button class="turn-visible-btn">
+            <button type="button" class="turn-visible-btn">
               <img src="/images/unvisible.png" alt="비밀번호 표시 버튼" />
             </button>
           </div>
-        </div>
-        <a href="" class="login__btn">로그인</a>
+        </form>
+        <button type="button" class="login__btn">로그인</button>
 
         <div class="login-easy">
           <div class="login-easy__wrapper">
