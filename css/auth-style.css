@@ -121,3 +121,22 @@
 .auth-guide-link {
   color: var(--primary-100);
 }
+
+/* Tablet */
+@media screen and (max-width: 1199px) {
+  .auth-container {
+    padding-top: 40px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .auth-container {
+    padding: 24px 16px 0;
+    max-width: 400px;
+  }
+  .logo-img {
+    width: 198px;
+    height: 66px;
+  }
+}
