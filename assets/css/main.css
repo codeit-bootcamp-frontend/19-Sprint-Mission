@@ -10,7 +10,7 @@ header {
     padding: 9px 200px;
     background-color: #ffffff;
     border-bottom: 1px #dfdfdf;
-    position: fixed;
+    position: sticky;
 }
 
 .header-wrap {
@@ -42,6 +42,10 @@ header {
 }
 
 /* banner */
+.banner-title-tb {
+    display: none;
+}
+
 .banner-wrap {
     width: 100%;
     height: 540px;
@@ -60,7 +64,7 @@ header {
     margin-right: auto;
 }
 
-.banner-title {
+.banner-title-pc {
     font-size: 40px;
     font-weight: 700;
     line-height: 140%;
@@ -89,6 +93,10 @@ header {
 }
 
 /* main */
+.content-title-tb {
+    display: none;
+}
+
 main{
     width: 100%;
     display: flex;
@@ -164,7 +172,7 @@ main{
     margin-bottom: 12px;
 }
 
-.content-title {
+.content-title-pc {
     font-size: 40px;
     font-weight: 700;
     line-height: 140%;
@@ -234,7 +242,78 @@ footer {
     }
     
     /* banner */
+    .banner-title-pc {
+        display: none;
+    }
+
+    .banner-wrap {
+        width: 100%;
+        height: 771px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 211px;
+    }
+
+    .banner-box {
+        margin-left: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .banner_button {
+        margin: 0;
+    }
+
+    .banner-image {
+        margin-right: 0;
+    }
+
+    .banner-title-tb {
+        display: inline;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 140%;
+        color: #374151;
+    }
+
+    /* main */
+    .content-title-pc {
+        display: none;
+    }
+
+    .main-container {
+        margin: 24px 24px 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 52px;
+    }
     
+    .content-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+        align-self: stretch;
+    }
+
+    .content-wrap-01 {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+    }
+
+    .content-img {
+        align-self: stretch;
+    }
 }
 
 /* Mobile */
