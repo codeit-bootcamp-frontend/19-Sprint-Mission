@@ -15,7 +15,6 @@ body {
 
 .banner-contents {
   margin: 0 auto;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,8 +22,8 @@ body {
 
 .banner-title {
   font-size: 40px;
-  line-height: 1.4;
   font-weight: 700;
+  line-height: 1.4;
   color: var(--gray-700);
 }
 
@@ -33,7 +32,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 200px;
   width: 100%;
   height: 70px;
   background-color: var(--gray-0);
@@ -52,17 +50,17 @@ body {
 }
 
 .logo-img {
-  width: 153px;
   height: 51px;
 }
 
 .login {
+  border-radius: 8px;
   width: 128px;
   height: 48px;
+  flex-shrink: 0;
   font-size: 16px;
   line-height: 26px;
   color: var(--gray-100);
-  border-radius: 8px;
 }
 
 /* 메인 배너 스타일 */
@@ -76,12 +74,12 @@ body {
 
 .view-more-items {
   margin-top: 32px;
+  border-radius: 40px;
   width: 357px;
   height: 56px;
   font-size: 20px;
   line-height: 32px;
   color: var(--gray-50);
-  border-radius: 40px;
 }
 
 .main-banner-img {
@@ -101,6 +99,7 @@ body {
 }
 
 .overview-contents {
+  border-radius: 12px;
   width: 100%;
   max-width: 988px;
   display: flex;
@@ -108,18 +107,17 @@ body {
   align-items: center;
   gap: 64px;
   background-color: var(--background-50);
-  border-radius: 12px;
 }
 
 .overview-img {
   width: 579px;
-  height: 100%;
+  height: 444px;
 }
 
 .overview-tag {
   font-size: 18px;
-  line-height: 26px;
   font-weight: 800;
+  line-height: 26px;
   color: var(--primary-100);
 }
 
@@ -127,15 +125,15 @@ body {
   margin-top: 12px;
   margin-bottom: 24px;
   font-size: 40px;
-  line-height: 1.4;
   font-weight: 700;
+  line-height: 1.4;
   color: var(--gray-700);
 }
 
 .overview-desc {
   font-size: 24px;
-  line-height: 32px;
   font-weight: 500;
+  line-height: 32px;
   color: var(--gray-700);
 }
 
@@ -195,31 +193,62 @@ body {
   gap: 12px;
 }
 
-@media screen and (max-width: 1020px) {
-  .gnb {
+@media screen and (max-width: 1199px) {
+  /* 헤더 */
+  .header-container {
     padding: 0 24px;
   }
-  .banner-title {
-    font-size: 32px;
-    text-align: center;
-  }
+
+  /* 배너 공통 */
   .banner-contents {
     flex-direction: column;
   }
 
+  .banner-title {
+    text-align: center;
+  }
+
+  /* 이미지 요소 크기 변경 */
+  .main-banner-img,
+  .overview-img,
+  .bottom-banner-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 메인 배너 */
+  .main-banner-contents {
+    padding-top: 84px;
+    gap: 211px;
+  }
+
+  .main-banner-text-area {
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-banner-title-br {
+    display: none;
+  }
+
+  .view-more-items {
+    margin-top: 24px;
+  }
+
+  /* 오버뷰 */
   .overview-container {
-    padding: 32px 16px;
-    gap: 24px;
+    padding: 24px;
+    padding-bottom: 56px;
+    gap: 52px;
   }
 
   .overview-contents {
-    width: 100%;
+    max-width: none;
     flex-direction: column;
     gap: 32px;
-  }
-
-  .overview-img {
-    width: 100%;
+    background-color: transparent;
   }
 
   .overview-text-area {
@@ -231,10 +260,125 @@ body {
   }
 
   .overview-title {
+    margin-top: 16px;
     font-size: 32px;
   }
 
+  .overview-title-br {
+    display: none;
+  }
+
   .overview-desc {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* 하단 배너 */
+  .bottom-banner-contents {
+    padding-top: 201px;
+    gap: 217px;
+  }
+
+  .bottom-banner-title {
+    padding-bottom: 0;
+  }
+
+  /* 푸터 */
+  .footer-contents {
+    padding-right: 102px;
+    padding-left: 102px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 헤더 */
+  .header-container {
+    padding: 0 16px;
+  }
+
+  /* 배너 공통 */
+  .banner-title {
+    font-size: 32px;
+  }
+
+  /* 메인 배너 */
+  .main-banner-contents {
+    padding-top: 48px;
+    gap: 132px;
+  }
+
+  .main-banner-title-br {
+    display: inline;
+  }
+
+  .view-more-items {
+    margin-top: 18px;
+    width: 240px;
+    height: 48px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* 오버뷰 */
+  .overview-container {
+    padding: 52px 16px 83px;
+    gap: 40px;
+  }
+
+  .overview-contents {
+    gap: 32px;
+  }
+
+  .overview-tag {
+    font-size: 16px;
+  }
+
+  .overview-title {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .overview-desc {
+    font-size: 16px;
+  }
+
+  /* 하단 배너 */
+  .bottom-banner-contents {
+    padding-top: 121px;
+    gap: 131px;
+  }
+
+  /* 푸터 */
+  .footer-container {
+    height: fit-content;
+  }
+
+  .footer-contents {
+    padding: 32px 32px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 60px;
+  }
+
+  .footer-company-info {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .footer-link-area {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-link {
+    flex-shrink: 0;
+  }
+
+  .footer-sns-area {
+    grid-column: 3;
+    grid-row: 1;
+    margin-left: auto;
   }
 }
