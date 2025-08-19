@@ -13,7 +13,7 @@
   </head>
   <body>
     <main>
-      <section class="login-section">
+      <form class="login-section">
         <a href="/" class="login-logo">
           <h1>
             <img src="/img/login/login-logo.png" alt="login-logo" />
@@ -21,13 +21,21 @@
         </a>
         <ul class="login-contents">
           <li class="li-input">
-            <label for="">이메일</label>
-            <input type="text" value="codeit@email.com" />
+            <label for="usr_email">이메일</label>
+            <input
+              id="usr_email"
+              type="text"
+              placeholder="이메일을 입력해주세요"
+            />
           </li>
           <li class="li-input">
-            <label for="">비밀번호</label>
+            <label for="usr_password">비밀번호</label>
             <div class="input-inc-btn">
-              <input type="password" value="12341234" />
+              <input
+                id="usr_password"
+                type="password"
+                placeholder="비밀번호를 입력해주세요"
+              />
               <button class="btn-visibility"></button>
             </div>
           </li>
@@ -50,7 +58,7 @@
             <a href="/pages/signup.html">회원가입</a>
           </li>
         </ul>
-      </section>
+      </form>
     </main>
   </body>
 </html>
