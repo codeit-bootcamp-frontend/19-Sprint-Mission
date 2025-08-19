@@ -7,6 +7,10 @@ body {
     background-color: #FCFCFC;
 }
 
+.logo-s {
+    display: none;
+}
+
 .signup-container, .login-container {
     width: 640px;
     display: flex;
@@ -135,4 +139,38 @@ body {
 .signup a {
     text-decoration: underline;
     color: var(--blue100);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+}
+
+/* Mobile */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    body {
+        padding: 80px 16px;
+    }
+
+    .signup-container, .login-container {
+        width: 100%;
+        max-width: 400px;
+        gap: 24px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-s {
+        display: block;
+    }
+
+    .signup-box, .login-box, .input-box {
+        gap: 16px;
+    }
+
+    .email, .name, .password-box, .password-repeat-box, .email, .password {
+        gap: 8px;
+    }
 }
