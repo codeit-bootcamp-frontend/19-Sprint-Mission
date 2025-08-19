@@ -10,12 +10,24 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta
+      property="og:image"
+      content="https://daeya-splint.netlify.app/img/og-image.png"
+    />
+    <meta property="og:url" content="https://daeya-splint.netlify.app/" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <header>
       <div class="inner">
         <a href="/" class="btn-logo">
-          <h1><img src="img/logo.png" alt="logo" /></h1>
+          <h1>
+            <img src="img/logo.png" class="only-pc only-tab" alt="logo" />
+            <img src="img/logo-mo.png" class="only-mo" alt="logo" />
+          </h1>
         </a>
         <a href="/pages/login.html" class="btn-login">로그인</a>
       </div>
@@ -24,7 +36,9 @@
       <section class="section-main">
         <div class="inner">
           <div class="text-box">
-            <h2>일상의 모든 물건을<br />거래해 보세요</h2>
+            <h2>
+              일상의 모든 물건을 <br class="only-pc only-mo" />거래해 보세요
+            </h2>
             <a href="/items">구경하러 가기</a>
           </div>
           <img src="img/Img_home_top.png" alt="img home top" />
@@ -32,11 +46,16 @@
       </section>
       <section class="section-cont">
         <div class="inner">
-          <img src="img/Img_home_01.png" alt="img home 01" />
+          <div class="img-box">
+            <img src="img/Img_home_01.png" alt="img home 01" />
+          </div>
           <div class="text-box">
             <h3>Hot item</h3>
-            <h2>인기 상품을<br />확인해 보세요</h2>
-            <p>가장 HOT한 중고거래 물품을 판다 마켓에서 확인해 보세요</p>
+            <h2>인기 상품을<br class="only-pc" />확인해 보세요</h2>
+            <p>
+              가장 HOT한 중고거래 물품을 <br class="only-tab only mo" />판다
+              마켓에서 확인해 보세요
+            </p>
           </div>
         </div>
       </section>
@@ -44,19 +63,29 @@
         <div class="inner">
           <div class="text-box">
             <h3>Search</h3>
-            <h2>구매를 원하는<br />상품을 검색하세요</h2>
-            <p>구매하고 싶은 물품은 검색해서 쉽게 찾아보세요</p>
+            <h2>구매를 원하는<br class="only-pc" />상품을 검색하세요</h2>
+            <p>
+              구매하고 싶은 물품은 검색해서 <br class="only-tab only mo" />쉽게
+              찾아보세요
+            </p>
           </div>
-          <img src="img/Img_home_02.png" alt="img home 02" />
+          <div class="img-box">
+            <img src="img/Img_home_02.png" alt="img home 02" />
+          </div>
         </div>
       </section>
       <section class="section-cont">
         <div class="inner">
-          <img src="img/Img_home_03.png" alt="img home 03" />
+          <div class="img-box">
+            <img src="img/Img_home_03.png" alt="img home 03" />
+          </div>
           <div class="text-box">
             <h3>Register</h3>
-            <h2>판매를 원하는<br />상품을 등록하세요</h2>
-            <p>어떤 물건이든 판매하고 싶은 상품을 쉽게 등록하세요</p>
+            <h2>판매를 원하는<br class="only-pc" />상품을 등록하세요</h2>
+            <p>
+              어떤 물건이든 판매하고 싶은 상품을
+              <br class="only-tab only mo" />쉽게 등록하세요
+            </p>
           </div>
         </div>
       </section>

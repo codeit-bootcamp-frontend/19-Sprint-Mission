@@ -1,5 +1,6 @@
 /* Common */
 html {
+  min-width: 375px;
   font-size: 62.5%; /* 1rem = 10px */
   @media (max-width: 1024px) {
     font-size: 56.25%; /* 1rem = 9px */
@@ -18,4 +19,46 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* UI */
+input::placeholder {
+  color: var(--gray400);
+}
+
+/* 반응형 */
+@media (min-width: 1200px) {
+  .only-tab {
+    display: none;
+  }
+  .only-mo {
+    display: none;
+  }
+  .only-pc {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .only-pc {
+    display: none;
+  }
+  .only-mo {
+    display: none;
+  }
+  .only-tab {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .only-pc {
+    display: none;
+  }
+  .only-tab {
+    display: none;
+  }
+  .only-mo {
+    display: block;
+  }
 }

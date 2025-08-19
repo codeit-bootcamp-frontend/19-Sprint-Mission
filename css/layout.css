@@ -5,8 +5,8 @@ header {
   left: 0;
   display: flex;
   align-items: center;
-  height: 7rem; /* 70px */
-  border-bottom: 0.1rem solid #dfdfdf;
+  height: 70px;
+  border-bottom: 1px solid #dfdfdf;
   background-color: #fff;
 }
 
@@ -18,17 +18,17 @@ header > .inner {
 
 /* 로그인 버튼 */
 .btn-logo img {
-  height: 5.2rem;
+  height: 51px;
 }
 .btn-login {
-  width: 12.8rem; /* 128px */
-  height: 4.8rem; /* 48px */
-  line-height: 4.8rem;
+  width: 128px;
+  height: 48px;
+  line-height: 48px;
   text-align: center;
-  border-radius: 0.8rem; /* 8px */
+  border-radius: 8px;
   background-color: #3692ff;
   color: #fff;
-  font-size: 1.6rem; /* 추가: 16px */
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@ header > .inner {
 /* Footer */
 footer {
   width: 100%;
-  height: 16rem; /* 160px */
+  height: 160px;
   background-color: #111827;
 }
 
@@ -50,12 +50,12 @@ footer > .inner {
 
 footer p {
   color: #9ca3af;
-  font-size: 1.4rem;
+  font-size: 16px;
 }
 
 footer a {
   color: #e5e7eb;
-  font-size: 1.4rem;
+  font-size: 16px;
 }
 
 .footer-center {
@@ -65,21 +65,47 @@ footer a {
 
 .footer-sns {
   display: flex;
-  gap: 1.2rem; /* 12px */
+  gap: 12px; /* 12px */
 }
 
-@media (max-width: 1024px) {
-  footer {
-    height: auto;
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 1199px) {
+  header > .inner {
+    padding: 0 24px;
   }
   footer > .inner {
-    flex-flow: column;
-    padding-bottom: 4rem;
+    max-width: 536px;
+  }
+  footer p {
+    color: var(--gray200);
+  }
+}
+
+@media (max-width: 767px) {
+  header > .inner {
+    padding: 0 16px;
+  }
+  footer > .inner {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    padding: 32px;
   }
   .footer-center {
-    margin-top: 2rem;
+    position: absolute;
+    top: 32px;
+    left: 32px;
   }
   .footer-sns {
-    margin-top: 4rem;
+    position: absolute;
+    top: 32px;
+    right: 32px;
+  }
+  footer > .inner > p {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
   }
 }
