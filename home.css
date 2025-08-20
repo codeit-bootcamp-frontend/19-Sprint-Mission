@@ -5,7 +5,24 @@
   font-family: "Pretendard", sans-serif;
 }
 
-body {
+/* CSS 변수 */
+:root {
+  --blue: #3692ff;
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+}
+
+.top-banner-section,
+.main-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 버튼 2개 호버 */
@@ -13,220 +30,375 @@ a.button:hover {
   background-color: #1251aa;
 }
 
-/* 최상단 네비게이션 바*/
+/* 네비게이션바 */
 
-nav {
-  position: fixed;
+.nav-section {
   display: flex;
-  flex-direction: row;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
-  /* width: 1920px; */
-  height: 70px;
-  padding: 9px px;
-  gap: 10px;
-  border-bottom: 1px solid #dfdfdf;
+
   width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #ffffff;
 }
 
-.logo_img {
-  width: 153px;
-  height: 51px;
-}
-
-.login_button {
-  color: #f3f4f6;
-  font-size: 16px;
-  font-weight: 600;
+/* 버튼 */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #3692ff;
-  border: #f3f4f6;
-  border-radius: 10px;
+  font-weight: 600;
+  color: var(--gray100);
+  text-decoration: none;
+}
+.login-button {
+  font-size: 16px;
   width: 128px;
   height: 48px;
-  padding: 12px 23px;
-  gap: 10px;
-  text-decoration: none;
+  border-radius: 8px;
 }
-
-/* header */
-
-.top_header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 540px;
-  background-color: #cfe5ff;
-}
-
-.top_title {
-  color: #374151;
-  font-size: 40px;
-  font-weight: 700;
-}
-
-.top_text_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 60px;
-  gap: 32px;
-}
-
-.top_img_box {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
-.top_button {
-  display: inline-block;
-  text-align: center;
-  line-height: 56px;
-  text-decoration: none;
-  color: #f9fafb;
+.search-button {
   font-size: 20px;
-  font-weight: 600;
-  background-color: #3692ff;
-  border: #f3f4f6;
-  border-radius: 30px;
-  height: 56px;
   width: 357px;
-  /* padding: 16px 124px;
-  gap: 10px; */
+  height: 56px;
+  border-radius: 40px;
 }
 
-.top_img {
-}
-
-/* bottom */
-
-.bottom_header {
-  display: flex;
-  justify-content: center;
+/* 배너 */
+.banner-background {
   width: 100%;
   height: 540px;
   background-color: #cfe5ff;
-}
 
-.bottom_title {
-  color: #374151;
-  font-size: 40px;
-  font-weight: 700;
-}
-
-.bottom_text_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 60px;
-  gap: 32px;
-}
-
-.bottom_img_box {
   display: flex;
   justify-content: center;
   align-items: end;
 }
-
-/* section */
-
-.section_inner {
+.top-banner-section {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* border: 5px dashed rgb(173, 235, 145); 테스트용 */
-  gap: 64px;
-  background-color: #fcfcfc;
-  width: 998px;
 }
-
-.section_div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 720px;
-  padding: 138px 0px;
-  gap: 10px;
-  /* border: 2px dashed red; 테스트용 */
-}
-
-.section_img_box {
-  width: 579px;
-  height: 444px;
-}
-
-.section_text_box {
+.top-banner-textbox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding-right: 24px;
-  gap: 12px;
+  gap: 32px;
+}
+.bottom-banner-textbox {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 32px;
 }
 
-.section_text_box.reverse {
-  align-items: flex-end;
-  text-align: right;
+.banner-img {
+  display: flex;
 }
 
-.section_tag {
-  color: #3692ff;
-  font-size: 20px;
-  font-weight: 800;
-  /* width: 72px;
-  height: 26px; */
+/* 메인 섹션 */
+
+.main-section-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  background-color: #fcfcfc;
+  border: 1px dotted red; /*범위 테스트용*/
+}
+.main-section-color.reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.section_title {
+.main-section-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0px;
+}
+.main-section-textbox.reverse {
+  text-align: end;
+}
+
+.main-section-textbox {
+  display: inline-block;
+  flex-direction: column;
+}
+
+/* 폰트  */
+.main-text {
   color: #374151;
   font-size: 40px;
   font-weight: 700;
 }
-
-.section_text {
+.point-text {
+  color: #3692ff;
+  font-size: 18px;
+  font-weight: 800;
+}
+.body-text {
   color: #374151;
   font-size: 24px;
   font-weight: 500;
 }
-
-/* footer */
-
-footer {
+.footer-text {
+  color: var(--gray400);
+  font-size: 16px;
+  font-weight: 400;
+}
+.bottom-banner-text {
   display: flex;
-  flex-direction: row;
+  justify-items: center;
+}
+
+/* 푸터 */
+.footer-section {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: #111827;
+
   width: 100%;
   height: 160px;
   padding: 32px 400px;
-  gap: 10px;
 }
-
-.footer_start {
-  color: #9ca3af;
-  font-size: 16px;
-  font-weight: 400;
-  width: 112px;
-  height: 19px;
-}
-
-.footer_center a {
-  color: #9ca3af;
-  font-size: 16px;
-  font-weight: 400;
-  width: 159px;
-  height: 19px;
-  text-decoration: none;
-}
-
-.footer_end a {
+.footer-herf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 12px;
-  width: 116px;
-  height: 20px;
+}
+
+.footer-herf a {
+  color: var(--gray400);
   text-decoration: none;
+}
+
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* 태블릿 사이즈 */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* main-text'일상의 모든 물건을 거래해보세요' <br> 속성 삭제 */
+  .br_text {
+    display: none;
+  }
+
+  /* 네비게이션바 */
+
+  .nav-section {
+    height: 70px;
+    padding: 10px 24px 9px 24px;
+  }
+
+  /* main-text'일상의 모든 물건을 거래해보세요' 줄바꿈 삭제 */
+
+  .main-text {
+    white-space: nowrap;
+  }
+
+  /* 상단 배너 열정렬 중앙정렬  */
+  .top-banner-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 상단 배너 배경 꽉차게 높이 지정 */
+  .banner-background {
+    height: 771px;
+  }
+
+  .main-section-inner {
+    padding: 52px;
+  }
+
+  /* 상단 배너 텍스트 박스 + 구경하러가기 버튼 정렬 및 패딩 */
+  .top-banner-textbox {
+    display: flex;
+    align-items: center;
+    padding: 84px 551px;
+  }
+
+  /* 메인 섹션 1,3 이미지,텍스트 박스 및 텍스트 박스 정렬 */
+  .main-section-color {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .main-section-color.reverse {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .main-section-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 메인 섹션 2  텍스트 박스 정렬 */
+  .main-section-textbox.reverse {
+    display: flex;
+    text-align: end;
+  }
+
+  .point-text {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .main-text {
+    padding-bottom: 24px;
+  }
+
+  /* 하단 배너 */
+
+  .banner-background.bottom {
+    width: 100%;
+    height: 927px;
+  }
+
+  /* 하단 배너 이미지+텍스트 정렬 */
+  .bottom-banner-textbox {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* 하단 배너 텍스트,패딩 정렬 */
+
+  .bottom-banner-text {
+    padding-top: 201px;
+    padding-bottom: 217px;
+    text-align: center;
+  }
+  .footer-section {
+    padding: 32px 104px 64px 104px;
+  }
+}
+
+/* 모바일 사이즈 */
+
+@media (min-width: 375px) and (max-width: 767px) {
+  /* 네비게이션바 */
+
+  .nav-section {
+    height: 70px;
+    padding: 10px 16px 9px 16px;
+  }
+
+  /* main-text.top 일상의 모든 물건을 거래해보세요 중앙정렬 */
+  .main-text.top {
+    text-align: center;
+  }
+
+  /* 상단 배너 열정렬 중앙정렬  */
+  .top-banner-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 상단 배너 배경 꽉차게 높이 지정 */
+  .banner-background {
+    height: auto;
+  }
+
+  /* 메인 섹션 양쪽 패딩 */
+  .main-section-inner {
+    padding: 40px 15px;
+  }
+
+  /* 상단 배너 텍스트 박스 + 구경하러가기 버튼 정렬 및 패딩 */
+  .top-banner-textbox {
+    display: flex;
+    align-items: center;
+    padding: 84px 551px;
+  }
+
+  /* 메인 섹션 1,3 이미지,텍스트 박스 및 텍스트 박스 정렬 */
+  .main-section-color {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .main-section-color.reverse {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .main-section-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* 메인 섹션 2  텍스트 박스 정렬 */
+  .main-section-textbox.reverse {
+    display: flex;
+    text-align: end;
+  }
+
+  .point-text {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+  .main-text {
+    padding-bottom: 16px;
+  }
+
+  /* 하단 배너 */
+  .banner-background.bottom {
+    width: 100%;
+    height: 927px;
+  }
+
+  /* 하단 배너 이미지+텍스트 정렬 */
+  .bottom-banner-textbox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 하단 배너 텍스트,패딩 정렬 */
+  .bottom-banner-text {
+    padding-bottom: 131px;
+    text-align: center;
+  }
+
+  /* 푸터 패딩 */
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    align-content: space-around;
+    padding: 32px 32px 64px 32px;
+    margin-right: 50px;
+  }
+  .footer-herf {
+  }
 }
