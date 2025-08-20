@@ -1,0 +1,18 @@
+:root {
+  --primary50: #cfe5ff;
+  --primary100: #3692ff;
+  --primary200: #1967d6;
+  --primary300: #1251aa;
+
+  --secondary900: #111827;
+  --secondary800: #1f2937;
+  --secondary700: #374151;
+  --secondary600: #4b5563;
+  --secondary500: #6b7280;
+  --secondary400: #9ca3af;
+  --secondary200: #e5e7eb;
+  --secondary100: #f3f4f6;
+  --secondary50: #f9fafb;
+
+  --white: #ffffff;
+}

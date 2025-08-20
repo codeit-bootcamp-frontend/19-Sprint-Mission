@@ -1,0 +1,62 @@
+@import url(../css/reset.css);
+@import url(../css/font.css);
+@import url(../css/color.css);
+
+/* 버튼 */
+.btn {
+  background-color: var(--primary100);
+}
+
+.btn:hover {
+  background-color: var(--primary200);
+}
+
+.btn:active {
+  background-color: var(--primary300);
+}
+
+.btn:disabled {
+  background-color: var(--secondary400);
+}
+
+.btn_lg {
+  height: 56px;
+  padding: 12px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: var(--fw_sb);
+  line-height: 32px;
+  border-radius: 28px;
+}
+
+.btn_md {
+  height: 48px;
+  padding: 11px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: var(--fw_sb);
+  border-radius: 24px;
+}
+
+.btn_sm42 {
+  height: 42px;
+  padding: 8px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: var(--fw_sb);
+  border-radius: 16px;
+}
+
+.btn_sm48 {
+  height: 48px;
+  padding: 11px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.6rem;
+  line-height: 26px;
+  font-weight: var(--fw_sb);
+  border-radius: 16px;
+}
