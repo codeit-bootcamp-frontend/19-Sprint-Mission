@@ -1,0 +1,57 @@
+/* tablet size */
+@media (max-width: 1199px) {
+  .header {
+    padding: 10px 24px;
+  }
+
+  .home-top {
+    padding-top: 84px;
+  }
+
+  .home-top-inside,
+  .home-bottom-inside {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .home-top-explain {
+    width: 512px;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .home-top-button {
+    display: flex;
+    height: 56px;
+    padding: 16px 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home-mid {
+    padding: 24px;
+  }
+
+  .home-mid-inside {
+    flex-direction: column;
+  }
+
+  .real-mid {
+    flex-direction: column-reverse;
+  }
+
+  .home-bottom {
+    padding-top: 201px;
+  }
+  .home-bottom-explain {
+    text-align: center;
+  }
+
+  footer {
+    padding: 32px 104px 64px;
+  }
+}
+  
