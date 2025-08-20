@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>판다마켓-회원가입페이지</title>
-  <link rel="stylesheet" href="./css/style.css?=${date()getTime()}">
+  <link rel="stylesheet" href="./css/login.css?=${new Date().getTime()}">
 </head>
 <body>
   <div class="wrap">
@@ -36,14 +36,14 @@
           </div>
         </div>
         <button type="submit" class="submit">회원가입</button>
-        <div class="login_sns">
-          <p>간편 로그인하기</p>
-          <div class="btn_wrap">
-            <button type="button" class="google">구글</button>
-            <button type="button" class="kakao">카카오톡</button>
-          </div>
-        </div>
       </form>
+      <div class="login_sns">
+        <span>간편 로그인하기</span>
+        <div class="btn_wrap">
+          <button type="button" class="google">구글</button>
+          <button type="button" class="kakao">카카오톡</button>
+        </div>
+      </div>
       <p class="exception">이미 회원이신가요?<a href="./login.html">로그인</a></p>
     </div>
   </div>
