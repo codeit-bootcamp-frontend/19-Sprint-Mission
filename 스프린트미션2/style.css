@@ -81,6 +81,7 @@ main input{
 
 .password_box{
     position: relative;
+    width: 100%;
 }
 
 .security,.public{
@@ -106,7 +107,7 @@ main input{
 button{
     align-items: center;
     width: 100%;
-    background-color: #3692FF;
+    background-color: #9CA3AF;
     font-size: 1.25rem;
     border-radius: 2.5rem;
     padding: 12px 0;
@@ -151,11 +152,59 @@ footer{
     gap: 4px;
 }
 
-footer p{
-    font-weight: 500;
+footer p{ 
     color: #1F2937;
 }
 
 footer a{
-    color: #3692FF;
+    color: #3692FF; 
+}
+
+/* -----------반응형--------------------- */
+
+@media (max-width:767px){
+    body{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .logo_area{
+        width: 198px;
+        margin-bottom: 24px;
+    }
+
+    .logo_area img{ 
+    width: 52px;
+    height: 52px;
+    }
+
+    .logo_area h1{
+    font-weight: 700;   
+    font-size: 33.17px;
+    margin-left: 11.12px;
+    }
+
+    form{
+        width: 100%;
+        padding: 0 16px;
+    }
+    main{
+        width: 100%;
+    }
+    .main input{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .main label{
+        margin-bottom: 8px;
+    }
+
+    .id_area,.password_area{
+        width: 100%;
+    }
+
+    main input{
+        width: 100%;
+    }
 }
