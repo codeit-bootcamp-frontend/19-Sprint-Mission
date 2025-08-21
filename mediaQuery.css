@@ -1,5 +1,98 @@
+/* mobile phone size */
+@media (min-width: 375px) {
+  .header {
+    padding : 10px 16px;
+  }
+
+  .home-top {
+    padding-top: 48px;
+  }
+
+  .home-top-inside,
+  .home-bottom-inside {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    gap: 132px;
+  }
+
+  .home-top-explain {
+    padding: 0;
+    width: 240px;
+    gap: 18px;
+  }
+
+  .home-top-explain > .topic,
+  .home-bottom-explain > .topic {
+    text-align: center;
+    padding: 0 auto;
+  }
+  
+  .home-top-button {
+    display: flex;
+    height: 56px;
+    padding: 12px 71px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home-top-button a {
+    font-size: 17px;
+  }
+
+  .home-top-inside > img,
+  .home-bottom-inside > img {
+    width: 100%;
+  }
+
+  .home-mid {
+    padding: 24px;
+  }
+
+  .home-mid-inside {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .home-mid-explain {
+    gap: 16px;
+  }
+
+  .home-mid-explain-top {
+    font-size: 16px;
+  }
+
+  .home-mid-explain-mid {
+    font-size: 24px;
+  }
+
+  .home-mid-explain-bottom {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .real-mid {
+    flex-direction: column-reverse;
+  }
+
+  .home-bottom {
+    padding-top: 121px;
+  }
+
+  .home-bottom-explain {
+    padding: 0;
+    width: 240px;
+  }
+
+  footer {
+    padding: 32px 32px 64px;
+  }
+}
+
 /* tablet size */
-@media (max-width: 1199px) {
+@media (min-width: 768px) {
   .header {
     padding: 10px 24px;
   }
@@ -23,7 +116,6 @@
   }
 
   .home-top-button {
-    display: flex;
     height: 56px;
     padding: 16px 124px;
     justify-content: center;
@@ -37,6 +129,18 @@
 
   .home-mid-inside {
     flex-direction: column;
+  }
+
+  .home-mid-explain-top {
+    font-size: 18px;
+  }
+
+  .home-mid-explain-mid {
+    font-size: 32px;
+  }
+
+  .home-mid-explain-bottom {
+    font-size: 18px;
   }
 
   .real-mid {
@@ -55,3 +159,71 @@
   }
 }
   
+/* desktop size */
+@media (min-width: 1200px) {
+  .header {
+    max-width: 1120px;
+  }
+
+  .home-top,
+  .home-bottom {
+    padding-top: 200px;
+  }
+  
+  .home-top-inside,
+  .home-bottom-inside {
+    flex-direction: row;
+    font-size: 40px;
+    gap: 7px;
+    max-width: 1120px;
+  }
+
+  .home-top-explain {
+    align-items: start;
+    gap: 32px;
+  }
+
+  .home-top-explain > .topic,
+  .home-bottom-explain > .topic {
+    text-align: left;
+    width: 295px;
+    padding: 0;
+  }
+
+  .home-top-button {
+    flex-direction: column;
+    padding: 16px 110px;
+  }
+  
+  .home-top-button a {
+    font-size: 20px;
+  }
+
+  .home-mid {
+    padding: 138px 0;
+  }
+
+  .home-mid-inside {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home-mid-explain {
+    gap: 24px;
+  }
+  .home-mid-explain-top {
+    font-size: 18px;
+  }
+
+  .home-mid-explain-mid {
+    font-size: 40px;
+  }
+
+  .home-mid-explain-bottom {
+    font-size: 24px;
+  }
+
+  .home-bottom-inside {
+    gap: 69px;
+  }
+}
