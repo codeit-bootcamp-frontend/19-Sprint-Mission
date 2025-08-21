@@ -7,6 +7,13 @@
 body{
     box-sizing: border-box;
     font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    object-fit: cover;
+    
+}
+
+img{
+    width: 100%;
 }
 
 header{
@@ -57,6 +64,7 @@ header{
 .main_txt{
     margin-bottom: 112px;
     margin-right: 7px;
+    width: 100%;
 }
 
 h2{
@@ -78,25 +86,28 @@ h2{
 /* ------------섹션1------------ */
 
 .section_01{
-    height: 720px;
-    width: 100%;
+    /* height: 720px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 24px;
 }
 
 .section_01_box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 444px;
-    padding: 0 23.5px;
+    height: auto;  
     background-color: #FCFCFC;
     border-radius: 12px;
 }
 
 .section_01 img{
     margin-right: 64px;
+}
+
+.section_01_txt{
+    width: 100%;
 }
 
 
@@ -114,25 +125,26 @@ h2{
 /* -----------섹션2---------------- */
 
 .section_02{
-    height: 720px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 24px;
 }
 
 .section_02_box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 444px;
-    padding: 0 23.5px;
     background-color: #FCFCFC;
     border-radius: 12px;
 }
 
 .section_02 img{
     margin-left: 64px;
+}
+
+.section_02_txt{
+    width: 100%;
 }
 
 .sec_02_badge{
@@ -149,26 +161,27 @@ h2{
 /* ----------섹션3----------------- */
 
 .section_03{
-    height: 720px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 138px;
+    padding: 0 24px;
 }
 
 .section_03_box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 444px;
-    padding: 0 23.5px;
     background-color: #FCFCFC;
     border-radius: 12px;
 }
 
 .section_03 img{
     margin-right: 64px;
+}
+
+.section_03_txt{
+    width: 100%;
 }
 
 .sec_03_badge{
@@ -190,7 +203,6 @@ h2{
     justify-content: center;
     align-items: flex-end;
     height: 540px; 
-    width: auto;
 }
 
 .section_04_box{
@@ -202,17 +214,21 @@ h2{
 .section_04_txt{
     margin-right: 69px;
     margin-bottom: 60px;
+    width: 100%;
 }
 
 /* --------------footer--------------- */
 
-.footer{
+footer{
     height: 160px;
     background-color: #111827;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    height: 160px !important;
 }
+
+
 
 .footer_box{
     display: flex;
@@ -220,6 +236,13 @@ h2{
     align-items: center;
     width: 58.33%;
     margin-top: 32px;
+}
+
+.footer_txt_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 56%;
 }
 
 .footer_txt_01{
@@ -240,10 +263,227 @@ h2{
     align-items: center;
 }
 
-.sns_icon img{
+.sns_icon a{
     margin-right: 12px;
 }
 
-.sns_icon img:nth-child(4){
+.sns_icon a:nth-child(4){
     margin-right: 0;
 }
+
+@media (max-width:1200px){
+    h2 br{
+            display: none;
+        }
+
+    header{
+        padding: 0;
+    }
+
+    .header{
+        width: 100%;
+        padding: 0 24px;
+    }
+    
+    .main{
+        height: 771px;
+        margin-bottom: 24px;
+    }
+
+    .main_box{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 84px;
+        justify-content: space-between;
+    }
+    .main_txt{
+        text-align: center;
+        margin-top: 84px;
+    }   
+    
+    .section_01,.section_02,.section_03{
+        margin-bottom: 52px;  
+        padding: 0 24px;
+    }
+
+    .section_01_box,.section_02_box,.section_03_box{
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+}
+
+    .section_01 h2,.section_02 h2,.section_03 h2{
+        font-size: 2rem;
+        margin-top:16px ;
+        margin-bottom: 24px;
+    }
+
+    .section_01 img,.section_02 img,.section_03 img{
+    margin-right: 0;
+    margin-bottom: 24px;
+    }
+
+    .section_01_txt,.section_03_txt{
+        align-self: self-start;
+        text-align: left;
+    }
+
+    .section_02_box{
+        flex-direction: column-reverse;
+    }
+    .section_01 img,.section_03{
+        margin-right: 0;
+    }
+    .section_02 img{
+        margin-left: 0;
+    }
+
+    .section_02_txt{
+        align-self: self-end;
+        text-align: right;
+    }
+
+    .section_04{
+        height: 927px;
+    }
+
+     br{
+        display: block;
+    }
+
+
+
+    .section_04_box{
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .section_04_txt{
+        text-align: center;
+        margin-top: 201px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+
+}
+
+@media (max-width:875px){
+    .footer_txt_area{
+        width: 66%;
+    }
+}
+
+@media (max-width:767px){
+    br{
+            display: block;
+        }
+    h2 br{
+        display: none;
+    }
+
+    .section_04 h2 br{
+        display: block;
+    }
+
+     .header{
+        padding: 0 16px; 
+     }
+     .main{
+        height: 540px;
+        margin-bottom: 52px;
+     }
+
+     .main_txt{
+        margin-top: 48px;
+        margin-bottom: 0;
+     }
+
+     .main img{
+        height: 204px;
+     }
+
+     .main_box h2{
+        font-size: 2rem;
+     }
+
+    .section_01,.section_02,.section_03{  
+        padding: 0 16px;
+        overflow: hidden;
+    }
+
+     .section_01_txt h2,.section_02_txt h2,.section_03_txt h2{
+        font-size: 1.5rem;
+        margin: 8px 0;
+     }
+
+     .section_01_box,.section_02_box,.section_03_box{
+        width: 100%;
+     }
+
+     .section_01{
+        height: auto;
+        margin-bottom: 40px;
+        overflow: hidden;
+     }
+     
+     .main_txt{
+        max-width: 240px;
+     }
+     
+    .item{
+         padding: 11px 71px;
+         font-size: 1rem;
+    }
+     
+    .section_04{
+        height: 540px;
+    }
+
+    .section_04 img{
+        height: 198px;
+    }
+
+    .section_04_txt{
+        text-align: center;
+        margin-top: 121px;
+    }
+
+    .section_04 h2{
+        font-size: 2rem;
+    }
+
+    
+    footer{
+        height: 100% !important;
+    }
+
+    .footer_box{
+        padding: 32px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer_txt_area{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    
+    .footer_txt_02{
+        margin-bottom:  60px;
+    }
+
+    .sns_icon a{
+        width: 20px;
+        height: 20xp;
+    }
+
+}
+
+     
+
+
+
