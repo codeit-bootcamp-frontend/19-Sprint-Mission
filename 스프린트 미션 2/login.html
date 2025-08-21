@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+</head>
+<body>
+   <main class="paper">
+    <header>
+        <a href="/"><img class="mbanner" src="panda-market-logo.png" alt=""></a>
+    </header>
+    <div class="email">
+        <span class="label">이메일</span> <br> 
+        <input type="text" id="email" placeholder="Codeit@email.com"> 
+    </div>
+    <div class="password">
+        <span class="label">비밀번호</span> <br>
+        <div class="input-wrapper">
+            <input type="password" id="pwd" placeholder="비밀번호 입력">
+            <span class="toggle-btn" onclick="togglePassword()">👁</span>
+        </div>
+    </div>
+    <div class="login-btn">
+        <button type="submit" class="login-btn">로그인</button>
+    </div>
+    <div class="simplelogin">
+        <span class="text">간편 로그인하기</span>
+         <div class="icon-group">
+            <div>
+            <img class="icon google-icon" src="google.png" alt="">
+            </div>
+            <div>
+            <img class="icon kakao-icon" src="kakao.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="sign-in">
+       <div class="sign-in-text1">
+        <span> 판다마켓이 처음이신가요?</span>
+        </div>
+        <div class="sign-in-text2">
+        <a class="sign-in-text" href="">회원가입</a>
+        </div>
+    </div>
+
+   </main>
+    
+</body>
+</html>
