@@ -1,0 +1,149 @@
+/* Mobile */
+@media (min-width:350px) and (max-width:767px){
+    .login-area{
+        width: 70.723%;
+        max-width: 400px;
+        padding-block: 80px;
+    }
+    .login label{
+        margin-bottom: 8px; 
+        font-size: 14px; 
+        font-weight: 700; 
+        line-height: 24px; 
+    }
+    .signUp label{
+        margin-bottom: 8px; 
+        font-size: 14px; 
+        font-weight: 700; 
+        line-height: 17px; 
+    }
+    input{
+        margin-bottom: 16px; 
+        border: none;
+    } 
+     #submit{
+        padding: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .login-head{
+         width: 198px;
+        margin: 0 auto;
+        gap: 11.12px;
+        margin-bottom: 24px; 
+    }
+
+    
+    .login-head h1{
+    padding-block:12px 9.01px;
+    font-size: 36.14px;
+    font-weight: 700;
+    line-height: 45px;
+    }
+
+    .login-panda{
+    width: 51.76px;
+    aspect-ratio: 51.76 / 51.95;
+    padding-block: 6.49px 7.58x;
+    }  
+    .signUp form .Name{line-height: 17px;}
+
+}
+
+
+
+/* Tablet */
+@media (min-width:768px) and (max-width:1199px){
+    .login-area{
+        width: 640px;
+        padding-block: 231px;
+    }
+    .login-head{
+         width: 396px;
+        margin: 0 auto;
+        gap: 22.24px;
+        margin-bottom: 40px; 
+    }
+    .login-panda{
+    width: 103.54px;
+    aspect-ratio: 103.54 / 103.89;
+    padding-block: 13px 15.14px;
+    }  
+    
+    .login-head h1{
+    padding-block: 23.99px 18.02px;
+    font-size: 72.28px;
+    font-weight: 700;
+    line-height: 90px;
+    }
+
+    .login label{
+        margin-bottom: 16px; 
+        font-size: 18px; 
+        font-weight: 700; 
+        line-height: 26px; 
+    }
+    .signUp label{
+        margin-bottom: 16px; 
+        font-size: 18px; 
+        font-weight: 700; 
+        line-height: 26px; 
+    }
+    input{margin-bottom: 24px; border: none;} 
+    #submit{
+        line-height: 24px;
+        padding: 16px;
+    }   
+    .signUp form .Name{line-height: 21px;}
+}
+ 
+/* Pc */
+@media (min-width: 1200px){
+    .login-area{
+        width: 640px;
+        padding-block: 231px;
+    }
+
+    .login-head{
+        width: 396px;
+        margin: 0 auto;
+        gap: 22.24px;
+        margin-bottom: 40px; 
+    }
+
+    .login-panda{
+    width: 103.54px;
+    aspect-ratio: 103.54 / 103.89;
+    padding-block: 13px 15.14px;
+    }
+
+    .login-head h1{
+    padding-block: 23.99px 18.02px;
+    font-size: 72.28px;
+    font-weight: 700;
+    line-height: 90px;
+    }
+    
+    .login label{
+        margin-bottom: 16px; 
+        font-size: 18px; 
+        font-weight: 700; 
+        line-height: 26px; 
+    }
+    .signUp label{
+        margin-bottom: 16px; 
+        font-size: 18px; 
+        font-weight: 700; 
+        line-height: 26px; 
+    }
+    input{
+        margin-bottom: 24px; 
+        border: none;
+    } 
+    #submit{
+        padding: 16px;
+        line-height: 24px;
+    }
+    .signUp form .Name{line-height: 21px;}
+}
