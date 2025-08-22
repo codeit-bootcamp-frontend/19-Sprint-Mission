@@ -53,9 +53,13 @@ input[type="password"] {
     position: relative;
 }
 
-.toggle-btn{
-    position: absolute;
-    
+.toggle-password {
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+  width: 25px;
+  opacity: 0.5;
+  top: 12px;
 }
 
 
