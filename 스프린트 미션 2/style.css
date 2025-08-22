@@ -49,6 +49,14 @@ input[type="password"] {
   box-sizing: border-box;    
 }
 
+.input-wrapper{
+    position: relative;
+}
+
+.toggle-btn{
+    position: absolute;
+    
+}
 
 
 .login-btn {
