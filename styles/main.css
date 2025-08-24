@@ -1,154 +1,3 @@
-/* reset css */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-a {
-  text-decoration: none;
-}
-:root {
-  /* 색상 지정 */
-  --gray900: #111827;
-  --gray800: #1f2937;
-  --gray700: #374151;
-  --gray600: #4b5563;
-  --gray500: #6b7280;
-  --gray400: #9ca3af;
-  --gray200: #e5e7eb;
-  --gray100: #f3f4f6;
-  --gray50: #f9fafb;
-  --blue: #3692ff;
-}
-
-/* 👇 여기부터 본 코드 시작 👇 */
-* {
-  box-sizing: border-box;
-  font-family: 'Pretendard Variable', Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
-    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-}
-
 body {
   background-color: #ffffff;
   margin: 0;
@@ -336,19 +185,8 @@ footer {
 }
 
 /* media query */
-/* 1200px ~ */
-@media (min-width: 1200px) {
-  header {
-    width: 100%;
-    padding: 9.5px 400px;
-  }
-  .bigScreen-only {
-    display: inline;
-  }
-}
-
-/* 768px ~ 1199px */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* 화면 크기가 1199px 이하일 때 */
+@media (max-width: 1199px) {
   body {
     background-color: #fcfcfc;
   }
@@ -361,7 +199,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .bigScreen-only {
+  .onlyBigScreen {
     display: none;
   }
   .banner.top {
@@ -437,19 +275,16 @@ footer {
   }
 }
 
-/* 375px ~ 767px */
-@media (min-width: 375px) and (max-width: 767px) {
+/* 화면 크기가 767px 이하일 때 */
+@media (max-width: 767px) {
   body {
     background-color: #fcfcfc;
   }
   header {
-    /* width: 100%; */
     padding: 9px 16px;
   }
 
   .banner {
-    /* width: 800px; */
-    /* min-height: 540px; */
     margin: 0;
     padding-top: 100px;
   }
@@ -482,8 +317,12 @@ footer {
   }
 
   .main li {
-    margin: 52px auto;
+    margin: 0 16px 20px 16px;
   }
+  .main > li:first-child {
+    margin-top: 52px;
+  }
+
   .main__img {
     width: 100%;
   }
@@ -496,7 +335,6 @@ footer {
   .texts__en {
     font-size: 16px;
     font-weight: 700;
-    margin-top: 24px;
   }
   .texts__ko-big {
     font-size: 24px;
@@ -506,8 +344,8 @@ footer {
     font-size: 16px;
     line-height: 26px;
   }
-  .bigScreen-only {
-    display: none;
+  .onlyBigScreen {
+    display: block;
   }
   footer {
     width: 100%;

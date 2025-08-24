@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/login.css" />
   </head>
   <body>
@@ -24,8 +25,6 @@
             id="user-email"
             placeholder="codeit@example.com"
           />
-        </form>
-        <form>
           <label for="user-pwd">비밀번호</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd" />
@@ -33,8 +32,8 @@
               <img src="/images/unvisible.png" alt="비밀번호 표시 버튼" />
             </button>
           </div>
+          <button type="submit" class="login__btn">로그인</button>
         </form>
-        <button type="button" class="login__btn">로그인</button>
 
         <div class="login-easy">
           <div class="login-easy__wrapper">
