@@ -111,6 +111,8 @@ input {
   height: 24px;
 }
 
+/* media query */
+/* 모바일 사이즈 */
 @media (max-width: 767px) {
   .login {
     max-width: 350px;
