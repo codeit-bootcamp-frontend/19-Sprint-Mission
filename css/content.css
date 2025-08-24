@@ -71,7 +71,7 @@
 /*================================================== join & login ==================================================*/
 .formWrap {
   width: 640px;
-  margin: 60px auto 0;
+  margin: 60px auto;
 }
 .formWrap .logo {
   margin-bottom: 40px; 
@@ -295,7 +295,7 @@
     width: 100%;
     padding: 0 16px;
     max-width: calc(400px + 32px);
-    margin: 24px auto 0;
+    margin: 24px auto;
     box-sizing: border-box;
   }
   .formWrap .logo {
