@@ -186,6 +186,7 @@ footer {
 }
 
 /* media query */
+/* 화면 크기가 1700px 이하일 때 */
 @media (max-width: 1700px) {
   header {
     padding: 9.5px 200px;
@@ -293,7 +294,7 @@ footer {
 
   .banner {
     margin: 0;
-    padding-top: 100px;
+    padding-top: 120px;
   }
   .banner.top {
     margin: 0;
