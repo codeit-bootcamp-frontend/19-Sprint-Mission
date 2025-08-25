@@ -97,7 +97,7 @@ body {
 .login-pass-again > div > input {
   border: none;
   background-color: #f3f4f6;
-  width: 600px;
+  /* width: 600px; */
 }
 
 input:focus {
@@ -120,7 +120,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3692ff;
+  background-color: #9ca3af;
   border: none;
   color: #f3f4f6;
   border-radius: 48px;
@@ -162,4 +162,38 @@ input:focus {
 
 .signup-to-login > a {
   color: #3692ff
+}
+
+@media (max-width: 767px) {
+  .login-box{
+    width: 343px;
+  }
+
+  .login-logo img {
+    width: 52px;
+  }
+
+  .login-logo div > a {
+    font-size: 33.172px;
+  }
+
+  .login-email > div,
+  .login-nick > div,
+  .login-pass > div,
+  .login-pass-again > div {
+    width: 343px;
+    height: 56px;
+    flex-shrink: 0;
+    padding: 16px 24px;
+  }
+
+  .login-pass-again > div > input {
+    width: 200px;
+  }
+  
+  .signup-button,
+  .login-button,
+  .login-easy {
+    width: 343px;
+  }
 }
