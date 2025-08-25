@@ -4,6 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="title" content="판다 마켓">
+	<meta name="keywords" content="판다 마켓, 일상, 물건, 선물, 특별">
+	<meta name="description" content="일상의 모든 물건을 거래해보세요">
+
+	<meta name="twitter:card" content="Summary">
+	<meta name="twitter:site" content="@pandamarket">
+	<meta name="twitter:creator" content="@pandamarket">
+	<meta name="twitter:url" content="http://fe19-pandamarket.netlify.app/">
+	<meta name="twitter:title" content="판다 마켓">
+	<meta name="twitter:description" content="일상의 모든 물건을 거래해보세요">
+	<meta name='twitter:image' content="http://fe19-pandamarket.netlify.app/img/common/pandamarket.png">
+
+	<meta property="og:url" content="http://fe19-pandamarket.netlify.app/">
+	<meta property="og:image" content="http://fe19-pandamarket.netlify.app/img/common/pandamarket.png">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Panda Market">
+	<meta property="og:locale" content="ko">
+	<meta property="og:title" content="판다 마켓">
+	<meta property="og:description" content="일상의 모든 물건을 거래해보세요">
+
 	<title>판다마켓</title>
 
 	<link rel="Shortcut Icon" href="img/fav/favicon.ico">
@@ -15,25 +37,33 @@
 			<h1 class="logo"><a href="/"><span class="blind">판다마켓</span></a></h1>
 
 			<form class="authForm">
-				<div class="ipt">
-					<label for="user-email">이메일</label>
-					<input id="user-email" type="email" placeholder="이메일을 입력해 주세요.">
+				<div class="iptBox">
+					<label for="email">이메일</label>
+					<div class="ipt">
+						<input id="email" type="email" placeholder="이메일을 입력해 주세요.">
+					</div>
 				</div>
-				<div class="ipt">
-					<label for="user-name">닉네임</label>
-					<input id="user-name" type="text" placeholder="닉네임을 입력해 주세요.">
+				<div class="iptBox">
+					<label for="name">닉네임</label>
+					<div class="ipt">
+						<input id="name" type="text" placeholder="닉네임을 입력해 주세요.">
+					</div>
 				</div>
-				<div class="ipt">
-					<label for="user-pw">비밀번호</label>
-					<input id="user-pw" type="password" placeholder="비밀번호를 입력해 주세요.">
-					<button type="button" class="btnEye"><span class="blind">비밀번호 표시</span></button>
+				<div class="iptBox">
+					<label for="pw">비밀번호</label>
+					<div class="ipt">
+						<input id="pw" type="password" placeholder="비밀번호를 입력해 주세요.">
+						<button type="button" class="btnEye"><span class="blind">비밀번호 표시</span></button>
+					</div>
 				</div>
-				<div class="ipt">
-					<label for="user-pw-chk">비밀번호 확인</label>
-					<input id="user-pw-chk" type="password" placeholder="비밀번호를 입력해 주세요.">
-					<button type="button" class="btnEye on"><span class="blind">비밀번호 숨김</span></button>
+				<div class="iptBox">
+					<label for="pwCheck">비밀번호 확인</label>
+					<div class="ipt">
+						<input id="pwCheck" type="password" placeholder="비밀번호를 입력해 주세요.">
+						<button type="button" class="btnEye on"><span class="blind">비밀번호 숨김</span></button>
+					</div>
 				</div>
-				<button type="button" class="btn lg">회원가입</button>
+				<button type="submit" class="btn lg">회원가입</button>
 			</form>
 
 			<div class="socialBtn">
