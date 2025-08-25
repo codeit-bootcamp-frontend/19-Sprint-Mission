@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/login.css" />
   </head>
   <body>
@@ -24,8 +25,6 @@
             id="user-email"
             placeholder="codeit@example.com"
           />
-        </form>
-        <form>
           <label for="user-nickname">닉네임</label>
           <input
             type="text"
@@ -33,8 +32,6 @@
             id="user-nickname"
             placeholder="홍길동"
           />
-        </form>
-        <form>
           <label for="user-pwd">비밀번호</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd" />
@@ -42,8 +39,6 @@
               <img src="/images/unvisible.png" alt="비밀번호 표시 버튼" />
             </button>
           </div>
-        </form>
-        <form>
           <label for="user-pwd-check">비밀번호 확인</label>
           <div class="pwd__wrapper">
             <input type="password" name="pwd" id="user-pwd-check" />
@@ -51,8 +46,8 @@
               <img src="/images/visible.png" alt="비밀번호 숨기기 버튼" />
             </button>
           </div>
+          <button type="submit" class="login__btn">회원가입</button>
         </form>
-        <button class="login__btn">회원가입</button>
 
         <!-- 간편 로그인 -->
         <div class="login-easy">
