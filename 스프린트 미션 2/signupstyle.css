@@ -1,9 +1,5 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #F9FAFB; 
+  background-color: #F9FAFB;
   margin: 0;
   font-family: 'Pretendard', sans-serif;
 }
@@ -24,6 +20,11 @@ main.paper {
   object-fit: contain; 
   display: block;
   margin: 0 auto; 
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+   background-color: #F9FAFB;
 }
 
 .label {
@@ -36,8 +37,7 @@ main.paper {
   margin-bottom: 4px;      
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"]{
   width: 640px;              
   height: 56px;              
   border-radius: 12px;       
@@ -47,6 +47,20 @@ input[type="password"] {
   font-size: 16px;           
   outline: none;             
   box-sizing: border-box;    
+}
+
+
+input[type="password"] {
+  width: 640px;              
+  height: 56px;              
+  border-radius: 12px;       
+  background-color: #F3F4F6; 
+  border: 2px solid #3182F600;    
+  padding: 0 16px;           
+  font-size: 16px;           
+  outline: none;             
+  box-sizing: border-box;
+  margin: 24px 0 24px;    
 }
 
 .input-wrapper{
@@ -85,13 +99,14 @@ input[type="password"] {
 .simplelogin {
   width: 640px;
   height: 74px;
-  padding: 16px 23px;
+  padding: 16px 23px 16px;
   display: flex;
   align-items: center;       
   justify-content: space-between; 
   background-color: #E6F2FF;
   border-radius: 12px;
   box-sizing: border-box;
+  margin: 24px;
 }
 
 .icon-group {
@@ -143,11 +158,13 @@ border: 1px solid #F9FAFB;
 
 .sign-in {
     display: flex;            
-    align-items: center;     
+    align-items: center;  
+    justify-content: center;   
     gap: 4px;                
 }
 
 .sign-in-text1 {
+    
     width: 144px;             
     height: 24px;             
     display: flex;
