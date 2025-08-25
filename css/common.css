@@ -12,6 +12,7 @@
   --gray100: #F3F4F6;
   --gray50: #F9FAFB;
   --blue: #3692FF;
+  --red: #F74747;
 }
 
 /*================================================== common ==================================================*/
@@ -116,56 +117,4 @@
   height: 56px;
   font-size: 1.25rem;
   border-radius: 40px;
-}
-
-
-
-
-
-/*************************************************** media ***************************************************/
-/* Tablet */
-@media (max-width: 1199px)  {
-  .hiddenTM {
-    display: none !important;
-  }
-  .hiddenT {
-    display: none !important;
-  }
-  .inner{
-    max-width: initial;
-  }
-  /* Header & footer */
-  .header{
-    padding: 0 24px;
-  }
-  .footer{
-    font-size: 1rem;
-    padding: 2rem 6.5rem 6.8125rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .hiddenT {
-    display: block !important;
-  }
-  /* Header & footer */
-  .header{
-    padding: 0 16px;
-  }
-  .header .logo{
-    width: 103px;
-    height: 35px;
-    background: url(./../img/common/logo2.png) no-repeat 0 0 / cover;
-  }
-  .footer{
-    position: relative;
-    padding: 32px 32px 108px;
-  }
-  .footer .copy{
-    position: absolute;
-    left: 32px;
-    bottom: 32px;
-    color: var(--gray200);
-  }
 }
