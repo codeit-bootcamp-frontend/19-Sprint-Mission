@@ -58,3 +58,8 @@ input::placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opaci
 input::-webkit-input-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
 input::-moz-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
 input:-ms-input-placeholder {color:var(--gray800); font-size:1rem; font-weight:400; opacity:0.5;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 1000px var(--gray100) inset !important; background-color: var(--gray100) !important;}
