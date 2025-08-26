@@ -68,6 +68,16 @@ input {
     border: 2px solid var(--blue);
 }
 
+input.error {
+    border: 2px solid var(--red);
+}
+
+.error-message {
+    color: var(--red);
+    margin-left: 16px;
+    font-size: 14px;
+}
+
 .password-input-container {
     position: relative;
     width: 100%;
@@ -88,7 +98,7 @@ input {
     background-color: var(--gray400);
     border-radius: 40px;
     pointer-events: none;
-}form:valid .button.submit {
+} .button.submit.enabled {
     pointer-events: auto;
     background-color: var(--blue);
 }
