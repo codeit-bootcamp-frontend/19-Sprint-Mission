@@ -164,6 +164,14 @@ input:focus {
   color: #3692ff
 }
 
+/* 상호작용에 따른 클래스 */
+.email-error,
+.nick-error,
+.pwd-error,
+.pwd-again-error {
+  border: 1px solid #ff0000;
+}
+
 @media (max-width: 767px) {
   .login-box{
     width: 343px;
