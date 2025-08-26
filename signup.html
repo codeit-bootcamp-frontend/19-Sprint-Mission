@@ -22,45 +22,42 @@
                 </div>
             </div>
             <form class="authForm">
-                <div class="ipt-email">
-                    <label for="user-email">
-                        이메일
-                    </label>
-                    <input id="user-email" type="email" class="input-common" placeholder="이메일을 입력해 주세요.">
-                </div>
-                <div class="ipt-nickname">
-                    <label for="user-nickname">
-                        닉네임
-                    </label>
-                    <input id="user-nickname" type="nickname" class="input-common" placeholder="닉네임을 입력해 주세요.">
-                </div>
-                <div class="ipt-pw">
-                    <label for="user-pw">
-                        비밀번호
-                    </label>
-                    <div class="pw-box">
-                        <input id="user-pw" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
-                        <div class="icon-wrapper">
-                            <button type="button" aria-label="비밀번호 보이기">
+                <div class="area">
+                    <div class="ipt-email">
+                        <label for="user-email">
+                            이메일
+                        </label>
+                        <input id="user-email" type="email" class="input-common" placeholder="이메일을 입력해 주세요.">
+                    </div>
+                    <div class="ipt-nickname">
+                        <label for="user-nickname">
+                            닉네임
+                        </label>
+                        <input id="user-nickname" type="nickname" class="input-common" placeholder="닉네임을 입력해 주세요.">
+                    </div>
+                    <div class="ipt-pw">
+                        <label for="user-pw">
+                            비밀번호
+                        </label>
+                        <div class="pw-box">
+                            <input id="user-pw" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
+                            <button type="button" class="toggle-pw" aria-label="비밀번호 표시 전환">
                                 <img class="login_eyes" src="image/btn_visibility_on_24px.png" alt="로그인 눈모양">
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="ipt-pw-check">
-                    <label for="user-pw-check">
-                        비밀번호 확인
-                    </label>
-                    <div class="pw-check-bok">
-                        <input id="user-pw-check" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
-                        <div class="icon-wrapper-check">
-                            <button type="button" aria-label="비밀번호 보이기">
+                    <div class="ipt-pw-check">
+                        <label for="user-pw-check">
+                            비밀번호 확인
+                        </label>
+                        <div class="pw-check-box">
+                            <input id="user-pw-check" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
+                            <button type="button" class="toggle-check-pw" aria-label="비밀번호 보이기">
                                 <img class="login_eyes_off" src="image/btn_visibility_off_24px.png" alt="눈모양 오프">
                             </button>
                         </div>
                     </div>
-                </div>
-                <button type="button" class="btn_lg">회원가입</button>
+                    <button type="button" class="btn_lg">회원가입</button>
             </form>
             <div class="socialBtn-main">
                 <div class="socialBtn">
@@ -80,7 +77,8 @@
                 <span class="tit">이미 회원이신가요? </span>
                 <a href="/login" class="btnTxt">로그인</a>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 </body>
 
