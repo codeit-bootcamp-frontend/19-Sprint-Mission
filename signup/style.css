@@ -99,3 +99,13 @@ button{
 .login-link a{
   color:#3692FF;
 }
+.signup{
+  text-align: center;
+  width:100%;
+  font-size: 14px;
+  font-weight: 500;
+  color:#1F2937;
+}
+.signup a{
+  color:#3692FF;
+}

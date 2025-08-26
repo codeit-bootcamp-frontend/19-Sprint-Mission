@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../login/style.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   </head>
 
@@ -14,20 +14,26 @@
       <!--로그인 폼-->
       <form>
         <div class="input-wrapper">  
-          <label for="user.email">이메일</label>
-          <input id="user.email" name="email" type="email" placeholder="이메일">
+          <label for="user-email">이메일</label>
+          <input id="user-email" name="email" type="email" placeholder="이메일">
         </div>
         <div class="input-wrapper">
-          <label for="user.nickname">닉네임</label>
-          <input id="user.nickname" name="nickname" type="text" placeholder="닉네임"> 
+          <label for="user-nickname">닉네임</label>
+          <input id="user-nickname" name="nickname" type="text" placeholder="닉네임"> 
         </div>
         <div class="input-wrapper">
-          <label for="user.password">비밀번호</label>
-          <input class="hide-text" id="user.password" name="password" type="password" placeholder="비밀번호">
+          <label for="user-password">비밀번호</label>
+          <div class="input-container">
+            <input id="user-password" name="password" type="password" placeholder="비밀번호">
+            <img src="../images/btn_visibility_off_24px.png" class="hide-text">
+          </div>
         </div> 
         <div class="input-wrapper">
-          <label for="user.password-checker">비밀번호 확인</label>
-          <input class="hide-text" id="user.password-checker" name="password-checker" type="password" placeholder="비밀번호 확인">
+          <label for="user-password-checker">비밀번호 확인</label>
+          <div class="input-container">
+            <input id="user-password-checker" name="password-checker" type="password" placeholder="비밀번호 확인">
+            <img src="../images/btn_visibility_off_24px.png" class="hide-text">
+          </div>
         </div> 
         <button>로그인</button>
       </form>
