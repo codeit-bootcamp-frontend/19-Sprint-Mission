@@ -49,10 +49,7 @@
               placeholder="비밀번호를 입력해주세요."
               autocomplete="new-password"
             />
-            <!-- TODO: 비밀번호 보거나 가리는 기능 추가 -->
-            <button class="show-password-button" type="button">
-              <img src="./images/auth/btn_visibility_off.svg" alt="비밀번호 보기" />
-            </button>
+            <button class="show-password-button" type="button" aria-label="비밀번호 보기"></button>
           </div>
           <span class="auth-input-errorMsg none"></span>
         </div>
@@ -67,9 +64,7 @@
               placeholder="비밀번호를 한 번 더 입력해주세요."
               autocomplete="new-password"
             />
-            <button class="show-password-button" type="button">
-              <img src="./images/auth/btn_visibility_on.svg" alt="비밀번호 보기" />
-            </button>
+            <button class="show-password-button" type="button" aria-label="비밀번호 보기"></button>
           </div>
           <span class="auth-input-errorMsg none"></span>
         </div>
@@ -88,6 +83,6 @@
         <span class="auth-guide-text">이미 회원이신가요?</span><a class="auth-guide-link" href="./login.html">로그인</a>
       </div>
     </main>
-    <script type="module" src="./js/signup.js"></script>
+    <script type="module" src="./js/auth-handlers.js"></script>
   </body>
 </html>
