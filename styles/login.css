@@ -28,7 +28,6 @@ body {
   height: 132px;
 }
 .login__btn {
-  background-color: var(--blue);
   border-radius: 40px;
   border: none;
   padding: 12px 294px;
@@ -83,7 +82,6 @@ label {
   line-height: 26px;
 }
 input {
-  margin-bottom: 24px;
   width: 100%;
   height: 56px;
   border: none;
@@ -94,8 +92,12 @@ input {
   line-height: 26px;
   font-weight: 400;
 }
+.input__wrapper {
+  margin-bottom: 24px;
+}
 .pwd__wrapper {
   position: relative;
+  margin-bottom: 24px;
 }
 .turn-visible-btn {
   position: absolute;
@@ -109,6 +111,19 @@ input {
 .turn-visible-btn > img {
   width: 24px;
   height: 24px;
+}
+
+.input-wrong {
+  border: 1px solid var(--error-red);
+}
+.input-wrong__message {
+  color: var(--error-red);
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 16px;
+}
+.active {
+  background-color: var(--blue);
 }
 
 /* media query */
