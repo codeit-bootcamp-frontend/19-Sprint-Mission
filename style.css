@@ -1,3 +1,5 @@
+/* common style effects */
+
 * {
     box-sizing: border-box;
 }
@@ -21,25 +23,6 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 1920px) {
-  .header {
-    padding: 20px 200px;
-  }
-}
-
-@media (max-width: 1120px) {
-  .topic {
-    font-size: 20px;
-  }
-
-  .home-mid-explain-top{
-    font-size: 9px;
-  }
-
-  .home-mid-explain-bottom{
-    font-size: 16px;
-  }
-}
 
 header {
     background-color: #ffffff;
@@ -89,7 +72,6 @@ header {
 .home-top,
 .home-bottom {
     background-color: #CFE5FF;
-    padding-top: 200px;
 }
 
 .home-top-inside,
@@ -97,8 +79,6 @@ header {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-  flex-shrink: 0;
-  min-width: 1120px;
   font-size: 40px;
   font-weight: 700;
 }
@@ -112,14 +92,13 @@ header {
 }
 
 .home-top-button {
+  display: flex;
   background: #3692ff;
   border-radius: 40px;
-  text-align: center;
 }
 
 .home-top-button a {
   color: #ffffff;
-  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -139,8 +118,7 @@ header {
   gap: 64px;
   flex-grow: 1;
   flex-shrink: 0;
-  min-width: 988px;
-  align-items: center;
+  max-width: 988px;
   background-color: #fcfcfc;
 }
 
@@ -162,20 +140,17 @@ header {
 
 .home-mid-explain-top {
   color: #3692ff;
-  font-size: 18px;
   font-weight: 800; 
 }
 
 .home-mid-explain-mid {
   color: #374151;
-  font-size: 40px;
   font-weight: 700;
   line-height: 140%;
 }
 
 .home-mid-explain-bottom {
   color: #374151;
-  font-size: 24px;
   font-weight: 500;
   line-height: 32px;
 }
@@ -194,12 +169,6 @@ footer {
   display: flex;
   justify-content: space-between;
   color: #9ca3af;
-}
-
-.footer-info-left,
-.footer-info-right {
-  display: flex;
-  justify-content: space-between;
 }
 
 .footer-info a {
