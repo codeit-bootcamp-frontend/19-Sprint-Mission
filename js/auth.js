@@ -68,9 +68,9 @@ export const updateFormValidity = (form) => {
   let isValid = true
 
   inputs.forEach((input) => {
-    const errorSpan = input.closest('.auth-input-area').querySelector('.auth-input-errorMsg')
-    const noError = errorSpan.classList.contains('none')
-    if (!input.value || !noError) {
+    const isError = input.classList.contains('auth-input-error')
+    const isComplete = input.classList.contains('auth-input-complete')
+    if (!input.value || !isComplete || isError) {
       isValid = false
     }
   })
