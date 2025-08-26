@@ -16,16 +16,28 @@
       <form class="auth-form">
         <div class="auth-input-area">
           <label for="email" class="auth-label">이메일</label>
-          <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." />
+          <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." autocomplete="email" />
         </div>
         <div class="auth-input-area">
           <label for="nickname" class="auth-label">닉네임</label>
-          <input id="nickname" class="auth-input" type="text" placeholder="닉네임을 입력해주세요." />
+          <input
+            id="nickname"
+            class="auth-input"
+            type="text"
+            placeholder="닉네임을 입력해주세요."
+            autocomplete="username"
+          />
         </div>
         <div class="auth-input-area">
           <label for="password" class="auth-label">비밀번호</label>
           <div class="password-input-area">
-            <input id="password" class="auth-input" type="password" placeholder="비밀번호를 입력해주세요." />
+            <input
+              id="password"
+              class="auth-input"
+              type="password"
+              placeholder="비밀번호를 입력해주세요."
+              autocomplete="new-password"
+            />
             <!-- TODO: 비밀번호 보거나 가리는 기능 추가 -->
             <button class="show-password-button" type="button">
               <img src="./images/auth/btn_visibility_off.svg" alt="비밀번호 보기" />
@@ -40,6 +52,7 @@
               class="auth-input"
               type="password"
               placeholder="비밀번호를 한 번 더 입력해주세요."
+              autocomplete="new-password"
             />
             <button class="show-password-button" type="button">
               <img src="./images/auth/btn_visibility_on.svg" alt="비밀번호 보기" />
