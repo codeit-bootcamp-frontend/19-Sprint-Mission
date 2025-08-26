@@ -1,0 +1,194 @@
+body {
+  background-color: #F9FAFB;
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+main.paper {
+  margin: 60px 640px 407px;        
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  gap: 24px;              
+}
+
+
+
+.mbanner {
+  width: 396px;
+  height: 132px;
+  object-fit: contain; 
+  display: block;
+  margin: 0 auto; 
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+   background-color: #F9FAFB;
+}
+
+.label {
+  font-weight: 700;       
+  font-size: 18px;        
+  line-height: 26px;       
+  letter-spacing: 0;      
+  color: #1F2937;          
+  display: inline-block;   
+  margin-bottom: 4px;      
+}
+
+input[type="text"]{
+  width: 640px;              
+  height: 56px;              
+  border-radius: 12px;       
+  background-color: #F3F4F6; 
+  border: 2px solid #3182F600;    
+  padding: 0 16px;           
+  font-size: 16px;           
+  outline: none;             
+  box-sizing: border-box;    
+}
+
+
+input[type="password"] {
+  width: 640px;              
+  height: 56px;              
+  border-radius: 12px;       
+  background-color: #F3F4F6; 
+  border: 2px solid #3182F600;    
+  padding: 0 16px;           
+  font-size: 16px;           
+  outline: none;             
+  box-sizing: border-box;
+  margin: 24px 0 24px;    
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.toggle-btn{
+    position: absolute;
+    
+}
+
+.toggle-password {
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+  width: 25px;
+  opacity: 0.5;
+  top: 12px;
+}
+
+.login-btn {
+  width: 640px;
+  height: 56px;
+  border-radius: 40px;          
+  background-color: #3692FF;     
+  color: #F3F4F6;                
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;       
+  align-items: center;          
+}
+
+.simplelogin {
+  width: 640px;
+  height: 74px;
+  padding: 16px 23px 16px;
+  display: flex;
+  align-items: center;       
+  justify-content: space-between; 
+  background-color: #E6F2FF;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 24px;
+}
+
+.icon-group {
+  display: flex;
+  gap: 8px;       
+}
+
+.simplelogin .icon {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  padding: 10px;           
+  box-sizing: content-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.icon {
+  width: 42px;              
+  height: 42px;
+  border-radius: 50%;        
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FFFFFF; 
+}
+
+.icon img {
+  width: 22px;               
+  height: 22px;
+  object-fit: contain;
+}
+
+.google-icon {
+border: 1px solid #F9FAFB;
+  background-color: #ffffff;
+}
+
+.kakao-icon {
+  background-color: #F5E14B;
+}
+
+
+.sign-in {
+    display: flex;            
+    align-items: center;  
+    justify-content: center;   
+    gap: 4px;                
+}
+
+.sign-in-text1 {
+    
+    width: 144px;             
+    height: 24px;             
+    display: flex;
+    align-items: center;      
+    white-space: nowrap;      
+}
+
+.sign-in-text1 span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #1F2937;
+}
+
+.sign-in-text2 {
+    width: 49px;             
+    height: 17px;             
+    display: flex;
+    align-items: center;     
+    white-space: nowrap;     
+}
+
+.sign-in-text2 a {
+    font-weight: 500;
+    font-size: 14px;
+    color: #3692FF;
+    text-decoration: none;
+}
