@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +10,57 @@
 </head>
 
 <body>
-	<div class="wrap">
-		<main class="formWrap">
+    <div class="wrap">
+        <main class="formWrap">
             <div class="panda_logo">
-			<span class="logo"><a href="/">
-                <span class="blind">
-                    판다마켓
-                </span></a></span>
-            <img class="panda_face" src="image/panda_face.png" alt="로그인-판다머리아이콘">
+                <span class="logo"><a href="/">
+                        <span class="blind">
+                            판다마켓
+                        </span></a></span>
+                <img class="panda_face" src="image/panda_face.png" alt="로그인-판다머리아이콘">
             </div>
             <form class="authForm">
-				<div class="ipt-email">
-					<label for="user-email">
-                        이메일
-                    </label>
-					<input id="user-email" type="email" class="input-common" placeholder="이메일을 입력해 주세요.">
-				</div>
-				<div class="ipt-pw">
-					<label for="user-pw">
-                        비밀번호
-                    </label>
-                    <div class="pw-box">
-					<input id="user-pw" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
-                    <div class="icon-wrapper">
-                    <img class="login_eyes" src="image/btn_visibility_on_24px.png" alt="로그인 눈모양">
-				</div>
+                <div class="area">
+                    <div class="ipt-email">
+                        <label for="user-email">
+                            이메일
+                        </label>
+                        <input id="user-email" type="email" class="input-common" placeholder="이메일을 입력해 주세요.">
+                    </div>
+                    <div class="ipt-pw">
+                        <label for="user-pw">
+                            비밀번호
+                        </label>
+                        <div class="pw-box">
+                            <input id="user-pw" type="password" class="input-common" placeholder="비밀번호를 입력해 주세요.">
+                            <button type="button" class="toggle-pw" aria-label="비밀번호 표시 전환">
+                                <img class="login_eyes" src="image/btn_visibility_on_24px.png" alt="로그인 눈모양">
+                            </button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn_lg">로그인</button>
+            </form>
+            <div class="socialBtn-main">
+                <div class="socialBtn">
+                    <span class="tit">
+                        간편 로그인하기
+                    </span>
+                    <div class="btns">
+                        <a class="socialBtn-box-google" href="https://www.google.com/" target="_blank"
+                            rel="noopener noreferrer" title="새창으로 열기"><img src="image/google_icon.png" alt="구글 로그인"></a>
+                        <a class="socialBtn-box-kakao" href="https://www.kakaocorp.com/page/" target="_blank"
+                            rel="noopener noreferrer" title="새창으로 열기"><img src="image/kakao_icon.png"
+                                alt="카카오톡 로그인"></a>
+                    </div>
                 </div>
-               </div> 
-				<button type="button" class="btn_lg">로그인</button>
-			</form>
-        <div class="socialBtn-main">
-			<div class="socialBtn">
-				<span class="tit">
-                    간편 로그인하기
-                </span>
-				<div class="btns">
-					<a class="socialBtn-box-google" href="https://www.google.com/" target="_blank" rel="noopener noreferrer" title="새창으로 열기"><img src="image/google_icon.png" alt="구글 로그인"></a>
-                    <a class="socialBtn-box-kakao"  href="https://www.kakaocorp.com/page/" target="_blank" rel="noopener noreferrer" title="새창으로 열기"><img src="image/kakao_icon.png" alt="카카오톡 로그인"></a>
-				</div>
-			</div>
-        </div>
-			<div class="guideBtn">
-				<span class="tit">판다마켓이 처음이신가요?</span>
-				<a href="/signup" class="btnTxt">회원가입</a>
-			</div>
-		</main>
-	</div>
+            </div>
+            <div class="guideBtn">
+                <span class="tit">판다마켓이 처음이신가요?</span>
+                <a href="/signup" class="btnTxt">회원가입</a>
+            </div>
+    </div>
+    </main>
+    </div>
 </body>
+
 </html>

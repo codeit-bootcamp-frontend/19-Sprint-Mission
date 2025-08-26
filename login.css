@@ -1,15 +1,15 @@
-.wrap{
-    display: flex;
-    width: 1920px;
-    padding: 231px 640px;
-    justify-content: center;
+.wrap {
+    min-height: 100vh;
     align-items: center;
-    background: #FCFCFC;
+    justify-content: center;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 231px 20px;
 }
 
-.formWrap{
+.formWrap {
     display: flex;
-    width: 640px;
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -20,31 +20,35 @@ a,
 a:visited,
 a:hover,
 a:active {
-  text-decoration: none;  
-  color: inherit;          
+    text-decoration: none;
+    color: inherit;
 }
 
 .input-common {
-  width: 640px;
-  height: 56px;
-  padding: 16px 24px;
-  border-radius: 12px;
-  background: #F3F4F6;
-  border: 2px solid rgba(49, 130, 246, 0.00);
-  box-sizing: border-box;
-  font-size: 16px;
+    background: #F9FAFB;
+    border: none;
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-size: 16px;
+    outline: none;
 }
 
 
-.panda_logo{
+.panda_logo {
     display: flex;
     align-items: center;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     width: 396px;
     height: 132px;
 }
 
-.logo{
+.logo {
     color: var(--brand-blue, #3692FF);
     font-family: "ROKAF Sans";
     font-size: 66.344px;
@@ -56,7 +60,7 @@ a:active {
 
 
 
-.formWrap.panda_logo.blind{
+.formWrap.panda_logo.blind {
     color: var(--brand-blue, #3692FF);
     font-family: "ROKAF Sans";
     font-size: 66.344px;
@@ -66,7 +70,7 @@ a:active {
 
 }
 
-.authForm.socialBtn-main.guideBtn{
+.authForm.socialBtn-main.guideBtn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,16 +79,16 @@ a:active {
 }
 
 
-.panda_face{
+.panda_face {
     width: 103.529px;
     height: 103.88px;
     flex-shrink: 0;
     margin: auto;
 }
 
-.btn_lg{
+.btn_lg {
     display: flex;
-    width: 640px;
+    width: 645px;
     height: 56px;
     padding: 16px 124px;
     justify-content: center;
@@ -94,15 +98,14 @@ a:active {
     background: var(--Primary-100, #3692FF);
     color: var(--Cool-Gray-100, #F3F4F6);
     text-align: center;
-    /* pretendard/xl-20px-semibold */
     font-family: Pretendard;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 32px; /* 160% */
+    line-height: 32px;
 }
 
-.btnTxt{
+.btnTxt {
     color: var(--Primary-100, #3692FF);
     font-family: Pretendard;
     font-size: 14px;
@@ -117,29 +120,30 @@ a:active {
     text-underline-position: from-font;
 }
 
-.socialBtn-main{
+.socialBtn-main {
+    background: #F3F8FF;
+    padding: 12px 23px;
+    height: auto;
     display: flex;
-    height: 74px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 16px 23px;
     gap: 10px;
     border-radius: 8px;
-    align-self: stretch;
     border: 2px solid rgba(49, 130, 246, 0.00);
     background: #E6F2FF;
 }
 
-.socialBtn{
+.socialBtn {
     display: flex;
     width: 594px;
-    justify-content: space-between;
+    gap: 16px;
     align-items: center;
+    justify-content: space-between
 }
 
 
-.socialBtn-box-google img{
+.socialBtn-box-google img {
     display: flex;
     width: 22px;
     height: 22px;
@@ -148,7 +152,8 @@ a:active {
     flex-shrink: 0;
     margin: 10px 10px 10px 10px;
 }
-.socialBtn-box-google{
+
+.socialBtn-box-google {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
@@ -157,23 +162,23 @@ a:active {
 }
 
 
-.socialBtn-box-kakao img{
+.socialBtn-box-kakao img {
     width: 26px;
     height: 24px;
     flex-shrink: 0;
     margin: 10px 8px 8px 8px;
 }
 
-.socialBtn-box-kakao{
+.socialBtn-box-kakao {
     width: 42px;
     height: 42px;
     flex-shrink: 0;
     background-color: #F5E14B;
     border-radius: 100%;
-    
+
 }
 
-#user-email{
+#user-email {
     display: flex;
     width: 640px;
     height: 56px;
@@ -183,18 +188,15 @@ a:active {
     gap: 10px;
     border-radius: 12px;
     background: var(--Cool-Gray-100, #F3F4F6);
-    height: 56px;
     flex-shrink: 0;
     align-self: stretch;
-    border-radius: 12px;
     border: 2px solid rgba(49, 130, 246, 0.00);
 }
 
-#user-pw{
+#user-pw {
     display: flex;
     width: 640px;
     height: 56px;
-    padding: 16px 24px;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
@@ -202,22 +204,23 @@ a:active {
     background: var(--Cool-Gray-100, #F3F4F6);
 }
 
-#user-pw.login_eyes{
+#user-pw.login_eyes {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 16px;
     align-items: flex-start;
     align-self: stretch;
 }
 
-.tit{
+
+.tit {
     text-align: center;
     color: var(--Secondary-800, #1F2937);
-/* pretendard/lg-16px-medium */
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 26px; /* 162.5% */
+    line-height: 26px;
 }
 
 .ipt-email,
@@ -228,14 +231,14 @@ a:active {
     gap: 16px;
 }
 
-.authForm{
+.authForm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
-.btns{
+.btns {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,34 +246,142 @@ a:active {
     gap: 16px;
 }
 
-.pw-box {
-  display: flex;
-  align-items: center;
-  width: 640px;
-  height: 56px;
-  padding: 0 16px;
-  border-radius: 12px;
-  background: #F3F4F6;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-.input-common {
-  flex: 1; 
-  border: none;
-  background: transparent;
-  font-size: 16px;
-  height: 100%;
-  outline: none;
-  padding-left: 16px;
-}
-
 .icon-wrapper {
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.guideBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.pw-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 20px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login_eyes {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .wrap {
+        padding: 80px 16px 16px 16px;
+    }
+
+    .formWrap {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+
+    .panda_logo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        gap: 16px;
+        justify-content: center;
+    }
+
+
+    .panda_face {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        /* 추가: auto 마진 제거 */
+    }
+
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .input-common,
+    #user-email,
+    #user-pw {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .pw-box {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .btn_lg {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+
+    .socialBtn-main {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .socialBtn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .authForm {
+        width: 100%;
+    }
+
+    .area {
+        width: 100%;
+    }
+
+    .ipt-email,
+    .ipt-pw {
+        width: 100%;
+    }
+
+    .guideBtn {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
