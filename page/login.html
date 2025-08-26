@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <link rel="stylesheet" href="../assets/css/commom.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/auth.css"
 </head>
 <body>
     <div class="login-container">
         <div class="logo">
             <a href="../index.html">
                 <img src="../assets/images/panda_logo_L.svg" alt="로고">
+            </a>
+        </div>
+        <div class="logo-s">
+            <a href="../index.html">
+                <img src="../assets/images/panda_logo_M.svg" alt="로고">
             </a>
         </div>
         <div class="login-wrap">
@@ -21,18 +26,20 @@
                         <label for="user-email">이메일</label>
                         <input type="email" id="user-email" placeholder="codeit@email.com">
                     </div>
-                    <div class="password">
+                    <div class="password-box">
                         <label for="user-password">비밀번호</label>
                         <div class="password-input">
                             <input type="password" id="user-password" placeholder="비밀번호">
-                            <img src="../assets/images/eye.svg" alt="비밀번호 보이기/숨기기" class="password-toggle-icon" id="passwordToggle">
+                            <button type="button" class="password-toggle-icon" id="passwordToggle" aria-label="비밀번호 보이기/숨기기">
+                                <img src="../assets/images/eye.svg" alt="비밀번호 아이콘">
+                            </button>    
                         </div>
                     </div>
                 </div>
                 <button type="submit" class="login-button">로그인</button>
             </form>
             <div class="login-option">
-                <h3>간편 로그인하기</h3>
+                <h1>간편 로그인하기</h1>
                 <div class="login-option-button">
                     <a href="https://www.google.com/">
                         <img src="../assets/images/google_lg.svg" alt="구글">

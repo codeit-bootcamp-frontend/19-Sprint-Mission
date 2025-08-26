@@ -7,7 +7,11 @@ body {
     background-color: #FCFCFC;
 }
 
-.signup-container {
+.logo-s {
+    display: none;
+}
+
+.signup-container, .login-container {
     width: 640px;
     display: flex;
     flex-direction: column;
@@ -20,22 +24,26 @@ body {
 .input-box, 
 .email, .password, 
 .name, .password-box, 
-.password-repeat-box {
+.password-repeat-box,
+.login-wrap, .login-box, 
+.input-box {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.signup-wrap {
+.signup-wrap, .login-wrap {
     align-items: center;
 }
 
-.signup-wrap, .signup-box, .input-box {
+.signup-wrap, .signup-box,
+.login-wrap, .login-box, .input-box {
     gap: 24px;
 }
 
 .email, .name, 
-.password-box, .password-repeat-box {
+.password-box, .password-repeat-box,
+.email, .password {
     gap: 16px;
     font-size: 18px;
     font-weight: 700;
@@ -58,10 +66,12 @@ body {
 .password-toggle-icon {
     position: absolute;
     right: 10px;        
-    cursor: pointer;    
+    cursor: pointer;
+    background: none;
+    border: none;   
 }
 
-.email input, .name input,
+.email input, .name input, 
 .password-box input, .password-repeat-box input {
     height: 56px;
     flex-shrink: 0;
@@ -73,10 +83,10 @@ body {
     font-weight: 400;
     line-height: 26px;
     color: var(--gray800);
-    cursor: pointer;
+    cursor: text;
 }
 
-.signup-button {
+.signup-button, .login-button {
     height: 56px;
     padding: 16px 124px;
     display: flex;
@@ -102,6 +112,12 @@ body {
     background-color: #E6F2FF;
 }
 
+.login-option h1 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
 .login-option-button {
     display: flex;
     align-items: flex-start;
@@ -123,4 +139,38 @@ body {
 .signup a {
     text-decoration: underline;
     color: var(--blue100);
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+}
+
+/* Mobile */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    body {
+        padding: 80px 16px;
+    }
+
+    .signup-container, .login-container {
+        width: 100%;
+        max-width: 400px;
+        gap: 24px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-s {
+        display: block;
+    }
+
+    .signup-box, .login-box, .input-box {
+        gap: 16px;
+    }
+
+    .email, .name, .password-box, .password-repeat-box, .email, .password {
+        gap: 8px;
+    }
 }
