@@ -16,7 +16,14 @@
       <form class="auth-form">
         <div class="auth-input-area">
           <label for="email" class="auth-label">이메일</label>
-          <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." autocomplete="email" />
+          <input
+            id="email"
+            class="auth-input"
+            type="email"
+            name="email"
+            placeholder="이메일을 입력해주세요."
+            autocomplete="email"
+          />
         </div>
         <div class="auth-input-area">
           <label for="nickname" class="auth-label">닉네임</label>
@@ -24,6 +31,7 @@
             id="nickname"
             class="auth-input"
             type="text"
+            name="nickname"
             placeholder="닉네임을 입력해주세요."
             autocomplete="username"
           />
@@ -35,6 +43,7 @@
               id="password"
               class="auth-input"
               type="password"
+              name="password"
               placeholder="비밀번호를 입력해주세요."
               autocomplete="new-password"
             />
@@ -51,6 +60,7 @@
               id="confirm-password"
               class="auth-input"
               type="password"
+              name="confirmPassword"
               placeholder="비밀번호를 한 번 더 입력해주세요."
               autocomplete="new-password"
             />
