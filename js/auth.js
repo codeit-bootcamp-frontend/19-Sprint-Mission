@@ -82,3 +82,11 @@ export const updateFormValidity = (form) => {
 
   return isValid
 }
+
+export const handlePasswordToggle = (e) => {
+  e.target.classList.toggle('visible')
+  const passwordInput = e.target.previousElementSibling
+  if (passwordInput && passwordInput.tagName === 'INPUT') {
+    e.target.classList.contains('visible') ? (passwordInput.type = 'text') : (passwordInput.type = 'password')
+  }
+}

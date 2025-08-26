@@ -1,14 +1,15 @@
-import { updateFormValidity, handleInputValidation } from './auth.js'
+import { updateFormValidity, handleInputValidation, handlePasswordToggle } from './auth.js'
 
 const authForm = document.querySelector('.auth-form')
+const showPasswordButtons = authForm.querySelectorAll('.show-password-button')
 
 authForm.addEventListener('focusout', (e) => {
   handleInputValidation(e)
-  updateFormValidity(signupForm)
+  updateFormValidity(authForm)
 })
 
 authForm.addEventListener('input', () => {
-  updateFormValidity(signupForm)
+  updateFormValidity(authForm)
 })
 
 authForm.addEventListener('submit', (e) => {
@@ -18,4 +19,8 @@ authForm.addEventListener('submit', (e) => {
   } else if (authForm.name === 'login') {
     location.replace('/items.html')
   }
+})
+
+showPasswordButtons.forEach((button) => {
+  button.addEventListener('click', handlePasswordToggle)
 })

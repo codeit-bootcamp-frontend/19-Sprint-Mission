@@ -80,7 +80,13 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
+  background-image: url('../images/icons/ic_visibility_off.svg');
+  background-size: cover;
   cursor: pointer;
+}
+
+.show-password-button.visible {
+  background-image: url('../images/icons/ic_visibility_on.svg');
 }
 
 .auth-button {
