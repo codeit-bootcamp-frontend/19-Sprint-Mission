@@ -13,7 +13,7 @@
       <a href="/">
         <img src="./images/logo.svg" alt="판다마켓 로고" class="logo-img" />
       </a>
-      <form class="auth-form">
+      <form class="auth-form" name="signup">
         <div class="auth-input-area">
           <label for="email" class="auth-label">이메일</label>
           <input
@@ -24,6 +24,7 @@
             placeholder="이메일을 입력해주세요."
             autocomplete="email"
           />
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="nickname" class="auth-label">닉네임</label>
@@ -35,6 +36,7 @@
             placeholder="닉네임을 입력해주세요."
             autocomplete="username"
           />
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="password" class="auth-label">비밀번호</label>
@@ -52,6 +54,7 @@
               <img src="./images/auth/btn_visibility_off.svg" alt="비밀번호 보기" />
             </button>
           </div>
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="confirm-password" class="auth-label">비밀번호 확인</label>
@@ -68,6 +71,7 @@
               <img src="./images/auth/btn_visibility_on.svg" alt="비밀번호 보기" />
             </button>
           </div>
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <button type="submit" disabled class="button auth-button">회원가입</button>
       </form>
@@ -84,5 +88,6 @@
         <span class="auth-guide-text">이미 회원이신가요?</span><a class="auth-guide-link" href="./login.html">로그인</a>
       </div>
     </main>
+    <script type="module" src="./js/signup.js"></script>
   </body>
 </html>
