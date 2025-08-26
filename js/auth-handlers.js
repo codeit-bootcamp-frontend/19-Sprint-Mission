@@ -14,6 +14,13 @@ authForm.addEventListener('input', () => {
 
 authForm.addEventListener('submit', (e) => {
   e.preventDefault()
+
+  const isValid = updateFormValidity(authForm)
+
+  if (!isValid) {
+    return
+  }
+
   if (authForm.name === 'signup') {
     location.replace('/login.html')
   } else if (authForm.name === 'login') {
