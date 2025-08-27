@@ -3,6 +3,8 @@ const pwdInput = document.querySelector('#user-pwd');
 const pwdCheck = document.querySelector('#user-pwd-check');
 const nicknameInput = document.querySelector('#user-nickname');
 const loginBtn = document.querySelector('.login__btn');
+const visibleToggleBtns = document.querySelectorAll('.turn-visible-btn');
+// const visibleToggleImg = visibleToggleBtn.querySelector('img');
 
 //에러메시지 표시 함수
 function showErrorMessage(input, message) {
@@ -124,7 +126,6 @@ pwdInput.addEventListener('focusout', () => {
   checkPwd();
   turnActiveBtn();
 });
-
 //로그인 페이지에서 오류 발생하지 않게 pwdCheck가 있을 때만 실행(회원가입 페이지에서만 진행)
 if (pwdCheck) {
   pwdCheck.addEventListener('focusout', () => {
@@ -139,3 +140,20 @@ if (nicknameInput) {
     turnActiveBtn();
   });
 }
+
+//비밀번호 가리기 아이콘 클릭 시 이미지, input type을 text로 변경
+//회원가입 페이지에 버튼이 2개라 querySelectAll로 visibleToggleBtns를 가져왔음
+visibleToggleBtns.forEach((btn) => {
+  const img = btn.querySelector('img');
+  const input = btn.parentElement.querySelector('input');
+
+  btn.addEventListener('click', () => {
+    if (img.src.includes('unvisible.png')) {
+      img.src = '/images/visible.png';
+      input.setAttribute('type', 'text');
+    } else {
+      img.src = '/images/unvisible.png';
+      input.setAttribute('type', 'password');
+    }
+  });
+});
