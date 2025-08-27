@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign-up</title>
     <link rel="stylesheet" href="css/import.css">
-    <link rel="stylesheet" href="css/login-media.css">
+    <link rel="stylesheet" href="css/loginpage.css">
 </head>
 <body>
      <section class="login-area signUp">
@@ -13,24 +13,34 @@
         <img class="login-panda" src="img/판다 얼굴.png" alt="">
         <h1>판다마켓</h1>
         </a>
-        <form action="1.mision.html">
+        <form action="mainpage.html">
             <label for="">이메일</label>
-            <input type="email" id="email"  name="email" class="text" placeholder="email">
+            <input type="email" id="email"  name="email" class="text push" placeholder="email">
             <label for="" class="Name">닉네임</label>
-            <input type="name" id="name"  name="name" class="text" placeholder="닉네임">
+            <input type="name" id="name"  name="name" class="text push" placeholder="닉네임">
             <label for="">비밀번호</label>
-            <input type="password" id="password" name="password" class="text" placeholder="password">
+            <div class="password-wrap ">
+                <input type="password" id="password" name="password" class="text" placeholder="password">
+                <span class="eye-ikon eye-on"></span>
+                <span class="eye-ikon eye-off"></span>
+            </div>
             <label for="">비밀번호 확인</label>
-            <input type="password" id="password-chek" name="password" class="text" placeholder="비밀번호 확인">
-            <input type="submit" id="submit" value="로그인">
+            <div class="password-wrap">
+                <input type="password" id="password-check" name="password" class="text" placeholder="비밀번호 확인">
+                <span class="eye-ikon eye-on"></span>
+                <span class="eye-ikon eye-off"></span>
+            </div>
+            <input type="submit" id="submit" class="submit push" value="로그인">
         </form>
         
-        <div class="Easy-login">
+        <div class="easy-login">
             <span>간편 로그인하기</span>
             <a href="https://www.google.com/" class="google"></a>
             <a href="https://www.kakaocorp.com/page/" class="kakao"></a>
         </div>
         <p>판다마켓이 처음이신가요?<a href="pagelogin.html" class="sign-up">로그인</a></p>
     </section>
+    <script src="js/login.js"></script>
+
 </body>
 </html>
