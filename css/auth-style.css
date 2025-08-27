@@ -47,12 +47,26 @@
   line-height: 26px;
 }
 
+.auth-input-complete {
+  border: 1px solid var(--primary-100);
+}
+
+.auth-input-error {
+  border: 1px solid var(--error-red);
+}
+
 .auth-input:focus {
   outline: 1px solid var(--primary-100);
 }
 
 .auth-input::placeholder {
   color: var(--gray-400);
+}
+
+.auth-input-errorMsg {
+  margin-top: -8px;
+  padding-left: 16px;
+  color: var(--error-red);
 }
 
 .password-input-area {
@@ -66,7 +80,13 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
+  background-image: url('../images/icons/ic_visibility_off.svg');
+  background-size: cover;
   cursor: pointer;
+}
+
+.show-password-button.visible {
+  background-image: url('../images/icons/ic_visibility_on.svg');
 }
 
 .auth-button {

@@ -13,24 +13,45 @@
       <a href="/">
         <img src="./images/logo.svg" alt="판다마켓 로고" class="logo-img" />
       </a>
-      <form class="auth-form">
+      <form class="auth-form" name="signup">
         <div class="auth-input-area">
           <label for="email" class="auth-label">이메일</label>
-          <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." />
+          <input
+            id="email"
+            class="auth-input"
+            type="email"
+            name="email"
+            placeholder="이메일을 입력해주세요."
+            autocomplete="email"
+          />
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="nickname" class="auth-label">닉네임</label>
-          <input id="nickname" class="auth-input" type="text" placeholder="닉네임을 입력해주세요." />
+          <input
+            id="nickname"
+            class="auth-input"
+            type="text"
+            name="nickname"
+            placeholder="닉네임을 입력해주세요."
+            autocomplete="username"
+          />
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="password" class="auth-label">비밀번호</label>
           <div class="password-input-area">
-            <input id="password" class="auth-input" type="password" placeholder="비밀번호를 입력해주세요." />
-            <!-- TODO: 비밀번호 보거나 가리는 기능 추가 -->
-            <button class="show-password-button" type="button">
-              <img src="./images/auth/btn_visibility_off.svg" alt="비밀번호 보기" />
-            </button>
+            <input
+              id="password"
+              class="auth-input"
+              type="password"
+              name="password"
+              placeholder="비밀번호를 입력해주세요."
+              autocomplete="new-password"
+            />
+            <button class="show-password-button" type="button" aria-label="비밀번호 보기"></button>
           </div>
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="confirm-password" class="auth-label">비밀번호 확인</label>
@@ -39,12 +60,13 @@
               id="confirm-password"
               class="auth-input"
               type="password"
+              name="confirmPassword"
               placeholder="비밀번호를 한 번 더 입력해주세요."
+              autocomplete="new-password"
             />
-            <button class="show-password-button" type="button">
-              <img src="./images/auth/btn_visibility_on.svg" alt="비밀번호 보기" />
-            </button>
+            <button class="show-password-button" type="button" aria-label="비밀번호 보기"></button>
           </div>
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <button type="submit" disabled class="button auth-button">회원가입</button>
       </form>
@@ -61,5 +83,6 @@
         <span class="auth-guide-text">이미 회원이신가요?</span><a class="auth-guide-link" href="./login.html">로그인</a>
       </div>
     </main>
+    <script type="module" src="./js/auth-handlers.js"></script>
   </body>
 </html>

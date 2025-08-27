@@ -13,20 +13,33 @@
       <a href="/">
         <img src="./images/logo.svg" alt="판다마켓 로고" class="logo-img" />
       </a>
-      <form class="auth-form">
+      <form class="auth-form" name="login">
         <div class="auth-input-area">
           <label for="email" class="auth-label">이메일</label>
-          <input id="email" class="auth-input" type="email" placeholder="이메일을 입력해주세요." />
+          <input
+            id="email"
+            class="auth-input"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해주세요."
+            autocomplete="email"
+          />
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <div class="auth-input-area">
           <label for="password" class="auth-label">비밀번호</label>
           <div class="password-input-area">
-            <input id="password" class="auth-input" type="password" placeholder="비밀번호를 입력해주세요." />
-            <!-- TODO: 비밀번호 보거나 가리는 기능 추가 -->
-            <button class="show-password-button" type="button">
-              <img src="./images/auth/btn_visibility_off.svg" alt="비밀번호 보기" />
-            </button>
+            <input
+              id="password"
+              class="auth-input"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해주세요."
+              autocomplete="current-password"
+            />
+            <button class="show-password-button" type="button"></button>
           </div>
+          <span class="auth-input-errorMsg none"></span>
         </div>
         <button type="submit" disabled class="button auth-button">로그인</button>
       </form>
@@ -44,5 +57,6 @@
         ><a class="auth-guide-link" href="./signup.html">회원가입</a>
       </div>
     </main>
+    <script type="module" src="./js/auth-handlers.js"></script>
   </body>
 </html>
