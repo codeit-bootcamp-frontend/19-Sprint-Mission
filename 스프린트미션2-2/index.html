@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./jquery-3.6.0.js"></script>
-    <script src="./mission.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -25,18 +21,21 @@
             <div class="email_box">
                 <label for="email">이메일</label>
                 <input type="email" id="email" name="email" placeholder="codeit@email.com" required>
+                <div class="err-message" id="email-err"></div>
             </div>
             <div class="nickname_box">
                 <label for="nickname">닉네임</label>
                 <input type="text" id="nickname" name="nickname" placeholder="판다" required>
+                <div class="err-message" id="nick-err"></div>
             </div>
             <div class="password_box">
                 <label for="password">비밀번호</label>
                 <div class="password_with_icon">
                     <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요." required>
+                    <div class="err-message" id="password-err"></div>
                     <div class="password_icon_img">
-                        <img class="security" src="./eyes_icon.png" alt="안보이는 이미지">
-                        <img class="public" src="./eyes_icon2.png" alt="보이는 이미지">
+                        <img class="security" src="./eyes_icon.png" aria-label="안보이는 아이콘" alt="안보이는 이미지">
+                        <img class="public" src="./eyes_icon2.png" aria-label="보이는 아이콘" alt="보이는 이미지">
                     </div>    
                 </div>
             </div>
@@ -44,6 +43,7 @@
                 <label for="password_check">비밀번호확인</label>
                 <div class="password_check_with_icon">
                     <input type="password" id="password_check" name="password_check" placeholder="비밀번호를 입력하세요." required>
+                    <div class="err-message" id="password-check-err"></div>
                     <div class="password_check_icon_img">
                         <img class="security_check" src="./eyes_icon.png" alt="안보이는 이미지">
                         <img class="public_check" src="./eyes_icon2.png" alt="보이는 이미지">
@@ -53,7 +53,7 @@
             </form>
         </main>
 
-        <button class="signup_box">회원가입</button>
+       <a href="../스프린트미션2/index.html"><button class="signup_box">회원가입</button></a>
 
         <div class="social_login">
             <p>간편 로그인하기</p>
@@ -69,5 +69,7 @@
             <a href="../스프린트미션2/index.html">로그인</a>
         </footer>
     </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./mission.js"></script>
 </body>
 </html>
