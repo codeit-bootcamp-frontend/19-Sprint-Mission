@@ -90,6 +90,10 @@ function turnActiveBtn() {
     if (emailState && nicknameState && pwdState && checkpwdState) {
       loginBtn.classList.add('active');
       loginBtn.removeAttribute('disabled');
+      loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = '/login.html';
+      });
     } else {
       loginBtn.classList.remove('active');
       loginBtn.setAttribute('disabled', 'disabled');
@@ -100,6 +104,10 @@ function turnActiveBtn() {
     if (emailState && pwdState) {
       loginBtn.classList.add('active');
       loginBtn.removeAttribute('disabled');
+      loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        location.href = '/items.html';
+      });
     } else {
       loginBtn.classList.remove('active');
       loginBtn.setAttribute('disabled', 'disabled');
