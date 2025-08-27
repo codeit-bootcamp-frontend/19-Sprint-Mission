@@ -24,9 +24,16 @@ header{
   position: sticky;
   top:0px;
 }
+header a{
+  text-decoration: none;
+}
 .logo{
-  width:153px;
-  height: 51px;
+  width: 40px;
+  height: 40.135px;
+}
+.logo.letter{
+  width:103px;
+  height: 35px;
 }
 .head.wrap{
   display: flex;
@@ -81,6 +88,7 @@ header{
   background-color: #3692ff;
   padding:16px 124px;
   border-radius:40px;
+  width:357px;
 }
 .intro-btn a{
   text-decoration: none;
@@ -105,7 +113,7 @@ header{
   background-color: #FCFCFC;
   border-radius: 8px;
 }
-.Search .content{
+.right{
   text-align: right;
 }
 .menu{
@@ -137,13 +145,22 @@ header{
 }
 
 /*footer section*/
-footer{
+.footer-container{
   background-color: #111827;
-  margin:0 auto;
-  padding:32px 400px 100px;
-  color:#9CA3AF;
+  padding:32px 400px;
+  height: 160px;
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  align-items: start;
+}
+.footer-wrap{
+  width:100%;
   display:flex;
   justify-content: space-between;
+}
+.codeit{
+  color:#9CA3AF;
 }
 .icons{
   display: flex;
@@ -161,4 +178,97 @@ footer{
   line-height: 100%;
   font-weight: 400;
   color:#E5E7EB;
+}
+/*반응형 디자인*/
+
+/*태블릿 사이즈*/
+@media(max-width:1199px){
+  header{
+    padding:9px 24px;
+  }
+  .intro-wrap{
+    margin-bottom: 24px;
+  }
+  .intro-container,
+  .outro-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro{
+    align-items: center;
+  }
+  .intro-ment > br{
+    display: none;
+  }
+  .sections{
+    padding:0 24px;
+  }
+  .content-wrap{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    margin:0 auto 52px;
+    align-items: normal;
+  }
+  .ment > br{
+    display: none;
+  }
+  .right-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .content{
+    gap:0px;
+  }
+  .ment{
+    margin-top:16px;
+    margin-bottom:24px;
+    font-size: 24px;
+  }
+  .outro-wrap{
+    margin-top: 0;
+    padding-top:201px;
+  }
+  .outro-container{
+    gap:217px;
+  }
+  .outro-ment{
+    text-align: center;
+  }
+  
+  
+  .footer-container{
+    display: flex;
+    background-color: #111827;
+    padding:32px 104px 64px;
+    height: 160px;
+}
+
+}
+/*모바일 사이즈*/
+@media(max-width:767px){
+  img{
+    width:100%
+  }
+  .logo.image{
+    display: none;
+  }
+  .intro-ment > br{
+    display: inline;
+  }
+  .intro-ment{
+    text-align: center;
+  }
+  .footer-wrap{
+    flex-wrap: wrap-reverse;
+  }
+  .codeit{
+    flex-basis: 100%;
+    padding-top:60px;
+  }
+  .footer-container{
+    padding:32px 32px 64px;
+  }
 }
