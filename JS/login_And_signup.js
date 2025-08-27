@@ -13,6 +13,7 @@ function showErrorMessage(input, message) {
   errorMessage.textContent = message;
   errorMessage.classList.remove('hidden');
   input.classList.add('input-wrong');
+  input.classList.remove('input-correct');
 }
 //에러메시지 숨김 함수
 function hideErrorMessage(input) {
@@ -20,6 +21,7 @@ function hideErrorMessage(input) {
   errorMessage.textContent = '';
   errorMessage.classList.add('hidden');
   input.classList.remove('input-wrong');
+  input.classList.add('input-correct');
 }
 
 // 이메일 체크

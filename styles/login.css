@@ -119,6 +119,9 @@ input {
 .input-wrong {
   border: 1px solid var(--error-red);
 }
+.input-correct {
+  border: 1px solid var(--blue);
+}
 .input-wrong__message {
   color: var(--error-red);
   font-size: 14px;
