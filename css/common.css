@@ -20,6 +20,9 @@ a {
   margin: 0 auto;
   padding: 0 1rem;
 }
+.hidden {
+  display: none !important;
+}
 
 /* UI */
 input::placeholder {
