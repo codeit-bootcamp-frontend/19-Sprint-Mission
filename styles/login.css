@@ -112,6 +112,9 @@ input {
   width: 24px;
   height: 24px;
 }
+.error__message.hidden {
+  visibility: hidden;
+}
 
 .input-wrong {
   border: 1px solid var(--error-red);

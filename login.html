@@ -22,10 +22,11 @@
           <div class="input__wrapper">
             <input
               type="email"
-              name="emial"
+              name="email"
               id="user-email"
               placeholder="codeit@example.com"
             />
+            <p class="error__message input-wrong__message hidden"></p>
           </div>
           <label for="user-pwd">비밀번호</label>
           <div class="pwd__wrapper">
@@ -33,8 +34,11 @@
             <button type="button" class="turn-visible-btn">
               <img src="/images/unvisible.png" alt="비밀번호 표시 버튼" />
             </button>
+            <p class="error__message input-wrong__message hidden"></p>
           </div>
-          <button type="submit" class="login__btn">로그인</button>
+          <a href="">
+            <button type="submit" class="login__btn">로그인</button>
+          </a>
         </form>
 
         <div class="login-easy">
@@ -60,6 +64,6 @@
         </div>
       </div>
     </div>
-    <script src="JS/input.js"></script>
+    <script src="JS/login_And_signup.js"></script>
   </body>
 </html>
