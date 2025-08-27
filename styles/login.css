@@ -16,9 +16,9 @@ body {
   width: 640px;
   height: 618px;
 }
-.login.new {
+/* .login.new {
   height: 857px;
-}
+} */
 .login > a {
   display: flex;
   justify-content: center;
@@ -136,6 +136,7 @@ input {
     max-width: 350px;
     margin-bottom: 231px;
   }
+
   .login__btn {
     width: 100%;
     padding: 16px 124px;
