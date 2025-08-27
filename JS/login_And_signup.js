@@ -89,16 +89,20 @@ function turnActiveBtn() {
   if (signupPage) {
     if (emailState && nicknameState && pwdState && checkpwdState) {
       loginBtn.classList.add('active');
+      loginBtn.removeAttribute('disabled');
     } else {
       loginBtn.classList.remove('active');
+      loginBtn.setAttribute('disabled', 'disabled');
     }
   }
   //회원가입 페이지가 아니라면(로그인 페이지라면) 이메일,비밀번호 확인 함수가 모두 참일 때 실행
   else {
     if (emailState && pwdState) {
       loginBtn.classList.add('active');
+      loginBtn.removeAttribute('disabled');
     } else {
       loginBtn.classList.remove('active');
+      loginBtn.setAttribute('disabled', 'disabled');
     }
   }
 }
