@@ -139,6 +139,7 @@ a {
   --gray50: #f9fafb;
   --blue: #3692ff;
   --secondary400: #9ca3af;
+  --error-red: #f74747;
 }
 
 * {
