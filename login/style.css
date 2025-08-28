@@ -115,3 +115,10 @@ form > button{
 .signup a{
   color:#3692FF;
 }
+
+@media(max-width:767px){
+  main{
+    margin:0 auto;
+    padding:16px;
+  }
+}
