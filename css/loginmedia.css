@@ -1,9 +1,9 @@
 /* Mobile */
 @media (min-width:350px) and (max-width:767px){
     .login-area{
-        width: 70.723%;
+        width: 68.6%;
         max-width: 400px;
-        padding-block: 80px;
+        padding-block: 80px 231px;
     }
     .login label{
         margin-bottom: 8px; 
@@ -17,18 +17,18 @@
         font-weight: 700; 
         line-height: 17px; 
     }
-    input{
+    .push,.password-wrap{
         margin-bottom: 16px; 
         border: none;
     } 
-     #submit{
+    .submit{
         padding: 16px;
         line-height: 24px;
         margin-bottom: 24px;
     }
     
     .login-head{
-         width: 198px;
+        width: 198px;
         margin: 0 auto;
         gap: 11.12px;
         margin-bottom: 24px; 
@@ -47,7 +47,6 @@
     aspect-ratio: 51.76 / 51.95;
     padding-block: 6.49px 7.58x;
     }  
-    .signUp form .Name{line-height: 17px;}
 
 }
 
@@ -60,7 +59,7 @@
         padding-block: 231px;
     }
     .login-head{
-         width: 396px;
+        width: 396px;
         margin: 0 auto;
         gap: 22.24px;
         margin-bottom: 40px; 
@@ -88,14 +87,16 @@
         margin-bottom: 16px; 
         font-size: 18px; 
         font-weight: 700; 
-        line-height: 26px; 
+        line-height: 21px; 
     }
-    input{margin-bottom: 24px; border: none;} 
-    #submit{
+    .push,.password-wrap{
+        margin-bottom: 24px; 
+        border: none;
+    } 
+    .submit{
         line-height: 24px;
         padding: 16px;
     }   
-    .signUp form .Name{line-height: 21px;}
 }
  
 /* Pc */
@@ -135,15 +136,14 @@
         margin-bottom: 16px; 
         font-size: 18px; 
         font-weight: 700; 
-        line-height: 26px; 
+        line-height: 21px; 
     }
-    input{
+    .push,.password-wrap{
         margin-bottom: 24px; 
         border: none;
     } 
-    #submit{
+    .submit{
         padding: 16px;
         line-height: 24px;
     }
-    .signUp form .Name{line-height: 21px;}
 }
