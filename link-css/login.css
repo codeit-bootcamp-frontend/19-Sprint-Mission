@@ -4,7 +4,7 @@
     padding:0;
     font-family: 'Pretendard', sans-serif;
 }
-body{
+.auth-container{
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -23,6 +23,14 @@ body{
   flex-direction: column;
   gap: 24px;
 }
+.input-item{
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 24px;
+ position: relative;
+}
+
 input{
   width: 640px;
   height: 56px;
@@ -42,19 +50,13 @@ label{
   color: #1F2937;
   font-weight: 700;
 }
-.input-wrapper{
-  position:relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 
 .eyeicon{
   position: absolute;
   cursor: pointer;
   padding-right: 24px;
 }
-button{
+.loginBtn{
   border-radius: 40px;
   width: 640px;
   height: 56px;
@@ -68,7 +70,7 @@ button{
   color:#F3F4F6;
   cursor: pointer;
 }
-form{
+.loginForm{
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -95,6 +97,18 @@ form{
   display: flex;
   gap: 16px;
 }
+.input-wrapper{
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.input-wrapper button{
+  position:relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .first-pandamarket{
   font-weight: 500;
   font-size: 14px;
@@ -117,21 +131,17 @@ form{
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   body{
     padding: 190px 52px;
   }
-  .login-frame,
-  input,
-  button,
-  .input-wrapper {
-    width: 640px;
-  }
+  button{
+  background-color:#9CA3AF;
 }
-
+}
 /* Mobile */
-@media (min-width: 375px) and (max-width: 767px) {
-  body {   
+@media (max-width: 767px) {
+  .auth-container {   
     width: 100%;        
     padding: 80px 16px 0 16px;
     display: flex;
@@ -165,7 +175,7 @@ label{
   font-size: 14px;
   font-weight: 700;
 }
-button{
+.loginBtn{
   width: 100%;     
   max-width: 343px;
   height: 56px;
@@ -174,7 +184,7 @@ button{
   font-size: 20px;
   line-height: 32px;
 }
-form{
+.loginForm{
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -187,6 +197,6 @@ input{
 }
 /*pc*/
   @media(min-width: 1200px) {
-  body {}
+  .auth-container {}
 }
 }
