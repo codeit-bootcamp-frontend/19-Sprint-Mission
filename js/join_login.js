@@ -65,6 +65,36 @@ function errorComplete(target) {
   target.classList.add("complete");
 }
 
+// 버튼 활성화/비활성화 업데이트
+function updateButtonState(inputList) {
+  const inputs = inputList.querySelectorAll("input");
+  const complete = inputList.querySelectorAll(".complete");
+  const btn = inputList.nextElementSibling;
+
+  const isAllComplete = inputs.length === complete.length;
+
+  if (isAllComplete) {
+    activateButton(btn);
+  } else {
+    deactivateButton(btn);
+  }
+}
+
+function activateButton(btn) {
+  btn.removeAttribute("disabled");
+
+  if (window.location.href.includes("login")) {
+    btn.setAttribute("onclick", 'location.href="/items.html"');
+  } else if (window.location.href.includes("signup")) {
+    btn.setAttribute("onclick", 'location.href="/login.html"');
+  }
+}
+
+function deactivateButton(btn) {
+  btn.setAttribute("disabled", "true");
+  btn.removeAttribute("onclick");
+}
+
 // 포커스 아웃 이벤트
 function focusoutAction(e) {
   const rules = validations[e.target.id];
@@ -81,25 +111,9 @@ function focusoutAction(e) {
     errorComplete(e.target);
   }
 
-  // 버튼 활성화 / 비활성화 처리
+  // 버튼 상태 갱신
   const inputList = e.target.closest(".input_list");
-  const inputs = inputList.querySelectorAll("input");
-  const complete = inputList.querySelectorAll(".complete");
-
-  const btn = inputList.nextElementSibling;
-
-  if (inputs.length === complete.length) {
-    btn.removeAttribute("disabled");
-
-    if (window.location.href.includes("login")) {
-      btn.setAttribute("onclick", 'location.href="/items.html"');
-    } else if (window.location.href.includes("signup")) {
-      btn.setAttribute("onclick", 'location.href="/login.html"');
-    }
-  } else {
-    btn.setAttribute("disabled", "true");
-    btn.removeAttribute("onclick");
-  }
+  updateButtonState(inputList);
 }
 
 // 비밀번호 표시/숨기기
