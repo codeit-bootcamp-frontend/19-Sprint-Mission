@@ -40,12 +40,21 @@ h1 > img {
   font-size: 16px;
   line-height: 24px;
 }
-.login-contents .li-input {
+.login-contents .input-error {
+  /* border 생기면서 높이 커지는것 방지 */
+  box-shadow: 0 0 0 1px #f74747;
+}
+.login-contents .error {
+  font-size: 14px;
+  padding-left: 16px;
+  color: #f74747;
+}
+.login-contents .form-group {
   display: flex;
   flex-flow: column;
   gap: 16px;
 }
-.login-contents .li-input label {
+.login-contents .form-group label {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -61,22 +70,29 @@ h1 > img {
   border: none;
   width: 24px;
   height: 24px;
-  background: url(/img/login/btn-visibility-off.png) no-repeat center;
-}
-.btn-visibility.active {
   background: url(/img/login/btn-visibility-on.png) no-repeat center;
 }
-.login-contents .li-button a {
+.btn-visibility.off {
+  background: url(/img/login/btn-visibility-off.png) no-repeat center;
+}
+.login-contents .li-button button {
   display: block;
   width: 100%;
   height: 56px;
   line-height: 56px;
   border-radius: 40px;
-  background-color: var(--gray400);
+  background-color: var(--blue);
+  cursor: pointer;
+  border: none;
   text-align: center;
   font-size: 20px;
   font-weight: 600;
   color: #fff;
+  transition: all 0.5s;
+}
+.login-contents .li-button button:disabled {
+  background-color: var(--gray400);
+  cursor: initial;
 }
 .login-contents .li-sns {
   display: flex;
@@ -121,10 +137,10 @@ h1 > img {
   h1 > img {
     height: 66px;
   }
-  .login-contents .li-input {
+  .login-contents .form-group {
     gap: 8px;
   }
-  .login-contents .li-input label {
+  .login-contents .form-group label {
     font-size: 14px;
     line-height: 26px;
   }

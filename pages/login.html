@@ -10,37 +10,44 @@
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/common.css" />
     <link rel="stylesheet" href="/css/login.css" />
+    <script defer src="/js/login.js"></script>
   </head>
   <body>
     <main>
-      <form class="login-section">
+      <form id="login-form" class="login-section">
         <a href="/" class="login-logo">
           <h1>
             <img src="/img/login/login-logo.png" alt="login-logo" />
           </h1>
         </a>
         <ul class="login-contents">
-          <li class="li-input">
-            <label for="usr_email">이메일</label>
+          <li class="form-group">
+            <label for="usr-email">이메일</label>
             <input
-              id="usr_email"
+              id="usr-email"
               type="text"
               placeholder="이메일을 입력해주세요"
             />
+            <p id="usr-email-error" class="error hidden"></p>
           </li>
-          <li class="li-input">
-            <label for="usr_password">비밀번호</label>
+          <li class="form-group">
+            <label for="usr-password">비밀번호</label>
             <div class="input-inc-btn">
               <input
-                id="usr_password"
+                id="usr-password"
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
               />
-              <button class="btn-visibility"></button>
+              <button
+                id="btn-visibility"
+                class="btn-visibility off"
+                type="button"
+              ></button>
             </div>
+            <p id="usr-password-error" class="error hidden"></p>
           </li>
           <li class="li-button">
-            <a href="#">로그인</a>
+            <button id="btn-login" disabled type="submit">로그인</button>
           </li>
           <li class="li-sns">
             <h5>간편 로그인하기</h5>
