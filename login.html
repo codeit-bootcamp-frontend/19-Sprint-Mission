@@ -6,6 +6,11 @@
   <meta http-equiv="Expires" content="0"/>
   <meta http-equiv="Cache-Control" content="no-cache"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="판다마켓" />
+  <meta property="og:url" content="https://codeit-sprint-mission-seony-y.netlify.app/login" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="일상의 모든 물건을 거래해보세요"/>
+  <meta property="og:image" content="images/logo/og-image.png" />
   <title>로그인하기</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.ico">
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
@@ -15,28 +20,29 @@
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <div class="login_container">
+  <div class="auth_container">
     <a href="/" id="login_logo">
       <img src="images/logo/panda-market-logo.png" alt="판다마켓 홈페이지">
     </a>
-    <form id="login_form">
+    <form id="login_form" method="post">
       <div class="input_box">
-        <label for="login_email">이메일</label>
-        <input id="login_email" type="email" name="email" placeholder="이메일을 입력해 주세요"/>
+        <label for="email">이메일</label>
+        <input id="email" type="email" name="email" placeholder="이메일을 입력해주세요" required/>
+        <span id="emailEmptyError" class="error_message">이메일을 입력해주세요.</span>
+        <span id="emailInvalidError" class="error_message">잘못된 이메일 형식입니다.</span>
       </div>
       <div class="input_box">
-        <label for="login_password">비밀번호</label>
+        <label for="password">비밀번호</label>
         <div class="input-wrapper">
-          <input id="login_password" type="password" name="password" placeholder="비밀번호를 입력해 주세요"/>
-            <botton class="password-toggle-button" aria-label="비밀번호 표시/숨기기">
-              <img
-                src="images/input/invisible_input.svg"
-                alt="비밀번호 숨기기"
-              />
-            </botton>
+          <input id="password" type="password" name="password" placeholder="비밀번호를 입력해주세요" required/>
+          <botton class="password-toggle-button" aria-label="비밀번호 표시/숨기기">
+            <img class="password-toggle-img" src="images/input/invisible_input.svg" alt="비밀번호 숨기기"/>
+          </botton>
+          <span id="passwordEmptyError" class="error_message">비밀번호를 입력해주세요.</span>
+          <span id="passwordInvalidError" class="error_message">비밀번호를 8자 이상 입력해주세요.</span>
         </div>
       </div>
-      <button type="submit" class="button submitBtn">로그인</button>
+      <button type="submit" class="button submitBtn" disabled>로그인</button>
     </form>
     <div id="quickLogin_container">
       <h3>간편 로그인하기</h3>
@@ -55,5 +61,6 @@
     </p>
   </div>
   </div>
+  <script src="scripts/auth.js"></script>
 </body>
 </html>

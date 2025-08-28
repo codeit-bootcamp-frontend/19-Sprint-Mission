@@ -53,6 +53,19 @@
   margin-bottom: 24px;
 }
 
+.error_message{
+  display: none;
+  font-size: 14px;
+  color: #f74747;
+  font-weight: 600;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+#emailEmptyError, #emailInvalidError, #nicknameEmptyError{
+  margin-top: -8px;
+}
+
 @media (min-width: 768px) {
   .input_box{
     gap: 16px;

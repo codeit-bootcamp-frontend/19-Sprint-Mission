@@ -92,6 +92,11 @@ footer {
   background-color: var(--primary-300);
 }
 
+.button:disabled {
+  background-color: var(--secondary-400);
+  cursor: not-allowed;
+}
+
 .no-break {
   display: inline;
 }

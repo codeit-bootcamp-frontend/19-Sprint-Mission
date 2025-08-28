@@ -1,5 +1,5 @@
 /* login-container */
-.login_container {
+.auth_container {
   max-width: 400px;
   margin: 80px auto 0;
   padding: 0 16px;
@@ -70,7 +70,7 @@
 }
 
 @media (min-width: 768px) {
-  .login_container{
+  .auth_container{
     max-width: 640px;
     margin: 60px auto 0;
   }
