@@ -4,14 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
 }
 
 .input_box label{
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 144.444%;
+  line-height: 24px;
   color: var(--secondary-800);
 }
 
@@ -51,4 +51,14 @@
   border-radius: 40px;
   border: none;
   margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .input_box{
+    gap: 16px;
+  }
+
+  .input_box label {
+    font-size: 18px;
+  }
 }

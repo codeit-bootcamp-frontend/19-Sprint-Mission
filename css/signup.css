@@ -1,14 +1,15 @@
 /* signup-container */
 .signup_container{
-  max-width: 640px;
-  margin: 60px auto 0;
+  max-width: 400px;
+  margin: 24px auto 0;
+  padding: 0 16px;
 }
 
 /* signup-logo */
 #signup_logo>img{
   display: flex;
-  width: 396px;
-  height: 132px;
+  width: 198px;
+  height: 66px;
   background-size: 100%;
   justify-content: center;
   margin: 0 auto 40px;
@@ -65,4 +66,23 @@
 #navigateToLogin>a{
   color: var(--primary-100);
   text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  .signup_container{
+    max-width: 640px;
+    margin: 48px auto 0;
+  }
+
+  #signup_logo>img{
+    display: flex;
+    width: 396px;
+    height: 132px;
+    background-size: 100%;
+    margin: 0 auto 40px;
+  }
+
+  .input_box{
+    margin-bottom: 24px;
+  }
 }
