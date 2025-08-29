@@ -15,17 +15,17 @@
         </div>
         <!--로그인 폼-->
         <form>
-          <div class="input-wrapper">  
+          <div class="input-wrapper email">  
             <label for="user-email">이메일</label>
-            <input id="user-email" name="email" type="email" placeholder="이메일">
+            <input id="user-email" name="email" type="email" placeholder="이메일" required>
           </div>
-          <div class="input-wrapper">
+          <div class="input-wrapper password">
             <label for="user-password">비밀번호</label>
-            <div class="input-container">
+            <div class="input-image">
               <input id="user-password" name="password" type="password" placeholder="비밀번호">
               <button class="hide-text"><img src="../images/btn_visibility_off_24px.png" ></button>
             </div>
-          </div>  
+          </div>
           <button>로그인</button>
         </form>
         <!--간편로그인-->
@@ -42,5 +42,6 @@
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
