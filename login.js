@@ -1,122 +1,118 @@
-// 선택// DOM 요소 선택
-const emailInput = document.getElementById('user-email');
-const passwordInput = document.getElementById('user-pw');
-const loginBtn = document.getElementById('login-btn');
-const emailError = document.getElementById('email-error');
-const passwordError = document.getElementById('password-error');
-// 상태// 유효성 검사 상태
-let isEmailValid = false;
-let isPasswordValid = false;
-// 정규식// 이메일 정규식
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+document.addEventListener('DOMContentLoaded', function () {
+    const emailInput = document.getElementById('user-email');
+    const passwordInput = document.getElementById('user-pw');
+    const loginBtn = document.getElementById('login-btn');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+    const togglePwBtn = document.querySelector('.toggle-pw');
+    const eyeIcon = document.querySelector('.login_eyes');
 
-// 이메일 유효성 검사
-function validateEmail() {
-    const email = emailInput.value.trim();
+    // 빠른 가드(요소 못찾으면 콘솔에 찍음)
+    if (!passwordInput) { console.error('user-pw element not found'); return; }
 
-    // 빈 값 체크
-    if (email === '') {
-        showError(emailInput, emailError, '이메일을 입력해주세요.');
-        isEmailValid = false;
-        return;
-    }
-
-    // 이메일 형식 체크
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        showError(emailInput, emailError, '잘못된 이메일 형식입니다.');
-        isEmailValid = false;
-        return;
+    let isEmailValid = false;
+    let isPasswordValid = false;
+
+    function showError(inputElement, errorElement, message) {
+        const box = inputElement.closest('.email-box') || inputElement.closest('.pw-box');
+        if (box) box.classList.add('error');
+        if (errorElement) {
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
     }
 
-    // 유효한 경우
-    hideError(emailInput, emailError);
-    isEmailValid = true;
-}
-
-// 비밀번호 유효성 검사
-function validatePassword() {
-    const password = passwordInput.value;
-
-    // 빈 값 체크
-    if (password === '') {
-        showError(passwordInput, passwordError, '비밀번호를 입력해주세요.');
-        isPasswordValid = false;
-        return;
+    function hideError(inputElement, errorElement) {
+        const box = inputElement.closest('.email-box') || inputElement.closest('.pw-box');
+        if (box) box.classList.remove('error');
+        if (errorElement) {
+            errorElement.textContent = '';
+            errorElement.classList.remove('show');
+        }
     }
 
-    // 길이 체크
-    if (password.length < 8) {
-        showError(passwordInput, passwordError, '비밀번호를 8자 이상 입력해주세요.');
-        isPasswordValid = false;
-        return;
+    function validateEmail() {
+        if (!emailInput) return;
+        const email = emailInput.value.trim();
+        if (email === '') {
+            showError(emailInput, emailError, '이메일을 입력해주세요.');
+            isEmailValid = false; return;
+        }
+        if (!emailRegex.test(email)) {
+            showError(emailInput, emailError, '잘못된 이메일 형식입니다.');
+            isEmailValid = false; return;
+        }
+        hideError(emailInput, emailError);
+        isEmailValid = true;
     }
 
-    // 유효한 경우
-    hideError(passwordInput, passwordError);
-    isPasswordValid = true;
-}
-
-// 에러 표시
-function showError(inputElement, errorElement, message) {
-    inputElement.classList.add('error');
-    const box = inputElement.closest('.email-box') || inputElement.closest('.pw-box');
-    if (box) box.classList.add('error');
-
-    errorElement.textContent = message;
-    errorElement.classList.add('show');
-}
-
-// 에러 숨김
-function hideError(inputElement, errorElement) {
-    inputElement.classList.remove('error');
-    const box = inputElement.closest('.email-box') || inputElement.closest('.pw-box');
-    if (box) box.classList.remove('error');
-
-    errorElement.textContent = '';
-    errorElement.classList.remove('show');
-}
-
-// 로그인 버튼 상태 업데이트
-function updateLoginButton() {
-    loginBtn.disabled = !(isEmailValid && isPasswordValid);
-}
-
-// 이벤트 리스너 등록
-emailInput.addEventListener('blur', function () {
-    validateEmail();
-    updateLoginButton();
-});
-
-passwordInput.addEventListener('blur', function () {
-    validatePassword();
-    updateLoginButton();
-});
-
-// 실시간 검사 (선택사항)
-emailInput.addEventListener('input', function () {
-    if (emailInput.value.trim() !== '') {
-        validateEmail();
-        updateLoginButton();
+    function validatePassword() {
+        const password = passwordInput.value;
+        if (password === '') {
+            showError(passwordInput, passwordError, '비밀번호를 입력해주세요.');
+            isPasswordValid = false; return;
+        }
+        if (password.length < 8) {
+            showError(passwordInput, passwordError, '비밀번호를 8자 이상 입력해주세요.');
+            isPasswordValid = false; return;
+        }
+        hideError(passwordInput, passwordError);
+        isPasswordValid = true;
     }
-});
 
-passwordInput.addEventListener('input', function () {
-    if (passwordInput.value !== '') {
-        validatePassword();
-        updateLoginButton();
+    function updateLoginButton() {
+        if (!loginBtn) return;
+        loginBtn.disabled = !(isEmailValid && isPasswordValid);
     }
-});
 
-// 로그인 버튼 클릭
-loginBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    // 최종 검사
-    validateEmail();
-    validatePassword();
-
-    if (isEmailValid && isPasswordValid) {
-        window.location.href = '/items';
+    // 이벤트 바인딩
+    if (emailInput) {
+        emailInput.addEventListener('input', () => { validateEmail(); updateLoginButton(); });
+        emailInput.addEventListener('blur', () => { validateEmail(); updateLoginButton(); });
     }
+    passwordInput.addEventListener('input', () => { validatePassword(); updateLoginButton(); });
+    passwordInput.addEventListener('blur', () => { validatePassword(); updateLoginButton(); });
+
+    if (loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            validateEmail();
+            validatePassword();
+            updateLoginButton();
+            if (isEmailValid && isPasswordValid) {
+                window.location.href = '/items';
+            }
+        });
+    }
+
+    // === 여기서부터 토글 핵심 ===
+    if (togglePwBtn) {
+        togglePwBtn.addEventListener('click', (e) => {
+            e.preventDefault(); // (안전)
+            const nowVisible = passwordInput.type === 'text';
+            passwordInput.type = nowVisible ? 'password' : 'text';
+
+            // 아이콘 교체 (파일명이 맞는지 확인)
+            if (eyeIcon) {
+                const onPath = 'image/btn_visibility_on_24px.png';
+                const offPath = 'image/btn_visibility_off_24px.png';
+                eyeIcon.src = nowVisible ? onPath : offPath;
+                eyeIcon.alt = nowVisible ? '비밀번호 표시' : '비밀번호 숨김';
+            }
+            togglePwBtn.setAttribute('aria-pressed', String(!nowVisible));
+
+            // 포커스 유지 (타이핑 계속할 수 있게)
+            passwordInput.focus();
+        });
+    } else {
+        console.warn('toggle button(.toggle-pw) not found in DOM.');
+    }
+
+    // 디버그 헬퍼 (개발자도구에서 window.__loginDebug() 호출)
+    window.__loginDebug = () => console.log({
+        togglePwBtn: !!togglePwBtn,
+        eyeIcon: !!eyeIcon,
+        passwordInput: !!passwordInput
+    });
 });
