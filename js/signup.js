@@ -3,6 +3,7 @@ const pass = document.getElementById('password');
 const passCheck = document.getElementById('password-check');
 const Email = document.getElementById('email');
 const submitBtn = document.getElementById('submit')
+const Name = document.getElementById('name')
 
 passwordWraps.forEach(wrap => {
   const input = wrap.querySelector('input');
@@ -51,6 +52,28 @@ Email.addEventListener('focusout', () => {
     submitBtn.disabled = true;
   } else {// 정상 입력일떄
    Email.classList.remove('error');
+   submitBtn.disabled = false;
+  }
+});
+// 이메일 오류
+Name.addEventListener('focusout', () => {
+    // 기존 경고 메시지가 있으면 제거
+  const oldWarning = Name.nextElementSibling;
+  if (oldWarning && oldWarning.classList.contains('warning')) {
+    oldWarning.remove();
+  }
+
+  const nameValue = Name.value.trim();
+
+  if (nameValue === '') {// 값이 없을 때
+    Name.insertAdjacentHTML('afterend', `
+      <p class="warning">닉네임을 입력해주세요.</p>
+    `);
+    Name.classList.add('error');
+    submitBtn.disabled = true;
+   
+  } else {// 정상 입력일떄
+   Name.classList.remove('error');
    submitBtn.disabled = false;
   }
 });
