@@ -9,7 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <script src="../assets/js/signup.js" defer></script>
+    <script src="../assets/js/passwordToggle.js" defer></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -28,18 +31,24 @@
               id="email"
               type="email"
               class="input-field"
-              placeholder="이메일을 적어주세요."
+              aria-describedby="email-error"
+              placeholder="이메일을 입력해주세요."
             />
+            <p id="email-error" class="input-field-message"></p>
           </div>
+
           <div class="input-group">
             <label for="nickname" class="input-label">닉네임</label>
             <input
               id="nickname"
               type="text"
               class="input-field"
-              placeholder="닉넴임을 적어주세요."
+              aria-describedby="nickname-error"
+              placeholder="닉넴임을 입력해주세요."
             />
+            <p id="nickname-error" class="input-field-message"></p>
           </div>
+
           <div class="input-group">
             <label for="password" class="input-label">비밀번호</label>
             <div class="password-input-wrapper">
@@ -47,15 +56,21 @@
                 id="password"
                 type="password"
                 class="input-field"
-                placeholder="비밀번호를 적어주세요."
+                aria-describedby="password-error"
+                placeholder="비밀번호를 입력해주세요."
               />
-              <span class="password-toggle">
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="비밀번호 표시"
+              >
                 <img
                   id="eyeIcon"
                   src="../assets/images/eye_closed.svg"
-                  alt="비밀번호 보기/숨기기"
+                  alt=""
                 />
-              </span>
+              </button>
+              <p id="password-error" class="input-field-message"></p>
             </div>
           </div>
           <div class="input-group">
@@ -69,16 +84,23 @@
                 class="input-field"
                 placeholder="비밀번호를 적어주세요."
               />
-              <span class="password-toggle">
+              <button
+                type="button"
+                class="password-toggle"
+                aria-label="비밀번호 표시"
+              >
                 <img
                   id="eyeIcon"
-                  src="../assets/images/eye_open.svg"
-                  alt="비밀번호 보기/숨기기"
+                  src="../assets/images/eye_closed.svg"
+                  alt=""
                 />
-              </span>
+              </button>
+              <p id="passwordChk-error" class="input-field-message"></p>
             </div>
           </div>
-          <button type="submit" class="btn login">회원가입</button>
+          <button type="submit" class="btn login disabled" disabled>
+            회원가입
+          </button>
         </form>
         <div class="social-login-wrap">
           <div class="social-login-text">간편 로그인하기</div>
