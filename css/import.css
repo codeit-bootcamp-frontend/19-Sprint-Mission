@@ -1,8 +1,9 @@
 @import url(reset.css);
 @import url(global.css);
 @import url(style.css);
-@import url(mainmedia.css);
+@import url(mainpage.css);
 @import url(loginmedia.css);
+@import url(mainmedia.css);
 
 @font-face {
     font-family: 'Pretendard-Regular';

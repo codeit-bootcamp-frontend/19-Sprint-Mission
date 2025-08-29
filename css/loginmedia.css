@@ -17,14 +17,16 @@
         font-weight: 700; 
         line-height: 17px; 
     }
-    .push,.password-wrap{
+    .push,.email-wrap,.password-wrap{
         margin-bottom: 16px; 
-        border: none;
     } 
     .submit{
         padding: 16px;
         line-height: 24px;
         margin-bottom: 24px;
+        border: none;
+        margin-bottom: 24px;
+
     }
     
     .login-head{
@@ -89,13 +91,15 @@
         font-weight: 700; 
         line-height: 21px; 
     }
-    .push,.password-wrap{
+   .push,.email-wrap,.password-wrap{
         margin-bottom: 24px; 
-        border: none;
     } 
     .submit{
         line-height: 24px;
         padding: 16px;
+        border: none;
+        margin-bottom: 24px;
+
     }   
 }
  
@@ -138,12 +142,14 @@
         font-weight: 700; 
         line-height: 21px; 
     }
-    .push,.password-wrap{
+    .push,.email-wrap,.password-wrap{
         margin-bottom: 24px; 
-        border: none;
     } 
     .submit{
         padding: 16px;
         line-height: 24px;
+        border: none;
+        margin-bottom: 24px;
+     
     }
 }
