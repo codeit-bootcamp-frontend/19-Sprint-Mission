@@ -5,23 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/link-css/login.css">
+    <link rel="stylesheet" href="styles/auth.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/Pretendard/dist/web/static/pretendard.css">
 </head>
 
  <body>
+  <main class="auth-container">
       <a href="/" class="logo-img">
       <img src="/sprint2_img/loginpanda.png" alt="판다마켓로고"></a>
       <div class="login-frame">
-        <form>
+
+     <form class="loginForm" id="loginForm" method="post">
+        <div class="input-item">  
           <label for ="email">이메일</label>
-          <input id="email" name="email"/>
-          <label for="password">비밀번호</label> 
+           <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="이메일을 입력해 주세요"
+            required/>
+          <span id="emailEmptyError" class="error-message">이메일을 입력해 주세요</span>
+          <span id="emailInvalidError" class="error-message">잘못된 이메일 형식입니다</span>
+        </div>
+        <div class="input-item">
+          <label for="password">비밀번호</label>
           <div class="input-wrapper">
-            <input id="password" name="password"/>
-            <img class="eyeicon" src="/sprint2_img/Vector.png" alt=" 눈 모양 아이콘">  
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력해 주세요"
+              required/>
+            <button
+              type="button"
+              class="password-toggle-button"
+              aria-label="비밀번호 보기">
+             <img
+                class="eyeicon"
+                src= "/sprint2_img/Vector.png"
+                alt="비밀번호 표시 상태 아이콘"/>
+            </button>
           </div>
-          <button>로그인</button>
-        </form>
+          <span id="passwordEmptyError" class="error-message">비밀번호를 입력해 주세요</span>
+          <span id="passwordInvalidError" class="error-message">비밀번호를 8자 이상 입력해 주세요</span>
+        </div>
+        <button type="submit" name="login" class="loginBtn">로그인</button>
+        </form> 
+
         <div class="simple-login-box">
           <div class="simple-login">간편 로그인하기</div>
           <p class="icon">
@@ -34,6 +64,8 @@
         <div class="signup-container"><span class="first-pandamarket">판다마켓이 처음이신가요?</span>
           <a href="/link/signup.html" class="signup-link">회원가입</a></div>
       </div>
+     </main>  
+      <script src="js/auth.js"></script>
  </body>
 </html>
 
