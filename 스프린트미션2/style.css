@@ -87,7 +87,7 @@ main input{
 .security,.public{
     position: absolute;
     right: 24px;
-    bottom: 40px;
+    bottom: 54px;
 }
 
 .public{
@@ -101,6 +101,17 @@ main input{
 .security.active{
     display: none;
 }
+/* -------------input err------------ */
+input.err{
+    border: 1px solid #ff0000;
+}
+.err-message{
+    color: red; 
+    font-size: 12px;
+    height: 16px; 
+}
+
+
 
 /* -----------button------------ */
 
@@ -116,6 +127,10 @@ button{
     margin-bottom: 24px;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 8px;
+}
+.login_btn.active{
+    background-color: #3692FF;
 }
 
 /* -------------btn------------------ */
