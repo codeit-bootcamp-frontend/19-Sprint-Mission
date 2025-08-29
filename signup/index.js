@@ -59,7 +59,23 @@ function pwCheck (e){
     pwCheckInput.append(checkerContainer);
   }
 }
+//닉네임 경고문
+const nicknameInput = document.querySelector('.nickname')
+const addNickname = document.createElement('span');
+addNickname.classList.add('error-message');
+addNickname.textContent = '닉네임을 입력해주세요.';
 
+function nicknameErr(e){
+  const lastChildOfnick = nicknameInput.lastElementChild
+  if(!e.target.value){
+    const nicknameContainer = document.createElement('div');
+    nicknameContainer.classList.add('nickname-container')
+    nicknameContainer.innerHTML = lastChildOfnick.outerHTML;
+    nicknameContainer.append(addNickname)
+    lastChildOfnick.remove();
+    nicknameInput.append(nicknameContainer);
+  }
+}
 
 function clearEmail(){
   if(emailInput.lastElementChild.className==='email-container'){
@@ -86,6 +102,15 @@ function clearChecker(){
     pwCheckInput.append(checkerImage)
   }
 }
+function clearnickname(){
+  if(nicknameInput.lastElementChild.className==='nickname-container'){
+    const nicknameContainer = nicknameInput.querySelector('.nickname-container')
+    const userNickname = nicknameInput.querySelector('#user-nickname')
+    nicknameContainer.remove()
+    nicknameInput.append(userNickname)
+  }
+}
+
 const applyButton = document.querySelector('form > button')
 function activateButton(e){
   const errMessage = document.querySelector('.error-message')
@@ -100,3 +125,5 @@ emailInput.addEventListener('focusout', emailErr)
 pwCheckInput.addEventListener('focusout', clearChecker)
 pwCheckInput.addEventListener('focusout', pwCheck)
 document.addEventListener('change',activateButton)
+nicknameInput.addEventListener('focusout',clearnickname)
+nicknameInput.addEventListener('focusout',nicknameErr)
