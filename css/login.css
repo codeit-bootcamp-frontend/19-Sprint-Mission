@@ -1,17 +1,23 @@
 /* login-container */
-.login_container{
-  max-width: 640px;
-  margin: 60px auto 0;
+.auth_container {
+  max-width: 400px;
+  margin: 80px auto 0;
+  padding: 0 16px;
 }
 
 /* login-logo */
+
 #login_logo>img{
-  display: flex;
-  width: 396px;
-  height: 132px;
+  margin: 0 auto 24px;
+  display: block;
+  width: 198px;
+  height: 66px;
   background-size: 100%;
   justify-content: center;
-  margin: 0 auto 40px;
+} 
+
+.input_box{
+  margin-bottom: 16px;
 }
 
 /* login-input */
@@ -21,7 +27,7 @@
 
 /* login-quickLogin */
 #quickLogin_container{
-  width: calc(100% - 46px);
+  width: 100%;
   background-color:#E6F2FF;
   height: 74px;
   padding: 0 23px;
@@ -30,8 +36,10 @@
   margin-bottom: 24px;
 }
 
-#quickLogin_container>p{
+#quickLogin_container>h3{
   line-height: 74px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .quickLogin_btn_area{
@@ -59,4 +67,23 @@
 #navigateToSignup>a{
   color: var(--primary-100);
   text-decoration-line: underline;
+}
+
+@media (min-width: 768px) {
+  .auth_container{
+    max-width: 640px;
+    margin: 60px auto 0;
+  }
+
+  #login_logo>img{
+    display: flex;
+    width: 396px;
+    height: 132px;
+    background-size: 100%;
+    margin: 0 auto 40px;
+  }
+
+  .input_box{
+    margin-bottom: 24px;
+  }
 }

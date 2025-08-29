@@ -1,21 +1,10 @@
 /* main-common */
-h1 {
-  font-size: 2.4vw;
-  line-height: 1.4;
+h1, #mainBottomBanner h2 {
   font-weight: 700;
-}
-
-.subTitle{
-  color: var(--primary-100);
-  font-size: 1vw;
-  font-weight: 800;
-  line-height: 1.6;
-}
-
-p{
-  font-size: 1.4vw;
-  font-weight: 500;
-  line-height: 1.6;
+  font-size: 32px;
+  line-height: 44.8px;
+  padding-top: 48px;
+  padding-bottom: 18px;
 }
 
 .background_block{
@@ -24,13 +13,6 @@ p{
 }
 
 /* main - header */
-#gnb{
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding: 9px 200px;
- border-bottom: 1px solid #dfdfdf;
-}
 
 #panda_market_logo>img{
   display: flex;
@@ -42,56 +24,47 @@ p{
 }
 
 #loginButton{
-  padding: 12px 23px;
+  padding: 14.5px 43px;
   border-radius:8px;
   font-size: 16px;
-  gap: 10px;
   font-weight: 600;
 }
 
 /* main - section - mainTopBanner */
-#mainTobBanner, #mainBottomBanner{
+#mainTopBanner, #mainBottomBanner{
   height: 540px;
   background-color: #cfe5ff;
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin-top: 70px;
 }
 
-#mainTobBanner{
+#mainTopBanner{
   background-image: url(../images/main/main-top-banner-img.png);
   background-repeat: no-repeat;
-  background-position: 68% bottom;
-  background-size: 43%;
+  background-position: bottom;
+  background-size: 120%;
 }
 
-.mainBtn{
-  padding: 16px 124px;
-  font-size: 20px;
+.main-btn{
+  font-size: 16px;
   font-weight: 600;
   border-radius: 40px;
-  margin-top: 32px;
+  padding: 14.5px 33.5px;
 }
 
 /* main - section - main_contents */
 #main_contents{
-  padding-top: 138px;
-  margin-bottom: 138px;
+  padding-top: 52px;
 }
 
 .main_content{
-  background-color: #fcfcfc;
-  display: flex;
-  align-items: center;
-  margin-bottom: 138px;
-  gap:64px;
+  /* background-color: #fcfcfc; */
+  margin-bottom: 40px;
 }
 
 .main_content>img{
-  display: flex;
-  width: 55%;
-  height: auto;
-  background-size: 100%;
-  justify-content: center;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
 .main_content:nth-child(2) {
@@ -102,33 +75,144 @@ p{
   flex: 1;
 }
 
-.txt_content>p{
-  margin-top: 24px;
+.txt_content .subTitle {
+  color: var(--primary-100);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.txt_content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.txt_content p{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0.08em;
+  margin-top: 16px;
 }
 
 /* main - section - mainBottomBanner*/
 #mainBottomBanner{
+  margin-top: 83px;
   background-image: url(../images/main/main-bottom-banner-img.png);
   background-repeat: no-repeat;
-  background-position: 68% bottom;
-  background-size: 43%;
+  background-position: bottom;
+  background-size: 100%;
 }
 
-/* main - footer*/
-#copyright{
-  color: var(--secondary-400);
+#mainBottomBanner h2 {
+ padding-top: 121px;
 }
 
-#footerMenu{
-  display: flex;
-  gap: 30px;
+@media (min-width: 768px) {
+
+  #mainTopBanner {
+    height: 771px;
+    background-size: 100%;
+  }
+
+  .main-btn {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 126px;
+  }
+
+  h1, #mainBottomBanner h2 {
+    font-size: 40px;
+    line-height: 56px;
+    padding-top: 84px;
+    padding-bottom: 24px;
+  }
+
+  #main_contents{
+    padding-top: 24px;
+  }
+
+  .main_content{
+    margin-bottom: 52px;
+  }
+
+  .txt_content .subTitle {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 16px;
+  }
+
+  .txt_content h2 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+
+  .txt_content p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  #mainBottomBanner{
+    height: 927px;
+    margin-top: 201px;
+  }
 }
 
-#footerMenu>a{
-  color:#fff;
-}
+@media (min-width: 1200px) {
+  #mainTopBanner, #mainBottomBanner {
+    text-align: left;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    background-position: 78% bottom;
+    background-size: 50%;
+  }
 
-#footerSnsIcons{
-  display: flex;
-  gap: 12px;
+  #mainBottomBanner{
+    margin-top: 0;
+  }
+
+  h1, #mainBottomBanner h2 {
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  #main_contents {
+    padding: 138px 0 0;
+  }
+
+  .main_content {
+    margin-bottom: 276px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .main_content:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .main_content img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .txt_content .subTitle {
+    margin-bottom: 12px;
+  }
+
+  .txt_content h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .txt_content p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
