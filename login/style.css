@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
+button{
+  all:unset;
+  line-height: 0;
+}
 main{
   width:640px;
-  height: 618px;
   margin: 231px auto;
   font-family: Pretendard;
 }
@@ -32,6 +34,9 @@ input{
   font-weight: 700;
   line-height: 26px;
 }
+.input-container{
+  position: relative;
+}
 .input-wrapper input{
   background-color: #F3F4F6;
   padding: 10px;
@@ -40,11 +45,11 @@ input{
   height: 56px;
   border: 0px;
 }
+
 .hide-text{
-  background-image: url(../images/btn_visibility_off_24px.png);
-  background-position-x: 592px;
-  background-position-y: center;
-  background-repeat: no-repeat;
+  position: absolute;
+  bottom:16px;
+  right:24px;
 }
 
 ::placeholder{
@@ -53,7 +58,7 @@ input{
   padding: 0 16px;
 }
 
-button{
+form > button{
   border-radius: 40px;
   padding: 16px 124px;
   background-color: #3692FF;
@@ -62,6 +67,7 @@ button{
   font-size: 20px;
   line-height: 32px;
   color:#F3F4F6;
+  text-align: center;
 }
 
 .login{
@@ -88,6 +94,17 @@ button{
   height: 42px;
 }
 
+.login-link{
+  text-align: center;
+  width:100%;
+  font-size: 14px;
+  font-weight: 500;
+  color:#1F2937;
+}
+.login-link a{
+  color:#3692FF;
+}
+
 .signup{
   text-align: center;
   width:100%;
@@ -97,4 +114,11 @@ button{
 }
 .signup a{
   color:#3692FF;
+}
+
+@media(max-width:767px){
+  main{
+    margin:0 auto;
+    padding:16px;
+  }
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>판다마켓</title>
     <link rel="stylesheet" href="style.css">
@@ -10,7 +11,10 @@
   <body>
     <header>
       <div class="head wrap">
-        <a href="/"><img class="logo" src="images/Property 1=sm@3x.png" alt="판다마켓 로고"></a>
+        <a href="/">
+          <img class="logo image" src="images/title-logo.png" alt="판다마켓 로고">
+          <img class="logo letter" src="images/판다마켓.svg" alt="판다마켓">
+        </a>
         <div class="login-btn">
           <a href="/login">
             로그인
@@ -23,7 +27,7 @@
         <div class="intro-container">
           <div class="intro">
             <h1 class="intro-ment">
-              일상의 모든 물건을<br>거래해 보세요
+              일상의 모든 물건을 <br>거래해 보세요
             </h1>
             <div class="intro-btn">
               <a href="/items">구경하러 가기</a>
@@ -32,57 +36,63 @@
           <img class="top-img" src="images/Img_home_top.png" alt="판다마을">
         </div>
       </section>
-      
-      <section class="hot-item">
-        <div class="content-wrap">
-          <img src="images/Img_home_01.png" alt="상품">
-          <div class="content">
-            <h1 class="menu">Hot item</h1>
-            <h2 class="ment">인기 상품을<br>확인해 보세요</h2>
-            <p class="description"> HOT한 중고거래 물품을<br>판다 마켓에서 확인해 보세요</p>
+      <section class="sections">
+        <section class="hot-item">
+          <div class="content-wrap">
+            <img src="images/Img_home_01.png" alt="상품">
+            <div class="content">
+              <h1 class="menu">Hot item</h1>
+              <h2 class="ment">인기 상품을 <br>확인해 보세요</h2>
+              <p class="description"> HOT한 중고거래 물품을<br>판다 마켓에서 확인해 보세요</p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="Search">
-        <div class="content-wrap">
-          <div class="content">
-            <h1 class="menu">Search</h1>
-            <h2 class="ment">구매를 원하는<br>상품을 검색하세요</h2>
-            <p class="description">구매하고 싶은 물품은 검색해서<br>쉽게 찾아보세요</p>
+        </section>
+        <section class="search">
+          <div class="content-wrap right-wrap">
+            <div class="content right">
+              <h1 class="menu">Search</h1>
+              <h2 class="ment">구매를 원하는 <br>상품을 검색하세요</h2>
+              <p class="description">구매하고 싶은 물품은 검색해서<br>쉽게 찾아보세요</p>
+            </div>
+            <img src="images/Img_home_02.png" alt="검색">
           </div>
-          <img src="images/Img_home_02.png" alt="검색">
-        </div>
-      </section>
-      <section class="Register">
-        <div class="content-wrap">
-          <img src="images/Img_home_03.png" alt="등록">
-          <div class="content">
-            <h1 class="menu">Register</h1>
-            <h2 class="ment">판매를 원하는<br>상품을 등록하세요</h2>
-            <p class="description">어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록하세요</p>
+        </section>
+        <section class="register">
+          <div class="content-wrap">
+            <img src="images/Img_home_03.png" alt="등록">
+            <div class="content">
+              <h1 class="menu">Register</h1>
+              <h2 class="ment">판매를 원하는 <br>상품을 등록하세요</h2>
+              <p class="description">어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록하세요</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </section>  
       <section class="outro-wrap">
         <div class="outro-container">
           <h1 class="outro-ment">믿을 수 있는<br> 판다마켓 중고 거래</h1>
           <img src="images/Img_home_bottom.png" alt="인사하는 판다">
         </div>
       </section>
+      
     </main>
     <footer>
-      <span class="codeit">
-        ©codeit - 2024
-      </span>  
-      <div class="priv-pol-faq">  
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/faq">FAQ</a>
-      </div>
-      <div class="icons">
-        <a href="https://www.facebook.com/?locale=ko_KR" target="_blank"><img src="images/ic_facebook.svg"></a>
-        <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D" target="_blank"><img src="images/ic_twitter.svg"></a>
-        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="images/ic_youtube.svg"></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="images/ic_instagram.svg"></a>
+      <div class="footer-container">
+        <div class="footer-wrap">
+          <span class="codeit">
+            ©codeit - 2024
+          </span>  
+          <div class="priv-pol-faq">  
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/faq">FAQ</a>
+          </div>
+          <div class="icons">
+            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank"><img src="images/ic_facebook.svg"></a>
+            <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoia28ifQ%3D%3D%22%7D" target="_blank"><img src="images/ic_twitter.svg"></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="images/ic_youtube.svg"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="images/ic_instagram.svg"></a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
