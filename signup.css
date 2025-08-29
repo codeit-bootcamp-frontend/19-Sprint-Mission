@@ -10,6 +10,7 @@
 
 .formWrap {
     display: flex;
+    width: 640px;
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -34,7 +35,6 @@ a:active {
     background: #F3F4F6;
     border: 2px solid rgba(49, 130, 246, 0.00);
     box-sizing: border-box;
-    font-size: 16px;
     font-size: 16px;
     outline: none;
 }
@@ -70,12 +70,19 @@ a:active {
 
 }
 
-.authForm.socialBtn-main.guideBtn {
+.authForm,
+.socialBtn-main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
     align-self: stretch;
+}
+
+.guideBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 
@@ -121,15 +128,14 @@ a:active {
 }
 
 .socialBtn-main {
-    background: #F3F8FF;
-    padding: 12px 23px;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 16px;
     gap: 10px;
     border-radius: 8px;
+    align-self: stretch;
     border: 2px solid rgba(49, 130, 246, 0.00);
     background: #E6F2FF;
 }
@@ -137,9 +143,9 @@ a:active {
 .socialBtn {
     display: flex;
     width: 594px;
+    justify-content: space-between;
     gap: 16px;
     align-items: center;
-    justify-content: space-between
 }
 
 
@@ -188,10 +194,41 @@ a:active {
     gap: 10px;
     border-radius: 12px;
     background: var(--Cool-Gray-100, #F3F4F6);
+    height: 56px;
     flex-shrink: 0;
     align-self: stretch;
+    border-radius: 12px;
     border: 2px solid rgba(49, 130, 246, 0.00);
 }
+
+#user-nickname {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+    height: 56px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+}
+
+#user-pw-check {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
 
 #user-pw {
     display: flex;
@@ -212,6 +249,13 @@ a:active {
     align-self: stretch;
 }
 
+#user-pw-check .login_eyes_off .login_eyes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+}
 
 .tit {
     text-align: center;
@@ -224,7 +268,9 @@ a:active {
 }
 
 .ipt-email,
-.ipt-pw {
+.ipt-pw,
+.ipt-pw-check,
+.ipt-nickname {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -246,6 +292,18 @@ a:active {
     gap: 16px;
 }
 
+.pw-box,
+.pw-check-box {
+    display: flex;
+    align-items: center;
+    width: 645px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: none;
+    box-sizing: border-box;
+}
+
 .icon-wrapper {
     flex-shrink: 0;
     width: 24px;
@@ -256,10 +314,26 @@ a:active {
     cursor: pointer;
 }
 
-.guideBtn {
+.icon-wrapper-check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4px;
+    cursor: pointer;
+}
+
+
+.pw-check-bok {
+    position: relative;
+    width: 100%;
+}
+
+.pw-check-bok input {
+    width: 100%;
+    padding-right: 24px;
+    box-sizing: border-box;
 }
 
 .area {
@@ -300,41 +374,7 @@ a:active {
     flex-shrink: 0;
 }
 
-
-/* */
-/* 에러 메시지 스타일 */
-.error-message {
-    color: #EF4444;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    margin-top: 8px;
-    min-height: 20px;
-    display: none;
-}
-
-.error-message.show {
-    display: block;
-}
-
-/* 에러 상태 input 스타일 */
-
-.pw-box.error,
-.email-box.error {
-    border: 2px solid #EF4444;
-}
-
-.btn_lg:disabled {
-    background: #9ca3af;
-    cursor: not-allowed;
-}
-
-.btn_lg:enabled {
-    background: #3692ff;
-    cursor: pointer;
-}
-
-.email-box {
+.pw-check-box {
     position: relative;
     display: flex;
     align-items: center;
@@ -344,22 +384,31 @@ a:active {
     background: #F3F4F6;
 }
 
+.toggle-check-pw {
+    position: absolute;
+    right: 20px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
 
+.login_eyes_off {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
     .wrap {
-        padding: 80px 16px 16px 16px;
+        padding: 24px 16px 16px 16px;
+        min-height: 100vh;
     }
-
-
-    .email-box,
-    .pw-box {
-        width: 100%;
-        max-width: 400px;
-        box-sizing: border-box;
-    }
-
-
 
     .formWrap {
         width: 100%;
@@ -373,17 +422,12 @@ a:active {
         max-width: 300px;
         height: auto;
         gap: 16px;
-        justify-content: center;
     }
-
 
     .panda_face {
         width: 60px;
         height: 60px;
-        margin: 0;
-        /* 추가: auto 마진 제거 */
     }
-
 
     .logo {
         font-size: 40px;
@@ -391,13 +435,16 @@ a:active {
 
     .input-common,
     #user-email,
-    #user-pw {
+    #user-nickname,
+    #user-pw,
+    #user-pw-check {
         width: 100%;
         max-width: 400px;
         box-sizing: border-box;
     }
 
-    .pw-box {
+    .pw-box,
+    .pw-check-box {
         width: 100%;
         max-width: 400px;
         box-sizing: border-box;
@@ -428,10 +475,13 @@ a:active {
 
     .area {
         width: 100%;
+        gap: 20px;
     }
 
     .ipt-email,
-    .ipt-pw {
+    .ipt-nickname,
+    .ipt-pw,
+    .ipt-pw-check {
         width: 100%;
     }
 
@@ -439,5 +489,13 @@ a:active {
         text-align: center;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .tit {
+        font-size: 14px;
     }
 }
