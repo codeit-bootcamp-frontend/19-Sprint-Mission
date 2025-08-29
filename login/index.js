@@ -1,13 +1,3 @@
-//함수 로직
-// 1. 인풋컨테이너 디브 생성 
-// 2. 인풋 이미지 아우터 html 인풋의 text.content로 삽입한다.
-// 3. 스펜태그를 만든다. 
-// 4. 스펜태그에 클래스명 error-message를 집어넣는다.
-// 5. 스팬태그를 인풋컨테이너 디브 마지막 지식으로 추가한다.
-// 6. 인풋 래퍼의 마지막 자식 삭제, 
-// 7. 인풋 래퍼의 마지막 자식으로 추가
-//이벤트: focusout 조건: input.value.length<8
-
 //이메일 경고
 const emailInput = document.querySelector('.input-wrapper.email')
 
@@ -51,25 +41,6 @@ function passwordErr(e){
     passwordInput.append(pwContainer);
   }
 }
-// //비밀번호 확인 경고
-// const pwCheckInput = document.querySelector('.pw-checker')
-// const notSameErr = document.createElement('span');
-// notSameErr.classList.add('error-message');
-// notSameErr.textContent = '비밀번호가 일치하지 않습니다.';
-// const userPw = passwordInput.querySelector('#user-password')
-
-// function pwCheck (e){
-//   const lastChildOfPwChecker = pwCheckInput.lastElementChild
-//   if(e.target.value !== userPw.value){
-//     const checkerContainer = document.createElement('div');
-//     checkerContainer.classList.add('checker-container')
-//     checkerContainer.innerHTML = lastChildOfPwChecker.outerHTML;
-//     checkerContainer.append(notSameErr)
-//     lastChildOfPwChecker.remove();
-//     pwCheckInput.append(checkerContainer);
-//   }
-// }
-
 
 function clearEmail(){
   if(emailInput.lastElementChild.className==='email-container'){
@@ -88,14 +59,6 @@ function clearPw(){
   }
 }
 
-// function clearChecker(){
-//   if(pwCheckInput.lastElementChild.className==='checker-container'){
-//     const checkerContainer = pwCheckInput.querySelector('.checker-container')
-//     const checkerImage = pwCheckInput.querySelector('.input-image.pw-checker')
-//     checkerContainer.remove()
-//     pwCheckInput.append(checkerImage)
-//   }
-// }
 const applyButton = document.querySelector('form > button')
 function activateButton(e){
   const errMessage = document.querySelector('.error-message')
@@ -107,6 +70,4 @@ passwordInput.addEventListener('focusout',clearPw)
 passwordInput.addEventListener('focusout', passwordErr)
 emailInput.addEventListener('focusout',clearEmail)
 emailInput.addEventListener('focusout', emailErr)
-// pwCheckInput.addEventListener('focusout', clearChecker)
-// pwCheckInput.addEventListener('focusout', pwCheck)
 document.addEventListener('input',activateButton)
