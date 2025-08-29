@@ -44,7 +44,7 @@ Email.addEventListener('focusout', () => {
     Email.classList.add('error');
     submitBtn.disabled = true;
    
-  } else if (!emailPattern.test(value)) {// 이메일 형식이 아닐 때
+  } else if (!emailPattern.test(emailValue)) {// 이메일 형식이 아닐 때
     Email.insertAdjacentHTML('afterend', `
       <p class="warning">잘못된 이메일 형식입니다</p>
     `);
