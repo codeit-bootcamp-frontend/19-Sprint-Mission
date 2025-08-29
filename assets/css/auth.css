@@ -174,3 +174,32 @@ body {
         gap: 8px;
     }
 }
+
+/* 에러 스타일 */
+.error-message {
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 8px;
+    min-height: 20px;
+    line-height: 1.4;
+}
+
+.input-box input.error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.input-box input.error:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* 버튼 활성화 비활성화 */
+
+.login-button:disabled,
+.signup-button:disabled {
+    background-color: var(--gray400);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
