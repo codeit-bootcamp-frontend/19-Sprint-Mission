@@ -1,0 +1,567 @@
+.wrap {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 231px 20px;
+}
+
+.formWrap {
+    display: flex;
+    width: 640px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.input-common {
+    background: #F9FAFB;
+    border: none;
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.panda_logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 396px;
+    height: 132px;
+}
+
+.logo {
+    color: var(--brand-blue, #3692FF);
+    font-family: "ROKAF Sans";
+    font-size: 66.344px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+
+
+.formWrap.panda_logo.blind {
+    color: var(--brand-blue, #3692FF);
+    font-family: "ROKAF Sans";
+    font-size: 66.344px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.authForm,
+.socialBtn-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.guideBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.panda_face {
+    width: 103.529px;
+    height: 103.88px;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.btn_lg {
+    display: flex;
+    width: 645px;
+    height: 56px;
+    padding: 16px 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: var(--Primary-100, #3692FF);
+    color: var(--Cool-Gray-100, #F3F4F6);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.btnTxt {
+    color: var(--Primary-100, #3692FF);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.socialBtn-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 10px;
+    border-radius: 8px;
+    align-self: stretch;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    background: #E6F2FF;
+}
+
+.socialBtn {
+    display: flex;
+    width: 594px;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+}
+
+
+.socialBtn-box-google img {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 10px 10px 10px 10px;
+}
+
+.socialBtn-box-google {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+}
+
+
+.socialBtn-box-kakao img {
+    width: 26px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 10px 8px 8px 8px;
+}
+
+.socialBtn-box-kakao {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: #F5E14B;
+    border-radius: 100%;
+
+}
+
+#user-email {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+    height: 56px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+}
+
+#user-nickname {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+    height: 56px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+}
+
+#user-pw-check {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+
+#user-pw {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+#user-pw.login_eyes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+#user-pw-check .login_eyes_off .login_eyes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.tit {
+    text-align: center;
+    color: var(--Secondary-800, #1F2937);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.ipt-email,
+.ipt-pw,
+.ipt-pw-check,
+.ipt-nickname {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.pw-box,
+.pw-check-box {
+    display: flex;
+    align-items: center;
+    width: 645px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: none;
+    box-sizing: border-box;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-wrapper-check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.pw-check-bok {
+    position: relative;
+    width: 100%;
+}
+
+.pw-check-bok input {
+    width: 100%;
+    padding-right: 24px;
+    box-sizing: border-box;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.pw-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 20px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login_eyes {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.pw-check-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+}
+
+.toggle-check-pw {
+    position: absolute;
+    right: 20px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login_eyes_off {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* ✅ 에러 메시지 스타일 */
+.error-message {
+    color: #EF4444;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 8px;
+    min-height: 20px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* ✅ 에러 상태 input 스타일 */
+.input-common.error {
+    border: 2px solid #EF4444 !important;
+}
+
+.pw-box.error,
+.pw-check-box.error {
+    border: none !important;
+}
+
+/* ✅ 버튼 상태 스타일 */
+.btn_lg:disabled {
+    background: #9CA3AF !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn_lg:enabled {
+    background: #3692FF;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn_lg:enabled:hover {
+    background: #2563EB;
+}
+
+/* 비밀번호와 비밀번호 확인 입력란의 너비를 input-common 클래스와 동일하게 설정 */
+#user-pw,
+#user-pw-check {
+    width: 100%;
+    /* 너비를 100%로 설정하여 부모 요소에 맞춥니다. */
+    box-sizing: border-box;
+    /* 패딩과 테두리가 너비에 포함되도록 합니다. */
+    /* 기존 스타일에서 너비 관련 속성을 제거하거나 덮어씁니다. */
+}
+
+/* 비밀번호 상자(.pw-box)와 비밀번호 확인 상자(.pw-check-box)의 너비 조정 */
+.pw-box,
+.pw-check-box {
+    width: 640px;
+    /* 고정된 너비를 설정하여 input-common과 동일하게 만듭니다. */
+    /* 기존 스타일 유지 */
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .wrap {
+        padding: 24px 16px 16px 16px;
+        min-height: 100vh;
+    }
+
+    .formWrap {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+
+    .pw-box,
+    .pw-check-box {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .panda_logo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        gap: 16px;
+    }
+
+    .panda_face {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .input-common,
+    #user-email,
+    #user-nickname,
+    #user-pw,
+    #user-pw-check {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .pw-box,
+    .pw-check-box {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .btn_lg {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+
+    .socialBtn-main {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .socialBtn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .authForm {
+        width: 100%;
+    }
+
+    .area {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .ipt-email,
+    .ipt-nickname,
+    .ipt-pw,
+    .ipt-pw-check {
+        width: 100%;
+    }
+
+    .guideBtn {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .tit {
+        font-size: 14px;
+    }
+}

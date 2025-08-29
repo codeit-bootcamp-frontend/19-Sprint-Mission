@@ -1,0 +1,437 @@
+.wrap {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 231px 20px;
+}
+
+.formWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.input-common {
+    background: #F9FAFB;
+    border: none;
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: #F3F4F6;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.panda_logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 396px;
+    height: 132px;
+}
+
+.logo {
+    color: var(--brand-blue, #3692FF);
+    font-family: "ROKAF Sans";
+    font-size: 66.344px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+
+
+.formWrap.panda_logo.blind {
+    color: var(--brand-blue, #3692FF);
+    font-family: "ROKAF Sans";
+    font-size: 66.344px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.authForm.socialBtn-main.guideBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+
+.panda_face {
+    width: 103.529px;
+    height: 103.88px;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.btn_lg {
+    display: flex;
+    width: 645px;
+    height: 56px;
+    padding: 16px 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    background: var(--Primary-100, #3692FF);
+    color: var(--Cool-Gray-100, #F3F4F6);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.btnTxt {
+    color: var(--Primary-100, #3692FF);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.socialBtn-main {
+    background: #F3F8FF;
+    padding: 12px 23px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+    background: #E6F2FF;
+}
+
+.socialBtn {
+    display: flex;
+    width: 594px;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between
+}
+
+
+.socialBtn-box-google img {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 10px 10px 10px 10px;
+}
+
+.socialBtn-box-google {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+}
+
+
+.socialBtn-box-kakao img {
+    width: 26px;
+    height: 24px;
+    flex-shrink: 0;
+    margin: 10px 8px 8px 8px;
+}
+
+.socialBtn-box-kakao {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: #F5E14B;
+    border-radius: 100%;
+
+}
+
+#user-email {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+    flex-shrink: 0;
+    align-self: stretch;
+    border: 2px solid rgba(49, 130, 246, 0.00);
+}
+
+#user-pw {
+    display: flex;
+    width: 640px;
+    height: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(--Cool-Gray-100, #F3F4F6);
+}
+
+#user-pw.login_eyes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+
+.tit {
+    text-align: center;
+    color: var(--Secondary-800, #1F2937);
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.ipt-email,
+.ipt-pw {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.icon-wrapper {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.guideBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.pw-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 20px;
+    background: none;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login_eyes {
+    position: absolute;
+    left: 6px;
+    bottom: 6px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* */
+/* 에러 메시지 스타일 */
+.error-message {
+    color: #EF4444;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 8px;
+    min-height: 20px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* 에러 상태 input 스타일 */
+
+.pw-box.error,
+.email-box.error {
+    border: 2px solid #EF4444;
+}
+
+.btn_lg:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.btn_lg:enabled {
+    background: #3692ff;
+    cursor: pointer;
+}
+
+.email-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 640px;
+    height: 56px;
+    border-radius: 12px;
+    background: #F3F4F6;
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    .wrap {
+        padding: 80px 16px 16px 16px;
+    }
+
+    .email-box,
+    .pw-box {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .formWrap {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+
+    .panda_logo {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        gap: 16px;
+        justify-content: center;
+    }
+
+
+    .panda_face {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        /* 추가: auto 마진 제거 */
+    }
+
+
+    .logo {
+        font-size: 40px;
+    }
+
+    .input-common,
+    #user-email,
+    #user-pw {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .pw-box {
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    .btn_lg {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px 20px;
+        font-size: 18px;
+    }
+
+    .socialBtn-main {
+        width: 100%;
+        max-width: 400px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .socialBtn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .authForm {
+        width: 100%;
+    }
+
+    .area {
+        width: 100%;
+    }
+
+    .ipt-email,
+    .ipt-pw {
+        width: 100%;
+    }
+
+    .guideBtn {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
