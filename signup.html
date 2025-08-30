@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>판다마켓 - 회원가입</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/login.css">
+     <link rel="stylesheet" href="style/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css" />
+  </head>
+  <body>
+
+  <body>
+    <main class="signup-container">
+      <!-- 로고 -->
+      <div class="signup-logo">
+        <a href="index.html"><img src="images/signup/logo.svg" alt="판다마켓 홈" /></a>
+      </div>
+
+      <!-- 폼 -->
+      <form method="post">
+        <div class="signup-input-group">
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" placeholder="이메일을 입력해 주세요" />
+        </div>
+
+        <div class="signup-input-group">
+          <label for="nickname">닉네임</label>
+          <input id="nickname" name="nickname" type="text" placeholder="닉네임을 입력해 주세요" />
+        </div>
+
+        <div class="signup-input-group">
+          <label for="password">비밀번호</label>
+          <div class="signup-input-wrapper">
+            <input id="password" name="password" type="password" placeholder="비밀번호를 입력해 주세요" />
+            <img src="images/signup/eye-invisible.svg" alt="비밀번호 숨김" class="signup-toggle-password" />
+          </div>
+        </div>
+
+        <div class="signup-input-group">
+          <label for="passwordConfirmation">비밀번호 확인</label>
+          <div class="signup-input-wrapper">
+            <input id="passwordConfirmation" name="passwordConfirmation" type="password" placeholder="비밀번호를 다시 한 번 입력해 주세요" />
+            <img src="images/signup/eye-visible.svg" alt="비밀번호 보기" class="signup-toggle-password" />
+          </div>
+        </div>
+
+        <button type="submit" class="signup-btn">회원가입</button>
+      </form>
+
+      <!-- 간편 로그인 -->
+      <section class="signup-social">
+        <h3>간편 로그인하기</h3>
+        <div class="signup-social-buttons">
+          <a href="#" class="google-login" aria-label="구글 로그인">
+            <img src="images/signup/google-logo.png" alt="" />
+          </a>
+          <a href="#" class="kakao-login" aria-label="카카오 로그인">
+            <img src="images/signup/kakao-logo.png" alt="" />
+          </a>
+        </div>
+      </section>
+
+      <!-- 로그인 스위치 영역 -->
+      <p class="signup-switch">
+        이미 회원이신가요? <a href="login.html">로그인</a>
+      </p>
+    </main>
+  </body>
+</html>

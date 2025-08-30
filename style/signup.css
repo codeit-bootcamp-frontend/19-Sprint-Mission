@@ -1,0 +1,152 @@
+/* 기본 레이아웃 */
+* {
+  box-sizing: border-box;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 로고 영역 */
+.signup-logo {
+  width: 100%;
+  max-width: 640px;
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.signup-logo img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+
+/* 입력 영역 */
+.signup-input-group {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.signup-input-group label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.signup-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.signup-input-group input {
+  width: 100%;
+  padding: 16px 48px 16px 24px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.signup-toggle-password {
+  position: absolute;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* 회원가입 영역 */
+.signup-btn {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 16px auto 0;
+  padding: 16px;
+  border: 0;
+  border-radius: 50px;         
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: #3692ff;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.signup-btn:hover { 
+  background: #1967d6; 
+}
+
+/* 간편 가입 영역 */
+.signup-social {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e6f2ff;
+  border-radius: 12px;
+}
+
+.signup-social h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.signup-social-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.signup-social-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.signup-social-buttons img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* 로그인 안내 영역 */
+.signup-switch {
+  max-width: 640px;
+  margin: 24px auto 0;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: #111827;
+}
+.signup-switch a {
+  color: #3182f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* 반응형 768 */
+/* === Mobile hard override (≤480px) === */
+@media (max-width:768px){
+  .signup-container{
+   padding: 16px;
+  }
+}
+
+#email.is-invalid { outline: 2px solid #ef4444; background:#fff6f6; }
+.email-field-error { margin-top: 8px; font-size:14px; line-height:1.4; color:#ef4444; }
