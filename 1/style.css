@@ -17,7 +17,7 @@ html {
 .container {
   width: 100%;
   margin: 0 auto;
-} /* 전체 너비 조정 */
+ } /* 전체 너비 조정 */
 
 .header-logo { 
   display: flex;
