@@ -18,7 +18,7 @@
       <div class = "login-email">
         <label for = email>이메일</label>
         <div>
-          <input type = "text" id="email" placeholder="이메일을 입력해주세요">
+          <input type = "text" id="email" autocomplete="email" placeholder="이메일을 입력해주세요">
         </div>
       </div>
       <div class = "login-nick">
@@ -31,17 +31,17 @@
         <label for="pwd">비밀번호</label>
         <div>
           <input type = "password" id="pwd" placeholder="비밀번호를 입력해주세요">
-          <button class = "show-hide-button"></button>
+          <button type="button" class = "show-hide-button"></button>
         </div>
       </div>
       <div class = "login-pass-again">
         <label for="pwd-again">비밀번호 확인</label>
         <div>
           <input type = "password" id="pwd-again" placeholder="비밀번호를 다시 한 번 입력해주세요">
-          <button class = "show-hide-button"></button>
+          <button type="button" class = "show-hide-button-again"></button>
         </div>
       </div>
-      <button type="submit" class = "signup-button">회원가입</button>
+      <button type="submit" class = "signup-button" disabled>회원가입</button>
       </form>
       <div class = "login-easy">
         <div>간편 로그인하기</div>
@@ -55,5 +55,6 @@
       </div>
     </div>
   </div>
+  <script type="module" src="index.js"></script>
 </body>
 </html>

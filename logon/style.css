@@ -88,7 +88,7 @@ body {
 .login-pass-again > div {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-start; */
+  flex-wrap: wrap;
 }
 
 .login-email > div > input,
@@ -97,14 +97,15 @@ body {
 .login-pass-again > div > input {
   border: none;
   background-color: #f3f4f6;
-  /* width: 600px; */
+  width: 80%;
 }
 
 input:focus {
   outline: none;
 }
 
-.show-hide-button {
+.show-hide-button,
+.show-hide-button-again {
   width: 24px;
   height: 24px;
   background-image: url(../images/btn_visibility_off.svg);
@@ -130,11 +131,7 @@ input:focus {
   font-size: 20px;
   font-weight: 600;
   font-style: normal;
-}
-
-.signup-button:hover {
-  background-color: #1c4d87;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .login-easy {
@@ -162,6 +159,37 @@ input:focus {
 
 .signup-to-login > a {
   color: #3692ff
+}
+
+/* 상호작용에 따른 클래스 */
+.login-email > div.err,
+.login-nick > div.err,
+.login-pass > div.err,
+.login-pass-again > div.err {
+  border: 2px solid #ff0000;
+}
+
+.emailErr,
+.pwdErr,
+.pwdAgainErr,
+.nickErr{
+  color : #FF0000;
+  font-size: 14px;
+  margin-top: 23px;
+}
+
+.pwdErr,
+.pwdAgainErr{
+  flex-basis : 100%;  
+  width: 100%;
+}
+
+.btnActivate{
+  background-color: #3692ff;
+}
+
+.show{
+  background-image: url(../images/btn_visibility_on.svg);
 }
 
 @media (max-width: 767px) {
