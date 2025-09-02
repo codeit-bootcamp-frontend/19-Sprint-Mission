@@ -47,6 +47,7 @@
     background-color: #3692ff; 
     border-radius: 50px; 
     text-align: center; 
+    margin-inline: auto;
     color: white;
     font-weight: 600;
 }

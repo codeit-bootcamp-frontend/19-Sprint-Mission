@@ -16,8 +16,8 @@
 
   
     .flex-wrap{
-        width: 240px;
-         padding-top: 48px;
+        width: 100%;
+        padding-top: 48px;
     }
     .flex-wrap .wrap{
         gap: 18px;
@@ -26,7 +26,7 @@
         font-size: 32px; 
         line-height: 45px;
         text-align: center;
-    }
+    } 
     .flex-wrap .wrap a{
         font-size: 20px;
         line-height: 26px; 
@@ -35,7 +35,7 @@
         margin-bottom: 132px;
     } 
     .backimg{
-        width: 448px; 
+        width: 100%; 
         aspect-ratio: 448 / 204;
     }
 
@@ -132,6 +132,9 @@
     .code-it{
         position: absolute;
         bottom: 0;
+    }
+    .FAQ{
+        margin-right: 22.11px;
     }
 
 }

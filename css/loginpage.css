@@ -22,8 +22,11 @@ form{
     flex-direction: column;
 }
 .text{
+    width: 100%;
+    box-sizing: border-box;
     border: none;
     padding: 15px 24px; 
+    font-size: 16px;
     line-height: 26px;
     background-color: var(--gray100); 
     border-radius: 12px;
@@ -99,4 +102,23 @@ form{
 .eye-off{
     background: url(../img/eyeoff.png) no-repeat center / cover;
 }
-.test{display: none }
+.test{
+    display: none; 
+}
+.warning{
+    font-size: 14px; 
+    line-height: 24px; 
+    font-weight: 600; 
+    margin-block: 8px 0; 
+    padding-left: 16px;
+    color: var(--error);
+
+}
+.error{
+    border: 1px solid var(--error); 
+    box-sizing: border-box; 
+    padding-block: 14px;
+}
+.change{
+    top: calc(50% - 28px);
+}
