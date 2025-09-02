@@ -57,16 +57,14 @@ input::placeholder {
   line-height: 26px;
 }
 
-#password {
-  background: url(asset/etc/btn_visibility_off_24px.svg) no-repeat;
-  background-color: #f3f4f6;
-  background-position: 592px, center;
+.password-box {
+  position: relative;
 }
 
-#password-check {
-  background: url(asset/etc/btn_visibility_on_24px.svg) no-repeat;
-  background-color: #f3f4f6;
-  background-position: 592px, center;
+.eye-icon {
+  position: absolute;
+  left: 592px;
+  top: 13px;
 }
 
 .login-button input {
