@@ -1,0 +1,208 @@
+/* login & signup */
+.logo {
+  width: 396px;
+  height: 132px;
+}
+
+.btn {
+  display: inline-block;
+  height: 56px;
+  width: 357px;
+  padding: 16px;
+  margin-top: 32px;
+  margin-bottom: 60px;
+  border-radius: 40px;
+  border: none;
+  background: var(--primary-100);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #f3f4f6;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1565c0;
+}
+
+.page-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.login-container {
+  display: grid;
+  width: 100%;
+  max-width: 640px;
+  padding: 231px 640px;
+}
+
+.login-logo-wrap {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.form-wrap {
+  display: grid;
+  gap: 24px;
+}
+
+.input-group {
+  display: grid;
+  gap: 16px;
+}
+
+.input-group > p {
+  margin-top: -8px;
+}
+
+.input-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: var(--gray-50, #f3f4f6);
+  border-radius: 12px;
+  border: 1px solid rgba(49, 130, 246, 0);
+}
+
+.input-field:focus {
+  outline: none;
+  border: 1px solid rgba(49, 130, 246, 0);
+}
+
+/* 유효성검사 style */
+.input-field.error {
+  border-color: var(--error-red, #f74747);
+}
+
+.input-field-message {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--error-red, #f74747);
+}
+
+/* 유효성검사 통과 style */
+
+.input-field.success {
+  border-color: var(--primary-100, #3692ff);
+}
+
+.input-field::placeholder {
+  color: var(--gray-500);
+}
+
+.password-input-wrapper > .input-field {
+  padding-right: 50px;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#password-error {
+  align-self: stretch;
+  margin-top: 8px;
+}
+
+#passwordChk-error {
+  align-self: stretch;
+  margin-top: 8px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-top: 18px;
+  border: none;
+}
+
+.btn.login {
+  width: 100%;
+  padding: 16px 0px;
+  margin: 0 0 24px 0;
+}
+
+.btn.login.disabled {
+  cursor: not-allowed;
+  background: var(--gray-400, #9ca3af);
+}
+
+.social-login-wrap {
+  display: flex;
+  width: 100%;
+  height: 74px;
+  background: #e6f2ff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.social-login-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--gray-800);
+}
+
+.social-login-icons ul {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.signup-link {
+  margin: auto;
+}
+
+.signup-link a {
+  color: var(--primary-100);
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .login-container {
+    padding: 190px 52px 325px 52px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logo {
+    width: 198px;
+    height: 66px;
+  }
+
+  .login-logo-wrap {
+    margin-bottom: 24px;
+  }
+
+  .login-container {
+    max-width: 400px;
+    padding: 80px 16px 231px 16px;
+  }
+}
