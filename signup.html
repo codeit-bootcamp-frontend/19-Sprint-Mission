@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>판다마켓-회원가입</title>
+
+    <link rel="stylesheet" href="sigunp.css">
+
     <link rel="stylesheet" href="signup.css">
+
     <link rel="Icon" href="image/panda_face.png">
 </head>
 
@@ -28,12 +32,19 @@
                             이메일
                         </label>
                         <input id="user-email" type="email" class="input-common" placeholder="이메일을 입력해 주세요.">
+
+                        <div class="error-message" id="email-error"></div>
+
                     </div>
                     <div class="ipt-nickname">
                         <label for="user-nickname">
                             닉네임
                         </label>
                         <input id="user-nickname" type="nickname" class="input-common" placeholder="닉네임을 입력해 주세요.">
+
+                        <div class="error-message" id="email-error"></div>
+
+
                     </div>
                     <div class="ipt-pw">
                         <label for="user-pw">
@@ -45,6 +56,10 @@
                                 <img class="login_eyes" src="image/btn_visibility_on_24px.png" alt="로그인 눈모양">
                             </button>
                         </div>
+
+                        <div class="error-message" id="email-error"></div>
+
+
                     </div>
                     <div class="ipt-pw-check">
                         <label for="user-pw-check">
@@ -56,6 +71,10 @@
                                 <img class="login_eyes_off" src="image/btn_visibility_off_24px.png" alt="눈모양 오프">
                             </button>
                         </div>
+
+                        <div class="error-message" id="password-check-error"></div>
+
+
                     </div>
                     <button type="button" class="btn_lg">회원가입</button>
             </form>
@@ -80,6 +99,10 @@
     </div>
     </main>
     </div>
+
+    <script src="signup.js"></script>
+
+
 </body>
 
 </html>
