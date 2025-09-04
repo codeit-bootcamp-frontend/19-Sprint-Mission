@@ -27,6 +27,10 @@ main {
   justify-content: center;
 }
 
+.logo img {
+  width: 100%;
+}
+
 form {
   /*height: 446px;*/
   width: 100%;
@@ -63,12 +67,12 @@ input::placeholder {
 
 .eye-icon {
   position: absolute;
-  left: 592px;
-  top: 13px;
+  right: 24px;
+  top: 16px;
 }
 
 .login-button input {
-  background-color: #3692FF;
+  background-color: #9CA3AF;
   padding: 16px 124px;
   display: flex;
   justify-content: center;
@@ -111,4 +115,13 @@ input::placeholder {
 
 span a:visited {
   color: #3692FF
+}
+
+
+/* 모바일 */
+@media (max-width: 767px) {
+  body {
+    width: auto;
+    margin: 231px 16px;
+  }
 }
