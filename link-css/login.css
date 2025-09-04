@@ -1,129 +1,147 @@
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family: 'Pretendard', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", sans-serif;
 }
-.auth-container{
+.auth-container {
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
   width: 640px;
   margin: 231px 640px;
-  gap:40px;
+  gap: 40px;
 }
-.logo-img{
+.logo-img {
   width: 396px;
   height: 132px;
 }
-.login-frame{
+.login-frame {
   width: 640px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.input-item{
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- gap: 24px;
- position: relative;
+.input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
 }
-
-input{
+input {
   width: 640px;
   height: 56px;
   border-radius: 12px;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   padding-top: 16px;
-  padding-left:24px;
+  padding-left: 24px;
   padding-bottom: 16px;
-  border: 1px solid #F3F4F6;
+  border: 1px solid #f3f4f6;
   font-size: 16px;
-  color: #1F2937;
+  color: #1f2937;
   line-height: 26px;
   letter-spacing: 0%;
 }
-label{
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+label {
   font-size: 18px;
-  color: #1F2937;
+  color: #1f2937;
   font-weight: 700;
 }
 
-.eyeicon{
+.eyeicon {
   position: absolute;
   cursor: pointer;
   padding-right: 24px;
 }
-.loginBtn{
+.error-message {
+  color: var(--error-red, #f74747);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  display: none;
+}
+
+.input--invalid {
+  border-radius: 12px;
+  border: 1px solid var(--error-red, #f74747);
+  background: var(--Cool-Gray-100, #f3f4f6);
+}
+
+/* 에러 메시지가 보일 때 */
+.input-item input.input--invalid + .error-message {
+  display: block;
+}
+.loginBtn {
   border-radius: 40px;
   width: 640px;
   height: 56px;
   padding: 16px 124px;
-  background-color:#3692FF;
+  background-color: #3692ff;
   border: none;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0%;
-  color:#F3F4F6;
+  color: #f3f4f6;
   cursor: pointer;
 }
-.loginForm{
+.loginForm {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.simple-login-box{
-  background-color: #E6F2FF;
+.simple-login-box {
+  background-color: #e6f2ff;
   border-radius: 8px;
   height: 74px;
   padding: 16px 23px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:10px;
+  gap: 10px;
 }
-.simple-login{
+.simple-login {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0%;
-  color: #1F2937;
+  color: #1f2937;
 }
-.icon{
+.icon {
   display: flex;
   gap: 16px;
 }
-.input-wrapper{
-  position:relative;
+.input-wrapper button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-.input-wrapper button{
-  position:relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.first-pandamarket{
+.first-pandamarket {
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0%;
-  color: #1F2937;
+  color: #1f2937;
 }
-.signup-link{
+.signup-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-  color: #3692FF;
+  color: #3692ff;
 }
-.signup-container{
+.signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,17 +150,14 @@ label{
 
 /* Tablet */
 @media (max-width: 1199px) {
-  body{
+  body {
     padding: 190px 52px;
   }
-  button{
-  background-color:#9CA3AF;
-}
 }
 /* Mobile */
 @media (max-width: 767px) {
-  .auth-container {   
-    width: 100%;        
+  .auth-container {
+    width: 100%;
     padding: 80px 16px 0 16px;
     display: flex;
     flex-direction: column;
@@ -150,53 +165,60 @@ label{
     gap: 24px;
     box-sizing: border-box;
   }
-   .logo-img {
+  .logo-img {
     width: 198px;
     height: 66px;
     display: block;
     margin: 0 auto;
   }
   .logo-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
- .login-frame{
-  width: 100%;
-  max-width: 343px;
-  margin: 0 auto;
-  height: 411px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-label{
-  font-size: 14px;
-  font-weight: 700;
-}
-.loginBtn{
-  width: 100%;     
-  max-width: 343px;
-  height: 56px;
-  background-color:#9CA3AF;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-}
-.loginForm{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-input{
-  width: 100%;     
-  max-width: 343px;
-  height: 56px;
-  
-}
-/*pc*/
-  @media(min-width: 1200px) {
-  .auth-container {}
-}
+  .login-frame {
+    width: 100%;
+    max-width: 343px;
+    margin: 0 auto;
+    height: 411px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .loginBtn {
+    display: flex;
+    width: 343px;
+    height: 56px;
+    padding: 16px 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #3692ff;
+  }
+  .loginBtn:disabled {
+    display: flex;
+    width: 343px;
+    height: 56px;
+    padding: 16px 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--Cool-Gray-400, #9ca3af);
+  }
+
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  input {
+    width: 100%;
+    max-width: 343px;
+    height: 56px;
+  }
 }
