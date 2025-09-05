@@ -62,6 +62,10 @@ body {
   cursor: pointer;
   
 }
+.header-right a{
+  text-decoration: none;
+  color: white;
+}
 .header-right:hover {
   background-color: #267ae0;
 }
@@ -115,6 +119,10 @@ body {
    cursor: pointer;
 
 }
+.bt1 a{
+  text-decoration: none;
+  color: white;
+}
 .sectionimg{
   width: 746px;
   height: 340px;
@@ -130,7 +138,7 @@ body {
 }
 
 .card {
-  background-color: #F9FBFF;
+  background-color: #FCFCFC;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   width: 988px;
@@ -165,7 +173,7 @@ body {
 
 }
 .card-p1{
-  font-family: Pretendard;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: Medium;
   font-size: 24px;
@@ -186,12 +194,7 @@ body {
   margin-right: 20px;
   text-align: right;
 }
-.card-text2{
-  font-size: 40px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 140%;
-}
+
 .card-p2{
   font-family: Pretendard;
   font-weight: 500;
@@ -200,14 +203,11 @@ body {
   leading-trim: NONE;
   line-height: 32px;
   letter-spacing: 0%;
+  text-align: right;
   vertical-align: middle;
+
 }
-.card-text3{
-  font-size: 40px;
-  font-weight: 700;
-  font-style: bold;
-  line-height: 140%;
-}
+
 .card-p3{
   font-family: Pretendard;
   font-weight: 500;
@@ -250,7 +250,8 @@ body {
   background-color: #111827;
   display:flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 30px;
 }
 .footer2{
   width: 1120px;
@@ -258,7 +259,7 @@ body {
   
   display:flex;
   justify-content: space-between;
-  align-items: center;
+  
 }
 .footer3{
   font-weight: 400;
