@@ -1,0 +1,133 @@
+:root {
+    --main-color: #3692FF ;
+    --btn-hover-color: #1967D6 ;
+    --btn-click-color: #1251AA ;
+
+    --gray900: #111827 ;
+    --gray800: #1F2937 ;
+    --gray700: #374151 ;
+    --gray600: #4B5563 ;
+    --gray500: #6B7280 ;
+    --gray400: #9CA3AF ;
+    --gray200: #E5E7EB ;
+    --gray100: #F3F4F6 ;
+    --gray50: #F9FAFB ;
+
+    --bgPoint-color: #CFE5FF ;
+    --white-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  img {
+    vertical-align: bottom;
+  }
+  
+  body {
+    color: var(--gray700);
+    word-break: keep-all;
+    font-family: "Pretendard", sans-serif;
+  }
+  
+  header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+    background-color: var(--white-color);
+    border-bottom: 1px solid #dfdfdf;
+    position: fixed;
+    z-index: 2;
+  }
+  
+  main {
+    position: relative;
+    top: 70px;
+  }
+
+  footer {
+    background-color: var(--gray900);
+    color: var(--gray400);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 200px 108px 200px;
+    font-size: 16px;
+    position: relative;
+    top: 70px;
+  }
+  
+  #footerMenu {
+    display: flex;
+    gap: 30px;
+    color: var(--gray200);
+  }
+  
+  #socialMedia {
+    display: flex;
+    gap: 12px;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0.02em;
+  }
+  
+  .button {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+  }
+  
+  .button:hover {
+    background-color: var(--btn-hover-color);
+  }
+  
+  .button:focus {
+    background-color: var(--btn-click-color);
+  }
+  
+  .button:disabled {
+    background-color: var(--gray400);
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .pill-button {
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 16px 124px;
+  }
+  

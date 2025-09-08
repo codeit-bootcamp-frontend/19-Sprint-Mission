@@ -1,0 +1,133 @@
+@import url('./global.css');
+
+
+/* header */
+.logo a img{
+    width: 153px;
+    height: 51px;
+    margin-left: 200px;
+}
+#login-button {
+    padding: 12px 23px 12px;
+    margin-right: 200px;
+    border-radius: 8px;
+}
+
+
+/* .banner */
+.banner {
+   width: 100%;
+   height: 540px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   position: relative;
+   background-color: var(--bgPoint-color);
+}
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 340px;
+    padding-bottom: 60px;
+    gap: 32px;
+    z-index: 1;
+}
+.bottom-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 69px;
+}  
+.banner-image {
+    width: 50%;
+}
+#banner-bgtext {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+/* .feature */
+.feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 138px 0 138px;
+}
+.feature-content {
+    position: relative;
+    display: flex;
+    width: 988px;
+    border-radius: 12px;
+    background-color: #FCFCFC;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.feature-content img {
+    position: relative;
+    left: 9px;
+    width: 588px;
+    height: 444px;
+}
+.feature-text {
+    padding-right: 24px;
+    word-break: keep-all;
+}
+.feature-tag {
+    font-family: "Abhaya Libre ExtraBold";
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-bottom: 12px;
+}
+.bgtext {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 56px */
+    letter-spacing: 0.8px;
+    margin-bottom: 24px;
+    color: var(--gray700);
+}
+.feature-discription {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray700);
+}
+.feature-text.text-right {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 24px;
+}
+ 
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 160px;
+    padding-top: 32px;
+    background-color: var(--gray900);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: var(--white-color);
+}
+.ask {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+.ask a {
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+#socialMedia img {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+}
+
