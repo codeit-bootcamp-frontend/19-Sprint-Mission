@@ -1,0 +1,49 @@
+/* Tablet (768px ~ 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  main.paper {
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  .login-btn,
+  .simplelogin {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .icon-group {
+    gap: 16px;
+  }
+}
+
+/* Mobile (375px ~ 767px) */
+@media (min-width: 375px) and (max-width: 767px) {
+  main.paper {
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  .login-btn,
+  .simplelogin {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .icon-group {
+    gap: 12px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+  }
+}

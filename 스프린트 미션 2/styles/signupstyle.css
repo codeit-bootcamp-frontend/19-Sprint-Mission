@@ -14,10 +14,10 @@ main.paper {
   flex-direction: column;
   align-items: center;    
   gap: 24px;              
+  padding: 32px 16px;
 }
 
-
-
+/* 로고 */
 .mbanner {
   width: 396px;
   height: 132px;
@@ -26,16 +26,17 @@ main.paper {
   margin: 0 auto; 
 }
 
+/* Label */
 .label {
   font-weight: 700;       
   font-size: 18px;        
   line-height: 26px;       
-  letter-spacing: 0;      
   color: #1F2937;          
   display: inline-block;   
   margin-bottom: 4px;      
 }
 
+/* Input */
 input[type="text"],
 input[type="password"] {
   width: 640px;              
@@ -49,8 +50,8 @@ input[type="password"] {
   box-sizing: border-box;    
 }
 
-.input-wrapper{
-    position: relative;
+.input-wrapper {
+  position: relative;
 }
 
 .toggle-password {
@@ -62,7 +63,7 @@ input[type="password"] {
   top: 12px;
 }
 
-
+/* 버튼 */
 .login-btn {
   width: 640px;
   height: 56px;
@@ -78,6 +79,11 @@ input[type="password"] {
   align-items: center;          
 }
 
+.login-btn:hover {
+  background-color: #2977d9;
+}
+
+/* 간편 로그인 */
 .simplelogin {
   width: 640px;
   height: 74px;
@@ -101,15 +107,10 @@ input[type="password"] {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   padding: 10px;           
-  box-sizing: content-box;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-
-
-
-
 
 .icon {
   width: 42px;              
@@ -128,7 +129,7 @@ input[type="password"] {
 }
 
 .google-icon {
-border: 1px solid #F9FAFB;
+  border: 1px solid #F9FAFB;
   background-color: #ffffff;
 }
 
@@ -136,7 +137,7 @@ border: 1px solid #F9FAFB;
   background-color: #F5E14B;
 }
 
-
+/* 회원가입/로그인 링크 영역 */
 .sign-in {
     display: flex;            
     align-items: center;     
@@ -170,4 +171,20 @@ border: 1px solid #F9FAFB;
     font-size: 14px;
     color: #3692FF;
     text-decoration: none;
+}
+
+.sign-in-text2 a:hover {
+    text-decoration: underline;
+}
+
+/* Form 전체 컨테이너 */
+.form-wrap {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
 }

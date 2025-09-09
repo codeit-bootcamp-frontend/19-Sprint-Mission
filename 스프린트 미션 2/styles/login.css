@@ -1,43 +1,44 @@
 body {
-  background-color: #F9FAFB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #F9FAFB; 
   margin: 0;
   font-family: 'Pretendard', sans-serif;
 }
 
 main.paper {
-  margin: 60px 640px 407px;        
+  margin: 0 231px;        
   display: flex;
   flex-direction: column;
   align-items: center;    
   gap: 24px;              
+  padding: 32px 16px;
 }
 
-
-
+/* 로고 */
 .mbanner {
   width: 396px;
   height: 132px;
   object-fit: contain; 
   display: block;
   margin: 0 auto; 
-
-  position: sticky;
-  top: 0;
-  z-index: 100;
-   background-color: #F9FAFB;
 }
 
+/* Label */
 .label {
   font-weight: 700;       
   font-size: 18px;        
   line-height: 26px;       
-  letter-spacing: 0;      
   color: #1F2937;          
   display: inline-block;   
   margin-bottom: 4px;      
 }
 
-input[type="text"]{
+/* Input */
+input[type="text"],
+input[type="password"] {
   width: 640px;              
   height: 56px;              
   border-radius: 12px;       
@@ -49,27 +50,8 @@ input[type="text"]{
   box-sizing: border-box;    
 }
 
-
-input[type="password"] {
-  width: 640px;              
-  height: 56px;              
-  border-radius: 12px;       
-  background-color: #F3F4F6; 
-  border: 2px solid #3182F600;    
-  padding: 0 16px;           
-  font-size: 16px;           
-  outline: none;             
-  box-sizing: border-box;
-  margin: 24px 0 24px;    
-}
-
-.input-wrapper{
-    position: relative;
-}
-
-.toggle-btn{
-    position: absolute;
-    
+.input-wrapper {
+  position: relative;
 }
 
 .toggle-password {
@@ -81,6 +63,7 @@ input[type="password"] {
   top: 12px;
 }
 
+/* 로그인 버튼 */
 .login-btn {
   width: 640px;
   height: 56px;
@@ -96,17 +79,21 @@ input[type="password"] {
   align-items: center;          
 }
 
+.login-btn:hover {
+  background-color: #2977d9;
+}
+
+/* 간편 로그인 */
 .simplelogin {
   width: 640px;
   height: 74px;
-  padding: 16px 23px 16px;
+  padding: 16px 23px;
   display: flex;
   align-items: center;       
   justify-content: space-between; 
   background-color: #E6F2FF;
   border-radius: 12px;
   box-sizing: border-box;
-  margin: 24px;
 }
 
 .icon-group {
@@ -120,15 +107,10 @@ input[type="password"] {
   border: 1px solid #FFFFFF;
   border-radius: 50%;
   padding: 10px;           
-  box-sizing: content-box;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-
-
-
-
 
 .icon {
   width: 42px;              
@@ -147,7 +129,7 @@ input[type="password"] {
 }
 
 .google-icon {
-border: 1px solid #F9FAFB;
+  border: 1px solid #F9FAFB;
   background-color: #ffffff;
 }
 
@@ -155,16 +137,14 @@ border: 1px solid #F9FAFB;
   background-color: #F5E14B;
 }
 
-
+/* 회원가입 영역 */
 .sign-in {
     display: flex;            
-    align-items: center;  
-    justify-content: center;   
+    align-items: center;     
     gap: 4px;                
 }
 
 .sign-in-text1 {
-    
     width: 144px;             
     height: 24px;             
     display: flex;
@@ -191,4 +171,43 @@ border: 1px solid #F9FAFB;
     font-size: 14px;
     color: #3692FF;
     text-decoration: none;
+}
+
+.sign-in-text2 a:hover {
+    text-decoration: underline;
+}
+
+/* Form 전체 컨테이너 */
+.form-wrap {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* -------------------- 반응형 관리 -------------------- */
+
+/* Tablet (768px ~ 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  main.paper {
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  .login-btn,
+  .simplelogin {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .icon-group {
+    gap: 16px;
+  }
 }
