@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/auth.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <a class="logo" href="/">
+            <img src="./images/logo/logo.png" alt="로고png" />
+        </a>
+        <form action="/" method="get">
+            <div class="auth">
+                <label for="id">이메일</label>
+                <input type="email" name="id" class="form-input" placeholder="codeit@email.com" autocomplete="username"/>
+            </div>
+
+            <div class="auth">
+                <label for="password">비밀번호</label>
+                <div class="input-password">
+                    <input type="password" name="password" class="form-input" autocomplete="current-password"/>
+                    <button type="button" class="toggle-password" aria-label="비밀번호 표시/숨기기">
+                        <img src="./images/icons/btn_visibility_off_24px.svg" alt="눈모양 off 아이콘">
+                    </button>
+                </div>
+
+            </div> 
+            <button type="submit" class="button pill-button">로그인</button>
+        </form>
+        <div class="social-auth-container">
+            간편 로그인하기
+            <div class="social-button">
+                <a href="https://www.google.com/">
+                    <img src="./images/icons/google_icon.png" alt="구글 아이콘png" />
+                </a>
+                <a href="https://www.kakaocorp.com/page/">
+                    <img src="./images/icons/kakao_icon.png" alt="카카오 로고png" />
+                </a>
+            </div>
+        </div>
+        <div class="signup">
+            판다마켓이 처음이신가요? <a href="./signup.html">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>
