@@ -1,6 +1,5 @@
 # 빌드 결과물이 저장되는 폴더
 dist
-build
 
 # 노드 패키지
 node_modules
