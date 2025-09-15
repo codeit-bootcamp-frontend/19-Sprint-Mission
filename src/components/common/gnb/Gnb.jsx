@@ -6,13 +6,17 @@ import Button from '@/components/common/button/Button';
 import styles from './Gnb.module.css';
 
 const Gnb = ({ login = true }) => {
+  const gnbClassName = `${styles.gnb} ${
+    login ? styles['gnb-auth'] : styles['gnb-guest']
+  }`;
+
   const navLinkClassName = ({ isActive }) => {
     return isActive ? `${styles['menu-active']}` : '';
   };
 
   return (
     <header className={styles.container}>
-      <nav className={styles.gnb}>
+      <nav className={gnbClassName}>
         <h1>
           <Link to="/">
             <picture>
