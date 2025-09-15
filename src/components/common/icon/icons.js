@@ -1,6 +1,6 @@
-import FacebookIcon from '@/assets/icons/ic-facebook.svg';
-import InstgramIcon from '@/assets/icons/ic-instagram.svg';
-import TwitterIcon from '@/assets/icons/ic-twitter.svg';
-import YoutubeIcon from '@/assets/icons/ic-youtube.svg';
+import facebookIcon from '@/assets/icons/ic-facebook.svg?url';
+import instgramIcon from '@/assets/icons/ic-instagram.svg?url';
+import twitterIcon from '@/assets/icons/ic-twitter.svg?url';
+import youtubeIcon from '@/assets/icons/ic-youtube.svg?url';
 
-export default { FacebookIcon, InstgramIcon, TwitterIcon, YoutubeIcon };
+export default { facebookIcon, instgramIcon, twitterIcon, youtubeIcon };
