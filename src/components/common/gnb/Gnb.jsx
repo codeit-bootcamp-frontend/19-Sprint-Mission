@@ -1,7 +1,6 @@
 import { Link, NavLink } from 'react-router';
 import profile from '@/assets/gnb/profile.png';
-import logo from '@/assets/logo/logo.svg?url';
-import textLogo from '@/assets/logo/text-logo.svg?url';
+import logos from '@/assets/logo/logo';
 import Button from '@/components/common/button/Button';
 import styles from './Gnb.module.css';
 
@@ -20,8 +19,8 @@ const Gnb = ({ login = true }) => {
         <h1>
           <Link to="/">
             <picture>
-              <source media="(max-width: 767px)" srcSet={textLogo} />
-              <img className={styles['logo-img']} src={logo} alt="로고" />
+              <source media="(max-width: 767px)" srcSet={logos.textLogo} />
+              <img className={styles['logo-img']} src={logos.logo} alt="로고" />
             </picture>
           </Link>
         </h1>
