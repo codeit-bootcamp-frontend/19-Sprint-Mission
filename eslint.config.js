@@ -67,7 +67,8 @@ export default defineConfig([
         },
       ],
       'import/no-unresolved': 'error',
-
+      'arrow-body-style': ['error', 'as-needed'],
+      curly: ['error'],
       'no-var': 'error',
       'no-console': 'warn',
       'no-debugger': 'warn',
