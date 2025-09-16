@@ -4,9 +4,12 @@ const Button = ({
   as: Component = 'button',
   size = 's',
   children,
+  full = false,
   ...props
 }) => {
-  const className = `${styles.button} ${styles[`button-${size}`]}`;
+  const className = `${styles.button} ${styles[`button-${size}`]} ${
+    full ? styles['button-full'] : ''
+  }`;
 
   return (
     <Component className={className} {...props}>
