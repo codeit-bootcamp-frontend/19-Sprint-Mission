@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router';
+import Footer from '@/components/common/footer/Footer';
 import Gnb from '@/components/common/gnb/Gnb';
 import styles from './MainLayout.module.css';
 
@@ -8,10 +9,13 @@ const MainLayout = () => {
   const isMain = pathname === '/';
 
   return (
-    <div className={styles.container}>
-      <Gnb login={!isMain} />
-      <Outlet />
-    </div>
+    <>
+      <div className={styles.container}>
+        <Gnb login={!isMain} />
+        <Outlet />
+      </div>
+      {isMain && <Footer />}
+    </>
   );
 };
 
