@@ -1,4 +1,5 @@
 import icons from '@/assets/icons/icons';
+import useAuthForm from '@/hooks/useAuthForm';
 import styles from './AuthInput.module.css';
 
 const AuthInput = ({
@@ -8,8 +9,20 @@ const AuthInput = ({
   name,
   placeholder,
   autoComplete,
-  errorMsg,
+  value,
+  handleChange,
+  handleBlur,
+  error,
 }) => {
+  const { showPassword, handlePasswordToggle } = useAuthForm();
+
+  const inputType =
+    type === 'password' ? (showPassword ? 'text' : 'password') : type;
+
+  const inputClassName = `${styles.input} ${
+    error ? styles['input-error'] : ''
+  } ${value && !error ? styles['input-complete'] : ''}`;
+
   return (
     <div className={styles.container}>
       <label htmlFor={id} className={styles.label}>
@@ -18,22 +31,30 @@ const AuthInput = ({
       <div className={styles['input-area']}>
         <input
           id={id}
-          className={styles.input}
-          type={type}
+          className={inputClassName}
+          type={inputType}
           name={name}
           placeholder={placeholder}
           autoComplete={autoComplete}
+          value={value}
+          onChange={handleChange}
+          onBlur={handleBlur}
         />
         {type === 'password' && (
           <button
             className={styles['show-password-button']}
             type="button"
-            aria-label="비밀번호 보기">
-            {<icons.HidePasswordIcon />}
+            aria-label={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
+            onClick={handlePasswordToggle}>
+            {showPassword ? (
+              <icons.ShowPasswordIcon />
+            ) : (
+              <icons.HidePasswordIcon />
+            )}
           </button>
         )}
       </div>
-      {errorMsg && <span className={styles['error-msg']}>{errorMsg}</span>}
+      {error && <span className={styles['error-msg']}>{error}</span>}
     </div>
   );
 };
