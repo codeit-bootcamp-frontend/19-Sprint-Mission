@@ -1,0 +1,9 @@
+.best-product-area {
+  margin-bottom: 40px;
+
+  .contents {
+    display: flex;
+    margin-top: 16px;
+    gap: 24px;
+  }
+}
