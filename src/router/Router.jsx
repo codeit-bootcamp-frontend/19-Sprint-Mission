@@ -11,8 +11,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route index element={<Home />} />
         <Route element={<MainLayout />}>
-          <Route index element={<Home />} />
           <Route path="/items" element={<Items />} />
           <Route path="/boards" element={<Boards />} />
           <Route path="/additem" element={<AddItem />} />
