@@ -16,7 +16,7 @@ const Gnb = ({ login = true }) => {
   return (
     <header className={styles.container}>
       <nav className={gnbClassName}>
-        <h1>
+        <h1 className={styles.logo}>
           <Link to="/">
             <picture>
               <source media="(max-width: 767px)" srcSet={logos.textLogo} />
