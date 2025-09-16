@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .label {
+    color: var(--gray-800);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  .input-area {
+    position: relative;
+
+    .input {
+      width: 100%;
+      padding: 15px 24px;
+      border: none;
+      border-radius: 12px;
+      background-color: var(--gray-100);
+      font-size: 16px;
+      line-height: 26px;
+
+      &::placeholder {
+        color: var(--gray-400);
+      }
+
+      &:focus {
+        outline: 1px solid var(--primary-100);
+      }
+    }
+
+    .input-complete {
+      border: 1px solid var(--primary-100);
+    }
+
+    .input-error {
+      border: 1px solid var(--error-red);
+    }
+
+    .show-password-button {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      width: 24px;
+      height: 24px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
