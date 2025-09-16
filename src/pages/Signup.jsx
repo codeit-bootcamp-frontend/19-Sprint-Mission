@@ -48,7 +48,7 @@ const Signup = () => {
       <SnsLogin />
       <div className={styles['guide-area']}>
         <span className={styles['guide-text']}>이미 회원이신가요?</span>
-        <Link className={styles['guide-link']} to="/signup">
+        <Link className={styles['guide-link']} to="/login">
           로그인
         </Link>
       </div>
