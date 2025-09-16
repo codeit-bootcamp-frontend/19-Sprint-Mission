@@ -1,15 +1,28 @@
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import AuthInput from '@/components/Auth/authInput/AuthInput';
 import Logo from '@/components/Auth/logo/Logo';
 import SnsLogin from '@/components/Auth/snsLogin/SnsLogin';
 import Button from '@/components/common/button/Button';
+import useAuthForm from '@/hooks/useAuthForm';
 import styles from '@/style/page/Auth.module.css';
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const { values, handleChange, handleBlur, errors, isValid } = useAuthForm({
+    email: '',
+    nickname: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate('/login', { replace: true });
+  };
   return (
     <main className={styles.container}>
       <Logo />
-      <form className={styles.form} name="signup">
+      <form className={styles.form} name="signup" onSubmit={handleSubmit}>
         <AuthInput
           id="email"
           label="이메일"
@@ -17,6 +30,10 @@ const Signup = () => {
           type="email"
           placeholder="이메일을 입력해주세요."
           autoComplete="email"
+          value={values.email}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          error={errors?.email}
         />
         <AuthInput
           id="nickname"
@@ -24,6 +41,10 @@ const Signup = () => {
           name="nickname"
           placeholder="닉네임을 입력해주세요."
           autoComplete="username"
+          value={values.nickname}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          error={errors?.nickname}
         />
         <AuthInput
           id="password"
@@ -32,6 +53,10 @@ const Signup = () => {
           type="password"
           placeholder="비밀번호를 입력해주세요."
           autoComplete="current-password"
+          value={values.password}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          error={errors?.password}
         />
         <AuthInput
           id="confirm-password"
@@ -40,8 +65,12 @@ const Signup = () => {
           type="password"
           placeholder="비밀번호를 한 번 더 입력해주세요."
           autoComplete="new-password"
+          value={values.confirmPassword}
+          handleChange={handleChange}
+          handleBlur={handleBlur}
+          error={errors?.confirmPassword}
         />
-        <Button size="l" disabled full={true}>
+        <Button type="submit" size="l" disabled={!isValid} full={true}>
           회원가입
         </Button>
       </form>
