@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 23px;
+  border-radius: 8px;
+  background-color: var(--background-100);
+  gap: 16px;
+
+  .text {
+    flex-grow: 1;
+    color: var(--gray-800);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  .link {
+    width: 42px;
+    height: 42px;
+
+    .img {
+      width: 100%;
+    }
+  }
+}
