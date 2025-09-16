@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router';
-import profile from '@/assets/gnb/profile.png';
+import images from '@/assets/images/images';
 import logos from '@/assets/logo/logo';
 import Button from '@/components/common/button/Button';
 import styles from './Gnb.module.css';
@@ -39,7 +39,7 @@ const Gnb = ({ login = true }) => {
               </li>
             </ul>
             <button type="button">
-              <img width={40} src={profile} alt="프로필 이미지" />
+              <img width={40} src={images.profile} alt="프로필 이미지" />
             </button>
           </>
         ) : (
