@@ -2,11 +2,12 @@
   width: fit-content;
   height: 132px;
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 16px;
-    gap: 24px;
+  @media screen and (width <= 767px) {
+    height: 66px;
+
+    .img {
+      width: 198px;
+      height: 66px;
+    }
   }
 }
