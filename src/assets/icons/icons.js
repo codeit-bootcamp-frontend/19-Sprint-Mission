@@ -5,6 +5,7 @@ import facebookIcon from '@/assets/icons/ic-facebook.svg?url';
 import HeartIcon from '@/assets/icons/ic-heart.svg';
 import instgramIcon from '@/assets/icons/ic-instagram.svg?url';
 import SearchIcon from '@/assets/icons/ic-search.svg';
+import SortIcon from '@/assets/icons/ic-sort.svg';
 import twitterIcon from '@/assets/icons/ic-twitter.svg?url';
 import HidePasswordIcon from '@/assets/icons/ic-visibility-off.svg';
 import ShowPasswordIcon from '@/assets/icons/ic-visibility-on.svg';
@@ -22,4 +23,5 @@ export default {
   HidePasswordIcon,
   ShowPasswordIcon,
   HeartIcon,
+  SortIcon,
 };

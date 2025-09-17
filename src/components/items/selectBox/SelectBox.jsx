@@ -23,8 +23,11 @@ const SelectBox = ({ options, selectedSort, onSelect }) => {
         className={styles['select-box']}
         type="button"
         onClick={handleClickToggle}>
-        {selectedSort}
-        <icons.ArrowDownIcon className={styles.icon} />
+        <div className={styles['desktop-content']}>
+          {selectedSort}
+          <icons.ArrowDownIcon className={styles.icon} />
+        </div>
+        <icons.SortIcon className={styles['mobile-icon']} />
       </button>
       {isOpen && (
         <ul className={styles['list-container']}>
