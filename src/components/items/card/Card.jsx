@@ -3,11 +3,21 @@ import images from '@/assets/images/images';
 import styles from './Card.module.css';
 
 const Card = ({ image, name, price, favoriteCount }) => {
-  const img = image === 'https://example.com/...' ? images.productEmpty : image;
+  const handleError = (e) => {
+    e.target.src = images.productEmpty;
+    e.target.onerror = null;
+  };
+
+  const imageSrc = image || images.productEmpty;
 
   return (
     <div className={styles.container}>
-      <img className={styles.img} src={img} alt="상품 사진" />
+      <img
+        className={styles.img}
+        src={imageSrc}
+        alt="상품 사진"
+        onError={handleError}
+      />
       <p className={styles.title}>{name}</p>
       <span className={styles.price}>{price}</span>
       <div className={styles['favorite-button-area']}>
