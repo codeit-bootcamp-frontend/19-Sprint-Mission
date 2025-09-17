@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import icons from '@/assets/icons/icons';
 import styles from './PaginationButton.module.css';
 
-const PaginationButton = ({ totalCount, pageSize }) => {
+const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
   const totalPages = Math.ceil(totalCount / pageSize);
-  const [page, setPage] = useState(1);
 
   const pageGroupSize = 5;
   const currentGroup = Math.ceil(page / pageGroupSize);
