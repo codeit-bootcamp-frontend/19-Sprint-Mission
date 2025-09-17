@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  color: var(--gray-800);
 
   .img {
     width: 100%;
@@ -18,7 +17,6 @@
   .price {
     display: inline-block;
     margin: 6px 0;
-    font-size: 16px;
     font-weight: 700;
   }
 

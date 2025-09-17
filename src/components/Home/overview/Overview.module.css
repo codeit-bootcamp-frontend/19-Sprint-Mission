@@ -101,18 +101,10 @@
       gap: 32px;
 
       .text-area {
-        .tag {
-          font-size: 16px;
-        }
-
         .title {
           margin-top: 8px;
           margin-bottom: 16px;
           font-size: 24px;
-        }
-
-        .desc {
-          font-size: 16px;
         }
       }
     }
