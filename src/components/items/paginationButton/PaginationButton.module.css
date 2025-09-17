@@ -17,6 +17,7 @@
 
     &:disabled {
       background-color: var(--gray-50);
+      cursor: default;
 
       & > svg > path {
         stroke: var(--gray-200);
