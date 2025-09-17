@@ -6,7 +6,9 @@ const MainLayout = () => {
   return (
     <div className={styles.container}>
       <Gnb login={true} />
-      <Outlet />
+      <div className={styles.contents}>
+        <Outlet />
+      </div>
     </div>
   );
 };
