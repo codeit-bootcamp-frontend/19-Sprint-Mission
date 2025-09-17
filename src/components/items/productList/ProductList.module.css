@@ -26,25 +26,32 @@
       }
     }
 
-    @media screen and (width <= 1199px) {
-      display: grid;
-      grid-template-columns: 1fr auto;
+    @media screen and (width <= 766px) {
+      flex-wrap: wrap;
       gap: 8px 12px;
 
       h2:first-of-type {
-        grid-column: 1;
+        flex: 1 1 auto;
+        order: 1;
       }
 
       a:first-of-type {
-        justify-self: end;
+        flex: 0 0 auto;
+        order: 2;
       }
 
       .search-area {
-        grid-row: 2;
+        flex: 1 1 auto;
+        order: 3;
 
         .search-input {
           width: 100%;
         }
+      }
+
+      div:last-of-type {
+        flex: 0 0 auto;
+        order: 4;
       }
     }
   }
