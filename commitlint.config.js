@@ -8,6 +8,7 @@ export default {
   },
   rules: {
     'type-case': [0],
+    'subject-case': [0],
     'type-empty': [2, 'never'],
     'subject-empty': [2, 'never'],
     'type-enum': [
