@@ -2,9 +2,8 @@ import { useState } from 'react';
 import icons from '@/assets/icons/icons';
 import styles from './SelectBox.module.css';
 
-const SelectBox = ({ options, onSelect }) => {
+const SelectBox = ({ options, selectedSort, onSelect }) => {
   const optionKeys = Object.keys(options);
-  const [selectedSort, setSelectedSort] = useState(optionKeys[0]);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClickToggle = () => {
@@ -14,9 +13,8 @@ const SelectBox = ({ options, onSelect }) => {
   };
 
   const handleSortChange = (sortText) => {
-    setSelectedSort(sortText);
     setIsOpen(false);
-    onSelect(options[sortText]);
+    onSelect(sortText);
   };
 
   return (
