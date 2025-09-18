@@ -16,13 +16,28 @@ import styles from './ProductList.module.css';
 const ProductList = () => {
   const [product, setProduct] = useState([]);
   const [error, setError] = useState(null);
-  const pageSize = useResponsiveSize('ALL_PRODUCTS');
-  const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
-  const [totalCount, setTotalCount] = useState(0);
+
   const [page, setPage] = useState(1);
+  const pageSize = useResponsiveSize('ALL_PRODUCTS');
+  const [totalCount, setTotalCount] = useState(0);
+
+  const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
 
   const handleSort = (sortValue) => {
     setSort(sortValue);
+    setPage(1);
+  };
+
+  const [search, setSearch] = useState('');
+  const [keyword, setKeyword] = useState('');
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setKeyword(search);
     setPage(1);
   };
 
@@ -33,6 +48,7 @@ const ProductList = () => {
           page,
           pageSize,
           orderBy: SORT_OPTIONS[sort],
+          keyword,
         });
         setProduct(data.list);
         setTotalCount(data.totalCount);
@@ -41,20 +57,25 @@ const ProductList = () => {
       }
     };
     fetchProduct();
-  }, [page, pageSize, sort]);
+  }, [page, pageSize, sort, keyword]);
 
   return (
     <section className={styles.container}>
       <div className={styles['top-area']}>
         <Title>전체 상품</Title>
-        <div className={styles['search-area']}>
+        <form
+          name="keyword"
+          onSubmit={handleSubmit}
+          className={styles['search-area']}>
           <icons.SearchIcon className={styles['search-icon']} />
           <Input
             id="search"
             className={styles['search-input']}
             placeholder="검색할 상품을 입력해주세요"
+            value={search}
+            onChange={handleSearch}
           />
-        </div>
+        </form>
         <Button as={Link} to="/additem" size="xs">
           상품 등록하기
         </Button>

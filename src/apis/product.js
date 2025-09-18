@@ -7,9 +7,16 @@ export const getBestProducts = async ({ pageSize }) => {
   return res.data;
 };
 
-export const getProducts = async ({ page, pageSize, orderBy = 'recent' }) => {
-  const res = await api.get(
-    `/products?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}`
-  );
+export const getProducts = async ({
+  page,
+  pageSize,
+  orderBy = 'recent',
+  keyword,
+}) => {
+  const query = `/products?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}${
+    keyword ? `&keyword=${keyword}` : ''
+  }`;
+
+  const res = await api.get(query);
   return res.data;
 };
