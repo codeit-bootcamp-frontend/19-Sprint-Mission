@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 60px;
+  gap: 24px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 16px;
+    gap: 24px;
+  }
+
+  .guide-area {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+
+    .guide-text {
+      margin-right: 4px;
+    }
+
+    .guide-link {
+      color: var(--primary-100);
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (width <= 1199px) {
+    padding-top: 40px;
+  }
+
+  @media screen and (width <= 767px) {
+    max-width: 400px;
+    padding: 24px 16px 0;
+  }
+}

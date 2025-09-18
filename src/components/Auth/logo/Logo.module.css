@@ -1,0 +1,13 @@
+.container {
+  width: fit-content;
+  height: 132px;
+
+  @media screen and (width <= 767px) {
+    height: 66px;
+
+    .img {
+      width: 198px;
+      height: 66px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border: none;
+  border-radius: 40px;
+  background-color: var(--primary-100);
+  color: var(--gray-0);
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-200);
+  }
+
+  &:active {
+    background-color: var(--primary-300);
+  }
+
+  &:disabled {
+    background-color: var(--gray-400);
+    color: var(--gray-100);
+    cursor: default;
+  }
+}
+
+.button-xs {
+  height: 42px;
+  padding: 0 23px;
+  border-radius: 8px;
+}
+
+.button-s {
+  width: 128px;
+  border-radius: 8px;
+}
+
+.button-m {
+  width: 240px;
+  font-size: 18px;
+}
+
+.button-l {
+  width: 357px;
+  height: 56px;
+  font-size: 20px;
+
+  @media screen and (width <= 767px) {
+    width: 240px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
+
+.button-full {
+  width: 100%;
+}
