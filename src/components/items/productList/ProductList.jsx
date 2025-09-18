@@ -23,6 +23,7 @@ const ProductList = () => {
 
   const handleSort = (sortValue) => {
     setSort(sortValue);
+    setPage(1);
   };
 
   useEffect(() => {
