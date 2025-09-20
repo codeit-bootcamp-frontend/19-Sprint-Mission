@@ -5,7 +5,7 @@
 }
 
 body {
-	margin: 0;
+  margin: 0;
   color: #374151;
 }
 
@@ -17,9 +17,9 @@ html {
 .container {
   width: 100%;
   margin: 0 auto;
- } /* 전체 너비 조정 */
+} /* 전체 너비 조정 */
 
-.header-logo { 
+.header-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +54,8 @@ main {
   margin-top: 70px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 140%;
@@ -67,7 +68,7 @@ h1, h2 {
 }
 
 .badge {
-  color: #3692FF;
+  color: #3692ff;
   font-size: 18px;
   font-weight: 800;
 }
@@ -84,8 +85,8 @@ h1, h2 {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  background-color: #3692FF;
-  color: #F3F4F6
+  background-color: #3692ff;
+  color: #f3f4f6;
 }
 
 .container.landing {
@@ -161,11 +162,11 @@ footer {
   width: 100%;
   height: 160px;
   background-color: #111827;
-  color: #E5E7EB;
+  color: #e5e7eb;
   font-size: 16px;
 }
 
-.footer-contents { 
+.footer-contents {
   display: flex;
   justify-content: space-between;
   padding-top: 32px;
@@ -191,13 +192,12 @@ a {
 }
 
 #copyright {
-  color: #9CA3AF;
+  color: #9ca3af;
 }
 
 button:hover {
-	cursor : pointer
+  cursor: pointer;
 }
-
 
 /* 태블릿 */
 @media (max-width: 1199px) {
@@ -210,7 +210,7 @@ button:hover {
     height: 56px;
   }
 
-  .container.landing{
+  .container.landing {
     height: auto;
   }
 
@@ -240,7 +240,6 @@ button:hover {
 
   .badge {
     font-weight: 700;
-    
   }
 
   .except-tablet {
@@ -307,9 +306,7 @@ button:hover {
   #copyright {
     color: inherit;
   }
-
 }
-
 
 /* 모바일 */
 @media (max-width: 767px) {
@@ -376,7 +373,7 @@ button:hover {
     justify-content: center;
     align-items: center;
   }
-  
+
   div.cards-landing > img {
     width: 448px;
     height: 204px;

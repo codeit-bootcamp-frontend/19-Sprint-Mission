@@ -1,44 +1,55 @@
- <!DOCTYPE html>
- <html lang="ko">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
-  <title>판다마켓 로그인 페이지</title>
- </head>
- 
- <body>
-  <header>
-    <div class="logo">
-      <a href="./"><img src="asset/logo/Property 1=lg.svg"></a>
-    </div>
-  </header>
-  <main>
-    <form>
-      <div>
-        <label for="email">이메일</label>
-        <input type="email" id="email" placeholder="codeit@email.com">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css"
+    />
+    <title>판다마켓 로그인 페이지</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./"><img src="asset/logo/Property 1=lg.svg" /></a>
       </div>
-      <div>
-        <label for="password">비밀번호</label>
-        <div class="password-box">
-          <input type="password" id="password" placeholder="●●●●●●●●">
-          <img class="eye-icon" src="asset/etc/btn_visibility_off_24px.svg">
+    </header>
+    <main>
+      <form>
+        <div>
+          <label for="email">이메일</label>
+          <input type="email" id="email" placeholder="codeit@email.com" />
         </div>
-      </div>
-      <div class="login-button">
-        <input type="submit" value="로그인">
-      </div>
-      <div class="social-login">
-        <div>간편 로그인하기</div>
-        <div class="sns-icon">
-          <a href="https://www.google.com/"><img src="asset/sns-icon/ic_google.svg"></a>
-          <a href="https://www.kakaocorp.com/page/"><img src="asset/sns-icon/ic_kakao.svg"></a>
+        <div>
+          <label for="password">비밀번호</label>
+          <div class="password-box">
+            <input type="password" id="password" placeholder="●●●●●●●●" />
+            <img class="eye-icon" src="asset/etc/btn_visibility_off_24px.svg" />
+          </div>
         </div>
+        <div class="login-button">
+          <input type="submit" value="로그인" />
+        </div>
+        <div class="social-login">
+          <div>간편 로그인하기</div>
+          <div class="sns-icon">
+            <a href="https://www.google.com/"
+              ><img src="asset/sns-icon/ic_google.svg"
+            /></a>
+            <a href="https://www.kakaocorp.com/page/"
+              ><img src="asset/sns-icon/ic_kakao.svg"
+            /></a>
+          </div>
+        </div>
+      </form>
+      <div class="signup">
+        판다마켓이 처음이신가요?&nbsp;<span
+          ><a href="signup.html">회원가입</a></span
+        >
       </div>
-    </form>
-    <div class="signup">판다마켓이 처음이신가요?&nbsp;<span><a href="signup.html">회원가입</a></span></div>
-  </main>
- </body>
- </html>
+    </main>
+  </body>
+</html>
