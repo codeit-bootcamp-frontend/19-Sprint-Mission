@@ -59,7 +59,7 @@ function validateInput(input) {
     if (input.id === "password2") {
       const password = document.getElementById("password1");
       if (password.value !== input.value) {
-        errorMessage.textContent = "비밀번호를 확인해주세요.";
+        errorMessage.textContent = "비밀번호가 일치하지 않습니다.";
         valid = false;
       }
     }
