@@ -119,6 +119,20 @@ span a:visited {
   color: #3692ff;
 }
 
+.input-wrapper {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.error-message {
+  position: absolute;
+  top: 100%;
+  left: 4px;
+  margin-top: 4px;
+  color: red;
+  display: none;
+}
+
 /* 모바일 */
 @media (max-width: 767px) {
   body {
