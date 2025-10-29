@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Link, NavLink } from 'react-router';
 import images from '@/assets/images/images';
 import logos from '@/assets/logo/logo';
@@ -5,17 +6,16 @@ import Button from '@/components/common/button/Button';
 import styles from './Gnb.module.css';
 
 const Gnb = ({ login = true }) => {
-  const gnbClassName = `${styles.gnb} ${
-    login ? styles['gnb-auth'] : styles['gnb-guest']
-  }`;
-
-  const navLinkClassName = ({ isActive }) => {
-    return isActive ? `${styles['menu-active']}` : '';
-  };
+  const navLinkClassName = ({ isActive }) =>
+    classNames({ [styles['menu-active']]: isActive });
 
   return (
     <header className={styles.container}>
-      <nav className={gnbClassName}>
+      <nav
+        className={classNames(styles.gnb, {
+          [styles['gnb-auth']]: login,
+          [styles['gnb-guest']]: !login,
+        })}>
         <h1 className={styles.logo}>
           <Link to="/">
             <picture>

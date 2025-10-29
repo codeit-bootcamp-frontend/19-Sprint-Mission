@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import styles from './Input.module.css';
 
 const Input = ({
@@ -9,13 +10,16 @@ const Input = ({
 }) => {
   const { error, value } = props;
 
-  const inputClassName = `${styles.input} ${
-    error ? styles['input-error'] : ''
-  } ${value && !error ? styles['input-complete'] : ''} ${className}`;
-
   return (
     <input
-      className={inputClassName}
+      className={classNames(
+        styles.input,
+        {
+          [styles['input-error']]: error,
+          [styles['input-complete']]: value && !error,
+        },
+        className
+      )}
       id={id}
       type={type}
       placeholder={placeholder}
