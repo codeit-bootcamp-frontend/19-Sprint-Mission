@@ -1,3 +1,7 @@
+const rootColors = getComputedStyle(document.documentElement);
+const validColor = rootColors.getPropertyValue("--blue");
+const invalidColor = rootColors.getPropertyValue("--gray400");
+
 document.querySelectorAll(".validate-form").forEach((form) => {
   const btn = form.querySelector(".btn");
 
@@ -89,7 +93,7 @@ function updateButtonState(form, btn) {
   });
 
   btn.disabled = !isFormValid;
-  btn.style.backgroundColor = isFormValid ? "#3692ff" : "#9ca3af";
+  btn.style.backgroundColor = isFormValid ? validColor : invalidColor;
   return isFormValid;
 }
 
