@@ -9,20 +9,17 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
   const startPage = (currentGroup - 1) * pageGroupSize + 1;
   const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
 
-  const pages = Array.from({ length: endPage - startPage + 1 }, (_, i) => {
-    return startPage + i;
-  });
+  const pages = Array.from(
+    { length: endPage - startPage + 1 },
+    (_, i) => startPage + i
+  );
 
   const handlePrevPage = () => {
-    setPage((prev) => {
-      return prev - 1;
-    });
+    setPage((prev) => prev - 1);
   };
 
   const handleNextPage = () => {
-    setPage((prev) => {
-      return prev + 1;
-    });
+    setPage((prev) => prev + 1);
   };
 
   const handleGoPage = (p) => {
@@ -47,9 +44,7 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
             className={`${styles.button} ${
               page == p ? styles['button-select'] : ''
             }`}
-            onClick={() => {
-              return handleGoPage(p);
-            }}>
+            onClick={() => handleGoPage(p)}>
             {p}
           </button>
         );

@@ -13,9 +13,9 @@ const getSizeWidth = (key, width) => {
 };
 
 const useResponsiveSize = (key) => {
-  const [pageSize, setPageSize] = useState(() => {
-    return getSizeWidth(key, window.innerWidth);
-  });
+  const [pageSize, setPageSize] = useState(() =>
+    getSizeWidth(key, window.innerWidth)
+  );
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -26,9 +26,7 @@ const useResponsiveSize = (key) => {
 
       timerRef.current = setTimeout(() => {
         const newPageSize = getSizeWidth(key, window.innerWidth);
-        setPageSize((prev) => {
-          return prev !== newPageSize ? newPageSize : prev;
-        });
+        setPageSize((prev) => (prev !== newPageSize ? newPageSize : prev));
       }, 100);
     };
 

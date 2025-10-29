@@ -7,14 +7,12 @@ const useAuthForm = (initialValues) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
-  const checkFormValid = () => {
-    return Object.keys(values).every((key) => {
-      return (
+  const checkFormValid = () =>
+    Object.keys(values).every(
+      (key) =>
         values[key] &&
         !(validators[key] && validators[key](values[key], values))
-      );
-    });
-  };
+    );
 
   const handleBlur = (e) => {
     const { name, value } = e.target;
@@ -29,15 +27,11 @@ const useAuthForm = (initialValues) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setValues((prev) => {
-      return { ...prev, [name]: value };
-    });
+    setValues((prev) => ({ ...prev, [name]: value }));
   };
 
   const handlePasswordToggle = () => {
-    setShowPassword((prev) => {
-      return !prev;
-    });
+    setShowPassword((prev) => !prev);
   };
 
   return {
