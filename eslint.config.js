@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
+import componentArrowStyle from 'eslint-plugin-component-arrow-style';
 import importPlugin from 'eslint-plugin-import';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -16,6 +17,7 @@ export default defineConfig([
       js.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
+      componentArrowStyle.configs.recommended,
     ],
     plugins: {
       react,
@@ -67,7 +69,6 @@ export default defineConfig([
         },
       ],
       'import/no-unresolved': ['error', { ignore: ['\\.svg\\?url$'] }],
-      'arrow-body-style': ['error', 'always'],
       curly: ['error'],
       'no-var': 'error',
       'no-console': 'warn',
