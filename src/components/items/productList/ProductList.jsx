@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { getProducts } from '@/apis/product';
 import icons from '@/assets/icons/icons';
@@ -9,27 +9,20 @@ import Card from '@/components/items/card/Card';
 import PaginationButton from '@/components/items/paginationButton/PaginationButton';
 import SelectBox from '@/components/items/selectBox/SelectBox';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
-import useResponsiveSize from '@/hooks/useResponsiveSize';
+import useFetchProduct from '@/hooks/useFetchProduct';
 import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
-  const [product, setProduct] = useState([]);
-  const [error, setError] = useState(null);
-
   const [page, setPage] = useState(1);
-  const pageSize = useResponsiveSize('ALL_PRODUCTS');
-  const [totalCount, setTotalCount] = useState(0);
-
   const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
+  const [search, setSearch] = useState('');
+  const [keyword, setKeyword] = useState('');
 
   const handleSort = (sortValue) => {
     setSort(sortValue);
     setPage(1);
   };
-
-  const [search, setSearch] = useState('');
-  const [keyword, setKeyword] = useState('');
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -41,24 +34,11 @@ const ProductList = () => {
     setPage(1);
   };
 
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const data = await getProducts({
-          page,
-          pageSize,
-          orderBy: SORT_OPTIONS[sort],
-          keyword,
-        });
-        setProduct(data.list);
-        setTotalCount(data.totalCount);
-      } catch (error) {
-        setError(error);
-      }
-    };
-    fetchProduct();
-  }, [page, pageSize, sort, keyword]);
-
+  const { product, pageSize, totalCount, error } = useFetchProduct(
+    getProducts,
+    'ALL_PRODUCTS',
+    { page, orderBy: SORT_OPTIONS[sort], keyword }
+  );
   return (
     <section className={styles.container}>
       <div className={styles['top-area']}>
