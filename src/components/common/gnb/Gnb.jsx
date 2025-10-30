@@ -1,13 +1,21 @@
 import classNames from 'classnames';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
 import images from '@/assets/images/images';
 import logos from '@/assets/logo/logo';
 import Button from '@/components/common/button/Button';
 import styles from './Gnb.module.css';
 
 const Gnb = ({ login = true }) => {
+  const location = useLocation();
+
   const navLinkClassName = ({ isActive }) =>
     classNames({ [styles['menu-active']]: isActive });
+
+  const navLinkItemsClassName = () => {
+    const active =
+      location.pathname === '/items' || location.pathname === '/additem';
+    return classNames({ [styles['menu-active']]: active });
+  };
 
   return (
     <header className={styles.container}>
@@ -33,7 +41,7 @@ const Gnb = ({ login = true }) => {
                 </NavLink>
               </li>
               <li className={styles.menu}>
-                <NavLink className={navLinkClassName} to="/items">
+                <NavLink className={navLinkItemsClassName} to="/items">
                   중고마켓
                 </NavLink>
               </li>
