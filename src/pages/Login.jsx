@@ -14,6 +14,7 @@ const Login = () => {
   });
 
   const handleSubmit = (e) => {
+    // TODO: 미션 11 구현 시 에러 처리 추가
     e.preventDefault();
     navigate('/items', { replace: true });
   };
