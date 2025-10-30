@@ -42,7 +42,7 @@ const TagInput = ({ tags, setTags }) => {
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
       />
-      {error && <p className={styles.error}>{error}</p>}
+      {error && <span className={styles.error}>{error}</span>}
       {tags.length > 0 && (
         <ul className={styles['tag-area']}>
           {tags.map((t) => {
