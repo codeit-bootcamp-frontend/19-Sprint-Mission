@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .error {
+    color: var(--error-red);
+    font-size: 14px;
+  }
+
+  .tag-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 5px 12px;
+      border-radius: 26px;
+      background-color: var(--gray-100);
+      gap: 8px;
+
+      .remove-button {
+        width: 22px;
+        height: 24px;
+      }
+    }
+  }
+}
