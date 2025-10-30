@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { getProducts } from '@/apis/product';
 import icons from '@/assets/icons/icons';
@@ -16,29 +16,35 @@ import styles from './ProductList.module.css';
 const ProductList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = Number(searchParams.get('page') || '1');
-  const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
-  const [search, setSearch] = useState('');
-  const [keyword, setKeyword] = useState('');
-
-  useEffect(() => {
-    if (!searchParams.get('page')) {
-      setSearchParams({ page: '1' });
-    }
-  }, [searchParams, setSearchParams]);
+  const keyword = searchParams.get('keyword') || '';
+  const sort = searchParams.get('sort') || Object.keys(SORT_OPTIONS)[0];
+  const [searchBar, setSearchBar] = useState(keyword);
 
   const handleSort = (sortValue) => {
-    setSort(sortValue);
-    setSearchParams({ page: '1' });
+    setSearchParams({
+      keyword,
+      page: '1',
+      sort: sortValue,
+    });
   };
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+  const handleChangeSearchBar = (e) => {
+    setSearchBar(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setKeyword(search);
-    setSearchParams({ page: '1' });
+    const params = { page: '1', sort };
+
+    if (searchBar.trim() !== '') {
+      params.keyword = searchBar;
+    }
+    setSearchParams(params);
+  };
+
+  const handleResetSearchBar = () => {
+    setSearchBar('');
+    setSearchParams({ page: '1', sort });
   };
 
   const { product, pageSize, totalCount, error } = useFetchProduct(
@@ -59,9 +65,17 @@ const ProductList = () => {
             id="search"
             className={styles['search-input']}
             placeholder="검색할 상품을 입력해주세요"
-            value={search}
-            onChange={handleSearch}
+            value={searchBar}
+            onChange={handleChangeSearchBar}
           />
+          {searchBar && (
+            <button
+              type="button"
+              className={styles['reset-button']}
+              onClick={handleResetSearchBar}>
+              ✕
+            </button>
+          )}
         </form>
         <Button as={Link} to="/additem" size="xs">
           상품 등록하기

@@ -24,6 +24,14 @@
         padding: 9px 16px;
         padding-left: 42px;
       }
+
+      .reset-button {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        font-weight: 700;
+      }
     }
 
     @media screen and (width <= 766px) {
