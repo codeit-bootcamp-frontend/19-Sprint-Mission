@@ -1,7 +1,8 @@
+import Button from "@/components/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <div className="mx-auto flex max-w-[1520px] items-center justify-between border-b border-[#DFDFDF] px-[24px] py-[10px]">
       <div className="flex items-center gap-8">
@@ -11,18 +12,14 @@ const Header = () => {
             <Image src="/images/logo.png" alt="logo" width={153} height={51} />
           </picture>
         </Link>
-        <nav className="flex gap-[30px]">
-          <Link href="/items">자유게시판</Link>
-          <Link href="/items">중고마켓</Link>
-        </nav>
       </div>
       <div>
         <Link href="/items">
-          <img className="logo" src="images/ic_profile.png" alt="logo" />
+          <Button onClick={() => console.log("page")}>로그인</Button>
         </Link>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default HomeHeader;

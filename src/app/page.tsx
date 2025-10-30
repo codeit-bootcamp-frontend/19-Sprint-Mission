@@ -1,10 +1,10 @@
-import LandingPage from "./(route)/landing/LandingPage";
+import HomePage from "./(route)/home/HomePage";
 
 export default function Home() {
   return (
     <div>
       <main className="flex flex-col">
-        <LandingPage/>
+        <HomePage/>
       </main>
     </div>
   );
