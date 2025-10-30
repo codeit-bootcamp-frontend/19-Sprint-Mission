@@ -1,5 +1,6 @@
 import icons from '@/assets/icons/icons';
 import Input from '@/components/common/input/Input';
+import Label from '@/components/common/label/Label';
 import useAuthForm from '@/hooks/useAuthForm';
 import styles from './AuthInput.module.css';
 
@@ -22,9 +23,7 @@ const AuthInput = ({
 
   return (
     <div className={styles.container}>
-      <label htmlFor={id} className={styles.label}>
-        {label}
-      </label>
+      <Label id={id} label={label} />
       <div className={styles['input-area']}>
         <Input
           id={id}
