@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router';
-import AuthInput from '@/components/Auth/authInput/AuthInput';
-import Logo from '@/components/Auth/logo/Logo';
-import SnsLogin from '@/components/Auth/snsLogin/SnsLogin';
+import AuthInput from '@/components/auth/authInput/AuthInput';
+import Logo from '@/components/auth/logo/Logo';
+import SnsLogin from '@/components/auth/snsLogin/SnsLogin';
 import Button from '@/components/common/button/Button';
 import useAuthForm from '@/hooks/useAuthForm';
 import styles from '@/style/page/Auth.module.css';

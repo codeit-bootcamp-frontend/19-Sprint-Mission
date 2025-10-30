@@ -1,8 +1,8 @@
 import Footer from '@/components/common/footer/Footer';
 import Gnb from '@/components/common/gnb/Gnb';
-import BottomBanner from '@/components/Home/banner/BottomBanner';
-import TopBanner from '@/components/Home/banner/TopBanner';
-import Overview from '@/components/Home/overview/Overview';
+import BottomBanner from '@/components/home/banner/BottomBanner';
+import TopBanner from '@/components/home/banner/TopBanner';
+import Overview from '@/components/home/overview/Overview';
 import styles from '@/style/page/Home.module.css';
 
 const Home = () => {
