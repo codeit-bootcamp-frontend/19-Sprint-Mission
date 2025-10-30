@@ -14,21 +14,21 @@ import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
-  const [pageSearchParams, setPageSearchParams] = useSearchParams();
-  const page = pageSearchParams.get('page');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = Number(searchParams.get('page') || '1');
   const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
   const [search, setSearch] = useState('');
   const [keyword, setKeyword] = useState('');
 
   useEffect(() => {
-    if (!pageSearchParams.get('page')) {
-      setPageSearchParams({ page: '1' });
+    if (!searchParams.get('page')) {
+      setSearchParams({ page: '1' });
     }
-  }, [pageSearchParams, setPageSearchParams]);
+  }, [searchParams, setSearchParams]);
 
   const handleSort = (sortValue) => {
     setSort(sortValue);
-    setPageSearchParams({ page: '1' });
+    setSearchParams({ page: '1' });
   };
 
   const handleSearch = (e) => {
@@ -38,7 +38,7 @@ const ProductList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setKeyword(search);
-    setPageSearchParams({ page: '1' });
+    setSearchParams({ page: '1' });
   };
 
   const { product, pageSize, totalCount, error } = useFetchProduct(
@@ -92,8 +92,8 @@ const ProductList = () => {
           <PaginationButton
             totalCount={totalCount}
             pageSize={pageSize}
-            page={Number(page)}
-            setPage={setPageSearchParams}
+            page={page}
+            setPage={setSearchParams}
           />
         </div>
       )}
