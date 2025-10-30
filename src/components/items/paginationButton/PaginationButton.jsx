@@ -3,7 +3,6 @@ import styles from './PaginationButton.module.css';
 
 const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
   const totalPages = Math.ceil(totalCount / pageSize);
-
   const pageGroupSize = 5;
   const currentGroup = Math.ceil(page / pageGroupSize);
   const startPage = (currentGroup - 1) * pageGroupSize + 1;
@@ -15,15 +14,26 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
   );
 
   const handlePrevPage = () => {
-    setPage((prev) => prev - 1);
+    const newPage = Math.max(page - 1, 1);
+    setPage((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
+    });
   };
 
   const handleNextPage = () => {
-    setPage((prev) => prev + 1);
+    const newPage = page + 1;
+    setPage((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
+    });
   };
 
   const handleGoPage = (p) => {
-    setPage(p);
+    setPage((searchParams) => {
+      searchParams.set('page', p);
+      return searchParams;
+    });
   };
 
   return (

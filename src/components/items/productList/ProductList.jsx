@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Link, useSearchParams } from 'react-router';
 import { getProducts } from '@/apis/product';
 import icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
@@ -14,14 +14,21 @@ import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
-  const [page, setPage] = useState(1);
+  const [pageSearchParams, setPageSearchParams] = useSearchParams();
+  const page = pageSearchParams.get('page');
   const [sort, setSort] = useState(Object.keys(SORT_OPTIONS)[0]);
   const [search, setSearch] = useState('');
   const [keyword, setKeyword] = useState('');
 
+  useEffect(() => {
+    if (!pageSearchParams.get('page')) {
+      setPageSearchParams({ page: '1' });
+    }
+  }, [pageSearchParams, setPageSearchParams]);
+
   const handleSort = (sortValue) => {
     setSort(sortValue);
-    setPage(1);
+    setPageSearchParams({ page: '1' });
   };
 
   const handleSearch = (e) => {
@@ -31,7 +38,7 @@ const ProductList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setKeyword(search);
-    setPage(1);
+    setPageSearchParams({ page: '1' });
   };
 
   const { product, pageSize, totalCount, error } = useFetchProduct(
@@ -85,8 +92,8 @@ const ProductList = () => {
           <PaginationButton
             totalCount={totalCount}
             pageSize={pageSize}
-            page={page}
-            setPage={setPage}
+            page={Number(page)}
+            setPage={setPageSearchParams}
           />
         </div>
       )}
