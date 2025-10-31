@@ -1,8 +1,10 @@
+import AddItemForm from '@/components/addItems/addItemForm/AddItemForm';
+
 const AddItem = () => {
   return (
-    <div>
-      <p>아이템 추가 페이지</p>
-    </div>
+    <main>
+      <AddItemForm />
+    </main>
   );
 };
 
