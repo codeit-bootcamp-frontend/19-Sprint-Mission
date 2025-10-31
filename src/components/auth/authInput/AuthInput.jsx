@@ -35,6 +35,7 @@ const AuthInput = ({
           onChange={handleChange}
           onBlur={handleBlur}
           error={error}
+          showCompleteStyle
         />
         {type === 'password' && (
           <button

@@ -6,6 +6,7 @@ const Input = ({
   id,
   type = 'text',
   placeholder,
+  showCompleteStyle = false,
   ...props
 }) => {
   const { error, value } = props;
@@ -16,7 +17,7 @@ const Input = ({
         styles.input,
         {
           [styles['input-error']]: error,
-          [styles['input-complete']]: value && !error,
+          [styles['input-complete']]: showCompleteStyle && value && !error,
         },
         className
       )}
