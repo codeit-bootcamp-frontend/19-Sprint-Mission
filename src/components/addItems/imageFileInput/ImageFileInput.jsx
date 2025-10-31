@@ -3,25 +3,24 @@ import Icons from '@/assets/icons/icons';
 import Label from '@/components/common/label/Label';
 import styles from './ImageFileInput.module.css';
 
-const ImageFileInput = () => {
+const ImageFileInput = ({ name, value, onChange }) => {
   const fileInputRef = useRef(null);
-  const [image, setImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!image) {
+    if (!value) {
       return;
     }
 
-    const url = URL.createObjectURL(image);
+    const url = URL.createObjectURL(value);
     setPreviewUrl(url);
 
     return () => URL.revokeObjectURL(url);
-  }, [image]);
+  }, [value]);
 
   const handleFileInputClick = () => {
-    if (image) {
+    if (value) {
       setError('*이미지 등록은 최대 1개까지 가능합니다.');
       return;
     }
@@ -36,13 +35,13 @@ const ImageFileInput = () => {
       return;
     }
 
-    setImage(selectedFile);
+    onChange(name, selectedFile);
     setError('');
   };
 
   const handleResetFileInput = () => {
-    setImage(null);
-    setPreviewUrl(null);
+    onChange(name, '');
+    setPreviewUrl('');
     setError('');
     if (fileInputRef.current) {
       fileInputRef.current.value = '';

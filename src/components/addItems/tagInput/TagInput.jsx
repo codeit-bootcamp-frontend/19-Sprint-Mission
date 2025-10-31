@@ -4,7 +4,7 @@ import Input from '@/components/common/input/Input';
 import Label from '@/components/common/label/Label';
 import styles from './TagInput.module.css';
 
-const TagInput = ({ tags, setTags }) => {
+const TagInput = ({ name, value, onChange }) => {
   const [tagInput, setTagInput] = useState('');
   const [error, setError] = useState('');
 
@@ -17,10 +17,10 @@ const TagInput = ({ tags, setTags }) => {
       e.preventDefault();
       const newTag = tagInput.trim();
 
-      if (tags.includes(newTag)) {
+      if (value.includes(newTag)) {
         setError(`"${newTag}" 태그는 이미 추가되었습니다.`);
       } else {
-        setTags((prev) => [...prev, newTag]);
+        onChange(name, [...value, newTag]);
         setError('');
       }
 
@@ -29,7 +29,10 @@ const TagInput = ({ tags, setTags }) => {
   };
 
   const handleRemoveTag = (tag) => {
-    setTags((prev) => prev.filter((t) => t !== tag));
+    onChange(
+      name,
+      value.filter((t) => t !== tag)
+    );
   };
 
   return (
@@ -43,9 +46,9 @@ const TagInput = ({ tags, setTags }) => {
         onKeyDown={handleKeyDown}
       />
       {error && <span className={styles.error}>{error}</span>}
-      {tags.length > 0 && (
+      {value.length > 0 && (
         <ul className={styles['tag-area']}>
-          {tags.map((t) => {
+          {value.map((t) => {
             return (
               <li key={t} className={styles.tag}>
                 #{t}
