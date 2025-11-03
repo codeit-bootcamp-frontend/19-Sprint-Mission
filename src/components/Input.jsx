@@ -14,4 +14,5 @@ const Inp = styled.input`
   background-color: #f3f4f6;
   background: #f3f4f6 url('../../public/ico_search.svg') no-repeat left 16px
     center;
+  outline: none;
 `;
