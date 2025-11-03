@@ -136,6 +136,13 @@ const AllProduct = styled.div`
 
   // 테블릿
   @media (max-width: 900px) {
+    > div {
+      display: block;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+
     > div input {
       width: 242px;
     }
@@ -148,12 +155,14 @@ const AllProduct = styled.div`
       position: relative;
       > h2 {
         width: 100%;
+        margin-bottom: 0;
       }
 
       > div {
         margin-top: 14px;
         align-items: center;
-        > button {
+        > button,
+        a {
           position: absolute;
           right: 0;
           top: -9px;
