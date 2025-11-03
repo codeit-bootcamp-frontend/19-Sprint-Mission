@@ -1,27 +1,12 @@
-import { useEffect, useState } from 'react';
 import { getBestProducts } from '@/apis/product';
 import Title from '@/components/common/title/Title';
 import Card from '@/components/items/card/Card';
-import useResponsiveSize from '@/hooks/useResponsiveSize';
+import useFetchProduct from '@/hooks/useFetchProduct';
 import { formatPrice } from '@/utils/formatPrice';
 import styles from './BestProductList.module.css';
 
 const BestProductList = () => {
-  const [product, setProduct] = useState([]);
-  const [error, setError] = useState(null);
-  const pageSize = useResponsiveSize('BEST_PRODUCTS');
-
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const data = await getBestProducts({ pageSize });
-        setProduct(data.list);
-      } catch (error) {
-        setError(error);
-      }
-    };
-    fetchProduct();
-  }, [pageSize]);
+  const { product, error } = useFetchProduct(getBestProducts, 'BEST_PRODUCTS');
 
   return (
     <section className={styles.container}>

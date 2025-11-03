@@ -3,30 +3,37 @@ import styles from './PaginationButton.module.css';
 
 const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
   const totalPages = Math.ceil(totalCount / pageSize);
-
   const pageGroupSize = 5;
   const currentGroup = Math.ceil(page / pageGroupSize);
   const startPage = (currentGroup - 1) * pageGroupSize + 1;
   const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
 
-  const pages = Array.from({ length: endPage - startPage + 1 }, (_, i) => {
-    return startPage + i;
-  });
+  const pages = Array.from(
+    { length: endPage - startPage + 1 },
+    (_, i) => startPage + i
+  );
 
   const handlePrevPage = () => {
-    setPage((prev) => {
-      return prev - 1;
+    const newPage = Math.max(page - 1, 1);
+    setPage((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
     });
   };
 
   const handleNextPage = () => {
-    setPage((prev) => {
-      return prev + 1;
+    const newPage = page + 1;
+    setPage((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
     });
   };
 
   const handleGoPage = (p) => {
-    setPage(p);
+    setPage((searchParams) => {
+      searchParams.set('page', p);
+      return searchParams;
+    });
   };
 
   return (
@@ -47,9 +54,7 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
             className={`${styles.button} ${
               page == p ? styles['button-select'] : ''
             }`}
-            onClick={() => {
-              return handleGoPage(p);
-            }}>
+            onClick={() => handleGoPage(p)}>
             {p}
           </button>
         );

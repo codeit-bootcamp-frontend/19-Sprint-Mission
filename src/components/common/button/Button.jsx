@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import styles from './Button.module.css';
 
 const Button = ({
@@ -5,14 +6,18 @@ const Button = ({
   size = 's',
   children,
   full = false,
+  className = '',
   ...props
 }) => {
-  const className = `${styles.button} ${styles[`button-${size}`]} ${
-    full ? styles['button-full'] : ''
-  }`;
-
   return (
-    <Component className={className} {...props}>
+    <Component
+      className={classNames(
+        styles.button,
+        styles[`button-${size}`],
+        { [styles['button-full']]: full },
+        className
+      )}
+      {...props}>
       {children}
     </Component>
   );

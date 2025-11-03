@@ -24,6 +24,14 @@
         padding: 9px 16px;
         padding-left: 42px;
       }
+
+      .reset-button {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        font-weight: 700;
+      }
     }
 
     @media screen and (width <= 766px) {
@@ -41,7 +49,11 @@
       }
 
       .search-area {
-        flex: 1 1 auto;
+        /* 정렬 셀렉트 박스 + gap 크기 */
+        --select-box-width: 54px;
+
+        /* 모바일 레이아웃 배치를 위해 calc 추가 */
+        flex: 1 1 calc(100% - var(--select-box-width));
         order: 3;
 
         .search-input {

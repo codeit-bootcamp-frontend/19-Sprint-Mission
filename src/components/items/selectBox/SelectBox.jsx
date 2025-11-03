@@ -7,9 +7,7 @@ const SelectBox = ({ options, selectedSort, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClickToggle = () => {
-    setIsOpen((prev) => {
-      return !prev;
-    });
+    setIsOpen((prev) => !prev);
   };
 
   const handleSortChange = (sortText) => {
@@ -36,9 +34,7 @@ const SelectBox = ({ options, selectedSort, onSelect }) => {
               <li
                 key={item}
                 className={styles['list-item']}
-                onClick={() => {
-                  return handleSortChange(item);
-                }}>
+                onClick={() => handleSortChange(item)}>
                 {item}
               </li>
             );
