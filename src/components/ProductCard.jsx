@@ -9,7 +9,7 @@ function ProductCard({ images, name, price, favorite }) {
           <img src={images} alt={name} />
         </ImageWrap>
         <p>{name}</p>
-        <strong>{price}원</strong>
+        <strong>{price.toLocaleString('ko-KR')}원</strong>
         <LikeArea>
           <i>
             <img src="/ico_like.svg" alt="좋아요" />
