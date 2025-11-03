@@ -1,28 +1,29 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 function Header() {
   return (
     <HeaderWrap>
       <div>
         <h1>
-          <a href="#;">
+          <Link to="/">
             <img
               src="/logo_face.png"
               alt="판다마켓 로고 얼굴"
               className="face"
             />
             <img src="/logo.png" alt="판다마켓 로고" className="logo" />
-          </a>
+          </Link>
         </h1>
         <ul>
           <li>
-            <a href="#;">자유게시판</a>
+            <Link to="/">자유게시판</Link>
           </li>
           <li>
-            <a href="#;">중고마켓</a>
+            <Link to="/items">중고마켓</Link>
           </li>
         </ul>
       </div>
-      <a href="#;" title="프로필로 이동" className="profile"></a>
+      <Link to="/" title="프로필로 이동" className="profile"></Link>
     </HeaderWrap>
   );
 }
