@@ -32,3 +32,12 @@
 
 - [x] 페이지 네이션 기능을 구현합니다.
 - [x] 반응형으로 보여지는 물품들의 개수를 다르게 설정할 때 서버에 보내는 pageSize값을 적절하게 설정합니다.
+
+PC
+![image](/capture/sprint5_1.png)
+
+테블릿
+![image](/capture/sprint5_2.png)
+
+모바일
+![image](/capture/sprint5_3.png)
