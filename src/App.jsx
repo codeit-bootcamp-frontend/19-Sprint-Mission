@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './page/Home';
-import Items from './page/items';
 import Header from './components/Header';
 import AddItem from './page/AddItem';
+import Items from './page/Items';
 
 function App() {
   return (
