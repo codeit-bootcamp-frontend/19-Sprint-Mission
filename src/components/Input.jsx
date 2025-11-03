@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 function Input({ placeholder = '입력해주세요.', value = '' }) {
-  return <Inp type="text" placeholder={placeholder} value={value} />;
+  const [text, setText] = useState('');
+
+  const onChange = (e) => setText(e.target.value);
+
+  return (
+    <Inp
+      type="text"
+      placeholder={placeholder}
+      value={text}
+      onChange={onChange}
+    />
+  );
 }
 
 export default Input;

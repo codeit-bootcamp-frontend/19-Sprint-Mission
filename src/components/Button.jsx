@@ -1,7 +1,14 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function Button({ buttonName }) {
-  return <Btn>{buttonName}</Btn>;
+function Button({ buttonName, to }) {
+  const Component = to ? Link : 'button';
+
+  return (
+    <Btn as={Component} to={to}>
+      {buttonName}
+    </Btn>
+  );
 }
 
 export default Button;

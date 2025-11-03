@@ -1,24 +1,29 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-function Dropdown() {
+function Dropdown({ dropState, setDropState }) {
   const [show, setShow] = useState(false);
-
   const showClick = () => setShow((prev) => !prev);
 
   return (
     <>
       <DropdownWrap>
-        <DropdownButton onClick={showClick}>최신순</DropdownButton>
+        <DropdownButton onClick={showClick}>
+          {dropState ? '최신순' : '좋아요순'}
+        </DropdownButton>
         {!show ? (
           ''
         ) : (
           <DropdownList>
             <li>
-              <button>최신순</button>
+              <button onClick={() => (setDropState(true), showClick())}>
+                최신순
+              </button>
             </li>
             <li>
-              <button>좋아요순</button>
+              <button onClick={() => (setDropState(false), showClick())}>
+                좋아요순
+              </button>
             </li>
           </DropdownList>
         )}
@@ -36,11 +41,27 @@ const DropdownWrap = styled.div`
 
 const DropdownButton = styled.button`
   width: 130px;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #fff;
   border-radius: 12px;
   border: 1px solid#e5e7eb;
   cursor: pointer;
+  text-align: left;
+  background: url('../../ico_dropdown_arrow.svg') no-repeat right 20px center;
+  transition: 0.5s all;
+
+  &:hover {
+    color: #3692ff;
+    border-color: #3692ff;
+  }
+
+  // 모바일
+  @media (max-width: 600px) {
+    width: 42px;
+    height: 42px;
+    text-indent: -9999px;
+    background: url('../../ico_dropdown_m.svg') no-repeat center center;
+  }
 `;
 
 const DropdownList = styled.ul`
@@ -66,5 +87,10 @@ const DropdownList = styled.ul`
     border: none;
     text-align: center;
     background-color: #fff;
+    transition: color 0.5s;
+
+    &:hover {
+      color: #3692ff;
+    }
   }
 `;

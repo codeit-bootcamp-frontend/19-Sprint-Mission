@@ -1,21 +1,22 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function ProductCard() {
+function ProductCard({ images, name, price, favorite }) {
   return (
     <ProductWrap>
-      <a href="#;">
+      <Link to="/">
         <ImageWrap>
-          <img src="/aa.png" alt="임시" />
+          <img src={images} alt={name} />
         </ImageWrap>
-        <p>아이패드 미니 팝니다.</p>
-        <strong>500,000원</strong>
+        <p>{name}</p>
+        <strong>{price}원</strong>
         <LikeArea>
           <i>
             <img src="/ico_like.svg" alt="좋아요" />
           </i>
-          <span>240</span>
+          <span>{favorite}</span>
         </LikeArea>
-      </a>
+      </Link>
     </ProductWrap>
   );
 }
@@ -34,11 +35,25 @@ const ProductWrap = styled.div`
     margin-top: 6px;
     font-weight: 700;
   }
+
+  a {
+    display: block;
+
+    & img {
+      transition: all 0.3s;
+    }
+    & :hover img {
+      transform: scale(1.2);
+    }
+  }
 `;
 
 const ImageWrap = styled.div`
-  width: 282px;
-  height: 282px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 16px;
 `;

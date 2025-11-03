@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 function Header() {
+  const location = useLocation();
+
   return (
     <HeaderWrap>
       <div>
@@ -15,7 +17,7 @@ function Header() {
           </Link>
         </h1>
         <ul>
-          <li>
+          <li className={location.pathname === '/items' ? 'active' : ''}>
             <Link to="/">자유게시판</Link>
           </li>
           <li>
@@ -52,10 +54,20 @@ const HeaderWrap = styled.div`
   .face {
     width: 40px;
     margin-right: 9px;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   .logo {
     width: 103px;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   ul {
@@ -67,9 +79,25 @@ const HeaderWrap = styled.div`
       margin-left: 30px;
     }
 
+    .active {
+      a {
+        color: #3692ff;
+        transition: opacity 0.5s;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
     a {
       font-size: 18px;
       font-weight: 700;
+      transition: color 0.5s;
+
+      &:hover {
+        color: #3692ff;
+      }
     }
   }
 
@@ -79,5 +107,35 @@ const HeaderWrap = styled.div`
     border-radius: 50%;
     background: url('../../public/profile.png') no-repeat #dfdfdf;
     background-size: 100%;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  // 테블릿
+  @media (max-width: 900px) {
+    padding: 10px 24px;
+  }
+
+  // 모바일
+  @media (max-width: 600px) {
+    padding: 15px;
+
+    .face {
+      display: none;
+    }
+
+    > div {
+      align-items: center;
+    }
+
+    ul {
+      margin-left: 8px;
+      li ~ li {
+        margin-left: 8px;
+      }
+    }
   }
 `;

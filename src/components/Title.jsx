@@ -8,5 +8,5 @@ export default Title;
 
 const TitleName = styled.h2`
   font-size: 20px;
-  font-weight: 700px;
+  font-weight: 700;
 `;
