@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function Button({ buttonName, to }) {
+function Button({ buttonName, to, disabled }) {
   const Component = to ? Link : 'button';
 
   return (
-    <Btn as={Component} to={to}>
+    <Btn as={Component} to={to} disabled={disabled ? true : false}>
       {buttonName}
     </Btn>
   );
@@ -25,5 +25,9 @@ const Btn = styled.button`
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:disabled {
+    background-color: #9ca3af;
   }
 `;
