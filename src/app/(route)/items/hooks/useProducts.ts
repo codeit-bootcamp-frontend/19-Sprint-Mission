@@ -1,53 +1,70 @@
-'use client';
+"use client";
 
-import { getProductsList } from '@/apis/products';
-import { useState, useEffect } from 'react';
-import { Product } from '@/types/product';
+import { getProductsList } from "@/apis/products";
+import { useState, useEffect, useRef } from "react";
+import { Product } from "@/types/product";
 
-interface ProductsState {
-  favorite: Product[];
-  recent: Product[];
+interface UseProductsParams {
+  page?: number;
+  pageSize?: number;
+  orderBy?: "recent" | "favorite";
+  search?: string;
 }
 
-export const useProducts = () => {
-  const [products, setProducts] = useState<ProductsState>({favorite: [], recent: []});
-  const [error, setError] = useState<Error | null>(null);
+interface UseProductResult {
+  products: Product[];
+  totalCount: number;
+  loading: boolean;
+  error: Error | null;
+}
+
+export const useProducts = ({
+  page,
+  pageSize,
+  orderBy,
+  search,
+}: UseProductsParams): UseProductResult => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
-  useEffect(()=> {
-    const fetchProducts = async () => {
-      try {
-        const [favoriteRes, recentRes] = await Promise.all([
-          getProductsList({orderBy: 'favorite'}),
-          getProductsList({orderBy: 'recent'}),
-        ]);
+  // fetchProducts() : 상품 불러오기
+  const fetchProducts = async (initial = false) => {
+    setError(null);
+    try {
+      const res = await getProductsList({
+        page,
+        pageSize,
+        orderBy,
+        search,
+      });
 
-        
-        const mapToProduct = (list: any[]): Product[] =>
-          list.map(item => ({
-            id: item.id,
-            name: item.name,
-            price: item.price,
-            favoriteCount: item.favoriteCount,
-            imageUrl: item.images?.[0],
-          }));
-          
-          setProducts({
-            favorite: mapToProduct(favoriteRes.list ?? []),
-            recent: mapToProduct(recentRes.list ?? []),
-          });
-      } catch (err){
-        if(err instanceof Error) {
-          setError(err);
-        } else {
-          setError (new Error('Unknown error'));
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
+      // 데이터 매핑
+      const list = (res.list ?? []).map(
+        (p: Product): Product => ({
+          id: p.id,
+          name: p.name,
+          price: p.price,
+          favoriteCount: p.favoriteCount,
+          images: p.images?.[0],
+        }),
+      );
+
+      setProducts(list ?? []);
+      setTotalCount(res.totalCount ?? 0);
+    } catch (err) {
+      if (err instanceof Error) setError(err);
+      else setError(new Error("Unknown error"));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // initialParams의 각 값이 변경될 때마다 fetch
+  useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [page, pageSize, orderBy, search]);
 
-  return {products, error, loading};
+  return { products, totalCount, loading, error };
 };

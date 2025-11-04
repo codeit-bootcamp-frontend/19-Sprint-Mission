@@ -1,11 +1,11 @@
-import AddItemPage from './AddItemPage';
+import AddItemPage from "./AddItemPage";
 
 const Page = () => {
   return (
     <div>
-      <AddItemPage/>
+      <AddItemPage />
     </div>
   );
-}
+};
 
 export default Page;

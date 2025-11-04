@@ -15,7 +15,9 @@ const HomeHeader = () => {
       </div>
       <div>
         <Link href="/items">
-          <Button onClick={() => console.log("page")}>로그인</Button>
+          <Button size="lg" onClick={() => console.log("page")}>
+            로그인
+          </Button>
         </Link>
       </div>
     </div>

@@ -1,13 +1,13 @@
 import clsx from "clsx";
 import { tv } from "tailwind-variants";
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
 const styles = tv({
-  base: "flex justify-center items-center cursor-pointer",
+  base: "flex justify-center items-center cursor-pointer transition-all duration-150",
   variants: {
     variant: {
       primary: "bg-[#3692FF] text-white hover:bg-blue-500",
-      outlined: "bg-white text-gray600 border border-gray200",
+      outlined: "bg-white text-gray600 border border-gray200 hover:bg-gray100",
     },
     radius: {
       sm: "rounded-sm",
@@ -16,42 +16,56 @@ const styles = tv({
       full: "rounded-full",
     },
     size: {
-      sm: "w-32 h-12",
-      md: "w-40",
-      lg: "w-48",
+      sm: "w-10 h-10",
+      md: "px-[23px] h-[42px]",
+      lg: "px-[23px]  h-12",
       full: "w-full h-14",
     },
   },
 });
 
-interface ButtonProps {
+interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, "chidren" | "onClick"> {
   children: React.ReactNode;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
-  variant?: "primary" | "outlined";
+  disabled?: boolean;
   radius?: "sm" | "md" | "lg" | "full";
   size?: "sm" | "md" | "lg" | "full";
+  variant?: "primary" | "outlined";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({
-  onClick,
-  children,
-  className = "",
-  variant = "primary",
-  radius = "lg",
-  size = "sm",
-}: ButtonProps) => {
-  const classes = styles({
-    variant,
-    radius,
-    size,
-  });
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      children,
+      className,
+      disabled = false,
+      radius = "lg",
+      size = "md",
+      variant = "primary",
+      onClick,
+      ...rest
+    },
+    ref,
+  ) => {
+    const classes = styles({
+      variant,
+      radius,
+      size,
+    });
 
-  return (
-    <button onClick={onClick} className={clsx(classes, className)}>
-      {children}
-    </button>
-  );
-};
+    return (
+      <button
+        ref={ref}
+        className={clsx(classes, className)}
+        disabled={disabled}
+        onClick={onClick}
+        {...rest}
+      >
+        {children}
+      </button>
+    );
+  },
+);
 
 export default Button;

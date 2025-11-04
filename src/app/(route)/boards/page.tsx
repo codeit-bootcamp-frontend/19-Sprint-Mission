@@ -1,9 +1,9 @@
-import ItemPage from "./ItemPage";
+import BoardsPage from "./BoardsPage";
 
 const Page = () => {
   return (
     <div>
-      <ItemPage />
+      <BoardsPage />
     </div>
   );
 };

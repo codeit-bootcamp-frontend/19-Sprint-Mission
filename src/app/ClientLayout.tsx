@@ -14,7 +14,7 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
 
   return (
     <>
-      {isHome ? <HomeHeader /> : <Header />}
+      {isHome ? <HomeHeader /> : <Header currentPath={pathname} />}
       {children}
     </>
   );
