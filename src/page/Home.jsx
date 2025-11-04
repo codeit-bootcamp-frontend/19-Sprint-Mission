@@ -83,7 +83,7 @@ function Home() {
           <div>
             <Title title="전체 상품" />
             <div>
-              <Input />
+              <Input search={true} />
               <Button buttonName="상품 등록하기" to={'/addItem'} />
               <Dropdown dropState={dropState} setDropState={setDropState} />
             </div>
@@ -153,6 +153,7 @@ const AllProduct = styled.div`
     > div {
       display: block;
       position: relative;
+
       > h2 {
         width: 100%;
         margin-bottom: 0;
@@ -161,6 +162,7 @@ const AllProduct = styled.div`
       > div {
         margin-top: 14px;
         align-items: center;
+
         > button,
         a {
           position: absolute;
