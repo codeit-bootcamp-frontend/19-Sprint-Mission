@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css"></link>
+    <link rel="stylesheet" href="./css/common.css"></link>
+    <link rel="stylesheet" href="./css/style.css"></link>
+    <title>판다마켓 - 회원가입</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="join_area">
+            <div class="inner">
+                <h1>
+                    <a href="/" title="홈 페이지로 이동">
+                        <img src="img/join_logo.png" alt="판다마켓 로고 이미지"/>
+                    </a>
+                </h1>
+                <form>
+                    <ul class="input_list">
+                        <li>
+                            <div class="input_group">
+                                <label for="join_email">이메일</label>
+                                <div class="input_body">
+                                    <input type="email" id="join_email" placeholder="이메일을 입력해주세요" title="이메일 입력">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input_group">
+                                <label for="nickname">닉네임</label>
+                                <div class="input_body">
+                                    <input type="text" id="nickname" placeholder="닉네임을 입력해주세요" title="이메일 입력">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input_group">
+                                <label for="password">비밀번호</label>
+                                <div class="input_body password">
+                                    <input type="password" id="password" placeholder="비밀번호을 입력해주세요" title="비밀번호 입력">
+                                    <button type="button" class="password_visibility" aria-label="비밀번호 확인하기"></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input_group password">
+                                <label for="password_confirm">비밀번호 확인</label>
+                                <div class="input_body password">
+                                    <input type="password" id="password_confirm" placeholder="비밀번호을 입력해주세요" title="비밀번호 입력">
+                                    <button type="button" class="password_visibility" aria-label="비밀번호 확인하기"></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn large" title="회원가입" disabled>회원가입</button>
+                </form>
+                <div class="easy_login">
+                    <strong>간편 로그인하기</strong>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com" title="구글 페이지로 이동">
+                                <img src="img/ico_google.png" alt="구글 아이콘 이미지" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.kakaocorp.com/page" title="카카오톡 페이지로 이동">
+                                <img src="img/ico_kakao.png" alt="카카오톡 아이콘 이미지" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="join_desc">
+                    이미 회원이신가요? <a href="login.html" title="로그인 페이지로 이동">로그인</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/join_login.js"></script>
+</body>
+</html>
