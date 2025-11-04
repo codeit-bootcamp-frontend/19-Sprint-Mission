@@ -20,7 +20,6 @@ const Pagination = ({ totalCount, currentPage, setPage, visibleItemCount }: Pagi
 
   const currentBlock = Math.floor((currentPage - 1) / PAGE_BLOCK);
   const startPage = currentBlock * PAGE_BLOCK + 1;
-  const endPage = Math.min(startPage + PAGE_BLOCK - 1, totalPages);
 
   const handlePageChange = (num: number) => {
     if (num < 1 || num > totalPages) return;

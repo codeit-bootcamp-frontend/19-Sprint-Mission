@@ -1,7 +1,7 @@
 "use client";
 
 import { getProductsList } from "@/apis/products";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Product } from "@/types/product";
 
 interface UseProductsParams {
@@ -30,7 +30,7 @@ export const useProducts = ({
   const [error, setError] = useState<Error | null>(null);
 
   // fetchProducts() : 상품 불러오기
-  const fetchProducts = async (initial = false) => {
+  const fetchProducts = async () => {
     setError(null);
     try {
       const res = await getProductsList({

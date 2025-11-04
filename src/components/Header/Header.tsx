@@ -47,7 +47,7 @@ const Header = ({ currentPath }: HeaderProps) => {
 
         <div>
           <Link href="/profile">
-            <img src="/images/ic_profile.png" alt="profile" />
+            <Image src="/images/ic_profile.png" alt="profile" width={40} height={40} />
           </Link>
         </div>
       </div>

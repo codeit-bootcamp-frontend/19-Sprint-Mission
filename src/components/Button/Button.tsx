@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { tv } from "tailwind-variants";
-import React, { HTMLAttributes } from "react";
+import { forwardRef, HTMLAttributes } from "react";
 
 const styles = tv({
   base: "flex justify-center items-center cursor-pointer transition-all duration-150",
@@ -34,38 +34,36 @@ interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, "chidren" 
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      children,
-      className,
-      disabled = false,
-      radius = "lg",
-      size = "md",
-      variant = "primary",
-      onClick,
-      ...rest
-    },
-    ref,
-  ) => {
-    const classes = styles({
-      variant,
-      radius,
-      size,
-    });
-
-    return (
-      <button
-        ref={ref}
-        className={clsx(classes, className)}
-        disabled={disabled}
-        onClick={onClick}
-        {...rest}
-      >
-        {children}
-      </button>
-    );
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+  {
+    children,
+    className,
+    disabled = false,
+    radius = "lg",
+    size = "md",
+    variant = "primary",
+    onClick,
+    ...rest
   },
-);
+  ref,
+) {
+  const classes = styles({
+    variant,
+    radius,
+    size,
+  });
+
+  return (
+    <button
+      ref={ref}
+      className={clsx(classes, className)}
+      disabled={disabled}
+      onClick={onClick}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
+});
 
 export default Button;

@@ -1,5 +1,5 @@
 "use client";
-import { useCallback, useState, useEffect, useRef, HTMLAttributes } from "react";
+import { useCallback, useState, useEffect, useRef } from "react";
 // useCallback : 컴포넌트가 리렌더링될 때마다 새로 만들어지는 함수를 기억하여(메모이제이션) 재생성을 방지함
 //               useCallback은 "함수 전용"으로, 값(숫자, 문자열, 객체)은 useMemo를 사용함
 //               - 자식 컴포넌트에 함수를 props로 넘길 때
