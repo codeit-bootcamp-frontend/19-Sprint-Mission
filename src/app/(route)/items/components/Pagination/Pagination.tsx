@@ -1,4 +1,4 @@
-import Button from "@/components/Button/Button";
+import Button from "@/components/Button/base/Button";
 
 import IC_ArrowLeft from "@/components/icons/arrow_left.svg";
 import IC_ArrowRight from "@/components/icons/arrow_right.svg";
@@ -8,7 +8,7 @@ const PAGE_BLOCK = 5; // 보여지는 버튼 개수
 interface PaginationProps {
   totalCount: number; // 총 데이터 개수
   currentPage: number; // 현재 페이지
-  setPage: React.Dispatch<React.SetStateAction<number>>; // 페이지 상태 업데이트
+  setPage: (page: number) => void; // 페이지 상태 업데이트
   visibleItemCount: number; // 한 페이지당 데이터 수
 }
 

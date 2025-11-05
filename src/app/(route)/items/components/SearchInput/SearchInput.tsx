@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { tv } from "tailwind-variants";
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import IC_Search from "@/components/icons/ic_search.svg";
 
 const inputStyles = tv({
@@ -21,13 +21,14 @@ const inputStyles = tv({
   },
 });
 
-interface SearchInputProps extends Omit<HTMLAttributes<HTMLInputElement>, "value" | "onChange"> {
+interface SearchInputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "value" | "onChange" | "size"> {
   className?: string;
   value: string;
   placeholder?: string;
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "full";
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEventHandler<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent) => void; // 이건 왜 HTMLFormElement 안받지
 }
 

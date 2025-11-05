@@ -1,4 +1,4 @@
-import Button from "@/components/Button/Button";
+import Button from "@/components/Button/base/Button";
 import Link from "next/link";
 
 const ResisterButton = () => {

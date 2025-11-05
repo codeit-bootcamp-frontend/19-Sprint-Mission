@@ -6,7 +6,7 @@ import IC_Twitter from "@/components/icons/ic_twitter.svg";
 import IC_Youtube from "@/components/icons/ic_youtube.svg";
 import IC_Instagram from "@/components/icons/ic_instagram.svg";
 
-import Button from "@/components/Button/Button";
+import Button from "@/components/Button/base/Button";
 import Link from "next/link";
 import LeftOrderedCard from "./components/Card/LeftOrderedCard";
 import RightOrderedCard from "./components/Card/RightOrderedCard";

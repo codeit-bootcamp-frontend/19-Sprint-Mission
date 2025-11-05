@@ -26,8 +26,6 @@ const Header = ({ currentPath }: HeaderProps) => {
           <nav className="flex gap-[30px]">
             {menus.map((menu) => {
               const isActive = currentPath.startsWith(menu.href);
-              console.log("현재 경로:", currentPath);
-              console.log("menu.href:", menu.href);
               return (
                 <Link
                   key={menu.href}

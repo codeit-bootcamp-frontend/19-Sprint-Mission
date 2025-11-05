@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { tv } from "tailwind-variants";
-import { forwardRef, HTMLAttributes } from "react";
+import { forwardRef, ButtonHTMLAttributes, ReactNode } from "react";
+import { Slot } from "@radix-ui/react-slot";
 
 const styles = tv({
   base: "flex justify-center items-center cursor-pointer transition-all duration-150",
@@ -8,6 +9,7 @@ const styles = tv({
     variant: {
       primary: "bg-[#3692FF] text-white hover:bg-blue-500",
       outlined: "bg-white text-gray600 border border-gray200 hover:bg-gray100",
+      ghost: "bg-transparent text-gray600 hover:scale-[1.02]",
     },
     radius: {
       sm: "rounded-sm",
@@ -24,18 +26,21 @@ const styles = tv({
   },
 });
 
-interface ButtonProps extends Omit<HTMLAttributes<HTMLButtonElement>, "chidren" | "onClick"> {
-  children: React.ReactNode;
+export interface ButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "chidren" | "onClick"> {
+  asChild?: boolean;
+  children: ReactNode;
   className?: string;
   disabled?: boolean;
   radius?: "sm" | "md" | "lg" | "full";
   size?: "sm" | "md" | "lg" | "full";
-  variant?: "primary" | "outlined";
+  variant?: "primary" | "outlined" | "ghost";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   {
+    asChild = false,
     children,
     className,
     disabled = false,
@@ -47,6 +52,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   },
   ref,
 ) {
+  const Comp = asChild ? Slot : "button";
   const classes = styles({
     variant,
     radius,
@@ -54,7 +60,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   });
 
   return (
-    <button
+    <Comp
       ref={ref}
       className={clsx(classes, className)}
       disabled={disabled}
@@ -62,7 +68,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       {...rest}
     >
       {children}
-    </button>
+    </Comp>
   );
 });
 
