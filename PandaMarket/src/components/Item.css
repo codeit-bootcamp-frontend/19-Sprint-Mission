@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item .card {
+  width: 282px;
+  height: 282px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.item .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item .card-text .price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.item .like {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.item .like .icon {
+  width: 16px;
+}
