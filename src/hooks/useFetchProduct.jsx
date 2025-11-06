@@ -8,9 +8,10 @@ const useFetchProduct = (fetchFn, listOption, params = {}) => {
   const pageSize = useResponsiveSize(listOption);
 
   useEffect(() => {
+    const { page, orderBy, keyword } = params;
     const fetchProduct = async () => {
       try {
-        const data = await fetchFn({ pageSize, ...params });
+        const data = await fetchFn({ pageSize, page, orderBy, keyword });
         setProduct(data.list);
         setTotalCount(data.totalCount);
       } catch (error) {
@@ -18,8 +19,7 @@ const useFetchProduct = (fetchFn, listOption, params = {}) => {
       }
     };
     fetchProduct();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pageSize, fetchFn, JSON.stringify(params)]);
+  }, [pageSize, fetchFn, params]);
 
   return { product, error, totalCount, pageSize };
 };
