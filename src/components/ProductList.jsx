@@ -1,10 +1,10 @@
 import ProductCard from './ProductCard';
 import styled from 'styled-components';
 
-function ProductList({ product, size }) {
+function ProductList({ products, size }) {
   return (
     <ProductListWrap className={size}>
-      {product.map((item) => (
+      {products.map((item) => (
         <li key={item.id}>
           <ProductCard
             images={item.images}

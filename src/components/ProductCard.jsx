@@ -8,7 +8,7 @@ function ProductCard({ images, name, price, favorite }) {
         <ImageWrap>
           <img src={images} alt={name} />
         </ImageWrap>
-        <p>{name}</p>
+        <div>{name}</div>
         <strong>{price.toLocaleString('ko-KR')}원</strong>
         <LikeArea>
           <i>
@@ -24,7 +24,7 @@ function ProductCard({ images, name, price, favorite }) {
 export default ProductCard;
 
 const ProductWrap = styled.div`
-  p {
+  div {
     margin-top: 16px;
     font-size: 14px;
     font-weight: 500;
