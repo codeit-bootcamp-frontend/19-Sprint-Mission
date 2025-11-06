@@ -1,43 +1,68 @@
-import { getProducts } from '../utill/api';
+// import { getProducts } from '../utill/api';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button';
-import Dropdown from '../components/Dropdown';
+import ItemsOdrderDropdown from '../components/ItemsOdrderDropdown';
 import Input from '../components/Input';
 import Pagination from '../components/Pagination';
 import ProductList from '../components/ProductList';
 import Title from '../components/Title';
+import { useProducts } from '../hooks/useProducts';
+
+const dropdownOptions = [
+  {
+    label: '최신순',
+    value: 'recent',
+  },
+  {
+    label: '좋아요순',
+    value: 'favorite',
+  },
+];
 
 function Home() {
-  const [best, setBest] = useState([]);
-  const [all, setAll] = useState([]);
-  const [dropState, setDropState] = useState(true);
+  // const [best, setBest] = useState([]);
+  // const [all, setAll] = useState([]);
+  const [dropState, setDropState] = useState(dropdownOptions[0]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  // const [totalPages, setTotalPages] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [bigPageSize, setBigPageSize] = useState(4);
 
-  useEffect(() => {
-    const fetchBest = async () => {
-      const res = await getProducts(1, bigPageSize, 'favorite');
-      setBest(res.list);
-    };
+  // 드롭다운 상태
+  const order = dropState.value;
 
-    fetchBest();
-  }, [bigPageSize]);
+  // 베스트 상품
+  const { products: bestProducts } = useProducts(1, bigPageSize, 'favorite');
 
-  useEffect(() => {
-    const fetchAll = async () => {
-      const order = dropState ? 'recent' : 'favorite';
-      const res = await getProducts(currentPage, pageSize, order);
-      setAll(res.list);
+  // 전체 상품
+  const { products: allProducts, totalPages } = useProducts(
+    currentPage,
+    pageSize,
+    order
+  );
 
-      if (res.totalCount) {
-        setTotalPages(Math.ceil(res.totalCount / pageSize));
-      }
-    };
-    fetchAll();
-  }, [dropState, currentPage, pageSize]);
+  // useEffect(() => {
+  //   const fetchBest = async () => {
+  //     const res = await getProducts(1, bigPageSize, 'favorite');
+  //     setBest(res.list);
+  //   };
+
+  //   fetchBest();
+  // }, [bigPageSize]);
+
+  // useEffect(() => {
+  //   const fetchAll = async () => {
+  //     const order = dropState.value;
+  //     const res = await getProducts(currentPage, pageSize, order);
+  //     setAll(res.list);
+
+  //     if (res.totalCount) {
+  //       setTotalPages(Math.ceil(res.totalCount / pageSize));
+  //     }
+  //   };
+  //   fetchAll();
+  // }, [dropState, currentPage, pageSize]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -77,7 +102,7 @@ function Home() {
     <>
       <ContentBody>
         <Title title="베스트 상품" />
-        <ProductList product={best} size="big" />
+        <ProductList products={bestProducts} size="big" />
 
         <AllProduct>
           <div>
@@ -85,10 +110,14 @@ function Home() {
             <div>
               <Input search={true} />
               <Button buttonName="상품 등록하기" to={'/addItem'} />
-              <Dropdown dropState={dropState} setDropState={setDropState} />
+              <ItemsOdrderDropdown
+                options={dropdownOptions}
+                dropState={dropState}
+                setDropState={setDropState}
+              />
             </div>
           </div>
-          <ProductList product={all} size="small" />
+          <ProductList products={allProducts} size="small" />
         </AllProduct>
         <Pagination
           currentPage={currentPage}
