@@ -4,10 +4,7 @@ import React from "react";
 import IC_Search from "@/components/icons/ic_search.svg";
 
 const inputStyles = tv({
-  base: `
-    flex items-center bg-gray-100 text-xm h-[42px] placeholder:text-gray-400 rounded-xl pl-10
-    focus:outline-none focus:border focus:border-gray-800
-  `,
+  base: `text-xm flex h-[42px] items-center rounded-xl bg-gray-100 pl-10 placeholder:text-gray-400 focus:border focus:border-gray-800 focus:outline-none`,
   variants: {
     variant: {
       primary: "",
@@ -28,7 +25,7 @@ interface SearchInputProps
   placeholder?: string;
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "full";
-  onChange: (e: React.ChangeEventHandler<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent) => void; // 이건 왜 HTMLFormElement 안받지
 }
 

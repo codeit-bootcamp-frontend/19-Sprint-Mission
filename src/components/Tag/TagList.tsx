@@ -14,7 +14,7 @@ const TagList = React.forwardRef<HTMLUListElement, TagListProps>(function TagLis
   ref,
 ) {
   return (
-    <ul ref={ref} role="list" className="flex flex-wrap gap-2 rounded-md bg-gray-700 p-2">
+    <ul ref={ref} role="list" className="flex flex-wrap gap-3 rounded-md">
       {tags.map((tag) => (
         <li key={tag}>
           <Tag label={tag} onDelete={() => onDeleteTag(tag)} />

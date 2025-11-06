@@ -1,6 +1,5 @@
 import LinkButton from "@/components/Button/wrappers/LinkButton";
 import Image from "next/image";
-import Link from "next/link";
 
 const HomeHeader = () => {
   return (

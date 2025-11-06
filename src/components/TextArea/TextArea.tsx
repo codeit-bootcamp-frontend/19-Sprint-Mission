@@ -5,7 +5,7 @@ import React from "react";
 import { tv } from "tailwind-variants";
 
 const styles = tv({
-  base: "resize-none border p-2 text-gray-900 placeholder:text-gray-300 focus:ring-1 focus:outline-none",
+  base: "bg-gray100 w-full resize-none rounded-xl p-4 text-gray-900 placeholder:text-gray-300 focus:outline-none",
 });
 export interface TextAreaProps
   extends Omit<
@@ -26,7 +26,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(function T
     className,
     maxLength = 200,
     placeholder = "무엇이든 물어보세요",
-    value,
+    value = "",
     height = "md",
     onChange,
     onSubmit,
@@ -34,7 +34,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(function T
   },
   ref,
 ) {
-  const classes = styles;
+  const classes = styles();
   const isOverMaxLength = value.length >= maxLength;
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {

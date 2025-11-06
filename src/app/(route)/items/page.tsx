@@ -1,10 +1,12 @@
+"use client";
+import { Suspense } from "react";
 import ItemPage from "./ItemPage";
 
 const Page = () => {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <ItemPage />
-    </div>
+    </Suspense>
   );
 };
 

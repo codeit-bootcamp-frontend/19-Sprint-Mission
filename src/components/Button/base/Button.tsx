@@ -4,12 +4,12 @@ import { forwardRef, ButtonHTMLAttributes, ReactNode } from "react";
 import { Slot } from "@radix-ui/react-slot";
 
 const styles = tv({
-  base: "flex justify-center items-center cursor-pointer transition-all duration-150",
+  base: "flex cursor-pointer items-center justify-center transition-all duration-150",
   variants: {
     variant: {
       primary: "bg-[#3692FF] text-white hover:bg-blue-500",
-      outlined: "bg-white text-gray600 border border-gray200 hover:bg-gray100",
-      ghost: "bg-transparent text-gray600 hover:scale-[1.02]",
+      outlined: "text-gray600 border-gray200 hover:bg-gray100 border bg-white",
+      ghost: "text-gray600 bg-transparent hover:scale-[1.02]",
     },
     radius: {
       sm: "rounded-sm",
@@ -18,10 +18,15 @@ const styles = tv({
       full: "rounded-full",
     },
     size: {
-      sm: "w-10 h-10",
-      md: "px-[23px] h-[42px]",
-      lg: "px-[23px]  h-12",
-      full: "w-full h-14",
+      xs: "h-6 w-6",
+      sm: "h-10 w-10",
+      md: "h-[42px] px-[23px]",
+      lg: "h-12 px-[23px]",
+      full: "h-14 w-full",
+    },
+    disabled: {
+      true: "bg-gray400 hover:bg-gray400 cursor-not-allowed",
+      false: "",
     },
   },
 });
@@ -33,7 +38,7 @@ export interface ButtonProps
   className?: string;
   disabled?: boolean;
   radius?: "sm" | "md" | "lg" | "full";
-  size?: "sm" | "md" | "lg" | "full";
+  size?: "xs" | "sm" | "md" | "lg" | "full";
   variant?: "primary" | "outlined" | "ghost";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -57,6 +62,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
     variant,
     radius,
     size,
+    disabled,
   });
 
   return (

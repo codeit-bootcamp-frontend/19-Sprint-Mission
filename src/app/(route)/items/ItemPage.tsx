@@ -10,7 +10,7 @@ const ItemPage = () => {
 
   return (
     <div>
-      <div className="mx-auto mt-6 flex max-w-[1200px] flex-col items-center px-4 md:px-6">
+      <div className="mx-auto mt-6 mb-14 flex max-w-[1200px] flex-col items-center px-4 md:px-6">
         <>
           <BestProducts visibleItemCount={bestItemCount} />
           <AllProducts visibleItemCount={allItemCount} />

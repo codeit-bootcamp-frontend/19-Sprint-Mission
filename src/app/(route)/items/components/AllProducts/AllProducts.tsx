@@ -18,7 +18,7 @@ interface AllProductsProps {
 
 const AllProducts = ({ visibleItemCount }: AllProductsProps) => {
   const { isMobile, isTablet, isDesktop } = useResponsive();
-  const { page, search, sort, setPage, setSearch, setSort } = useProductQuery();
+  const { page, search, sort, setPage, setSearch } = useProductQuery();
 
   const { products, totalCount, loading, error } = useProducts({
     page,

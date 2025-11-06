@@ -11,10 +11,10 @@ interface TagProps {
 
 export default function Tag({ label, onDelete }: TagProps) {
   return (
-    <div className="inline-flex cursor-default items-center justify-center gap-1 rounded-md bg-gray-300 px-2 py-1 text-xs font-medium text-gray-900">
+    <div className="bg-gray100 text-gray800 inline-flex h-9 cursor-default items-center justify-center gap-1 rounded-full pr-3 pl-4">
       <span>{label}</span>
       {onDelete && (
-        <Button size="sm" onClick={onDelete}>
+        <Button size="xs" variant="ghost" onClick={onDelete}>
           <IC_X />
         </Button>
       )}

@@ -46,6 +46,7 @@ const Pagination = ({ totalCount, currentPage, setPage, visibleItemCount }: Pagi
         size="sm"
         onClick={handlePrev}
         disabled={currentPage === 1}
+        className="disabled:invisible"
       >
         <IC_ArrowLeft />
       </Button>
@@ -72,6 +73,7 @@ const Pagination = ({ totalCount, currentPage, setPage, visibleItemCount }: Pagi
         radius="full"
         onClick={handleNext}
         disabled={currentPage === totalPages}
+        className="disabled:invisible"
       >
         <IC_ArrowRight />
       </Button>

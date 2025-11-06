@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,8 +10,8 @@ interface HeaderProps {
 const Header = ({ currentPath }: HeaderProps) => {
   // 메뉴 리스트를 한 곳에서 관리
   const menus = [
-    { name: "자유게시판", href: "/boards" },
-    { name: "중고마켓", href: "/items" },
+    { name: "자유게시판", activeHref: "/boards" },
+    { name: "중고마켓", activeHref: "/items" },
   ];
 
   return (
@@ -25,11 +27,14 @@ const Header = ({ currentPath }: HeaderProps) => {
 
           <nav className="flex gap-[30px]">
             {menus.map((menu) => {
-              const isActive = currentPath.startsWith(menu.href);
+              const isActive =
+                currentPath.startsWith(menu.activeHref) ||
+                menu.activeHref === "/items" ||
+                currentPath.startsWith("/additems");
               return (
                 <Link
-                  key={menu.href}
-                  href={menu.href}
+                  key={menu.activeHref}
+                  href={menu.activeHref}
                   className="transition-all duration-200 hover:font-semibold"
                   style={{
                     color: isActive ? "#3692FF" : "#555",
