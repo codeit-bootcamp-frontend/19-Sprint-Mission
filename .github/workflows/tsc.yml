@@ -1,0 +1,28 @@
+# .github/workflows/tsc.yml
+name: tsc check
+
+on:
+  pull_request:
+    branches: [ yujin-main ]   # ✅ PR의 대상(base)이 yujin-main 인 경우에만 실행
+    # paths: [ "src/**", "tsconfig.json" ]  # (선택) 특정 변경에만 실행
+
+jobs:
+  tsc:
+    # (선택) 내 브랜치 패턴에서 온 PR만 실행하고 싶으면 추가
+    # if: startsWith(github.head_ref, 'yujin/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm   # ← pnpm 말고 npm
+
+      - name: Install deps
+        run: npm ci   # package-lock.json 있을 때 권장 (없으면 npm install)
+
+      - name: Build
+        run: npm run build
+
