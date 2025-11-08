@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* Mobile (767px 이하) */
+@media (max-width: 767px) {
+  /* common */
+  .hiddenT {
+    display: block;
+  }
+  /* Header & footer */
+  .header {
+    padding: 0 16px;
+    .logo {
+      width: 80px;
+      height: 40px;
+      margin-right: 0;
+      background: url(./../img/common/logo2.png) no-repeat 0 50% / contain;
+    }
+    .nav {
+      .navLink {
+        padding: 0;
+        margin: 0 0 0 8px;
+      }
+    }
+  }
+  .footer {
+    position: relative;
+    padding: 32px 32px 108px;
+  }
+  .footer .copy {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    color: var(--gray200);
+  }
+  /* main */
+  .main .top {
+    margin-bottom: 52px;
+  }
+  .main .top .inner {
+    padding: 48px 0 336px;
+    background-size: 448px auto;
+  }
+  .main .top .title,
+  .main .btm .title {
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  .main .top .btn.lg {
+    margin-top: 18px;
+    width: 240px;
+    height: 48px;
+  }
+  .main .btm {
+    margin-top: 83px;
+    height: initial;
+  }
+  .main .btm .inner {
+    padding: 121px 0 330px;
+    background-size: 375px auto;
+  }
+  .main .cont {
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+  .main .cont .imgCont {
+    border-radius: 7px;
+  }
+  .main .cont .type {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 22px;
+  }
+  .main .cont .title {
+    font-size: 24px;
+  }
+  .main .cont .text {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  /* join & login */
+  .formWrap {
+    width: 100%;
+    padding: 0 16px;
+    max-width: 432px;
+    margin: 24px auto;
+    box-sizing: border-box;
+  }
+  .formWrap .logo {
+    margin-bottom: 24px;
+  }
+  .formWrap .logo a {
+    width: 198px;
+    height: 66px;
+  }
+  .formWrap .iptBox + .iptBox {
+    margin-top: 16px;
+  }
+  .formWrap .iptBox label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+}
