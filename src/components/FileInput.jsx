@@ -27,6 +27,7 @@ function FileInput({ onChange, accept = 'image/*', multiple = false }) {
 
   const handleDelete = () => {
     setPreview(null);
+    onChange?.(null);
     setErrorMsg(false);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
@@ -66,6 +67,7 @@ export default FileInput;
 
 const FileInputWrap = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 const Preview = styled.div`
@@ -90,11 +92,30 @@ const Preview = styled.div`
       opacity: 0.5;
     }
   }
+
+  /* 테블릿 */
+  @media (max-width: 900px) {
+    width: 168px;
+    height: 168px;
+  }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin-left: 10px;
+  }
 `;
 
 const Label = styled.label`
   display: block;
   cursor: pointer;
+  @media (max-width: 600px) {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 `;
 
 const HiddenInput = styled.input`
@@ -110,6 +131,21 @@ const AddInput = styled.div`
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  /* 테블릿 */
+  @media (max-width: 900px) {
+    width: 168px;
+    height: 168px;
+    background-position-y: 41px;
+  }
+
+  /* 모바일 */
+  @media (max-width: 600px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-position-y: 71px;
+  }
 `;
 
 const PreviewImg = styled.img`
@@ -122,6 +158,16 @@ const Placeholder = styled.span`
   display: block;
   color: #9ca3af;
   margin-top: 158px;
+
+  /* 테블릿 */
+  @media (max-width: 900px) {
+    margin-top: 101px;
+  }
+
+  /* 테블릿 */
+  @media (max-width: 600px) {
+    margin-top: 121px;
+  }
 `;
 
 const Error = styled.div`

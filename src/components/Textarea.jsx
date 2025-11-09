@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-function Textarea({ placeholder = '입력해주세요.', value = '' }) {
+function Textarea({ placeholder = '입력해주세요.', value = '', onChange }) {
   const [text, setText] = useState(value);
 
-  const onChange = (e) => setText(e.target.value);
+  const handleChange = (e) => {
+    setText(e.target.value);
+    onChange?.(e.target.value);
+  };
 
   return (
     <TextareaWrap
       type="text"
       placeholder={placeholder}
       value={text}
-      onChange={onChange}
+      onChange={handleChange}
     />
   );
 }
