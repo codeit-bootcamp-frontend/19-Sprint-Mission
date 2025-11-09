@@ -26,6 +26,7 @@ const Btn = styled.button`
   }
 
   &:disabled {
+    cursor: no-drop;
     background-color: #9ca3af;
   }
 `;
