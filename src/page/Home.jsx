@@ -1,5 +1,4 @@
-// import { getProducts } from '../utill/api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button';
 import ItemsOdrderDropdown from '../components/ItemsOdrderDropdown';
@@ -8,6 +7,8 @@ import Pagination from '../components/Pagination';
 import ProductList from '../components/ProductList';
 import Title from '../components/Title';
 import { useProducts } from '../hooks/useProducts';
+import { useResponsiveProducts } from '../hooks/useResponsiveProducts';
+import { usePagination } from '../hooks/usePagination';
 
 const dropdownOptions = [
   {
@@ -21,13 +22,10 @@ const dropdownOptions = [
 ];
 
 function Home() {
-  // const [best, setBest] = useState([]);
-  // const [all, setAll] = useState([]);
+  const { currentPage, handlePageChange } = usePagination(1);
+  const { pageSize, bigPageSize } = useResponsiveProducts();
+
   const [dropState, setDropState] = useState(dropdownOptions[0]);
-  const [currentPage, setCurrentPage] = useState(1);
-  // const [totalPages, setTotalPages] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
-  const [bigPageSize, setBigPageSize] = useState(4);
 
   // 드롭다운 상태
   const order = dropState.value;
@@ -41,62 +39,6 @@ function Home() {
     pageSize,
     order
   );
-
-  // useEffect(() => {
-  //   const fetchBest = async () => {
-  //     const res = await getProducts(1, bigPageSize, 'favorite');
-  //     setBest(res.list);
-  //   };
-
-  //   fetchBest();
-  // }, [bigPageSize]);
-
-  // useEffect(() => {
-  //   const fetchAll = async () => {
-  //     const order = dropState.value;
-  //     const res = await getProducts(currentPage, pageSize, order);
-  //     setAll(res.list);
-
-  //     if (res.totalCount) {
-  //       setTotalPages(Math.ceil(res.totalCount / pageSize));
-  //     }
-  //   };
-  //   fetchAll();
-  // }, [dropState, currentPage, pageSize]);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      let newPageSize;
-      let newBigPageSize;
-
-      if (width <= 600) {
-        newPageSize = 4;
-        newBigPageSize = 1;
-      } else if (width <= 900) {
-        newPageSize = 6;
-        newBigPageSize = 2;
-      } else {
-        newPageSize = 10;
-        newBigPageSize = 4;
-      }
-
-      if (newPageSize !== pageSize) {
-        setPageSize(newPageSize);
-        setBigPageSize(newBigPageSize);
-        setCurrentPage(1);
-      }
-    };
-
-    handleResize(); // 초기 실행
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [pageSize]);
 
   return (
     <>
