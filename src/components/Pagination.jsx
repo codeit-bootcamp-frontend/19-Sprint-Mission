@@ -88,12 +88,12 @@ const PaginationWrap = styled.div`
     }
 
     &.prev {
-      background: url('../../ico_pagination_prev.svg') no-repeat center center;
+      background: url('/ico_pagination_prev.svg') no-repeat center center;
     }
 
     &.next {
       margin-left: 4px;
-      background: url('../../ico_pagination_next.svg') no-repeat center center;
+      background: url('/ico_pagination_next.svg') no-repeat center center;
     }
   }
 

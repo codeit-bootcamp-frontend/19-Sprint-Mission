@@ -95,7 +95,7 @@ const RemoveButton = styled.button`
   width: 22px;
   height: 24px;
   margin-left: 8px;
-  background: url('../../public/ico_taginput_del.svg') no-repeat;
+  background: url('/public/ico_taginput_del.svg') no-repeat;
   transition: opacity 0.5s;
 
   &:hover {

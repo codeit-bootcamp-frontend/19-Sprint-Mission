@@ -39,7 +39,6 @@ const Inp = styled.input`
 
   &.search {
     padding-left: 44px;
-    background: #f3f4f6 url('../../public/ico_search.svg') no-repeat left 16px
-      center;
+    background: #f3f4f6 url('/ico_search.svg') no-repeat left 16px center;
   }
 `;

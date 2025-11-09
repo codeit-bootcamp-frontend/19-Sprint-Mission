@@ -85,7 +85,7 @@ const Preview = styled.div`
     width: 22px;
     height: 24px;
     text-indent: -9999px;
-    background: url('../../public/ico_fileinput_del.svg') no-repeat;
+    background: url('/ico_fileinput_del.svg') no-repeat;
     transition: opacity 0.5s;
 
     &:hover {

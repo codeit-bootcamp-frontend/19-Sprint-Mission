@@ -111,7 +111,7 @@ const HeaderWrap = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: url('../../public/profile.png') no-repeat #dfdfdf;
+    background: url('/profile.png') no-repeat #dfdfdf;
     background-size: 100%;
     transition: opacity 0.5s;
 
