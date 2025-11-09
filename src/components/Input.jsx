@@ -21,7 +21,7 @@ export default Input;
 
 const Inp = styled.input`
   width: 352px;
-  padding: 9px 19px 10px 19px;
+  padding: 16px 19px 14px 19px;
   border: none;
   border-radius: 12px;
   background-color: #f3f4f6;
