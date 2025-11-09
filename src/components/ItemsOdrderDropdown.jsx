@@ -39,7 +39,6 @@ const DropdownButton = styled.button`
   background-color: #fff;
   border-radius: 12px;
   border: 1px solid#e5e7eb;
-  cursor: pointer;
   text-align: left;
   background: url('../../ico_dropdown_arrow.svg') no-repeat right 20px center;
   transition: 0.5s all;
@@ -77,8 +76,6 @@ const DropdownList = styled.ul`
     display: block;
     width: 100%;
     padding: 9px 3px 7px;
-    cursor: pointer;
-    border: none;
     text-align: center;
     background-color: #fff;
     transition: color 0.5s;
