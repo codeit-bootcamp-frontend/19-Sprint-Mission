@@ -126,8 +126,7 @@ const AddInput = styled.div`
   width: 282px;
   height: 282px;
   border-radius: 12px;
-  background: url('../../public/ico_fileinput_add.svg') no-repeat top 98px
-    center #f3f4f6;
+  background: url('/ico_fileinput_add.svg') no-repeat top 98px center #f3f4f6;
   display: flex;
   justify-content: center;
   overflow: hidden;
