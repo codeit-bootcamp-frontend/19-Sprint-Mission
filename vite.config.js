@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
+  build: {
+    outDir: 'dist', // 기본값 (Netlify에선 dist가 배포 폴더)
+  },
 });
