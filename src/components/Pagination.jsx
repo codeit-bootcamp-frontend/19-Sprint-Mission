@@ -2,15 +2,11 @@ import styled from 'styled-components';
 
 function Pagination({ currentPage, totalPages, onPageChange }) {
   const handlePrev = () => {
-    if (currentPage > 1) {
-      onPageChange(currentPage - 1);
-    }
+    if (currentPage > 1) onPageChange(currentPage - 1);
   };
 
   const handleNext = () => {
-    if (currentPage < totalPages) {
-      onPageChange(currentPage + 1);
-    }
+    if (currentPage < totalPages) onPageChange(currentPage + 1);
   };
 
   const getPageNumbers = () => {
@@ -76,11 +72,10 @@ const PaginationWrap = styled.div`
     border: 1px solid #e5e7eb;
     border-radius: 50%;
     color: #6b7280;
-    cursor: pointer;
     transition: opacity 0.5s;
 
     &:hover {
-      opacity: 0.2;
+      opacity: 0.5;
     }
 
     &.active {
@@ -109,7 +104,6 @@ const PaginationWrap = styled.div`
     }
   }
 
-  // 테블릿
   @media (max-width: 900px) {
     margin-top: 40px;
   }
