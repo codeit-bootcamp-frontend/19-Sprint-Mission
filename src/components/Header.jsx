@@ -17,10 +17,16 @@ function Header() {
           </Link>
         </h1>
         <ul>
-          <li className={location.pathname === '/items' ? 'active' : ''}>
+          <li>
             <Link to="/">자유게시판</Link>
           </li>
-          <li>
+          <li
+            className={
+              location.pathname === '/items' || location.pathname === '/addItem'
+                ? 'active'
+                : ''
+            }
+          >
             <Link to="/items">중고마켓</Link>
           </li>
         </ul>
