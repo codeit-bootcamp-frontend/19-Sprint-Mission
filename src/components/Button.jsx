@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-function Button({ buttonName, to }) {
+function Button({ buttonName, to, disabled }) {
   const Component = to ? Link : 'button';
 
   return (
-    <Btn as={Component} to={to}>
+    <Btn as={Component} to={to} disabled={disabled ? true : false}>
       {buttonName}
     </Btn>
   );
@@ -17,13 +17,16 @@ const Btn = styled.button`
   padding: 8px 23px;
   font-weight: 600;
   color: #f3f4f6;
-  border: none;
   border-radius: 8px;
   background-color: #3692ff;
   transition: all 0.5s;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &:disabled {
+    cursor: no-drop;
+    background-color: #9ca3af;
   }
 `;

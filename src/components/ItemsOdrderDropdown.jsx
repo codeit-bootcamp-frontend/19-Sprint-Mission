@@ -1,30 +1,23 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-function Dropdown({ dropState, setDropState }) {
+function ItemsOdrderDropdown({ dropState, setDropState, options }) {
   const [show, setShow] = useState(false);
   const showClick = () => setShow((prev) => !prev);
 
   return (
     <>
       <DropdownWrap>
-        <DropdownButton onClick={showClick}>
-          {dropState ? '최신순' : '좋아요순'}
-        </DropdownButton>
-        {!show ? (
-          ''
-        ) : (
+        <DropdownButton onClick={showClick}>{dropState.label}</DropdownButton>
+        {show && (
           <DropdownList>
-            <li>
-              <button onClick={() => (setDropState(true), showClick())}>
-                최신순
-              </button>
-            </li>
-            <li>
-              <button onClick={() => (setDropState(false), showClick())}>
-                좋아요순
-              </button>
-            </li>
+            {options.map((option) => (
+              <li key={option.value}>
+                <button onClick={() => (setDropState(option), showClick())}>
+                  {option.label}
+                </button>
+              </li>
+            ))}
           </DropdownList>
         )}
       </DropdownWrap>
@@ -32,11 +25,12 @@ function Dropdown({ dropState, setDropState }) {
   );
 }
 
-export default Dropdown;
+export default ItemsOdrderDropdown;
 
 const DropdownWrap = styled.div`
   position: relative;
   width: 130px;
+  z-index: 10;
 `;
 
 const DropdownButton = styled.button`
@@ -45,7 +39,6 @@ const DropdownButton = styled.button`
   background-color: #fff;
   border-radius: 12px;
   border: 1px solid#e5e7eb;
-  cursor: pointer;
   text-align: left;
   background: url('../../ico_dropdown_arrow.svg') no-repeat right 20px center;
   transition: 0.5s all;
@@ -83,8 +76,6 @@ const DropdownList = styled.ul`
     display: block;
     width: 100%;
     padding: 9px 3px 7px;
-    cursor: pointer;
-    border: none;
     text-align: center;
     background-color: #fff;
     transition: color 0.5s;

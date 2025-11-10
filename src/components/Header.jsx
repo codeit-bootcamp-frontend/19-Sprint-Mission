@@ -17,10 +17,16 @@ function Header() {
           </Link>
         </h1>
         <ul>
-          <li className={location.pathname === '/items' ? 'active' : ''}>
+          <li>
             <Link to="/">자유게시판</Link>
           </li>
-          <li>
+          <li
+            className={
+              location.pathname === '/items' || location.pathname === '/addItem'
+                ? 'active'
+                : ''
+            }
+          >
             <Link to="/items">중고마켓</Link>
           </li>
         </ul>
@@ -105,7 +111,7 @@ const HeaderWrap = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: url('../../public/profile.png') no-repeat #dfdfdf;
+    background: url('/profile.png') no-repeat #dfdfdf;
     background-size: 100%;
     transition: opacity 0.5s;
 

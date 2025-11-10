@@ -1,94 +1,65 @@
-import { getProducts } from '../utill/api';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../components/Button';
-import Dropdown from '../components/Dropdown';
+import ItemsOdrderDropdown from '../components/ItemsOdrderDropdown';
 import Input from '../components/Input';
 import Pagination from '../components/Pagination';
 import ProductList from '../components/ProductList';
 import Title from '../components/Title';
+import { useProducts } from '../hooks/useProducts';
+import { useResponsiveProducts } from '../hooks/useResponsiveProducts';
+import { usePagination } from '../hooks/usePagination';
+
+const dropdownOptions = [
+  {
+    label: '최신순',
+    value: 'recent',
+  },
+  {
+    label: '좋아요순',
+    value: 'favorite',
+  },
+];
 
 function Home() {
-  const [best, setBest] = useState([]);
-  const [all, setAll] = useState([]);
-  const [dropState, setDropState] = useState(true);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
-  const [bigPageSize, setBigPageSize] = useState(4);
+  const { currentPage, handlePageChange } = usePagination(1);
+  const { pageSize, bigPageSize } = useResponsiveProducts();
 
-  useEffect(() => {
-    const fetchBest = async () => {
-      const res = await getProducts(1, bigPageSize, 'favorite');
-      setBest(res.list);
-    };
+  const [dropState, setDropState] = useState(dropdownOptions[0]);
 
-    fetchBest();
-  }, [bigPageSize]);
+  // 드롭다운 상태
+  const order = dropState.value;
 
-  useEffect(() => {
-    const fetchAll = async () => {
-      const order = dropState ? 'recent' : 'favorite';
-      const res = await getProducts(currentPage, pageSize, order);
-      setAll(res.list);
+  // 베스트 상품
+  const { products: bestProducts } = useProducts(1, bigPageSize, 'favorite');
 
-      if (res.totalCount) {
-        setTotalPages(Math.ceil(res.totalCount / pageSize));
-      }
-    };
-    fetchAll();
-  }, [dropState, currentPage, pageSize]);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      let newPageSize;
-      let newBigPageSize;
-
-      if (width <= 600) {
-        newPageSize = 4;
-        newBigPageSize = 1;
-      } else if (width <= 900) {
-        newPageSize = 6;
-        newBigPageSize = 2;
-      } else {
-        newPageSize = 10;
-        newBigPageSize = 4;
-      }
-
-      if (newPageSize !== pageSize) {
-        setPageSize(newPageSize);
-        setBigPageSize(newBigPageSize);
-        setCurrentPage(1);
-      }
-    };
-
-    handleResize(); // 초기 실행
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, [pageSize]);
+  // 전체 상품
+  const { products: allProducts, totalPages } = useProducts(
+    currentPage,
+    pageSize,
+    order
+  );
 
   return (
     <>
       <ContentBody>
         <Title title="베스트 상품" />
-        <ProductList product={best} size="big" />
+        <ProductList products={bestProducts} size="big" />
 
         <AllProduct>
           <div>
             <Title title="전체 상품" />
             <div>
-              <Input />
+              <Input search={true} />
               <Button buttonName="상품 등록하기" to={'/addItem'} />
-              <Dropdown dropState={dropState} setDropState={setDropState} />
+              <ItemsOdrderDropdown
+                options={dropdownOptions}
+                dropState={dropState}
+                setDropState={setDropState}
+              />
             </div>
           </div>
-          <ProductList product={all} size="small" />
+          <ProductList products={allProducts} size="small" />
         </AllProduct>
         <Pagination
           currentPage={currentPage}
@@ -153,6 +124,7 @@ const AllProduct = styled.div`
     > div {
       display: block;
       position: relative;
+
       > h2 {
         width: 100%;
         margin-bottom: 0;
@@ -161,6 +133,7 @@ const AllProduct = styled.div`
       > div {
         margin-top: 14px;
         align-items: center;
+
         > button,
         a {
           position: absolute;
