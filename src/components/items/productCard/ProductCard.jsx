@@ -1,10 +1,11 @@
+import { Link } from 'react-router';
 import icons from '@/assets/icons/icons';
 import images from '@/assets/images/images';
 import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
-  const { images: productImg, name, price, favoriteCount } = product;
+  const { id, images: productImg, name, price, favoriteCount } = product;
 
   const imageSrc = productImg[0] || images.productEmpty;
 
@@ -14,7 +15,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <Link to={`/items/${id}`} className={styles.container}>
       <img
         className={styles.img}
         src={imageSrc}
@@ -32,7 +33,7 @@ const ProductCard = ({ product }) => {
         </button>
         <span className={styles['favorite-text']}>{favoriteCount}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 
