@@ -24,5 +24,7 @@
 }
 
 .detail-item-bg {
+  height: 100dvh;
+  overflow-y: auto;
   background-color: var(--background-50);
 }
