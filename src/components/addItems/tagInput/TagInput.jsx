@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Icons from '@/assets/icons/icons';
 import Input from '@/components/common/input/Input';
 import Label from '@/components/common/label/Label';
+import TagItem from '@/components/common/tag/TagItem';
 import styles from './TagInput.module.css';
 
 const TagInput = ({ name, value, onChange }) => {
@@ -49,17 +49,7 @@ const TagInput = ({ name, value, onChange }) => {
       {value.length > 0 && (
         <ul className={styles['tag-area']}>
           {value.map((t) => {
-            return (
-              <li key={t} className={styles.tag}>
-                #{t}
-                <button
-                  className={styles['remove-button']}
-                  type="button"
-                  onClick={() => handleRemoveTag(t)}>
-                  <Icons.RemoveIcon />
-                </button>
-              </li>
-            );
+            return <TagItem key={t} tag={t} onClick={handleRemoveTag} />;
           })}
         </ul>
       )}
