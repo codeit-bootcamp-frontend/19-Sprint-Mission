@@ -22,6 +22,7 @@ const Input = ({
         className
       )}
       id={id}
+      name={id}
       type={type}
       placeholder={placeholder}
       {...props}
