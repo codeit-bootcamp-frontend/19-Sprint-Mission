@@ -31,21 +31,11 @@ export default function ItemUtil({ setOrder, setCurrentPage }) {
         </button>
         {toggle && (
           <ul className="list">
-            <li className="">
-              <button
-                onClick={(e) => handleSort(e)}
-                className="flex items-center justify-center w-full h-[42px] "
-              >
-                최신순
-              </button>
+            <li>
+              <button onClick={(e) => handleSort(e)}>최신순</button>
             </li>
-            <li className="border-t-[1px] border-solid border-gray-200">
-              <button
-                onClick={(e) => handleSort(e)}
-                className="flex items-center justify-center w-full h-[42px] "
-              >
-                좋아요순
-              </button>
+            <li>
+              <button onClick={(e) => handleSort(e)}>좋아요순</button>
             </li>
           </ul>
         )}

@@ -1,8 +1,37 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import btnGoggle from "@/assets/img/content/btn_google.png";
-import btnKakao from "@/assets/img/content/btn_kakao.png";
+import InputForm from "@/components/InputForm";
+import AuthLinks from "@/components/AuthLinks";
+import Button from "@/components/Button";
 
 function Login() {
+  const [authForm, setAuthForm] = useState({
+    email: "",
+    password: "",
+  });
+  // 초기는 값이 없음. 전체 에러
+  const [inputError, setInputError] = useState({
+    email: true,
+    password: true,
+  });
+  const handleError = (name, value) => {
+    //value가 true면 hasError도 true (=에러)
+    const hasError = value ? true : false;
+    setInputError((prev) => ({
+      ...prev,
+      [name]: hasError,
+    }));
+  };
+  const handleValue = (name, value) => {
+    setAuthForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // 전체 폼 에러확인
+  const hasFormError = Object.values(inputError).every((el) => el !== true);
+  const handleSubmit = () => {};
   return (
     <main className="formWrap">
       <h1 className="logo">
@@ -12,64 +41,34 @@ function Login() {
       </h1>
 
       <form className="authForm">
-        <div className="iptBox">
-          <label htmlFor="email">이메일</label>
-          <div className="ipt">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="이메일을 입력해 주세요."
-            />
-          </div>
-        </div>
-        <div className="iptBox">
-          <label htmlFor="pw">비밀번호</label>
-          <div className="ipt">
-            <input
-              id="pw"
-              name="pw"
-              type="password"
-              placeholder="비밀번호를 입력해 주세요."
-            />
-            <button type="button" className="btnEye">
-              <span className="blind">비밀번호 숨김</span>
-            </button>
-          </div>
-        </div>
-        <button type="submit" name="login" className="btn lg">
+        <InputForm
+          label="이메일"
+          id="email"
+          name="email"
+          type="email"
+          placeholder="이메일을 입력해 주세요."
+          onChange={(value) => handleValue("email", value)}
+          onError={(value) => handleError("email", value)}
+        />
+        <InputForm
+          label="비밀번호"
+          id="pw"
+          name="password"
+          type="password"
+          placeholder="비밀번호를 입력해 주세요."
+          onChange={(value) => handleValue("password", value)}
+          onError={(value) => handleError("password", value)}
+        />
+        <Button
+          size="lg"
+          onClick={handleSubmit}
+          disabled={hasFormError ? false : true}
+        >
           로그인
-        </button>
+        </Button>
       </form>
 
-      <div className="socialBtn">
-        <span className="tit">간편 로그인하기</span>
-        <div className="btns">
-          <a
-            href="https://www.google.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="새창으로 열기"
-          >
-            <img src={btnGoggle} alt="구글 로그인" />
-          </a>
-          <a
-            href="https://www.kakaocorp.com/page/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="새창으로 열기"
-          >
-            <img src={btnKakao} alt="카카오톡 로그인" />
-          </a>
-        </div>
-      </div>
-
-      <div className="guideBtn">
-        <span className="tit">판다마켓이 처음이신가요?</span>
-        <Link to="/signup" className="btnTxt">
-          회원가입
-        </Link>
-      </div>
+      <AuthLinks type="Login" />
     </main>
   );
 }

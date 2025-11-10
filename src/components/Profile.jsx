@@ -2,7 +2,7 @@ import profileImg from "@/assets/img/common/profile.svg";
 
 const Profile = () => {
   return (
-    <button className="inline-flex rounded-[50%] w-[40px] h-[40px]">
+    <button className="profile">
       <img src={profileImg} alt="" />
     </button>
   );

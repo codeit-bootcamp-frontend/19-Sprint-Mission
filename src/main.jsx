@@ -1,26 +1,32 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "@/App.jsx";
 import Index from "@/pages/Index/Index.jsx";
 import ItemPage from "@/pages/List/index.jsx";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
-import "./assets/css/style.scss";
+import NotFoundPage from "@/pages/NotFoundPage";
+import "./assets/scss/style.scss";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <Index /> },
+      { path: "itemPage", element: <ItemPage /> },
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+      { path: "*", element: <NotFoundPage /> },
+    ],
+  },
+]);
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter
+  <RouterProvider
+    router={router}
     future={{
       v7_startTransition: true,
       v7_relativeSplatPath: true,
     }}
-  >
-    <App>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="ItemPage" element={<ItemPage />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-      </Routes>
-    </App>
-  </BrowserRouter>
+  />
 );
