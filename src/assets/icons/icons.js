@@ -6,6 +6,7 @@ import facebookIcon from '@/assets/icons/ic-facebook.svg?url';
 import HeartActiveIcon from '@/assets/icons/ic-heart-active.svg';
 import HeartIcon from '@/assets/icons/ic-heart.svg';
 import instgramIcon from '@/assets/icons/ic-instagram.svg?url';
+import KebabIcon from '@/assets/icons/ic-kebab.svg';
 import PlusIcon from '@/assets/icons/ic-plus.svg';
 import RemoveIcon from '@/assets/icons/ic-remove.svg';
 import SearchIcon from '@/assets/icons/ic-search.svg';
@@ -29,6 +30,7 @@ export default {
   HeartIcon,
   SortIcon,
   RemoveIcon,
+  KebabIcon,
   PlusIcon,
   HeartActiveIcon,
   BackIcon,
