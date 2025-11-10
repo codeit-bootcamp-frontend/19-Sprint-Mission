@@ -7,8 +7,9 @@ const useFetchProduct = (fetchFn, listOption, params = {}) => {
   const [totalCount, setTotalCount] = useState(0);
   const pageSize = useResponsiveSize(listOption);
 
+  const { page, orderBy, keyword } = params;
+
   useEffect(() => {
-    const { page, orderBy, keyword } = params;
     const fetchProduct = async () => {
       try {
         const data = await fetchFn({ pageSize, page, orderBy, keyword });
@@ -19,7 +20,7 @@ const useFetchProduct = (fetchFn, listOption, params = {}) => {
       }
     };
     fetchProduct();
-  }, [pageSize, fetchFn, params]);
+  }, [pageSize, fetchFn, page, orderBy, keyword]);
 
   return { product, error, totalCount, pageSize };
 };
