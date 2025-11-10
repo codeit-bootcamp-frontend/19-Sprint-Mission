@@ -7,9 +7,10 @@ import Input from '@/components/common/input/Input';
 import Title from '@/components/common/title/Title';
 import PaginationButton from '@/components/items/paginationButton/PaginationButton';
 import ProductCard from '@/components/items/productCard/ProductCard';
+import ProductSkeletonCard from '@/components/items/productCard/ProductSkeletonCard';
 import SortDropdown from '@/components/items/sortDropdown/SortDropdown';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
-import useFetchProduct from '@/hooks/useFetchProduct';
+import useFetchProductList from '@/hooks/useFetchProductList';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
@@ -53,11 +54,15 @@ const ProductList = () => {
     });
   };
 
-  const { product, pageSize, totalCount, error } = useFetchProduct(
+  const { product, pageSize, totalCount, error, loading } = useFetchProductList(
     getProducts,
     'ALL_PRODUCTS',
     { page, orderBy: SORT_OPTIONS[sort], keyword }
   );
+
+  if (error) {
+    return <div>에러 발생: {error.message}</div>;
+  }
 
   return (
     <section className={styles.container}>
@@ -93,23 +98,23 @@ const ProductList = () => {
           onSelect={handleSort}
         />
       </div>
-      {error ? (
-        <div>에러 발생 : {error.message}</div>
-      ) : (
-        <div className={styles['contents-area']}>
-          <div className={styles.contents}>
-            {product.map((product) => {
-              return <ProductCard key={product.id} product={product} />;
-            })}
-          </div>
-          <PaginationButton
-            totalCount={totalCount}
-            pageSize={pageSize}
-            page={page}
-            onChangePage={handlePageChange}
-          />
+      <div className={styles['contents-area']}>
+        <div className={styles.contents}>
+          {loading
+            ? Array.from({ length: pageSize }).map((_, index) => {
+                return <ProductSkeletonCard key={`Basic-${index}`} />;
+              })
+            : product.map((product) => {
+                return <ProductCard key={product.id} product={product} />;
+              })}
         </div>
-      )}
+        <PaginationButton
+          totalCount={totalCount}
+          pageSize={pageSize}
+          page={page}
+          onChangePage={handlePageChange}
+        />
+      </div>
     </section>
   );
 };
