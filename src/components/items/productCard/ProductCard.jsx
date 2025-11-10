@@ -1,14 +1,17 @@
 import icons from '@/assets/icons/icons';
 import images from '@/assets/images/images';
+import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductCard.module.css';
 
-const ProductCard = ({ image, name, price, favoriteCount }) => {
+const ProductCard = ({ product }) => {
+  const { images: productImg, name, price, favoriteCount } = product;
+
+  const imageSrc = productImg[0] || images.productEmpty;
+
   const handleError = (e) => {
     e.target.src = images.productEmpty;
     e.target.onerror = null;
   };
-
-  const imageSrc = image || images.productEmpty;
 
   return (
     <div className={styles.container}>
@@ -19,7 +22,7 @@ const ProductCard = ({ image, name, price, favoriteCount }) => {
         onError={handleError}
       />
       <p className={styles.title}>{name}</p>
-      <span className={styles.price}>{price}</span>
+      <span className={styles.price}>{formatPrice(price)}</span>
       <div className={styles['favorite-button-area']}>
         <button
           className={styles['favorite-button']}

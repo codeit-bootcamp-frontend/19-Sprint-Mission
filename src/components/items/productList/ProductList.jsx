@@ -10,7 +10,6 @@ import ProductCard from '@/components/items/productCard/ProductCard';
 import SelectBox from '@/components/items/selectBox/SelectBox';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
 import useFetchProduct from '@/hooks/useFetchProduct';
-import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
@@ -59,6 +58,7 @@ const ProductList = () => {
     'ALL_PRODUCTS',
     { page, orderBy: SORT_OPTIONS[sort], keyword }
   );
+
   return (
     <section className={styles.container}>
       <div className={styles['top-area']}>
@@ -98,16 +98,8 @@ const ProductList = () => {
       ) : (
         <div className={styles['contents-area']}>
           <div className={styles.contents}>
-            {product.map(({ id, images, name, price, favoriteCount }) => {
-              return (
-                <ProductCard
-                  key={id}
-                  image={images.length > 0 ? images[0] : null}
-                  name={name}
-                  price={formatPrice(price)}
-                  favoriteCount={favoriteCount}
-                />
-              );
+            {product.map((product) => {
+              return <ProductCard key={product.id} product={product} />;
             })}
           </div>
           <PaginationButton
