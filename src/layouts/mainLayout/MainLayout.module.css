@@ -22,3 +22,7 @@
     }
   }
 }
+
+.detail-item-bg {
+  background-color: var(--background-50);
+}
