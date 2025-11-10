@@ -86,7 +86,7 @@ const AddItemForm = () => {
           />
         </div>
 
-        <TagInput name="tags" value={formData.tags} onChange={handleChange} />
+        <TagInput id="tags" value={formData.tags} onChange={handleChange} />
       </div>
     </form>
   );
