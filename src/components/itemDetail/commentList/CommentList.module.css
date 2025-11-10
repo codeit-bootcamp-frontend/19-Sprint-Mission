@@ -1,0 +1,43 @@
+.not-comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  .img {
+    width: 196px;
+
+    @media screen and (width <= 1199px) {
+      width: 140px;
+    }
+  }
+
+  .text {
+    color: var(--gray-400);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .contents {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gray-200);
+
+    .comment-info {
+      flex-grow: 1;
+
+      .comment {
+        display: inline-block;
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
