@@ -1,0 +1,6 @@
+.container {
+  composes: input-base from '@/style/common/commonInput.module.css';
+  height: 282px;
+  padding: 16px 24px;
+  resize: none;
+}

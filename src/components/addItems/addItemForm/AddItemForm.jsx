@@ -4,6 +4,7 @@ import TagInput from '@/components/addItems/tagInput/TagInput';
 import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';
 import Label from '@/components/common/label/Label';
+import Textarea from '@/components/common/textarea/Textarea';
 import Title from '@/components/common/title/Title';
 import styles from './AddItemForm.module.css';
 
@@ -65,9 +66,7 @@ const AddItemForm = () => {
 
         <div className={styles['input-area']}>
           <Label id="description" label="상품 소개" />
-          <textarea
-            className={styles.textarea}
-            name="description"
+          <Textarea
             id="description"
             placeholder="상품 소개를 입력해주세요"
             value={formData.description}
