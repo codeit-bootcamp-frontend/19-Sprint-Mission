@@ -1,9 +1,10 @@
+import classNames from 'classnames';
 import styles from './Textarea.module.css';
 
-const Textarea = ({ value, onChange, placeholder, id }) => {
+const Textarea = ({ placeholder, id, value, onChange, className }) => {
   return (
     <textarea
-      className={styles.container}
+      className={classNames(styles.container, className)}
       name={id}
       id={id}
       placeholder={placeholder}
