@@ -24,6 +24,7 @@ const AddItemForm = () => {
     e.preventDefault();
     // TODO: 이후 미션에서 api 연결 구현
     // TODO: 이미지는 post /images/upload api 이용해서 url 획득 후 전달
+    // TODO: 미션 12에서 form 리팩토링 해보기 -> 제어컴포넌트 vs 비제어컴포넌트
     console.log(formData);
   };
 
