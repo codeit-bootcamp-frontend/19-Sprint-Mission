@@ -1,14 +1,15 @@
 import "./Item.css";
-import testProduct from "../assets/testimage.png";
 import likeIcon from "../assets/like-icon.svg";
 
-const Item = () => {
+const Item = ({ product }) => {
+  const { name, price, images } = product;
+
   return (
     <div className="item">
-      <img className="card" src={testProduct} />
+      <img className="card" src={images[0]} />
       <div className="card-text">
-        <div className="title">아이패드 미니 팝니다</div>
-        <div className="price">500,000</div>
+        <div className="title">{name}</div>
+        <div className="price">{price.toLocaleString()}원</div>
         <div className="like">
           <img className="icon" src={likeIcon}></img>
           <div className="count">240</div>
