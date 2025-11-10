@@ -1,8 +1,8 @@
 import icons from '@/assets/icons/icons';
 import images from '@/assets/images/images';
-import styles from './Card.module.css';
+import styles from './ProductCard.module.css';
 
-const Card = ({ image, name, price, favoriteCount }) => {
+const ProductCard = ({ image, name, price, favoriteCount }) => {
   const handleError = (e) => {
     e.target.src = images.productEmpty;
     e.target.onerror = null;
@@ -33,4 +33,4 @@ const Card = ({ image, name, price, favoriteCount }) => {
   );
 };
 
-export default Card;
+export default ProductCard;

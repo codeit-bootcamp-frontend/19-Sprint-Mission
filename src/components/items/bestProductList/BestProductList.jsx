@@ -1,6 +1,6 @@
 import { getBestProducts } from '@/apis/product';
 import Title from '@/components/common/title/Title';
-import Card from '@/components/items/card/Card';
+import ProductCard from '@/components/items/productCard/ProductCard';
 import useFetchProduct from '@/hooks/useFetchProduct';
 import { formatPrice } from '@/utils/formatPrice';
 import styles from './BestProductList.module.css';
@@ -17,7 +17,7 @@ const BestProductList = () => {
         <div className={styles.contents}>
           {product.map(({ id, images, name, price, favoriteCount }) => {
             return (
-              <Card
+              <ProductCard
                 key={id}
                 image={images.length > 0 ? images[0] : null}
                 name={name}

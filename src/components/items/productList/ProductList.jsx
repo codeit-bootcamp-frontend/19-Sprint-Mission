@@ -5,8 +5,8 @@ import icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';
 import Title from '@/components/common/title/Title';
-import Card from '@/components/items/card/Card';
 import PaginationButton from '@/components/items/paginationButton/PaginationButton';
+import ProductCard from '@/components/items/productCard/ProductCard';
 import SelectBox from '@/components/items/selectBox/SelectBox';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
 import useFetchProduct from '@/hooks/useFetchProduct';
@@ -100,7 +100,7 @@ const ProductList = () => {
           <div className={styles.contents}>
             {product.map(({ id, images, name, price, favoriteCount }) => {
               return (
-                <Card
+                <ProductCard
                   key={id}
                   image={images.length > 0 ? images[0] : null}
                   name={name}
