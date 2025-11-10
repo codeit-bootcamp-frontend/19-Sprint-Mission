@@ -24,7 +24,7 @@ function Header() {
             자유게시판
           </NavLink>
           <NavLink
-            to="/ItemPage"
+            to="/items"
             className={({ isActive }) =>
               `navLink ${isActive ? "isActive" : ""}`
             }
