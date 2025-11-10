@@ -39,8 +39,8 @@
         position: absolute;
         top: 9px;
         left: 16px;
-        background: url("./../../assets/img/content/ic_search.svg") no-repeat 0
-          0 / 24px 24px;
+        background: url("./../../../public/img/content/ic_search.svg") no-repeat
+          0 0 / 24px 24px;
       }
     }
     .sorting {
@@ -53,10 +53,10 @@
         border-radius: 12px;
         text-align: left;
         border: 1px solid var(--gray200);
-        background: url("./../../assets/img/content/ic_arrow_down.png")
+        background: url("./../../../public/img/content/ic_arrow_down.png")
           no-repeat 86px 50% / 24px 24px;
         &.atv {
-          background-image: url("./../../assets/img/content/ic_arrow_up.png");
+          background-image: url("./../../../public/img/content/ic_arrow_up.png");
         }
       }
       .list {
@@ -236,8 +236,8 @@
           color: transparent;
           width: 42px;
           padding: 0;
-          background: url("./../../assets/img/content/ic_sorting.svg") no-repeat
-            50% 50%;
+          background: url("./../../../public/img/content/ic_sorting.svg")
+            no-repeat 50% 50%;
         }
         .list {
           width: 130px;

@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import btnGoggle from "@/assets/img/content/btn_google.png";
-import btnKakao from "@/assets/img/content/btn_kakao.png";
 
 export default function AuthLinks({ type }) {
   return (
@@ -14,7 +12,7 @@ export default function AuthLinks({ type }) {
             rel="noopener noreferrer"
             title="새창으로 열기"
           >
-            <img src={btnGoggle} alt="구글 로그인" />
+            <img src="/img/content/btn_google.png" alt="구글 로그인" />
           </a>
           <a
             href="https://www.kakaocorp.com/page/"
@@ -22,7 +20,7 @@ export default function AuthLinks({ type }) {
             rel="noopener noreferrer"
             title="새창으로 열기"
           >
-            <img src={btnKakao} alt="카카오톡 로그인" />
+            <img src="/img/content/btn_kakao.png" alt="카카오톡 로그인" />
           </a>
         </div>
       </div>

@@ -15,10 +15,12 @@ export default function InputForm({
   const [pwType, setPwType] = useState("password");
   const [error, setError] = useState("");
 
+  // 인풋
   const handleChange = (e) => {
     const val = e.target.value.trim();
     onChange(val);
   };
+  // 인풋 벨리데이션
   const handleFocus = (e) => {
     const val = e.target.value.trim();
     const emailReg =
@@ -81,7 +83,12 @@ export default function InputForm({
 
     setError(errorMsg);
   };
-
+  // 비밀번호 숨김/표시
+  const handlePassword = () => {
+    setPwShow(!pwShow);
+    setPwType((prev) => (prev === "password" ? "text" : "password"));
+  };
+  // 비밀번호, 비밀번호 확인 매칭확인
   const matchPassword = () => {
     // 비밀번호 관련 필드가 아니면 실행하지 않음
     if (name !== "password" && name !== "passwordCheck") return;
@@ -100,12 +107,6 @@ export default function InputForm({
   useEffect(() => {
     matchPassword();
   }, [pwValue, value]);
-
-  // 비밀번호 숨김/표시
-  const handlePassword = () => {
-    setPwShow(!pwShow);
-    setPwType((prev) => (prev === "password" ? "text" : "password"));
-  };
 
   return (
     <div className="iptBox">

@@ -1,7 +1,3 @@
-import imgHome01 from "../../assets/img/main/img_home_01.png";
-import imgHome02 from "../../assets/img/main/img_home_02.png";
-import imgHome03 from "../../assets/img/main/img_home_03.png";
-
 function Index() {
   return (
     <main className="main">
@@ -21,7 +17,7 @@ function Index() {
       <section className="cont">
         <div className="inner">
           <div className="imgCont">
-            <img src={imgHome01} alt="" />
+            <img src="/img/main/img_home_01.png" alt="" />
           </div>
           <div className="txtCont">
             <span className="type">Hot item</span>
@@ -40,7 +36,7 @@ function Index() {
       <section className="cont reverse">
         <div className="inner">
           <div className="imgCont">
-            <img src={imgHome02} alt="" />
+            <img src="/img/main/img_home_02.png" alt="" />
           </div>
           <div className="txtCont">
             <span className="type">Search</span>
@@ -59,7 +55,7 @@ function Index() {
       <section className="cont">
         <div className="inner">
           <div className="imgCont">
-            <img src={imgHome03} alt="" />
+            <img src="/img/main/img_home_03.png" alt="" />
           </div>
           <div className="txtCont">
             <span className="type">Register</span>
