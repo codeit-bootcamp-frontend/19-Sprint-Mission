@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router';
 import Icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
-import ProductDetail from '@/components/detailItem/productDetail/ProductDetail';
+import ProductDetail from '@/components/itemDetail/productDetail/ProductDetail';
 import useFetchProduct from '@/hooks/useFetchProduct';
 import styels from '@/style/page/ItemDetail.module.css';
 

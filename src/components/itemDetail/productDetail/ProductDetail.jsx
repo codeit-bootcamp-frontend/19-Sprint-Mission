@@ -1,8 +1,8 @@
 import ProductImg from '@/components/common/productImg/ProductImg';
 import TagItem from '@/components/common/tag/TagItem';
-import LikeButton from '@/components/detailItem/likeButton/LikeButton';
-import MoreDropdown from '@/components/detailItem/MoreDropdown/MoreDropdown';
-import UserInfo from '@/components/detailItem/userInfo/UserInfo';
+import LikeButton from '@/components/itemDetail/likeButton/LikeButton';
+import MoreDropdown from '@/components/itemDetail/MoreDropdown/MoreDropdown';
+import UserInfo from '@/components/itemDetail/userInfo/UserInfo';
 import { formatDate } from '@/utils/formatDate';
 import { formatPrice } from '@/utils/formatPrice';
 import styles from './ProductDetail.module.css';
