@@ -47,6 +47,13 @@ const ProductList = () => {
     setSearchParams({ page: '1', sort });
   };
 
+  const handlePageChange = (newPage) => {
+    setSearchParams((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
+    });
+  };
+
   const { product, pageSize, totalCount, error } = useFetchProduct(
     getProducts,
     'ALL_PRODUCTS',
@@ -107,7 +114,7 @@ const ProductList = () => {
             totalCount={totalCount}
             pageSize={pageSize}
             page={page}
-            setPage={setSearchParams}
+            onChangePage={handlePageChange}
           />
         </div>
       )}

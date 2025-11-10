@@ -1,7 +1,7 @@
 import icons from '@/assets/icons/icons';
 import styles from './PaginationButton.module.css';
 
-const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
+const PaginationButton = ({ totalCount, pageSize, page, onChangePage }) => {
   const totalPages = Math.ceil(totalCount / pageSize);
   const pageGroupSize = 5;
   const currentGroup = Math.ceil(page / pageGroupSize);
@@ -13,35 +13,12 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
     (_, i) => startPage + i
   );
 
-  const handlePrevPage = () => {
-    const newPage = Math.max(page - 1, 1);
-    setPage((searchParams) => {
-      searchParams.set('page', newPage);
-      return searchParams;
-    });
-  };
-
-  const handleNextPage = () => {
-    const newPage = page + 1;
-    setPage((searchParams) => {
-      searchParams.set('page', newPage);
-      return searchParams;
-    });
-  };
-
-  const handleGoPage = (p) => {
-    setPage((searchParams) => {
-      searchParams.set('page', p);
-      return searchParams;
-    });
-  };
-
   return (
     <div className={styles.container}>
       <button
         type="button"
         className={styles.button}
-        onClick={handlePrevPage}
+        onClick={() => onChangePage(page - 1)}
         disabled={page === 1}>
         <icons.ArrowLeftIcon />
       </button>
@@ -54,7 +31,7 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
             className={`${styles.button} ${
               page == p ? styles['button-select'] : ''
             }`}
-            onClick={() => handleGoPage(p)}>
+            onClick={() => onChangePage(p)}>
             {p}
           </button>
         );
@@ -63,7 +40,7 @@ const PaginationButton = ({ totalCount, pageSize, page, setPage }) => {
       <button
         type="button"
         className={styles.button}
-        onClick={handleNextPage}
+        onClick={() => onChangePage(page + 1)}
         disabled={page === totalPages}>
         <icons.ArrowRightIcon />
       </button>
