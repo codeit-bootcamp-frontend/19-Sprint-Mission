@@ -3,6 +3,7 @@ import ArrowLeftIcon from '@/assets/icons/ic-arrow-left.svg';
 import ArrowRightIcon from '@/assets/icons/ic-arrow-right.svg';
 import BackIcon from '@/assets/icons/ic-back.svg';
 import facebookIcon from '@/assets/icons/ic-facebook.svg?url';
+import HeartActiveIcon from '@/assets/icons/ic-heart-active.svg';
 import HeartIcon from '@/assets/icons/ic-heart.svg';
 import instgramIcon from '@/assets/icons/ic-instagram.svg?url';
 import PlusIcon from '@/assets/icons/ic-plus.svg';
@@ -29,5 +30,6 @@ export default {
   SortIcon,
   RemoveIcon,
   PlusIcon,
+  HeartActiveIcon,
   BackIcon,
 };

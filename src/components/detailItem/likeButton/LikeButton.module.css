@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 4px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: 35px;
+  background-color: var(--gray-0);
+  gap: 4px;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .text {
+    color: var(--gray-500);
+    font-weight: 500;
+  }
+}
