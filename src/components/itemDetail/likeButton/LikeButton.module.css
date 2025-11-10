@@ -8,9 +8,18 @@
   background-color: var(--gray-0);
   gap: 4px;
 
-  .icon {
-    width: 24px;
-    height: 24px;
+  @media screen and (width <= 1199px) {
+    height: 32px;
+  }
+
+  & > svg {
+    width: 32px;
+    height: 32px;
+
+    @media screen and (width <= 1199px) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .text {
