@@ -77,7 +77,9 @@ const AddItemForm = () => {
 
         <div className={styles['input-area']}>
           <Label id="price" label="판매가격" />
+          {/* TODO: 숫자만 입력 가능하다고 안내 필요 */}
           <Input
+            type="number"
             id="price"
             placeholder="판매 가격을 입력해주세요"
             value={formData.price}
