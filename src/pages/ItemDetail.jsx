@@ -75,6 +75,7 @@ const ItemDetail = () => {
 
             {!isEnd && (
               <Button
+                theme="basic"
                 onClick={fetchMore}
                 disabled={commentLoading}
                 size="xs"
