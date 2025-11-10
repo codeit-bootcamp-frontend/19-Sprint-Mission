@@ -1,3 +1,16 @@
+[type='number'] {
+  appearance: textfield;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .input {
   width: 100%;
   padding: 15px 24px;
