@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
-import { getProducts } from '@/apis/product';
+import { getProducts } from '@/apis/products';
 import icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';

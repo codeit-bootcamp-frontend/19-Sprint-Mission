@@ -1,4 +1,4 @@
-import { getBestProducts } from '@/apis/product';
+import { getBestProducts } from '@/apis/products';
 import Title from '@/components/common/title/Title';
 import ProductCard from '@/components/items/productCard/ProductCard';
 import ProductSkeletonCard from '@/components/items/productCard/ProductSkeletonCard';
