@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "@/components/Button";
+import { Link } from "react-router-dom";
 
 export default function ItemUtil({ setOrder, setCurrentPage }) {
   const [toggle, setToggle] = useState(false);
@@ -21,7 +22,9 @@ export default function ItemUtil({ setOrder, setCurrentPage }) {
           <span className="blind">검색</span>
         </button>
       </div>
-      <Button size="sm">상품 등록하기</Button>
+      <Link to="/additem" className="btn sm">
+        상품 등록하기
+      </Link>
       <div className="sorting">
         <button
           className={`btnSort ${toggle ? "atv" : ""}`}

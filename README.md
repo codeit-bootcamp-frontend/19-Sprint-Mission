@@ -10,4 +10,4 @@
 
 ## 🌐 배포 주소
 
-➡️ [Fandom-K](https://fandom-k-19-5.vercel.app/)
+➡️ [판다마켓](https://19-sprint-mission5.vercel.app/)
