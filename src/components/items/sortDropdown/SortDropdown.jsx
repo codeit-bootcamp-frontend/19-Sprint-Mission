@@ -20,7 +20,6 @@ const SortDropdown = ({ options, selectedSort, onSelect }) => {
     <Dropdown>
       <Dropdown.Button
         className={styles['select-box']}
-        type="button"
         onClick={handleClickToggle}>
         <div className={styles['desktop-content']}>
           {selectedSort}
