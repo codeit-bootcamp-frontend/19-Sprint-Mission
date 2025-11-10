@@ -4,7 +4,7 @@ export default function AuthLinks({ type }) {
   return (
     <>
       <div className="socialBtn">
-        <span className="tit">간편 로그인하기 </span>
+        <span className="tit">간편 로그인하기</span>
         <div className="btns">
           <a
             href="https://www.google.com/"
