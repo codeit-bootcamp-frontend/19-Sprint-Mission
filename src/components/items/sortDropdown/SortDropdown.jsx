@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import icons from '@/assets/icons/icons';
-import styles from './SelectBox.module.css';
+import Dropdown from '@/components/common/dropdown/Dropdown';
+import styles from './SortDropdown.module.css';
 
-const SelectBox = ({ options, selectedSort, onSelect }) => {
+const SortDropdown = ({ options, selectedSort, onSelect }) => {
   const optionKeys = Object.keys(options);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,8 +17,8 @@ const SelectBox = ({ options, selectedSort, onSelect }) => {
   };
 
   return (
-    <div className={styles.container}>
-      <button
+    <Dropdown>
+      <Dropdown.Button
         className={styles['select-box']}
         type="button"
         onClick={handleClickToggle}>
@@ -26,23 +27,21 @@ const SelectBox = ({ options, selectedSort, onSelect }) => {
           <icons.ArrowDownIcon className={styles.icon} />
         </div>
         <icons.SortIcon className={styles['mobile-icon']} />
-      </button>
-      {isOpen && (
-        <ul className={styles['list-container']}>
-          {optionKeys.map((item) => {
-            return (
-              <li
-                key={item}
-                className={styles['list-item']}
-                onClick={() => handleSortChange(item)}>
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
+      </Dropdown.Button>
+      <Dropdown.List className={styles['list-container']} isOpen={isOpen}>
+        {optionKeys.map((item) => {
+          return (
+            <Dropdown.Item
+              key={item}
+              className={styles['list-item']}
+              onClick={() => handleSortChange(item)}>
+              {item}
+            </Dropdown.Item>
+          );
+        })}
+      </Dropdown.List>
+    </Dropdown>
   );
 };
 
-export default SelectBox;
+export default SortDropdown;

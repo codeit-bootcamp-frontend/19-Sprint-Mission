@@ -7,7 +7,7 @@ import Input from '@/components/common/input/Input';
 import Title from '@/components/common/title/Title';
 import PaginationButton from '@/components/items/paginationButton/PaginationButton';
 import ProductCard from '@/components/items/productCard/ProductCard';
-import SelectBox from '@/components/items/selectBox/SelectBox';
+import SortDropdown from '@/components/items/sortDropdown/SortDropdown';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
 import useFetchProduct from '@/hooks/useFetchProduct';
 import styles from './ProductList.module.css';
@@ -87,7 +87,7 @@ const ProductList = () => {
         <Button as={Link} to="/additem" size="xs">
           상품 등록하기
         </Button>
-        <SelectBox
+        <SortDropdown
           options={SORT_OPTIONS}
           selectedSort={sort}
           onSelect={handleSort}
