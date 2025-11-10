@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.list {
+  display: flex;
+  gap: 24px;
+}
+
+.title {
+  color: var(--secondary900);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
