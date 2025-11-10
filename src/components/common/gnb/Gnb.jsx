@@ -13,7 +13,8 @@ const Gnb = ({ login = true }) => {
 
   const navLinkItemsClassName = () => {
     const active =
-      location.pathname === '/items' || location.pathname === '/additem';
+      location.pathname.startsWith('/items') ||
+      location.pathname === '/additem';
     return classNames({ [styles['menu-active']]: active });
   };
 
