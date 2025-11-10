@@ -1,4 +1,4 @@
-import { getBestProducts } from '@/apis/products';
+import { getBestProductList } from '@/apis/products';
 import Title from '@/components/common/title/Title';
 import ProductCard from '@/components/items/productCard/ProductCard';
 import ProductSkeletonCard from '@/components/items/productCard/ProductSkeletonCard';
@@ -7,7 +7,7 @@ import styles from './BestProductList.module.css';
 
 const BestProductList = () => {
   const { product, error, pageSize, loading } = useFetchProductList(
-    getBestProducts,
+    getBestProductList,
     'BEST_PRODUCTS'
   );
 
