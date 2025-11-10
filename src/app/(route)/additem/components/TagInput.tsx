@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, KeyboardEvent, ChangeEvent } from "react";
+import { useState, KeyboardEvent, ChangeEvent } from "react";
 
 import Input from "@/components/Input/Input";
 import TagList from "@/components/Tag/TagList";
@@ -14,7 +14,7 @@ const TagInput = ({ onTagsChange }: TagInputProps) => {
   const [inputValue, setInputValue] = useState("");
 
   // 태그 추가
-  const handleAddTag = useCallback(() => {
+  const handleAddTag = () => {
     const trimmed = inputValue.trim();
     if (!trimmed) return;
 
@@ -25,35 +25,29 @@ const TagInput = ({ onTagsChange }: TagInputProps) => {
     setTags(updated);
     onTagsChange?.(updated);
     setInputValue("");
-  }, [inputValue, tags, onTagsChange]);
+  };
 
   // 키보드 입력으로 태그 추가
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent<HTMLInputElement>) => {
-      if (e.nativeEvent.isComposing) return;
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.nativeEvent.isComposing) return;
 
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        handleAddTag();
-      }
-    },
-    [handleAddTag],
-  );
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleAddTag();
+    }
+  };
 
   // 입력값 변경
-  const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
-  }, []);
+  };
 
   // 태그 삭제
-  const handleDeleteTag = useCallback(
-    (deleteTag: string) => {
-      const updated = tags.filter((tag) => tag !== deleteTag);
-      setTags(updated);
-      onTagsChange?.(updated);
-    },
-    [tags, onTagsChange],
-  );
+  const handleDeleteTag = (deleteTag: string) => {
+    const updated = tags.filter((tag) => tag !== deleteTag);
+    setTags(updated);
+    onTagsChange?.(updated);
+  };
 
   return (
     <div className="flex flex-col gap-[14px]">

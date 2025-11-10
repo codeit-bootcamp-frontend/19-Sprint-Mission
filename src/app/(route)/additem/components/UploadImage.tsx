@@ -6,7 +6,12 @@ import Button from "@/components/Button/base/Button";
 import IC_Plus from "@/components/icons/ic_plus.svg";
 import IC_X from "@/components/icons/ic_X.svg";
 
-const UploadImage = () => {
+interface ImageProps {
+  value: string;
+  onChange: () => void;
+}
+
+const UploadImage = ({ value, onChange }: ImageProps) => {
   const [itemImage, setItemImage] = useState("");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 

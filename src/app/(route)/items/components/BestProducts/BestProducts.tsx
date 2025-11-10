@@ -8,7 +8,7 @@ interface BestProductsProps {
 }
 
 const BestProducts = ({ visibleItemCount }: BestProductsProps) => {
-  const { products, loading, error } = useProducts({
+  const { products, totalCount, loading, error } = useProducts({
     orderBy: "favorite",
     pageSize: visibleItemCount,
   });
@@ -19,7 +19,8 @@ const BestProducts = ({ visibleItemCount }: BestProductsProps) => {
   return (
     <div className="mb-10 flex w-[343px] flex-col items-center md:w-[714px] lg:w-[1204px]">
       <h1 className="mb-4 w-full text-xl font-bold">베스트 상품</h1>
-      <ItemList isBest={true} items={products} />
+      {totalCount !== 0 && <ItemList isBest={true} items={products} />}
+      {totalCount === 0 && <p className="h-70"> 텅~ </p>}
     </div>
   );
 };

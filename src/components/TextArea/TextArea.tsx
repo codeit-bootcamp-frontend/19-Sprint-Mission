@@ -15,9 +15,9 @@ export interface TextAreaProps
   className?: string;
   maxLength?: number;
   placeholder?: string;
-  value: string;
+  value?: string;
   height: number;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   onSubmit?: (e?: React.KeyboardEvent<HTMLTextAreaElement>) => void;
 }
 
