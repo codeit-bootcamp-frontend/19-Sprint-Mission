@@ -6,9 +6,6 @@
   .info-area {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
     gap: 2px;
 
     .nickname {
@@ -19,4 +16,15 @@
       color: var(--gray-400);
     }
   }
+}
+
+.info-area-m {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.info-area-s {
+  font-size: 12px;
+  line-height: 18px;
 }
