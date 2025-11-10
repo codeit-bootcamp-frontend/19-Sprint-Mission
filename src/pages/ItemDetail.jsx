@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router';
 import Icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
+import CommentForm from '@/components/itemDetail/commentForm/CommentForm';
 import ProductDetail from '@/components/itemDetail/productDetail/ProductDetail';
 import useFetchProduct from '@/hooks/useFetchProduct';
 import styels from '@/style/page/ItemDetail.module.css';
@@ -36,6 +37,7 @@ const ItemDetail = () => {
         onEdit={handleProductEdit}
         onDelete={handleProductDelete}
       />
+      <CommentForm />
       <Button as={Link} to={'/items'} size="m">
         목록으로 돌아가기
         <Icons.BackIcon />
