@@ -4,7 +4,7 @@ import Label from '@/components/common/label/Label';
 import Textarea from '@/components/common/textarea/Textarea';
 import styles from './CommentForm.module.css';
 
-const QuestionForm = () => {
+const CommentForm = () => {
   const [comment, setComment] = useState('');
 
   const handleSubmit = (e) => {
@@ -35,4 +35,4 @@ const QuestionForm = () => {
   );
 };
 
-export default QuestionForm;
+export default CommentForm;
