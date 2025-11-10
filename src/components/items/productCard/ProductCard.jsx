@@ -24,13 +24,8 @@ const ProductCard = ({ product }) => {
       />
       <p className={styles.title}>{name}</p>
       <span className={styles.price}>{formatPrice(price)}</span>
-      <div className={styles['favorite-button-area']}>
-        <button
-          className={styles['favorite-button']}
-          type="button"
-          aria-label="상품 좋아요">
-          <icons.HeartIcon />
-        </button>
+      <div className={styles['favorite-info-area']}>
+        <icons.HeartIcon />
         <span className={styles['favorite-text']}>{favoriteCount}</span>
       </div>
     </Link>

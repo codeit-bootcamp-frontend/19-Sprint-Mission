@@ -22,14 +22,10 @@
     font-weight: 700;
   }
 
-  .favorite-button-area {
+  .favorite-info-area {
     display: flex;
     align-items: center;
     gap: 4px;
-
-    .favorite-button {
-      height: 16px;
-    }
 
     .favorite-text {
       color: var(--gray-600);
