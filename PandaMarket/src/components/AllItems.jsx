@@ -6,8 +6,11 @@ import Item from "./Item";
 import SearchBar from "./SearchBar";
 import { fetchAllProducts } from "../utils/api";
 import Pagination from "./Pagination";
+import { useNavigate } from "react-router-dom";
 
 const AllItems = () => {
+  const navigate = useNavigate();
+
   // Dropdown Props(동적 구현)
   const options = ["최신순", "좋아요순"];
   const [sort, setSort] = useState(options[0]);
@@ -37,7 +40,11 @@ const AllItems = () => {
       <section>
         <h2 className={style.title}>전체 상품</h2>
         <SearchBar />
-        <Button variantButton={style.addItemBtn} name="상품 등록하기" />
+        <Button
+          variantButton={style.addItemBtn}
+          name="상품 등록하기"
+          onClick={() => navigate("/additem")}
+        />
         <Dropdown options={options} currentValue={sort} onChange={setSort} />
       </section>
       <section>
