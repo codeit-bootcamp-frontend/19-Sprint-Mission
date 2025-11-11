@@ -24,7 +24,7 @@ const BestItems = () => {
       <h2 className={style.title}>베스트 상품</h2>
       <ul className={style.list}>
         {products.map((item) => (
-          <Item key={item.id} product={item} />
+          <Item key={item.id} product={item} imgClass={style.bestImgSize} />
         ))}
       </ul>
     </div>
