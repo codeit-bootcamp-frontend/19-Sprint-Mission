@@ -1,10 +1,11 @@
 import style from "./Button.module.css";
 
-const Button = ({ variantButton }) => {
+const Button = ({ variantButton, name }) => {
   return (
-    <button className={`${style.button} ${variantButton}`}>
-      상품 등록하기
-    </button>
+    <button
+      className={`${style.button} ${variantButton}`}
+      children={name}
+    ></button>
   );
 };
 
