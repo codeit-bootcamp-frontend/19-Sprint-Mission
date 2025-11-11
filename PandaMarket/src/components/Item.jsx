@@ -2,7 +2,7 @@ import style from "./Item.module.css";
 import likeIcon from "../assets/like-icon.svg";
 
 const Item = ({ product, imgClass }) => {
-  const { name, price, images } = product;
+  const { name, price, images, favoriteCount } = product;
 
   return (
     <div className={style.item}>
@@ -12,7 +12,7 @@ const Item = ({ product, imgClass }) => {
         <div className={style.price}>{price.toLocaleString()}원</div>
         <div className={style.like}>
           <img className={style.icon} src={likeIcon}></img>
-          <div className={style.count}>240</div>
+          <div className={style.count}>{favoriteCount}</div>
         </div>
       </div>
     </div>
