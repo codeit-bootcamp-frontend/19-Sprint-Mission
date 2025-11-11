@@ -5,6 +5,7 @@ import Dropdown from "./Dropdown";
 import Item from "./Item";
 import SearchBar from "./SearchBar";
 import { fetchAllProducts } from "../utils/api";
+import Pagination from "./Pagination";
 
 const AllItems = () => {
   // Dropdown Props(동적 구현)
@@ -13,18 +14,23 @@ const AllItems = () => {
 
   // 모든 데이터 불러오기(api 연동)
   const [products, setProducts] = useState([]);
+  // Pagination Props(동적 구현 +api연동)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   useEffect(() => {
     async function loadData() {
       try {
-        const productList = await fetchAllProducts();
-        setProducts(productList);
+        const data = await fetchAllProducts({ page: currentPage });
+        setProducts(data.list);
+
+        setTotalPages(5);
       } catch (err) {
         console.error("전체 상품 데이터 로드 오류", err);
       }
     }
 
     loadData();
-  }, []);
+  }, [currentPage]);
 
   return (
     <div className={style.container}>
@@ -40,6 +46,13 @@ const AllItems = () => {
             <Item key={item.id} product={item} imgClass={style.allImgSize} />
           ))}
         </ul>
+      </section>
+      <section className={style.footer}>
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onChange={setCurrentPage}
+        />
       </section>
     </div>
   );
