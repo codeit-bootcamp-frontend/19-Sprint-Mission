@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+}
+
+.input {
+  width: 325px;
+  height: 42px;
+  background-color: var(--secondary100);
+  border: none;
+  border-radius: 12px;
+  padding: 9px 44px;
+}
+
+.input::placeholder {
+  color: var(--secondary400);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.icon {
+  position: absolute;
+  top: 9px;
+  left: 16px;
+}
