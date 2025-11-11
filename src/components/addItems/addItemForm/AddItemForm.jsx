@@ -4,6 +4,7 @@ import TagInput from '@/components/addItems/tagInput/TagInput';
 import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';
 import Label from '@/components/common/label/Label';
+import Textarea from '@/components/common/textarea/Textarea';
 import Title from '@/components/common/title/Title';
 import styles from './AddItemForm.module.css';
 
@@ -24,6 +25,7 @@ const AddItemForm = () => {
     e.preventDefault();
     // TODO: 이후 미션에서 api 연결 구현
     // TODO: 이미지는 post /images/upload api 이용해서 url 획득 후 전달
+    // TODO: 미션 12에서 form 리팩토링 해보기 -> 제어컴포넌트 vs 비제어컴포넌트
     console.log(formData);
   };
 
@@ -64,9 +66,7 @@ const AddItemForm = () => {
 
         <div className={styles['input-area']}>
           <Label id="description" label="상품 소개" />
-          <textarea
-            className={styles.textarea}
-            name="description"
+          <Textarea
             id="description"
             placeholder="상품 소개를 입력해주세요"
             value={formData.description}
@@ -76,7 +76,9 @@ const AddItemForm = () => {
 
         <div className={styles['input-area']}>
           <Label id="price" label="판매가격" />
+          {/* TODO: 숫자만 입력 가능하다고 안내 필요 */}
           <Input
+            type="number"
             id="price"
             placeholder="판매 가격을 입력해주세요"
             value={formData.price}
@@ -84,7 +86,7 @@ const AddItemForm = () => {
           />
         </div>
 
-        <TagInput name="tags" value={formData.tags} onChange={handleChange} />
+        <TagInput id="tags" value={formData.tags} onChange={handleChange} />
       </div>
     </form>
   );

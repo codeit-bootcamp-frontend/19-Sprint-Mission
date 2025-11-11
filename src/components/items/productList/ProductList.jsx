@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
-import { getProducts } from '@/apis/product';
+import { getProductList } from '@/apis/products';
 import icons from '@/assets/icons/icons';
 import Button from '@/components/common/button/Button';
 import Input from '@/components/common/input/Input';
 import Title from '@/components/common/title/Title';
-import Card from '@/components/items/card/Card';
 import PaginationButton from '@/components/items/paginationButton/PaginationButton';
-import SelectBox from '@/components/items/selectBox/SelectBox';
+import ProductCard from '@/components/items/productCard/ProductCard';
+import ProductSkeletonCard from '@/components/items/productCard/ProductSkeletonCard';
+import SortDropdown from '@/components/items/sortDropdown/SortDropdown';
 import { SORT_OPTIONS } from '@/constants/sortOptions';
-import useFetchProduct from '@/hooks/useFetchProduct';
-import { formatPrice } from '@/utils/formatPrice';
+import useFetchProductList from '@/hooks/useFetchProductList';
 import styles from './ProductList.module.css';
 
 const ProductList = () => {
@@ -47,11 +47,23 @@ const ProductList = () => {
     setSearchParams({ page: '1', sort });
   };
 
-  const { product, pageSize, totalCount, error } = useFetchProduct(
-    getProducts,
+  const handlePageChange = (newPage) => {
+    setSearchParams((searchParams) => {
+      searchParams.set('page', newPage);
+      return searchParams;
+    });
+  };
+
+  const { product, pageSize, totalCount, error, loading } = useFetchProductList(
+    getProductList,
     'ALL_PRODUCTS',
     { page, orderBy: SORT_OPTIONS[sort], keyword }
   );
+
+  if (error) {
+    return <div>에러 발생: {error.message}</div>;
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles['top-area']}>
@@ -80,37 +92,29 @@ const ProductList = () => {
         <Button as={Link} to="/additem" size="xs">
           상품 등록하기
         </Button>
-        <SelectBox
+        <SortDropdown
           options={SORT_OPTIONS}
           selectedSort={sort}
           onSelect={handleSort}
         />
       </div>
-      {error ? (
-        <div>에러 발생 : {error.message}</div>
-      ) : (
-        <div className={styles['contents-area']}>
-          <div className={styles.contents}>
-            {product.map(({ id, images, name, price, favoriteCount }) => {
-              return (
-                <Card
-                  key={id}
-                  image={images.length > 0 ? images[0] : null}
-                  name={name}
-                  price={formatPrice(price)}
-                  favoriteCount={favoriteCount}
-                />
-              );
-            })}
-          </div>
-          <PaginationButton
-            totalCount={totalCount}
-            pageSize={pageSize}
-            page={page}
-            setPage={setSearchParams}
-          />
+      <div className={styles['contents-area']}>
+        <div className={styles.contents}>
+          {loading
+            ? Array.from({ length: pageSize }).map((_, index) => {
+                return <ProductSkeletonCard key={`Basic-${index}`} />;
+              })
+            : product.map((product) => {
+                return <ProductCard key={product.id} product={product} />;
+              })}
         </div>
-      )}
+        <PaginationButton
+          totalCount={totalCount}
+          pageSize={pageSize}
+          page={page}
+          onChangePage={handlePageChange}
+        />
+      </div>
     </section>
   );
 };

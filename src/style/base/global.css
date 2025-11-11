@@ -1,6 +1,6 @@
-@import url('@/style/common/variables.css');
-@import url('@/style/common/font.css');
-@import url('@/style/common/reset.css');
+@import url('@/style/base/variables.css');
+@import url('@/style/base/font.css');
+@import url('@/style/base/reset.css');
 
 body {
   color: var(--gray-800);

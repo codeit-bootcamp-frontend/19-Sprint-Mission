@@ -1,9 +1,12 @@
 import ArrowDownIcon from '@/assets/icons/ic-arrow-down.svg';
 import ArrowLeftIcon from '@/assets/icons/ic-arrow-left.svg';
 import ArrowRightIcon from '@/assets/icons/ic-arrow-right.svg';
+import BackIcon from '@/assets/icons/ic-back.svg';
 import facebookIcon from '@/assets/icons/ic-facebook.svg?url';
+import HeartActiveIcon from '@/assets/icons/ic-heart-active.svg';
 import HeartIcon from '@/assets/icons/ic-heart.svg';
 import instgramIcon from '@/assets/icons/ic-instagram.svg?url';
+import KebabIcon from '@/assets/icons/ic-kebab.svg';
 import PlusIcon from '@/assets/icons/ic-plus.svg';
 import RemoveIcon from '@/assets/icons/ic-remove.svg';
 import SearchIcon from '@/assets/icons/ic-search.svg';
@@ -27,5 +30,8 @@ export default {
   HeartIcon,
   SortIcon,
   RemoveIcon,
+  KebabIcon,
   PlusIcon,
+  HeartActiveIcon,
+  BackIcon,
 };

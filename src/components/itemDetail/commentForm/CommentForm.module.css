@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+
+  .textarea {
+    height: 104px;
+
+    @media screen and (width <= 767px) {
+      height: 129px;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .label {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: var(--gray-900);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .button {
+    margin-top: 12px;
+    margin-left: auto;
+  }
+}

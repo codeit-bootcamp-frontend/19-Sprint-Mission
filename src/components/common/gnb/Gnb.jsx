@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Link, NavLink, useLocation } from 'react-router';
-import images from '@/assets/images/images';
 import logos from '@/assets/logo/logo';
 import Button from '@/components/common/button/Button';
+import ProfileImg from '@/components/common/profileImg/ProfileImg';
 import styles from './Gnb.module.css';
 
 const Gnb = ({ login = true }) => {
@@ -13,7 +13,8 @@ const Gnb = ({ login = true }) => {
 
   const navLinkItemsClassName = () => {
     const active =
-      location.pathname === '/items' || location.pathname === '/additem';
+      location.pathname.startsWith('/items') ||
+      location.pathname === '/additem';
     return classNames({ [styles['menu-active']]: active });
   };
 
@@ -47,7 +48,7 @@ const Gnb = ({ login = true }) => {
               </li>
             </ul>
             <button type="button">
-              <img width={40} src={images.profile} alt="프로필 이미지" />
+              <ProfileImg />
             </button>
           </>
         ) : (

@@ -1,8 +1,9 @@
+import classNames from 'classnames';
 import styles from './Label.module.css';
 
-const Label = ({ id, label }) => {
+const Label = ({ id, label, className }) => {
   return (
-    <label htmlFor={id} className={styles.label}>
+    <label htmlFor={id} className={classNames(styles.label, className)}>
       {label}
     </label>
   );

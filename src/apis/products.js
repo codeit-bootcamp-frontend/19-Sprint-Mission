@@ -1,13 +1,13 @@
 import { api } from '@/apis/instance';
 
-export const getBestProducts = async ({ pageSize }) => {
+export const getBestProductList = async ({ pageSize }) => {
   const res = await api.get(
     `/products?page=1&pageSize=${pageSize}&orderBy=favorite`
   );
   return res.data;
 };
 
-export const getProducts = async ({
+export const getProductList = async ({
   page,
   pageSize,
   orderBy = 'recent',
@@ -18,5 +18,10 @@ export const getProducts = async ({
   }`;
 
   const res = await api.get(query);
+  return res.data;
+};
+
+export const getProduct = async ({ productId }) => {
+  const res = await api.get(`/products/${productId}`);
   return res.data;
 };

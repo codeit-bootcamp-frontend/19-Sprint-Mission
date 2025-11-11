@@ -1,34 +1,34 @@
 import images from '@/assets/images/images';
 import styles from './Overview.module.css';
 
-const Overview = () => {
-  const OVERVIEW_ITEMS = [
-    {
-      id: 1,
-      tag: 'Hot item',
-      title: ['인기 상품을', '확인해 보세요'],
-      desc: ['가장 HOT한 중고거래 물품을', '판다 마켓에서 확인해 보세요'],
-      img: images.homeOverview1,
-      isRight: false,
-    },
-    {
-      id: 2,
-      tag: 'Search',
-      title: ['구매를 원하는', '상품을 검색하세요'],
-      desc: ['구매하고 싶은 물품은 검색해서', '쉽게 찾아보세요'],
-      img: images.homeOverview2,
-      isRight: true,
-    },
-    {
-      id: 3,
-      tag: 'Register',
-      title: ['판매를 원하는', '상품을 등록하세요'],
-      desc: ['어떤 물건이든 판매하고 싶은 상품을', '쉽게 등록하세요'],
-      img: images.homeOverview3,
-      isRight: false,
-    },
-  ];
+const OVERVIEW_ITEMS = [
+  {
+    id: 1,
+    tag: 'Hot item',
+    title: ['인기 상품을', '확인해 보세요'],
+    desc: ['가장 HOT한 중고거래 물품을', '판다 마켓에서 확인해 보세요'],
+    img: images.homeOverview1,
+    isRight: false,
+  },
+  {
+    id: 2,
+    tag: 'Search',
+    title: ['구매를 원하는', '상품을 검색하세요'],
+    desc: ['구매하고 싶은 물품은 검색해서', '쉽게 찾아보세요'],
+    img: images.homeOverview2,
+    isRight: true,
+  },
+  {
+    id: 3,
+    tag: 'Register',
+    title: ['판매를 원하는', '상품을 등록하세요'],
+    desc: ['어떤 물건이든 판매하고 싶은 상품을', '쉽게 등록하세요'],
+    img: images.homeOverview3,
+    isRight: false,
+  },
+];
 
+const Overview = () => {
   return (
     <section className={styles.container}>
       {OVERVIEW_ITEMS.map(({ id, tag, title, desc, img, isRight }) => {

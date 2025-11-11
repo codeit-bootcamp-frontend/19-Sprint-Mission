@@ -3,13 +3,6 @@
   flex-direction: column;
   width: 100%;
 
-  .img {
-    width: 100%;
-    border-radius: 16px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
   .title {
     margin-top: 16px;
     font-size: 14px;
@@ -22,14 +15,10 @@
     font-weight: 700;
   }
 
-  .favorite-button-area {
+  .favorite-info-area {
     display: flex;
     align-items: center;
     gap: 4px;
-
-    .favorite-button {
-      height: 16px;
-    }
 
     .favorite-text {
       color: var(--gray-600);

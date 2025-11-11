@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Icons from '@/assets/icons/icons';
 import Input from '@/components/common/input/Input';
 import Label from '@/components/common/label/Label';
+import TagItem from '@/components/common/tag/TagItem';
 import styles from './TagInput.module.css';
 
-const TagInput = ({ name, value, onChange }) => {
+const TagInput = ({ id, value, onChange }) => {
   const [tagInput, setTagInput] = useState('');
   const [error, setError] = useState('');
 
@@ -20,7 +20,7 @@ const TagInput = ({ name, value, onChange }) => {
       if (value.includes(newTag)) {
         setError(`"${newTag}" 태그는 이미 추가되었습니다.`);
       } else {
-        onChange(name, [...value, newTag]);
+        onChange(id, [...value, newTag]);
         setError('');
       }
 
@@ -30,16 +30,16 @@ const TagInput = ({ name, value, onChange }) => {
 
   const handleRemoveTag = (tag) => {
     onChange(
-      name,
+      id,
       value.filter((t) => t !== tag)
     );
   };
 
   return (
     <div className={styles.container}>
-      <Label id="tags" label="태그" />
+      <Label id={id} label="태그" />
       <Input
-        id="tags"
+        id={id}
         placeholder="태그를 입력해주세요"
         value={tagInput}
         onChange={handleInputChange}
@@ -49,17 +49,7 @@ const TagInput = ({ name, value, onChange }) => {
       {value.length > 0 && (
         <ul className={styles['tag-area']}>
           {value.map((t) => {
-            return (
-              <li key={t} className={styles.tag}>
-                #{t}
-                <button
-                  className={styles['remove-button']}
-                  type="button"
-                  onClick={() => handleRemoveTag(t)}>
-                  <Icons.RemoveIcon />
-                </button>
-              </li>
-            );
+            return <TagItem key={t} tag={t} onClick={handleRemoveTag} />;
           })}
         </ul>
       )}

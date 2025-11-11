@@ -6,6 +6,7 @@ import homeOverview2 from '@/assets/images/home/img-home-02.png';
 import homeOverview3 from '@/assets/images/home/img-home-03.png';
 import homeBottomBanner from '@/assets/images/home/img-home-bottom.png';
 import homeTopBanner from '@/assets/images/home/img-home-top.png';
+import commentEmpty from '@/assets/images/items/comment-empty.png';
 import productEmpty from '@/assets/images/items/product-empty.png';
 
 export default {
@@ -18,4 +19,5 @@ export default {
   homeBottomBanner,
   homeTopBanner,
   productEmpty,
+  commentEmpty,
 };
