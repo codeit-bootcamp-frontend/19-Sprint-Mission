@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 43px;
+}
+
+.container > section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--secondary900);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.allImgSize {
+  width: 221px;
+  height: 221px;
+}
+
+.addItemBtn {
+  display: flex;
+  height: 42px;
+  padding: 12px 23px;
+  justify-content: center;
+  align-items: center;
+}
