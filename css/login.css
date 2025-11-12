@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+  box-sizing: border-box;
+  border: 0;
+}
+
+a, button {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+a:hover, button:hover {
+  text-decoration: none;
+  border: 0;
+}
+a:active, button:active {
+  text-decoration: none;
+  border: 0;
+}
+
+body {
+  font-family: "Pretendard-Regular", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/Pretendard/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2") format("woff2"), url("https://cdn.jsdelivr.net/gh/Project-Noonnu/Pretendard/packages/pretendard/dist/web/static/woff/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.wrap.center {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+.wrap.center .container_login {
+  padding: 0;
+}
+
+.container_login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0;
+}
+.container_login form {
+  width: 100%;
+  max-width: 640px;
+  margin-top: 40px;
+}
+.container_login form .input_box {
+  margin-bottom: 24px;
+}
+.container_login form .input_box label {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+.container_login form .input_box input {
+  display: block;
+  background: #F3F4F6;
+  width: 100%;
+  font-size: 16px;
+  line-height: 56px;
+  margin-top: 16px;
+  border-radius: 12px;
+  padding: 0 24px;
+}
+.container_login form .password_box {
+  position: relative;
+}
+.container_login form .password_box .password-toggle {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url(../img/picto_eye.png) no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+.container_login form button.submit {
+  width: 100%;
+  line-height: 56px;
+  border-radius: 40px;
+  padding-right: 124px;
+  padding-left: 124px;
+  background: #3692FF;
+  font-size: 20px;
+}
+.container_login .login_sns {
+  background: #E6F2FF;
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  padding: 16px 23px;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 24px auto;
+}
+.container_login .login_sns span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 42px;
+}
+.container_login .login_sns .btn_wrap {
+  display: flex;
+  gap: 16px;
+}
+.container_login .login_sns .btn_wrap button {
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  text-indent: -1000px;
+  cursor: pointer;
+}
+.container_login .login_sns .btn_wrap button.google {
+  background: url(../img/icon_google.png) no-repeat center center/contain;
+}
+.container_login .login_sns .btn_wrap button.kakao {
+  background: url(../img/icon_kakao.png) no-repeat center center/contain;
+}
+.container_login .exception {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  margin-top: 24px;
+}
+.container_login .exception a {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 24px;
+  line-height: 100%;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  color: #3692FF;
+}/*# sourceMappingURL=login.css.map */
