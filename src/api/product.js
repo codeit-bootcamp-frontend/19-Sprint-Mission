@@ -1,12 +1,10 @@
 import api from "./axios";
 
-export const getProducts = async (parmas) => {
+export const getProducts = async (params) => {
   try {
-    const response = await api.get(`/product`, parmas);
-    const productsData = await response.data;
-    if (!response.ok) {
-      throw new Error("에러발생");
-    }
+    const response = await api.get(`products/`, { params });
+    const productsData = response.data;
+
     return productsData;
   } catch (err) {
     console.error(err);
