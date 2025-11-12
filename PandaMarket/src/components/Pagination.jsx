@@ -1,4 +1,3 @@
-import { useState } from "react";
 import style from "./Pagination.module.css";
 import Button from "./Button";
 import arrowLeft from "../assets/arrow_left.svg";
@@ -8,11 +7,23 @@ const Pagination = ({
   totalPages = 1,
   currentPage = 1,
   onChange = () => {},
+  pageGroupSize = 5,
 }) => {
-  const [page, setPage] = useState(currentPage);
+  // const [page, setPage] = useState(currentPage);
+
+  // useEffect(() => {
+  //   setPage(currentPage);
+  // }, [currentPage]);
+
+  const page = currentPage;
+
+  // 현재 페이지 그룹 계산
+  const currentGroup = Math.floor((page - 1) / pageGroupSize);
+  const startPage = currentGroup * pageGroupSize + 1;
+  const endPage = Math.min(startPage + pageGroupSize - 1, totalPages);
 
   const handleClick = (pageNum) => {
-    setPage(pageNum);
+    if (pageNum < 1 || pageNum > totalPages) return;
     onChange(pageNum);
   };
 
@@ -26,7 +37,7 @@ const Pagination = ({
 
   const renderPageButtons = () => {
     const buttons = [];
-    for (let i = 1; i <= totalPages; i++) {
+    for (let i = startPage; i <= endPage; i++) {
       buttons.push(
         <Button
           key={i}

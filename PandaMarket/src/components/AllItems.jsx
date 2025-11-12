@@ -25,7 +25,7 @@ const AllItems = () => {
 
   // Pagination Props(동적 구현)
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState(5);
 
   // 반응형마다 다른 상품 개수 설정
   const [visibleCount, setVisibleCount] = useState(10);
@@ -50,9 +50,12 @@ const AllItems = () => {
           orderBy: sort,
           keyword: searchQuery,
         });
+
         setProducts(data.list);
 
-        setTotalPages(5);
+        const totalCount = data.totalCount ?? 0;
+        const pages = Math.ceil(totalCount / visibleCount);
+        setTotalPages(pages);
       } catch (err) {
         console.error("전체 상품 데이터 로드 오류", err);
       }
