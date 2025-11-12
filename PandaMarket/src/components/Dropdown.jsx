@@ -1,3 +1,21 @@
+/**
+ * 공용 드롭다운(선택박스) 컴포넌트
+ *
+ * 외부 클릭 시 자동으로 닫히며, 선택된 옵션을 상위 컴포넌트에 전달합니다.
+ *
+ * @component
+ * @param {string[]} options - 드롭다운에서 선택 가능한 옵션 목록
+ * @param {string} currentValue - 현재 선택된 값 (없을 경우 첫 번째 옵션 표시)
+ * @param {function} onChange - 옵션 선택 시 실행되는 콜백 함수 (선택된 option 반환)
+ *
+ * @example
+ * <Dropdown
+ *   options={["최신순", "인기순"]}
+ *   currentValue="최신순"
+ *   onChange={(value) => setSort(value)}
+ * />
+ */
+
 import { useState, useEffect, useRef } from "react";
 import style from "./Dropdown.module.css";
 import arrowDown from "../assets/ic_arrow_down.svg";
