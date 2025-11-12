@@ -52,7 +52,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .logo {
+  .header .logo {
     content: url("../assets/logo_typo.svg");
   }
 }
