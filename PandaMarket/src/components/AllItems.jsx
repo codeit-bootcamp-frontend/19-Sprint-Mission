@@ -27,7 +27,21 @@ const AllItems = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  // api 연동
+  // 반응형마다 다른 상품 개수 설정
+  const [visibleCount, setVisibleCount] = useState(10);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) setVisibleCount(4);
+      else if (window.innerWidth <= 1023) setVisibleCount(6);
+      else setVisibleCount(10);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // 데이터 불러오기(api 연동)
   useEffect(() => {
     async function loadData() {
       try {
@@ -69,7 +83,7 @@ const AllItems = () => {
       </section>
       <section>
         <ul className={style.list}>
-          {products.map((item) => (
+          {products.slice(0, visibleCount).map((item) => (
             <Item key={item.id} product={item} imgClass={style.allImgSize} />
           ))}
         </ul>
