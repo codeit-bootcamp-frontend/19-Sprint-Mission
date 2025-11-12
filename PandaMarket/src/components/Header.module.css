@@ -47,6 +47,10 @@
   text-align: center;
 }
 
+.header .activeTab {
+  color: var(--primary100);
+}
+
 @media screen and (max-width: 767px) {
   .logo {
     content: url("../assets/logo_typo.svg");
