@@ -10,20 +10,32 @@ import { useNavigate } from "react-router-dom";
 
 const AllItems = () => {
   const navigate = useNavigate();
+  // 모든 데이터 불러오기
+  const [products, setProducts] = useState([]);
+
+  // SearchBar Props(동적 구현)
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Dropdown Props(동적 구현)
-  const options = ["최신순", "좋아요순"];
-  const [sort, setSort] = useState(options[0]);
+  const sortOptions = [
+    { label: "최신순", value: "recent" },
+    { label: "좋아요순", value: "favorite" },
+  ];
+  const [sort, setSort] = useState(sortOptions[0].value);
 
-  // 모든 데이터 불러오기(api 연동)
-  const [products, setProducts] = useState([]);
-  // Pagination Props(동적 구현 +api연동)
+  // Pagination Props(동적 구현)
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
+  // api 연동
   useEffect(() => {
     async function loadData() {
       try {
-        const data = await fetchAllProducts({ page: currentPage });
+        const data = await fetchAllProducts({
+          page: currentPage,
+          orderBy: sort,
+          keyword: searchQuery,
+        });
         setProducts(data.list);
 
         setTotalPages(5);
@@ -33,19 +45,27 @@ const AllItems = () => {
     }
 
     loadData();
-  }, [currentPage]);
+  }, [currentPage, searchQuery, sort]);
 
   return (
     <div className={style.container}>
       <section className={style.serviceWrapper}>
         <h2 className={style.title}>전체 상품</h2>
-        <SearchBar />
+        <SearchBar value={searchQuery} onChange={setSearchQuery} />
         <Button
           variantButton={style.addItemBtn}
           name="상품 등록하기"
           onClick={() => navigate("/additem")}
         />
-        <Dropdown options={options} currentValue={sort} onChange={setSort} />
+        <Dropdown
+          options={sortOptions.map((option) => option.label)}
+          currentValue={
+            sortOptions.find((option) => option.value === sort)?.label
+          }
+          onChange={(label) =>
+            setSort(sortOptions.find((option) => option.label === label).value)
+          }
+        />
       </section>
       <section>
         <ul className={style.list}>

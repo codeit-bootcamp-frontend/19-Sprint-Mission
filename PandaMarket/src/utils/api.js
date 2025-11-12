@@ -22,8 +22,9 @@ export async function fetchAllProducts({
   page = 1,
   pageSize = 10,
   orderBy = "recent",
+  keyword = "",
 } = {}) {
-  const url = `${BASE_URL}products?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}`;
+  const url = `${BASE_URL}products?page=${page}&pageSize=${pageSize}&orderBy=${orderBy}&keyword=${keyword}`;
 
   try {
     const response = await fetch(url);

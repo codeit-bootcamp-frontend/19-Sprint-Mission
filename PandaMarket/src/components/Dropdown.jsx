@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from "./Dropdown.module.css";
 import arrowDown from "../assets/ic_arrow_down.svg";
 
-const Dropdown = ({ options = [], currentValue, onChange = () => {} }) => {
+const Dropdown = ({ options, currentValue, onChange = () => {} }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (option) => {
