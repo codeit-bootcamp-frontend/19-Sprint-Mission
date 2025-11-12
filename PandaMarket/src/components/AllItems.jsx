@@ -37,7 +37,7 @@ const AllItems = () => {
 
   return (
     <div className={style.container}>
-      <section>
+      <section className={style.serviceWrapper}>
         <h2 className={style.title}>전체 상품</h2>
         <SearchBar />
         <Button
@@ -54,7 +54,7 @@ const AllItems = () => {
           ))}
         </ul>
       </section>
-      <section className={style.footer}>
+      <section>
         <Pagination
           totalPages={totalPages}
           currentPage={currentPage}
