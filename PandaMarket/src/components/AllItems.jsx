@@ -62,7 +62,7 @@ const AllItems = () => {
     }
 
     loadData();
-  }, [currentPage, searchQuery, sort]);
+  }, [currentPage, searchQuery, sort, visibleCount]);
 
   return (
     <div className={style.container}>
@@ -72,6 +72,7 @@ const AllItems = () => {
           className={style.input}
           value={searchQuery}
           onChange={setSearchQuery}
+          placeholder="검색할 상품을 입력해주세요"
         />
         <Button
           variantButton={style.addItemBtn}
