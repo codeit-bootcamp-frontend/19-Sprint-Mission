@@ -6,7 +6,7 @@
     <meta property="og:image" content="./images/og-image.png" />
     <meta property="og:title" content="판다 마켓" />
     <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
-    <title>판다마켓 - 회원가입</title>
+    <title>판다마켓 - 로그인</title>
     <link rel="icon" href="images/logo/favicon.ico" />
     <link
       rel="stylesheet"
@@ -34,18 +34,7 @@
             id="email"
             name="email"
             type="email"
-            data-rule="email"
             placeholder="이메일을 입력해 주세요"
-          />
-        </div>
-        <div class="input-item">
-          <label for="nickname">닉네임</label>
-          <input
-            id="nickname"
-            name="nickname"
-            type="text"
-            data-rule="nickname"
-            placeholder="닉네임을 입력해 주세요"
           />
         </div>
         <div class="input-item">
@@ -55,36 +44,14 @@
               id="password"
               name="password"
               type="password"
-              data-rule="password"
               placeholder="비밀번호를 입력해 주세요"
             />
-            <img
-              src="images/icons/eye-invisible.svg"
-              alt="비밀번호 숨김"
-              class="toggle-password"
-            />
-          </div>
-        </div>
-        <div class="input-item">
-          <label for="passwordConfirmation">비밀번호 확인</label>
-          <div class="input-wrapper">
-            <input
-              id="passwordConfirmation"
-              name="passwordConfirmation"
-              type="password"
-              data-rule="passwordConfirmation"
-              placeholder="비밀번호를 다시 한 번 입력해 주세요"
-            />
-            <img
-              src="images/icons/eye-invisible.svg"
-              alt="비밀번호 숨김"
-              class="toggle-password"
-            />
+            <button class="toggle-password"></button>
           </div>
         </div>
 
-        <button type="submit" class="button pill-button full-width" id="joinBtn">
-          회원가입
+        <button type="submit" class="button pill-button full-width" id="loginBtn">
+          로그인
         </button>
       </form>
 
@@ -107,9 +74,10 @@
       </div>
 
       <div class="auth-switch">
-        이미 회원이신가요? <a href="signin.html">로그인</a>
+        판다마켓이 처음이신가요? <a href="signup.html">회원가입</a>
       </div>
     </div>
-    <script src="./script/signup.js"></script>
+
+    <script src="./script/signin.js"></script>
   </body>
 </html>
