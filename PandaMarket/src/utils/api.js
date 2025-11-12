@@ -1,7 +1,10 @@
 const BASE_URL = "https://panda-market-api.vercel.app/";
 
-export async function fetchBestProducts({ pageSize = 4 } = {}) {
-  const url = `${BASE_URL}products?pageSize=${pageSize}`;
+export async function fetchBestProducts({
+  pageSize = 4,
+  orderBy = "favorite",
+} = {}) {
+  const url = `${BASE_URL}products?pageSize=${pageSize}&orderBy=${orderBy}`;
 
   try {
     const response = await fetch(url);
