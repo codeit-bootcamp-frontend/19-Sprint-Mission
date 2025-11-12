@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImg {
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+}
