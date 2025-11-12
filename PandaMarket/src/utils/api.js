@@ -44,18 +44,3 @@ export async function fetchAllProducts({
     throw error;
   }
 }
-
-// fetch(test)
-//   .then((response) => {
-//     if (!response.ok) {
-//       throw new Error("ERROR:" + response.statusText);
-//     }
-
-//     return response.json();
-//   })
-//   .then((data) => {
-//     console.log("가져온 데이터 확인:", data);
-//   })
-//   .catch((error) => {
-//     console.error("데이터 가져오기 오류:", error);
-//   });
