@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/Pretendard/packages/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/Project-Noonnu/Pretendard/packages/pretendard/dist/web/static/woff/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
