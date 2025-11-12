@@ -3,7 +3,7 @@
 }
 
 .input {
-  width: 325px;
+  min-width: 325px;
   height: 42px;
   background-color: var(--secondary100);
   border: none;

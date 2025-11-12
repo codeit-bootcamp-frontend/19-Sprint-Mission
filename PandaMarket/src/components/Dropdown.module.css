@@ -5,6 +5,8 @@
   color: var(--secondary800);
   font-size: 16px;
   font-weight: 400;
+
+  white-space: nowrap;
 }
 
 .selected {
@@ -17,6 +19,10 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.arrow {
+  content: url("../assets/ic_arrow_down.svg");
 }
 
 .options {
@@ -40,4 +46,26 @@
 
 .option:last-child {
   border-bottom: none;
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    width: auto;
+  }
+
+  .selected {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 아이콘만 중앙 */
+    padding: 9px;
+    min-width: 0;
+  }
+
+  .arrow {
+    content: url("../assets/ic_dropdown.svg");
+  }
+
+  .text {
+    display: none;
+  }
 }

@@ -65,13 +65,18 @@ const AllItems = () => {
     <div className={style.container}>
       <section className={style.serviceWrapper}>
         <h2 className={style.title}>전체 상품</h2>
-        <SearchBar value={searchQuery} onChange={setSearchQuery} />
+        <SearchBar
+          className={style.input}
+          value={searchQuery}
+          onChange={setSearchQuery}
+        />
         <Button
           variantButton={style.addItemBtn}
           name="상품 등록하기"
           onClick={() => navigate("/additem")}
         />
         <Dropdown
+          className={style.dropdown}
           options={sortOptions.map((option) => option.label)}
           currentValue={
             sortOptions.find((option) => option.value === sort)?.label

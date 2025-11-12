@@ -22,11 +22,16 @@
   width: 153px;
   height: 51px;
   padding-right: 32px;
+  content: url("../assets/logo.svg");
 }
 
 .header .profile {
   width: 40px;
   margin-left: auto;
+}
+
+.header .tab {
+  white-space: nowrap;
 }
 
 .header button {
@@ -40,4 +45,10 @@
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    content: url("../assets/logo_typo.svg");
+  }
 }

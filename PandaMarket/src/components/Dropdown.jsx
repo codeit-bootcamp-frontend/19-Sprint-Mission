@@ -16,7 +16,7 @@ const Dropdown = ({ options, currentValue, onChange = () => {} }) => {
         className={style.selected}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <span>{currentValue || options[0]}</span>
+        <span className={style.text}>{currentValue || options[0]}</span>
         <img className={style.arrow} src={arrowDown} alt="화살표" />
       </div>
 
