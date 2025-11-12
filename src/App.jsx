@@ -1,4 +1,5 @@
 import "./App.css";
+import "./assets/css/global.scss";
 import { Route, Routes } from "react-router-dom";
 import Items from "./pages/Items";
 import AddItem from "./pages/AddItem";
