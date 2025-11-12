@@ -1,9 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import style from "./Dropdown.module.css";
 import arrowDown from "../assets/ic_arrow_down.svg";
 
 const Dropdown = ({ options, currentValue, onChange = () => {} }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // 옵션 외부 영역에 클릭해도 닫아지는 기능
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSelect = (option) => {
     onChange(option);
@@ -11,7 +23,7 @@ const Dropdown = ({ options, currentValue, onChange = () => {} }) => {
   };
 
   return (
-    <div className={`${style.dropdown}`}>
+    <div className={style.dropdown} ref={dropdownRef}>
       <div
         className={style.selected}
         onClick={() => setIsOpen((prev) => !prev)}
