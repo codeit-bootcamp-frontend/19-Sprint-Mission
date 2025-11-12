@@ -33,7 +33,8 @@ export async function fetchAllProducts({
     }
 
     const data = await response.json();
-    return data.list;
+
+    return { list: data.list, totalCount: data.totalCount };
   } catch (error) {
     console.error("데이터 가져오기 오류:", error);
     throw error;
