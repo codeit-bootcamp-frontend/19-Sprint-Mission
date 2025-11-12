@@ -55,7 +55,9 @@ const Pagination = ({
   return (
     <div className={style.pagination}>
       <Button
-        variantButton={`${style.arrowButton}`}
+        variantButton={`${style.arrowButton} ${
+          page === 1 ? style.disabled : ""
+        }`}
         name={<img src={arrowLeft} alt="prev" />}
         onClick={handlePrev}
       />
@@ -63,7 +65,9 @@ const Pagination = ({
       {renderPageButtons()}
 
       <Button
-        variantButton={`${style.arrowButton} `}
+        variantButton={`${style.arrowButton} ${
+          page === totalPages ? style.disabled : ""
+        }`}
         name={<img src={arrowRight} alt="next" />}
         onClick={handleNext}
       />
