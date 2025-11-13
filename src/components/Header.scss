@@ -1,0 +1,43 @@
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+
+  padding:9px 200px;
+  background-color: #fff;
+  height: 70px;
+  border-bottom: 1px solid $cool-gray-300;
+
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+
+  .nav{
+    display: flex;
+    flex:1;
+    align-items: center;
+    color: $secondary-600;
+
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    font-family: "Pretendard";
+
+    ul {
+    display: flex;
+
+    li{
+      padding: 21px 15px;
+    }
+  }
+  }
+
+  .profile-image{
+    background-color: $cool-gray-300;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+}
