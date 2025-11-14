@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "@/App.jsx";
-import Index from "@/pages/Index";
+import Index from "@/pages/Index/index";
 import ItemPage from "@/pages/List";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
