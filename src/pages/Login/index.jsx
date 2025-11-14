@@ -16,7 +16,8 @@ function Login() {
   });
   const handleError = (name, value) => {
     //value가 true면 hasError도 true (=에러)
-    const hasError = value ? true : false;
+    // const hasError = value ? true : false;
+    const hasError = !!value;
     setInputError((prev) => ({
       ...prev,
       [name]: hasError,
@@ -31,6 +32,7 @@ function Login() {
 
   // 전체 폼 에러확인
   const hasFormError = Object.values(inputError).every((el) => el !== true);
+  // const hasFormError = Object.values(inputError).some(Boolean);
   const handleSubmit = () => {};
   return (
     <main className="formWrap">

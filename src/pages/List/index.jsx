@@ -3,7 +3,7 @@ import TotalItems from "@/pages/List/TotalItems";
 
 function ItemPage() {
   return (
-    <div className="itemPage">
+    <div className="itemPage content">
       <div className="inner">
         <BestItems />
         <TotalItems />

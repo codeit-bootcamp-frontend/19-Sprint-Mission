@@ -143,8 +143,11 @@
   &:hover {
     background: #1967d6;
   }
+  &:disabled {
+    background-color: var(--gray400);
+  }
   &.sm {
-    width: 133px;
+    width: 74px;
     height: 42px;
   }
   &.mid {
@@ -158,7 +161,80 @@
     border-radius: 40px;
   }
 }
+/*============= form =============*/
+.iptBox {
+  .label,
+  label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--gray800);
+  }
+  .ipt {
+    position: relative;
+  }
 
+  input {
+    width: 100%;
+    height: 56px;
+    padding: 16px 24px 14px 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gray800);
+    background-color: var(--gray100);
+    border-radius: 12px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid transparent;
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+    &.error {
+      border: 1px solid var(--red);
+    }
+  }
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 282px;
+    padding: 16px 24px 14px 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gray800);
+    background-color: var(--gray100);
+    border-radius: 12px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid transparent;
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+  }
+  div.error {
+    margin: 8px 16px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--red);
+  }
+  & + .iptBox {
+    margin-top: 24px;
+  }
+  .btnEye {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/content/btn_visibility_on.png) no-repeat 0 0 / cover;
+    transform: translateY(-50%);
+    &.on {
+      background: url(../img/content/btn_visibility_off.png) no-repeat 0 0 /
+        cover;
+    }
+  }
+}
 /* Tablet */
 @media (max-width: 1199px) {
   /*============= common =============*/
@@ -218,6 +294,16 @@
         bottom: 32px;
         color: var(--gray200);
       }
+    }
+  }
+  /*============= form =============*/
+  .iptBox {
+    label {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    & + .iptBox {
+      margin-top: 16px;
     }
   }
 }

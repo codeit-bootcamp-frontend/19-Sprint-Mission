@@ -1,366 +1,49 @@
 @charset "utf-8";
 
-/*============= main =============*/
-.main {
-  .top,
-  .btm {
-    height: 540px;
-    background: #cfe5ff;
+/*============= content =============*/
+.content {
+  margin: 24px auto 58px;
+  .inner {
+    width: 1200px;
+    max-width: 1200px;
   }
-  .top {
-    .inner {
-      height: 100%;
-      padding-top: 15rem;
-      background: url(./../img/main/img_home_top.png) no-repeat 100% 100% /
-        746px auto;
-    }
-    .btn.lg {
-      margin-top: 2rem;
-      width: 357px;
-    }
-  }
-  .btm {
-    margin-top: 8.625rem;
-    .inner {
-      height: 100%;
-      padding-top: 15.9375rem;
-      background: url(./../img/main/img_home_bottom.png) no-repeat 100% 100% /
-        746px auto;
-    }
-  }
-  .cont {
-    padding: 8.625rem 0;
-    .inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-      width: 988px;
-      border-radius: 12px;
-      background-color: #fcfcfc;
-    }
-    &.reverse .inner {
-      flex-direction: row-reverse;
-      text-align: right;
-    }
-    img {
-      height: 444px;
-    }
-    .txtCont {
-      min-width: 300px;
-    }
-  }
-
-  .type {
-    margin-bottom: 0.75rem;
-    font-size: 1.125rem;
-    font-weight: 800;
-    color: var(--blue);
-    line-height: 1.625rem;
-  }
-  .title {
-    font-size: 2.5rem;
+  .secTit {
     font-weight: 700;
-    color: var(--gray700);
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 32px;
   }
-  .text {
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 2rem;
-  }
-}
-/*============= errorPage  =============*/
-.errorPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 150px 0;
-  text-align: center;
-  word-break: auto-phrase;
-  h1 {
-    margin: 15px auto;
-    font-size: 24px;
-  }
-  .btn {
-    margin-top: 30px;
-  }
-}
-/*============= join & login =============*/
-.formWrap {
-  width: 640px;
-  margin: 60px auto;
-
-  .logo {
-    margin-bottom: 40px;
-    a {
-      margin: auto;
-      display: block;
-      width: 396px;
-      height: 132px;
-      background: url(./../img/common/logo_lg.png) no-repeat 0 0 / cover;
-    }
-  }
-  .iptBox {
-    label {
-      display: block;
-      margin-bottom: 16px;
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--gray800);
-    }
-    .ipt {
-      position: relative;
-    }
-
-    input {
-      width: 100%;
-      height: 56px;
-      padding: 16px 24px 14px 24px;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--gray800);
-      background-color: var(--gray100);
-      border-radius: 12px;
-      box-sizing: border-box;
-      outline: none;
-      border: 1px solid transparent;
-      &:focus {
-        border: 1px solid var(--blue);
-      }
-      &.error {
-        border: 1px solid var(--red);
-      }
-    }
-    div.error {
-      margin: 8px 16px 0;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--red);
-    }
-    & + .iptBox {
-      margin-top: 24px;
-    }
-  }
-  .btnEye {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background: url(../img/content/btn_visibility_on.png) no-repeat 0 0 / cover;
-    transform: translateY(-50%);
-    &.on {
-      background: url(../img/content/btn_visibility_off.png) no-repeat 0 0 /
-        cover;
-    }
-  }
-  .btn.lg {
-    margin-top: 24px;
-    height: 56px;
-    background-color: var(--blue);
-    &:disabled {
-      background-color: var(--gray400);
-    }
-  }
-
-  .socialBtn {
+  .secTitWrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 24px;
-    padding: 16px 23px;
-    background-color: #e6f2ff;
-    border-radius: 8px;
-    .tit {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--gray800);
-    }
-    .btns {
-      font-size: 0;
-      word-spacing: 0;
-    }
-    a {
-      display: inline-block;
-      width: 42px;
-      height: 42px;
-      margin-left: 16px;
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  .guideBtn {
-    margin-top: 24px;
-    text-align: center;
-    .tit {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--gray800);
-    }
-    .btnTxt {
-      position: relative;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--blue);
-      text-decoration: underline;
-    }
+    position: relative;
   }
 }
 
 /* Tablet */
 @media (max-width: 1199px) {
-  /*============= main =============*/
-  .main {
-    .top {
-      height: initial;
-      margin-bottom: 24px;
-      .inner {
-        padding: 84px 0 551px;
-        background-position: 50% 100%;
-      }
-      .txtCont {
-        text-align: center;
-      }
+  /*============= content =============*/
+  .content {
+    padding-left: 3.225vw;
+    padding-right: 3.225vw;
+    .secTitWrap {
+      align-items: start;
     }
-    .btm {
-      margin-top: 56px;
-      height: initial;
-      .title {
-        font-size: 2.5rem;
-      }
-      .inner {
-        padding: 201px 0 614px;
-        background-position: 50% 100%;
-        text-align: center;
-      }
-    }
-    .cont {
-      padding: 0 24px;
-      margin-bottom: 52px;
-      .inner {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 24px;
-        width: 100%;
-        border-radius: 0;
-        background-color: transparent;
-      }
-      &.reverse .inner {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-      .imgCont {
-        width: 100%;
-        border-radius: 14px;
-        background-color: #fcfcfc;
-        overflow: hidden;
-        img {
-          width: 100%;
-          height: initial;
-        }
-      }
-      .txtCont {
-        min-width: 100%;
-      }
-      .type {
-        display: block;
-        margin-bottom: 16px;
-        font-size: 1.125rem;
-        font-weight: 700;
-        line-height: 26px;
-      }
-      .title {
-        font-size: 32px;
-      }
-      .text {
-        margin-top: 24px;
-        font-size: 18px;
-        line-height: 26px;
-      }
+    .inner {
+      width: 100%;
+      max-width: initial;
     }
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  /*============= main =============*/
-  .main {
-    .cont {
-      padding: 0 15px;
-      margin-bottom: 40px;
-      .imgCont {
-        border-radius: 7px;
-      }
-      .main .cont .type {
-        margin-bottom: 8px;
-        font-size: 1rem;
-        line-height: 22px;
-      }
-      .title {
-        font-size: 24px;
-      }
-      .text {
-        margin-top: 16px;
-        font-size: 18px;
-        line-height: 25px;
-      }
-    }
-    .top .title,
-    .btm .title {
-      text-align: center;
-      font-size: 32px;
-      line-height: 1.4;
-    }
-    .top {
-      margin-bottom: 52px;
-      .inner {
-        padding: 48px 0 336px;
-        background-size: 448px auto;
-      }
-      .btn.lg {
-        margin-top: 18px;
-        width: 240px;
-        height: 48px;
-      }
-    }
-    .btm {
-      margin-top: 83px;
-      height: initial;
-      .inner {
-        padding: 121px 0 330px;
-        background-size: 375px auto;
-      }
-    }
-  }
-  /*============= join & login =============*/
-  .formWrap {
-    width: 100%;
-    padding: 0 16px;
-    max-width: 432px;
-    margin: 24px auto;
-    box-sizing: border-box;
-    .logo {
-      margin-bottom: 24px;
-      a {
-        width: 198px;
-        height: 66px;
-      }
-    }
-    .iptBox {
-      label {
-        margin-bottom: 8px;
-        font-size: 14px;
-      }
-      & + .iptBox {
-        margin-top: 16px;
-      }
+  /*============= content =============*/
+  .content {
+    padding-left: 1.456vw;
+    padding-right: 1.456vw;
+    .secTitWrap {
+      padding-bottom: 50px;
     }
   }
 }

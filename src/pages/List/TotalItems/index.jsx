@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getProduct from "@/api/ProdApi";
+import getProduct from "@/api/productApi";
 import Items from "@/pages/List/Items";
 import ItemUtil from "@/pages/List/ItemUtil";
 import Pagination from "@/components/Pagination";
@@ -10,7 +10,6 @@ export default function TotalItems() {
   const device = useWindowSize();
   const [totalCount, setTotalCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const offset = (currentPage - 1) * ITEM_COUNT;
 
   const [order, setOrder] = useState("recent");
   const [prodList, setProdList] = useState([]);
@@ -29,8 +28,8 @@ export default function TotalItems() {
     } else {
       ITEM_COUNT = 10;
     }
-    productLoad({ order: order, pageSize: ITEM_COUNT, offset: offset });
-  }, [order, offset, device]);
+    productLoad({ orderBy: order, pageSize: ITEM_COUNT, page: currentPage });
+  }, [order, currentPage, device]);
 
   return (
     <section>

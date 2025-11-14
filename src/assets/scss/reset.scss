@@ -224,6 +224,10 @@ hr {
   border: 0;
   background-color: transparent;
 }
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
 
 button {
   display: inline-block;
@@ -242,6 +246,13 @@ input[type="submit"] {
   vertical-align: middle;
   cursor: pointer;
   -webkit-appearance: button;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 button[disabled],
 button[disabled]:hover,
@@ -277,24 +288,28 @@ select {
   -webkit-border-radius: 0;
 }
 
+textarea::placeholder,
 input::placeholder {
   color: var(--gray800);
   font-size: 1rem;
   font-weight: 400;
   opacity: 0.5;
 }
+textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
   color: var(--gray800);
   font-size: 1rem;
   font-weight: 400;
   opacity: 0.5;
 }
+textarea::-moz-placeholder,
 input::-moz-placeholder {
   color: var(--gray800);
   font-size: 1rem;
   font-weight: 400;
   opacity: 0.5;
 }
+textarea:-ms-input-placeholder,
 input:-ms-input-placeholder {
   color: var(--gray800);
   font-size: 1rem;

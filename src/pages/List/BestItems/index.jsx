@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getProduct from "@/api/ProdApi";
+import getProduct from "@/api/productApi";
 import useWindowSize from "@/hooks/useWindowSize";
 import Items from "@/pages/List/Items";
 
@@ -23,7 +23,7 @@ export default function TotalItems() {
       ITEM_COUNT = 4;
     }
 
-    bestProductLoad({ order: "favorite", pageSize: ITEM_COUNT });
+    bestProductLoad({ orderBy: "favorite", pageSize: ITEM_COUNT });
   }, [device]);
   return (
     <section>

@@ -1,0 +1,108 @@
+.addItemPage {
+  .secTitWrap {
+    padding-bottom: 24px;
+  }
+  .iptBox {
+    & + .iptBox {
+      margin-top: 32px;
+    }
+  }
+
+  .btnDelete {
+    display: inline-block;
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    background: url(./../img/content/ic_item_delete.svg) no-repeat 0 0;
+  }
+  .itemImgUpload {
+    display: flex;
+    gap: 24px;
+    .imgBox {
+      position: relative;
+      width: 282px;
+      height: 282px;
+      border: 1px solid var(--gray100);
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .btnDelete {
+      top: 12px;
+      right: 12px;
+    }
+    .imgUpload {
+      background: var(--gray100);
+      input {
+        position: absolute;
+        inset: 0;
+        padding: 0;
+        color: transparent;
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+        opacity: 0;
+        z-index: -1;
+      }
+      .btnUpload {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 158px;
+        font-size: 16px;
+        color: var(--gray400);
+        cursor: pointer;
+        background: url(./../img/content/ic_item_add.svg) no-repeat 50% 98px;
+      }
+    }
+  }
+  .tagWrp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+    .tag {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding: 0 42px 0 16px;
+      font-size: 16px;
+      height: 36px;
+      border-radius: 36px;
+      background-color: var(--gray100);
+      .btnDelete {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (max-width: 1236px) {
+  .addItemPage {
+    .itemImgUpload {
+      gap: 10px;
+      .imgBox {
+        width: 168px;
+        height: 168px;
+      }
+      .imgUpload {
+        .btnUpload {
+          padding-top: 101px;
+          background-position: 50% 41px;
+        }
+      }
+    }
+  }
+}

@@ -1,21 +1,4 @@
 .itemPage {
-  margin: 24px auto 58px;
-  .inner {
-    width: 1200px;
-    max-width: 1200px;
-  }
-  .secTit {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
-  }
-  .secTitWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-
   .util {
     display: flex;
     gap: 12px;
@@ -39,8 +22,8 @@
         position: absolute;
         top: 9px;
         left: 16px;
-        background: url("./../../../public/img/content/ic_search.svg") no-repeat
-          0 0 / 24px 24px;
+        background: url("./../public/img/content/ic_search.svg") no-repeat 0 0 /
+          24px 24px;
       }
     }
     .sorting {
@@ -53,10 +36,10 @@
         border-radius: 12px;
         text-align: left;
         border: 1px solid var(--gray200);
-        background: url("./../../../public/img/content/ic_arrow_down.png")
-          no-repeat 86px 50% / 24px 24px;
+        background: url("./../public/img/content/ic_arrow_down.png") no-repeat
+          86px 50% / 24px 24px;
         &.atv {
-          background-image: url("./../../../public/img/content/ic_arrow_up.png");
+          background-image: url("./../public/img/content/ic_arrow_up.png");
         }
       }
       .list {
@@ -79,6 +62,9 @@
           height: 42px;
         }
       }
+    }
+    .btn.sm {
+      width: 133px;
     }
   }
 }
@@ -177,15 +163,6 @@
 /* Tablet */
 @media (max-width: 1236px) {
   .itemPage {
-    padding-left: 3.225vw;
-    padding-right: 3.225vw;
-    .secTitWrap {
-      align-items: start;
-    }
-    .inner {
-      width: 100%;
-      max-width: initial;
-    }
     .util {
       .search {
         width: 242px;
@@ -214,11 +191,6 @@
 /* Mobile */
 @media (max-width: 744px) {
   .itemPage {
-    padding-left: 1.456vw;
-    padding-right: 1.456vw;
-    .secTitWrap {
-      padding-bottom: 50px;
-    }
     .util {
       .search {
         position: absolute;
@@ -236,8 +208,8 @@
           color: transparent;
           width: 42px;
           padding: 0;
-          background: url("./../../../public/img/content/ic_sorting.svg")
-            no-repeat 50% 50%;
+          background: url("./../public/img/content/ic_sorting.svg") no-repeat
+            50% 50%;
         }
         .list {
           width: 130px;
