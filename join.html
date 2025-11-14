@@ -13,16 +13,25 @@
       <a href="/index.html"
         ><img src="/img/page/login/login_logo.png" alt="판다마켓"
       /></a>
-      <!-- 로그인 폼 -->
+      <!-- 회원가입 폼 -->
       <form action="" class="loginFrom">
         <div class="iptWrap">
           <label for="#iptEmail">이메일</label>
           <input type="text" id="iptEmail" />
         </div>
         <div class="iptWrap">
+          <label for="#iptName">닉네임</label>
+          <input type="text" id="iptName" />
+        </div>
+        <div class="iptWrap">
           <label for="#iptPw">비밀번호</label>
           <input type="password" id="iptPw" />
           <button type="button" class="btnEye" id="btnPwToggle"></button>
+        </div>
+        <div class="iptWrap">
+          <label for="#iptPwConfirm">비밀번호 확인</label>
+          <input type="password" id="iptPwConfirm" />
+          <button type="button" class="btnEye" id="btnPwConfirmToggle"></button>
         </div>
         <button class="btn btn_lg w_full">회원가입</button>
         <!-- 간편회원가입 -->
@@ -42,8 +51,8 @@
           </div>
         </div>
         <div class="loginInfo">
-          <span>판다마켓이 처음이신가요?</span>
-          <a href="/join.html">회원가입</a>
+          <span>이미 회원이신가요?</span>
+          <a href="/login.html">로그인</a>
         </div>
       </form>
     </section>
