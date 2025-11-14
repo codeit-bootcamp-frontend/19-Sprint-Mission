@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -8,30 +7,37 @@ import Image from "next/image";
 import Link from "next/link";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/base/Button";
+import { useState } from "react";
 import IC_GOOGLE from "@/components/icons/ic_google.svg";
 
-// Zod 스키마 정의
-const loginSchema = z.object({
-  email: z.string().email("올바른 이메일을 입력해주세요"),
-  password: z.string().min(6, "비밀번호는 6자 이상이어야 합니다"),
-});
+const signupSchema = z
+  .object({
+    email: z.string().email("올바른 이메일을 입력해주세요"),
+    password: z.string().min(6, "비밀번호는 6자 이상이어야 합니다"),
+    confirmPassword: z.string().min(6, "비밀번호 확인란을 입력해주세요"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    path: ["confirmPassword"],
+    message: "비밀번호가 일치하지 않습니다",
+  });
 
-type LoginFormInputs = z.infer<typeof loginSchema>;
+type SignupFormInputs = z.infer<typeof signupSchema>;
 
-export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false);
-
+export default function SignupPage() {
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<LoginFormInputs>({
-    resolver: zodResolver(loginSchema),
+  } = useForm<SignupFormInputs>({
+    resolver: zodResolver(signupSchema),
     mode: "onChange",
   });
 
-  const onSubmit = (data: LoginFormInputs) => {
-    console.log("로그인 데이터:", data);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  const onSubmit = (data: SignupFormInputs) => {
+    console.log("회원가입 데이터:", data);
   };
 
   return (
@@ -57,7 +63,7 @@ export default function LoginPage() {
               className="w-[343px] md:w-[640px]"
               {...register("email")}
             />
-            {errors.email && <div className="error-message text-red">{errors.email.message}</div>}
+            {errors.email && <div className="text-red">{errors.email.message}</div>}
           </div>
 
           {/* 비밀번호 */}
@@ -65,13 +71,12 @@ export default function LoginPage() {
             <label htmlFor="password" className="text-[18px]">
               비밀번호
             </label>
-
             <div className="relative w-[343px] md:w-[640px]">
               <Input
                 type={showPassword ? "text" : "password"}
                 id="password"
                 placeholder="비밀번호를 입력하세요"
-                className="w-[343px] pr-10 md:w-[640px]"
+                className="w-[343px] md:w-[640px]"
                 {...register("password")}
               />
 
@@ -86,18 +91,44 @@ export default function LoginPage() {
                 height={24}
               />
             </div>
-
             {errors.password && <div className="text-red">{errors.password.message}</div>}
           </div>
 
-          <Button type="submit" radius="full" className="button submit w-full" disabled={!isValid}>
-            로그인
+          {/* 비밀번호 확인 */}
+          <div className="input-container flex w-fit flex-col items-start gap-4">
+            <label htmlFor="confirmPassword" className="text-[18px]">
+              비밀번호 확인
+            </label>
+            <div className="relative w-[343px] md:w-[640px]">
+              <Input
+                type={showConfirm ? "text" : "password"}
+                id="confirmPassword"
+                placeholder="비밀번호를 다시 입력하세요"
+                className="w-[343px] md:w-[640px]"
+                {...register("confirmPassword")}
+              />
+
+              <Image
+                onClick={() => setShowConfirm((prev) => !prev)}
+                className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer"
+                src={showConfirm ? "/images/ic_visibility_on.png" : "/images/ic_visibility_off.png"}
+                alt="비밀번호 표시 아이콘"
+                width={24}
+                height={24}
+              />
+            </div>
+            {errors.confirmPassword && (
+              <div className="text-red">{errors.confirmPassword.message}</div>
+            )}
+          </div>
+
+          <Button type="submit" radius="full" className="w-full" disabled={!isValid}>
+            회원가입
           </Button>
         </form>
 
         <div className="easy-login mt-6 flex items-center justify-between rounded-[8px] bg-[#E6F2FF] px-[23px] py-4">
           <span className="text-[16px]">간편 로그인하기</span>
-
           <div className="social-icon-container">
             <div className="flex gap-4">
               <Link href="https://www.google.com/" target="_blank" rel="noreferrer">
@@ -106,7 +137,6 @@ export default function LoginPage() {
                   className="h-10 w-10 items-center justify-center rounded-full bg-white p-2"
                 />
               </Link>
-
               <Link href="https://www.kakaocorp.com/" target="_blank" rel="noreferrer">
                 <Image
                   className="kakao"
@@ -121,9 +151,9 @@ export default function LoginPage() {
         </div>
 
         <div className="auth-toggle mt-6 flex w-full justify-center gap-1">
-          <span>판다마켓이 처음이신가요?</span>
-          <Link className="signup-link text-[#3692FF] underline" href="/signup">
-            회원가입
+          <span>이미 계정이 있으신가요?</span>
+          <Link className="text-[#3692FF] underline" href="/login">
+            로그인
           </Link>
         </div>
       </div>

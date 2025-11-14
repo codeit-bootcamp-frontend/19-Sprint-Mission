@@ -10,11 +10,12 @@ interface ClientLayoutProps {
 
 const ClientLayout = ({ children }: ClientLayoutProps) => {
   const pathname = usePathname();
-  const isHome = pathname === "/" || pathname === "/login" || pathname === "/signup";
+  const isHome = pathname === "/";
+  const isAuth = pathname === "/login" || pathname === "/signup";
 
   return (
     <>
-      {isHome ? <HomeHeader /> : <Header currentPath={pathname} />}
+      {isAuth ? null : isHome ? <HomeHeader /> : <Header currentPath={pathname} />}
       {children}
     </>
   );
