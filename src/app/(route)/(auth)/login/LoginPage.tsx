@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Image from "next/image";
 import Button from "@/components/Button/base/Button"; // 필요시 Button 컴포넌트 사용
+import Link from "next/link";
 
 // Zod 스키마 정의
 const loginSchema = z.object({
@@ -32,9 +33,9 @@ export default function LoginPage() {
 
   return (
     <div className="auth-container">
-      <a className="logo-link" href="/">
+      <Link className="logo-link" href="/">
         <Image src="/images/logo.png" alt="logo and link to home page" width={120} height={40} />
-      </a>
+      </Link>
 
       <div className="auths">
         <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +79,7 @@ export default function LoginPage() {
         <div className="easy-login">
           <span>간편 로그인하기</span>
           <div className="social-icon-container">
-            <a href="https://www.google.com/" target="_blank" rel="noreferrer">
+            <Link href="https://www.google.com/" target="_blank" rel="noreferrer">
               <Image
                 className="google"
                 src="/images/ic_google.png"
@@ -86,8 +87,8 @@ export default function LoginPage() {
                 width={40}
                 height={40}
               />
-            </a>
-            <a href="https://www.kakaocorp.com/" target="_blank" rel="noreferrer">
+            </Link>
+            <Link href="https://www.kakaocorp.com/" target="_blank" rel="noreferrer">
               <Image
                 className="kakao"
                 src="/images/ic_kakao.png"
@@ -95,15 +96,15 @@ export default function LoginPage() {
                 width={40}
                 height={40}
               />
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="auth-toggle">
           <span>판다마켓이 처음이신가요?</span>
-          <a className="signup-link" href="/signup">
+          <Link className="signup-link" href="/signup">
             회원가입
-          </a>
+          </Link>
         </div>
       </div>
     </div>
