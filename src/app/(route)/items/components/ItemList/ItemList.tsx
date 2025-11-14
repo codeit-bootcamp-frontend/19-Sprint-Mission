@@ -14,7 +14,8 @@ const ItemList = ({ items, isBest = false }: ItemListProps) => {
       {items.map((item) => (
         <li key={item.id}>
           <ItemCard
-            images={item.images}
+            id={item.id}
+            images={item.images[0]}
             name={item.name}
             price={item.price}
             favoriteCount={item.favoriteCount}

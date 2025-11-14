@@ -3,9 +3,9 @@
 import clsx from "clsx";
 
 import IC_Heart from "@/components/icons/ic_heart.svg";
-
+import Link from "next/link";
 interface ItemCardProps {
-  // id: number;
+  id: number;
   name: string;
   price: number;
   favoriteCount: number;
@@ -13,7 +13,7 @@ interface ItemCardProps {
   isBest: boolean;
 }
 
-const ItemCard = ({ images, name, price, favoriteCount, isBest }: ItemCardProps) => {
+const ItemCard = ({ id, images, name, price, favoriteCount, isBest }: ItemCardProps) => {
   const formattedPrice = price.toLocaleString();
 
   // === STYLES ===
@@ -24,7 +24,7 @@ const ItemCard = ({ images, name, price, favoriteCount, isBest }: ItemCardProps)
     : "w-42 h-[264px] md:w-[221px] md:h-[317px]";
 
   return (
-    <div className={clsx(baseStyle, sizes)}>
+    <Link href={`/items/${id}`} className={clsx(baseStyle, sizes)}>
       <div
         className={clsx(
           isBest ? "h-[343px] lg:h-[282px]" : "h-42 md:h-[221px]",
@@ -50,7 +50,7 @@ const ItemCard = ({ images, name, price, favoriteCount, isBest }: ItemCardProps)
           <span className="text-gray600">{favoriteCount}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

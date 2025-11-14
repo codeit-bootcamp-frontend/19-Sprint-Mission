@@ -1,3 +1,5 @@
+"use client";
+
 import ItemPage from "./ItemPage";
 
 const Page = () => {

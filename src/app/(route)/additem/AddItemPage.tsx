@@ -50,6 +50,7 @@ const AddItemPage = () => {
       ...data,
       itemImage,
     };
+    console.log(payload);
   };
 
   return (
