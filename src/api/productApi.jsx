@@ -7,7 +7,7 @@ const getProduct = async ({ orderBy = "recent", pageSize, page }) => {
     });
     return res.data;
   } catch (error) {
-    throw new Error(`${error} 페이지 로드에 실패했습니다.`);
+    throw new Error(`${error} 페이지 로드에 실패했습니다. `);
   }
 };
 
