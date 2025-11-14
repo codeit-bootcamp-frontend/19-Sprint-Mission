@@ -13,7 +13,7 @@ const HomeHeader = () => {
         </LinkButton>
       </div>
       <div>
-        <LinkButton href="/items" size="lg">
+        <LinkButton href="/login" size="lg">
           로그인
         </LinkButton>
       </div>

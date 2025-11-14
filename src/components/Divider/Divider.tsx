@@ -1,8 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import React, { CSSProperties, HTMLAttributes } from "react";
-import { tv } from "tailwind-variants";
+import React, { CSSProperties } from "react";
 
 export interface DividerProps {
   width?: number;

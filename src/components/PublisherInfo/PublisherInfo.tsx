@@ -23,6 +23,7 @@ export default function PublisherInfo({
       <span>
         <img
           src={profileImage ? profileImage : "/images/ic_profile.png"}
+          alt="profile"
           className="h-10 w-10 rounded-full"
         />
       </span>
