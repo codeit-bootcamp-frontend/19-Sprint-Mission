@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "@/App.jsx";
-import Index from "@/pages/Index/index.jsx";
+import MainPage from "@/pages/MainPage";
 import ItemPage from "@/pages/List";
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Index /> },
+      { index: true, element: <MainPage /> },
       { path: "items", element: <ItemPage /> },
       { path: "additem", element: <AddItemPage /> },
       { path: "login", element: <Login /> },

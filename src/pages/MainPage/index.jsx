@@ -1,4 +1,4 @@
-function Index() {
+function MainPage() {
   return (
     <main className="main">
       <section className="top">
@@ -84,4 +84,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default MainPage;
