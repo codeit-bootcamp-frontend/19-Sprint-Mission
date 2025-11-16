@@ -1,29 +1,45 @@
-import Card from "../components/Card";
-import { useState, useEffect } from "react";
-import { getProducts } from "../api/product";
+import AllProducts from "../components/AllProducts";
+import Searchbar from "../components/Searchbar";
+import Button from "../components/Button";
+import Dropdown from "../components/Dropdown";
+import { useState } from "react";
 import "./Items.scss";
-const Items = () => {
-  const [items, setItems] = useState([]);
+import BestProducts from "../components/BestProducts";
 
-  const fetchProductData = async () => {
-    const params = {
-      page: 1,
-      pageSize: 10,
-      orderBy: "recent",
-    };
-    const productData = await getProducts(params);
-    setItems(productData.list);
+const data = [
+  {
+    id: 1,
+    content: "최신순",
+  },
+  {
+    id: 2,
+    content: "좋아요 순",
+  },
+];
+
+const Items = () => {
+  const [filter, setFilter] = useState("");
+
+  const handleDropdown = (menu) => {
+    setFilter(menu);
   };
 
-  useEffect(() => {
-    fetchProductData();
-  }, []);
-
   return (
-    <div className="cards-container">
-      {items?.map((item) => (
-        <Card {...item} key={item.id} />
-      ))}
+    <div className="Items">
+      <section className="best-section">
+        <h2>베스트 상품</h2>
+        <BestProducts />
+      </section>
+
+      <section className="all-section">
+        <div className="actions">
+          <h2>전체 상품</h2>
+          <Searchbar />
+          <Button>상품 등록하기</Button>
+          <Dropdown data={data} />
+        </div>
+        <AllProducts />
+      </section>
     </div>
   );
 };

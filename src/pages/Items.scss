@@ -1,5 +1,33 @@
-.cards-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  
+.Items{
+  max-width: 1200px;
+  padding:24px 0;
+  margin:0 auto;
+
+  .best-section{
+    padding-bottom: 40px;
+
+    h2{
+      padding-bottom: 16px;
+    }
+  }
+
+  h2{
+    flex:1;
+    color: $secondary-900;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .actions{
+    display: flex;
+    gap:12px;
+    align-items: center;
+
+    padding-bottom: 24px;
+
+
+  }
 }
