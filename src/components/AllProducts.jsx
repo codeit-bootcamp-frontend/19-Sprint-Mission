@@ -4,23 +4,16 @@ import Card from "../components/Card";
 import "./AllProducts.scss";
 import PageButtons from "./PageButtons";
 
-const params = {
-  page: 1,
-  pageSize: 10,
-  orderBy: "recent",
-};
-
-//params 내부의 값을 변경.. params를 상태로 관리..?
-
-const AllProducts = () => {
-  const [page, setPage] = useState();
+const AllProducts = ({ filter, search }) => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState([]);
   const [count, setCount] = useState(0);
 
   const params = {
-    page,
+    page: currentPage,
     pageSize: 10,
-    orderBy: "recent",
+    orderBy: filter === "최신순" ? "recent" : "favorite",
+    keyword: search,
   };
 
   const fetchProductData = async () => {
@@ -31,10 +24,10 @@ const AllProducts = () => {
 
   useEffect(() => {
     fetchProductData();
-  }, [page]);
+  }, [currentPage, filter, search]);
 
   const handleClickPage = (page) => {
-    setPage(page);
+    setCurrentPage(page);
   };
 
   return (

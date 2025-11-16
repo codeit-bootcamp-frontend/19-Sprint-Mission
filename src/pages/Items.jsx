@@ -5,6 +5,7 @@ import Dropdown from "../components/Dropdown";
 import { useState } from "react";
 import "./Items.scss";
 import BestProducts from "../components/BestProducts";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -18,10 +19,20 @@ const data = [
 ];
 
 const Items = () => {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("최신순");
+  const [search, setSearch] = useState("");
+  const goToPage = useNavigate();
+
+  const goToAddItem = () => {
+    goToPage(`/additem`);
+  };
 
   const handleDropdown = (menu) => {
     setFilter(menu);
+  };
+
+  const handleSearch = (input) => {
+    setSearch(input);
   };
 
   return (
@@ -34,11 +45,15 @@ const Items = () => {
       <section className="all-section">
         <div className="actions">
           <h2>전체 상품</h2>
-          <Searchbar />
-          <Button>상품 등록하기</Button>
-          <Dropdown data={data} />
+          <Searchbar handleSearch={handleSearch} />
+          <Button onClick={goToAddItem}>상품 등록하기</Button>
+          <Dropdown
+            data={data}
+            handleDropdown={handleDropdown}
+            filter={filter}
+          />
         </div>
-        <AllProducts />
+        <AllProducts filter={filter} search={search} />
       </section>
     </div>
   );
