@@ -1,0 +1,89 @@
+@import url(/css/component.css);
+
+/* 로그인 섹션 */
+.loginFrame {
+  /* background-color: pink; */
+  width: 640px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.loginFrom {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 인풋 */
+.iptWrap {
+  /* background-color: aquamarine; */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.iptWrap label {
+  /* font: var(--txt_2lg_b); */
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary800);
+}
+
+/* 비밀번호 보이기 버튼 */
+.btnEye {
+  background: url(/img/page/login/btn_visibility_off.png) no-repeat center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+}
+
+.btnEye.active {
+  background-image: url(/img/page/login/btn_visibility_on.png);
+}
+
+/* 간편로그인 */
+.loginSimple {
+  padding: 16px 23px;
+  background-color: #e6f2ff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loginSimple > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loginSimple_icons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.loginSimple_icons > a {
+  width: 42px;
+  height: 42px;
+}
+
+/* 로그인 안내 */
+.loginInfo {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.loginInfo > span {
+  color: var(--secondary800);
+}
+
+.loginInfo > a {
+  color: var(--primary100);
+  text-decoration: underline;
+}

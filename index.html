@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="/img/icon/panda_face.png" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
     <!-- 헤더 -->
     <header>
       <div class="wrap">
         <div class="header__lf">
-          <a href="./index.html" class="logo"
-            ><img src="./img/main/logo_face.png" alt="판다마켓로고" /><img
-              src="./img/main/logo_font.png"
+          <a href="/index.html" class="logo"
+            ><img src="/img/page/main/logo_face.png" alt="판다마켓로고" /><img
+              src="/img/page/main/logo_font.png"
               alt="판다마켓로고"
           /></a>
         </div>
         <div class="header__rt">
-          <a href="./login.html" class="btn btn_sm48">로그인</a>
+          <a href="/login.html" class="btn btn_sm48">로그인</a>
         </div>
       </div>
     </header>
@@ -27,48 +28,70 @@
       <section class="main_sec01">
         <div class="wrap">
           <img
-            src="./img/main/Img_home_top.png"
+            src="/img/page/main/Img_home_top.png"
             alt="판다마켓 배너 이미지"
             class="bgImg" />
-          <article class="main_sec01__txtBox">
-            <h2>일상의 모든 물건을<br />거래해 보세요</h2>
-            <a href="./items.html" class="btn btn_lg">구경하러 가기</a>
-          </article>
+          <div class="main_sec01__txtBox">
+            <span>일상의 모든 물건을<br />거래해 보세요</span>
+            <a href="/items.html" class="btn btn_lg">구경하러 가기</a>
+          </div>
         </div>
       </section>
       <section class="main_sec02">
         <div class="wrap">
           <div class="contentFrame">
             <div class="content">
-              <div class="content__imgBox"></div>
-              <article class="content__article">
-                <h6>Hot item</h6>
-                <h3>인기 상품을 <br />확인해 보세요</h3>
-                <h4>
+              <div class="content__imgBox">
+                <img
+                  src="/img/page/main/Img_home_01.png"
+                  alt="인기 상품 배너 이미지" />
+              </div>
+              <div class="content__txtBox">
+                <small class="txtBox__label">Hot item</small>
+                <span class="txtBox__title"
+                  >인기 상품을 <br />확인해 보세요</span
+                >
+                <p class="txtBox__desc">
                   가장 HOT한 중고거래 물품을 <br />
                   판다 마켓에서 확인해 보세요
-                </h4>
-              </article>
+                </p>
+              </div>
             </div>
           </div>
           <div class="contentFrame">
             <div class="content">
-              <div class="content__imgBox"></div>
-              <article class="content__article">
-                <h6>Search</h6>
-                <h3>구매를 원하는 <br />상품을 검색하세요</h3>
-                <h4>구매하고 싶은 물품은 검색해서 <br />쉽게 찾아보세요</h4>
-              </article>
+              <div class="content__imgBox">
+                <img
+                  src="/img/page/main/Img_home_02.png"
+                  alt="인기 상품 배너 이미지" />
+              </div>
+              <div class="content__txtBox">
+                <small class="txtBox__label">Search</small>
+                <span class="txtBox__title"
+                  >구매를 원하는 <br />상품을 검색하세요</span
+                >
+                <p class="txtBox__desc">
+                  구매하고 싶은 물품은 검색해서 <br />쉽게 찾아보세요
+                </p>
+              </div>
             </div>
           </div>
           <div class="contentFrame">
             <div class="content">
-              <div class="content__imgBox"></div>
-              <article class="content__article">
-                <h6>Register</h6>
-                <h3>판매를 원하는 <br />상품을 등록하세요</h3>
-                <h4>어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요</h4>
-              </article>
+              <div class="content__imgBox">
+                <img
+                  src="/img/page/main/Img_home_03.png"
+                  alt="인기 상품 배너 이미지" />
+              </div>
+              <div class="content__txtBox">
+                <small class="txtBox__label">Register</small>
+                <span class="txtBox__title"
+                  >판매를 원하는 <br />상품을 등록하세요</span
+                >
+                <p class="txtBox__desc">
+                  어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -76,36 +99,37 @@
       <section class="main_sec03">
         <div class="wrap">
           <img
-            src="./img/main/Img_home_bottom.png"
+            src="/img/page/main/Img_home_bottom.png"
             alt="판다마켓 배너 이미지"
             class="bgImg" />
-          <article class="main_sec03__txtBox">
-            <h2>믿을 수 있는<br />판다마켓 중고 거래</h2>
-          </article>
+          <div class="main_sec03__txtBox">
+            <span>믿을 수 있는<br />판다마켓 중고 거래</span>
+          </div>
         </div>
       </section>
     </main>
     <!-- 푸터 -->
     <footer>
       <div class="wrap">
-        <p class="copyright">&copy;codeit - 2024</p>
+        <span class="copyright">&#169;codeit - 2024</span>
         <nav class="fnb">
           <a href="#">Privacy Policy</a>
           <a href="#">FAQ</a>
         </nav>
         <nav class="sns-bar">
-          <a href="#" target="_blank"
-            ><img src="./img/icon/ic_facebook.png" alt="페이스북" /></a
-          ><a href="#" target="_blank"
-            ><img src="./img/icon/ic_twitter.png" alt="트위터" /></a
-          ><a href="#" target="_blank"
-            ><img src="./img/icon/ic_youtube.png" alt="유투브" /></a
-          ><a href="#" target="_blank"
-            ><img src="./img/icon/ic_instagram.png" alt="인스타그램"
+          <a href="https://www.facebook.com/?locale=ko_KR" target="_blank"
+            ><img src="/img/icon/ic_facebook.png" alt="페이스북" /></a
+          ><a href="https://x.com/?lang=ko" target="_blank"
+            ><img src="/img/icon/ic_twitter.png" alt="트위터" /></a
+          ><a
+            href="https://www.youtube.com/?hl=ko&gl=KR&app=desktop"
+            target="_blank"
+            ><img src="/img/icon/ic_youtube.png" alt="유투브" /></a
+          ><a href="https://www.instagram.com/" target="_blank"
+            ><img src="/img/icon/ic_instagram.png" alt="인스타그램"
           /></a>
         </nav>
       </div>
     </footer>
-    <script src="/script.js"></script>
   </body>
 </html>
