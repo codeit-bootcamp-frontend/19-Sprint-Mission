@@ -10,6 +10,14 @@
     border-radius: 16px;
     object-fit: cover;
   }
+
+  .notFoundedImage{
+    width:100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    background-color: gray;
+  }
+
   .card-info{
     width: 100%;
     display: flex;

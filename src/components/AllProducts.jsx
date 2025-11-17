@@ -6,8 +6,7 @@ import PageButtons from "./PageButtons";
 
 const AllProducts = ({ filter, search }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [items, setItems] = useState([]);
-  const [count, setCount] = useState(0);
+  const [productData, setProductData] = useState({});
 
   const params = {
     page: currentPage,
@@ -17,13 +16,15 @@ const AllProducts = ({ filter, search }) => {
   };
 
   const fetchProductData = async () => {
-    const productData = await getProducts(params);
-    setItems(productData.list);
-    setCount(productData.totalCount);
+    const data = await getProducts(params);
+    setProductData(data);
   };
+
+  const { totalCount, list } = productData;
 
   useEffect(() => {
     fetchProductData();
+    console.log("랜더");
   }, [currentPage, filter, search]);
 
   const handleClickPage = (page) => {
@@ -33,11 +34,11 @@ const AllProducts = ({ filter, search }) => {
   return (
     <div className="AllProducts">
       <div className="all-cards-container">
-        {items?.map((item) => (
+        {list?.map((item) => (
           <Card {...item} key={item.id} />
         ))}
       </div>
-      <PageButtons handleClickPage={handleClickPage} totalCount={count} />
+      <PageButtons handleClickPage={handleClickPage} totalCount={totalCount} />
     </div>
   );
 };
