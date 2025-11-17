@@ -1,0 +1,13 @@
+.Searchbar{
+  .searchbar-input{
+    width:325px;
+    height: 42px;
+    padding: 9px 16px;
+    background-color: $secondary-100;
+
+    border: none;
+    border-radius: 12px;
+
+    outline: none;
+  }
+}

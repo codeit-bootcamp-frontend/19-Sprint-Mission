@@ -1,0 +1,36 @@
+.PageButtons{
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:40px;
+  gap:4px;
+  padding-top:43px;
+  padding-bottom: 58px;
+
+  .number-buttons{
+    display: flex;
+    gap:4px;
+  }
+
+  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 40px;
+    border: 1px solid $cool-gray-200;
+    background: #FFF;
+
+    width: 40px;
+    height: 40px;
+    padding: 12.5px;
+  }
+
+  .clicked-button{
+    background-color: #2F80ED;
+    color: $secondary-100;
+  }
+
+}
+
