@@ -43,11 +43,7 @@ export const useProducts = ({
       // 데이터 매핑
       const list = (res.list ?? []).map(
         (p: Product): Product => ({
-          id: p.id,
-          name: p.name,
-          price: p.price,
-          favoriteCount: p.favoriteCount,
-          images: p.images?.[0],
+          ...p,
         }),
       );
 

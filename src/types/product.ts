@@ -3,5 +3,11 @@ export interface Product {
   name: string;
   price: number;
   favoriteCount: number;
-  images: string;
+  images: string[];
+  description: string;
+  tags: string[];
+  ownerNickname: string;
+  ownerId: number;
+  createdAt: string;
+  isFavorite: boolean;
 }

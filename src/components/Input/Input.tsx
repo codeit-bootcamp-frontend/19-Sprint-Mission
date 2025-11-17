@@ -6,12 +6,11 @@ import React from "react";
 
 interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "value" | "onChange"> {
-  value: string | number;
-  type?: "text" | "number";
+  value?: string | number;
   placeholder?: string;
   icon?: React.ReactElement;
   className?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
@@ -39,6 +38,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!onChange) return;
+
     if (type === "number") {
       const val = e.target.value;
       if (!/^\d*$/.test(val)) {
@@ -56,7 +57,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(
       <div className={classes}>
         <input
           ref={ref}
-          type="text"
+          type={type}
           value={value}
           placeholder={placeholder}
           disabled={disabled}

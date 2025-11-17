@@ -66,8 +66,9 @@ const AllProducts = ({ visibleItemCount }: AllProductsProps) => {
             </div>
           </div>
         )}
-        {loading && <span>ㅋㅋ</span>}
-        {!loading && <ItemList items={products} isBest={false} />}
+        {loading && <span>불러오는 중...</span>}
+        {!loading && totalCount !== 0 && <ItemList items={products} isBest={false} />}
+        {totalCount === 0 && <p>텅~</p>}
       </div>
       <div className="mt-11 flex justify-center">
         <Pagination
