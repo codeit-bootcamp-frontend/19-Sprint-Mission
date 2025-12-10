@@ -1,0 +1,172 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+html, body {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+header,
+main,
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.main-logo {
+  width: 396px;
+  height: 132px;
+}
+
+form {
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column ;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-field label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form-field input {
+  width: 640px;
+  height: 56px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  border: 2px solid rgba(49, 130, 246, 0.00);
+  background:  #F3F4F6;
+}
+
+.form-field input:focus {
+  outline: none;
+  border: 2px solid #3192FF;
+  background: #FFFFFF;
+}
+
+form .submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  height: 56px;
+  border: none;
+  border-radius: 40px;
+  background: #3692FF;
+  color: #F3F4F6;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.easy-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 640px;
+  height: 74px;
+  padding: 16px 23px;
+  border-radius: 8px;
+  background: #E6F2FF;
+  margin-bottom: 24px;
+}
+
+.easy-login span {
+  font-weight: 500;
+}
+
+.easy-login__links {
+  display: flex;
+  gap: 16px;
+}
+
+.easy-login__links li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.easy-login__google {
+  background-color: #FFF;
+}
+
+.easy-login__kakao {
+  background-color: #F5E14B;
+}
+
+footer {
+  gap:4px;
+}
+
+footer span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1F2937
+}
+
+footer a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3192FF;
+  text-decoration: underline;
+}
+
+.visibility-btn {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.input-wrap {
+  position: relative;
+}
