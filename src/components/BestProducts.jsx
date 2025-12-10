@@ -1,5 +1,5 @@
 import { getProducts } from "../api/product";
-import Card from "./Card";
+import Card from "./common/Card";
 import "./BestProducts.scss";
 import { useQuery } from "../hooks/useQuery";
 

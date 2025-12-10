@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getProducts } from "../api/product";
-import Card from "../components/Card";
+import Card from "./common/Card";
 import "./AllProducts.scss";
 import PageButtons from "./PageButtons";
 import { useQuery } from "../hooks/useQuery";

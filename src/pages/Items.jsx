@@ -1,7 +1,7 @@
 import AllProducts from "../components/AllProducts";
 import Searchbar from "../components/Searchbar";
-import Button from "../components/Button";
-import Dropdown from "../components/Dropdown";
+import Button from "../components/common/Button";
+import Dropdown from "../components/common/Dropdown";
 import { useState } from "react";
 import "./Items.scss";
 import BestProducts from "../components/BestProducts";
