@@ -1,6 +1,5 @@
 import "./Card.scss";
 import heartIcon from "../assets/images/ic_heart.svg";
-import fallbackImg from "@/assets/images/fallback.png";
 
 const Card = (props) => {
   const { images, name, price, favoriteCount } = props;
@@ -15,12 +14,12 @@ const Card = (props) => {
         }
       />
       <div className="card-info">
-        <h1 className="card-name">{name}</h1>
-        <p className="card-price">{price}</p>
-        <p className="card-favorite">
+        <span className="card-name">{name}</span>
+        <span className="card-price">{price}</span>
+        <span className="card-favorite">
           <img src={heartIcon} />
           {favoriteCount}
-        </p>
+        </span>
       </div>
     </div>
   );
