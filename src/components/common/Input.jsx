@@ -1,9 +1,9 @@
 import "./Input.scss";
-export default function Input({ title, placeholder }) {
+export default function Input({ title, placeholder, className }) {
   return (
     <div className="Input">
       <label className="input-label">{title}</label>
-      <input placeholder={placeholder} />
+      <input placeholder={placeholder} className={className} />
     </div>
   );
 }
