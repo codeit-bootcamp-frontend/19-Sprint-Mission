@@ -5,7 +5,9 @@ import "./PageButtons.scss";
 import { useSearchParams } from "react-router-dom";
 
 const PageButtons = ({ totalCount, handleClickPage }) => {
-  const [searchParams] = useSearchParams();
+  const [searchParams] = useSearchParams({
+    page: "1",
+  });
   const [currentPage, setCurrentPage] = useState(() => {
     const page = searchParams.get("page");
     return Number(page);
