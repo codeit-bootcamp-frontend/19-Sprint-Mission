@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 
+import styles from "./AuthLinks.module.scss";
+
 export default function AuthLinks({ type }) {
   return (
     <>
-      <div className="socialBtn">
-        <span className="tit">간편 로그인하기 </span>
-        <div className="btns">
+      <div className={styles.socialBtn}>
+        <span className={styles.tit}>간편 로그인하기 </span>
+        <div className={styles.btns}>
           <a
             href="https://www.google.com/"
             target="_blank"
@@ -25,18 +27,18 @@ export default function AuthLinks({ type }) {
         </div>
       </div>
 
-      <div className="guideBtn">
+      <div className={styles.guideBtn}>
         {type === "Signup" ? (
           <>
-            <span className="tit">이미 회원이신가요?</span>
-            <Link to="/login" className="btnTxt">
+            <span className={styles.tit}>이미 회원이신가요?</span>
+            <Link to="/login" className={styles.btnTxt}>
               로그인
             </Link>
           </>
         ) : (
           <>
-            <span className="tit">판다마켓이 처음이신가요?</span>
-            <Link to="/signup" className="btnTxt">
+            <span className={styles.tit}>판다마켓이 처음이신가요?</span>
+            <Link to="/signup" className={styles.btnTxt}>
               회원가입
             </Link>
           </>

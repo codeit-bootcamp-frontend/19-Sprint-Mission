@@ -1,0 +1,44 @@
+.tagWrp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  .tag {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 42px 0 16px;
+    font-size: 16px;
+    height: 36px;
+    border-radius: 36px;
+    background-color: var(--gray100);
+    .btnDelete {
+      display: inline-block;
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      width: 22px;
+      height: 24px;
+      background: url(./../img/content/ic_item_delete.svg) no-repeat 0 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+.secTitWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .secTit {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .secTitWrap {
+    align-items: start;
+  }
+}

@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
+import styles from "./Footer.module.scss";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="inner">
-        <div className="copy">©codeit - 2024</div>
-        <div className="link">
+    <footer className={styles.footer}>
+      <div className={styles.inner}>
+        <div className={styles.copy}>©codeit - 2024</div>
+        <div className={styles.link}>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/faq">FAQ</Link>
         </div>
-        <div className="sns">
+        <div className={styles.sns}>
           <a
             href="https://www.facebook.com/"
             target="_blank"

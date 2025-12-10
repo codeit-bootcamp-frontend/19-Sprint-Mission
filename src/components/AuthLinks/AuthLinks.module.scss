@@ -1,0 +1,44 @@
+.socialBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 16px 23px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  .tit {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray800);
+  }
+  .btns {
+    font-size: 0;
+    word-spacing: 0;
+  }
+  a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin-left: 16px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.guideBtn {
+  margin-top: 24px;
+  text-align: center;
+  .tit {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray800);
+  }
+  .btnTxt {
+    position: relative;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--blue);
+    text-decoration: underline;
+  }
+}

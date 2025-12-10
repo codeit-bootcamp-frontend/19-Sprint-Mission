@@ -7,17 +7,6 @@
     width: 1200px;
     max-width: 1200px;
   }
-  .secTit {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 32px;
-  }
-  .secTitWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
 }
 
 /* Tablet */
@@ -26,9 +15,6 @@
   .content {
     padding-left: 3.225vw;
     padding-right: 3.225vw;
-    .secTitWrap {
-      align-items: start;
-    }
     .inner {
       width: 100%;
       max-width: initial;
@@ -42,8 +28,5 @@
   .content {
     padding-left: 1.456vw;
     padding-right: 1.456vw;
-    .secTitWrap {
-      padding-bottom: 50px;
-    }
   }
 }

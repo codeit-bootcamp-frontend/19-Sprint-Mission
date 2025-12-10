@@ -1,6 +1,10 @@
 @charset "utf-8";
 
 .main {
+  .inner {
+    max-width: 1120px;
+    margin: auto;
+  }
   .top,
   .btm {
     height: 540px;
@@ -73,6 +77,9 @@
 /* Tablet */
 @media (max-width: 1199px) {
   .main {
+    .inner {
+      max-width: 100%;
+    }
     .top {
       height: initial;
       margin-bottom: 24px;

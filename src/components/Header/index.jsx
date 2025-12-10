@@ -1,6 +1,8 @@
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import Button from "@/components/Button";
 import Profile from "@/components/Profile";
+import styles from "./Header.module.scss";
+import clsx from "clsx";
 
 function Header() {
   const location = useLocation();
@@ -9,16 +11,18 @@ function Header() {
   const navigate = useNavigate();
   const handleLink = () => navigate("/login");
   return (
-    <header className="header">
-      <div className="inner">
-        <Link to="/" className="logo">
-          <span className="blind">판다마켓</span>
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <Link to="/" className={styles.logo}>
+          <span className={styles.blind}>판다마켓</span>
         </Link>
-        <div className="nav">
+        <div className={styles.nav}>
           <NavLink
             to="/board"
             className={({ isActive }) =>
-              `navLink ${isActive ? "isActive" : ""}`
+              clsx(styles.navLink, {
+                [styles.isActive]: isActive,
+              })
             }
           >
             자유게시판
@@ -26,13 +30,15 @@ function Header() {
           <NavLink
             to="/items"
             className={({ isActive }) =>
-              `navLink ${isActive ? "isActive" : ""}`
+              clsx(styles.navLink, {
+                [styles.isActive]: isActive,
+              })
             }
           >
             중고마켓
           </NavLink>
         </div>
-        <div className="util">
+        <div className={styles.util}>
           {indexPage ? (
             <Button onClick={handleLink} size="mid">
               로그인

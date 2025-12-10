@@ -1,3 +1,6 @@
+import clsx from "clsx";
+import styles from "./Pagination.module.scss";
+
 function Pagination({ total, limit, currentPage, setCurrentPage }) {
   if (!total) return null;
 
@@ -34,9 +37,9 @@ function Pagination({ total, limit, currentPage, setCurrentPage }) {
   }
 
   return (
-    <div className="pagination">
+    <div className={styles.pagination}>
       <button
-        className="btnPrev"
+        className={styles.btnPrev}
         onClick={goToPrevGroup}
         disabled={currentGroup === 1}
       >
@@ -47,14 +50,14 @@ function Pagination({ total, limit, currentPage, setCurrentPage }) {
         <button
           key={page}
           onClick={() => setCurrentPage(page)}
-          className={currentPage === page ? "active" : ""}
+          className={clsx({ [styles.active]: currentPage === page })}
         >
           {page}
         </button>
       ))}
 
       <button
-        className="btnNext"
+        className={styles.btnNext}
         onClick={goToNextGroup}
         disabled={endPage === totalPages}
       >

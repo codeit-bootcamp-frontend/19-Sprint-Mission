@@ -1,28 +1,32 @@
 import Button from "@/components/Button";
 import ItemForm from "./ItemForm";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import styles from "./AddItem.module.scss";
+import { PostImage } from "@/api/ImageApi";
 
 function AddItemPage() {
-  const [values, setValues] = useState({
-    name: "",
-    info: "",
-    price: "",
-    tag: "",
-  });
-
-  const isFormValid = Object.entries(values)
-    .filter(([key]) => key !== "tag")
-    .every(([key, value]) => value.trim() !== "");
-
+  const fileInputRef = useRef(null);
+  const [errorMsg, setErrorMsg] = useState("");
   const [tags, setTags] = useState([]);
   const [tagId, setTagId] = useState(0);
+  const [values, setValues] = useState({
+    images: [],
+    tag: [],
+    price: "",
+    description: "",
+    name: "",
+  });
+  // console.log(values);
 
+  // 인풋 값 저장
   const handleValue = (title, value) => {
     setValues((prev) => ({
       ...prev,
       [title]: value,
     }));
   };
+
+  // 태그 생성
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -34,6 +38,7 @@ function AddItemPage() {
       }
     }
   };
+  // 태그 삭제
   const handleTagDelete = (e, value) => {
     e.preventDefault();
     setTags((prev) =>
@@ -43,28 +48,88 @@ function AddItemPage() {
     );
   };
 
-  if (isFormValid && tags.length > 0) {
-    console.log("true");
-  } else {
-    console.log("false");
+  // 파일 선택창 열기
+  const handleFile = (e) => {
+    e.preventDefault();
+    if (values.images.length > 0) {
+      setErrorMsg("*이미지 등록은 최대 1개까지 가능합니다.");
+    } else {
+      fileInputRef.current.click();
+    }
+  };
+  // 이미지 업로드
+  async function handleImgUpload(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    // 로컬 미리보기 URL 생성
+    const result = URL.createObjectURL(file);
+
+    try {
+      const data = await PostImage(file);
+      console.log(data);
+    } catch (e) {
+      console.log(e);
+    }
+
+    setValues((prev) => {
+      return {
+        ...prev,
+        images: [result],
+      };
+    });
+    if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
+  // 이미지 삭제
+  const handleImgDelete = (e) => {
+    e.preventDefault();
+    setValues((prev) => {
+      return {
+        ...prev,
+        images: [],
+      };
+    });
+
+    errorMsg && setErrorMsg("");
+  };
+
+  // 등록버튼 활성화
+  const isFormValid = Object.entries(values)
+    .filter(([key]) => key !== "tag")
+    .every(([key, value]) => value !== "");
+
+  // 등록
+  const handleRegister = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="addItemPage content">
+    <div className="content">
       <div className="inner">
+        {/* content start */}
         <form>
-          <div className="secTitWrap">
-            <h1 className="secTit">상품 등록하기</h1>
+          <div className={styles.secTitWrap}>
+            <h1 className={styles.secTit}>상품 등록하기</h1>
             <Button
               size="sm"
               type="submit"
               disabled={isFormValid && tags.length > 0 ? false : true}
+              onClick={handleRegister}
             >
               등록
             </Button>
           </div>
 
-          <ItemForm label="상품 이미지" />
+          <ItemForm
+            label="상품 이미지"
+            onChange={handleImgUpload}
+            onClick={handleFile}
+            onDeleteImg={handleImgDelete}
+            setErrorMsg={setErrorMsg}
+            errorMsg={errorMsg}
+            img={values.images}
+            fileInputRef={fileInputRef}
+          />
           <ItemForm
             label="상품명"
             name="name"
@@ -76,12 +141,12 @@ function AddItemPage() {
           />
           <ItemForm
             label="상품 소개"
-            name="info"
-            id="info"
+            name="description"
+            id="description"
             type="textarea"
-            value={values.info}
+            value={values.description}
             placeholder="상품 소개를 입력해주세요"
-            onChange={(value) => handleValue("info", value)}
+            onChange={(value) => handleValue("description", value)}
           />
           <ItemForm
             label="판매가격"
@@ -103,7 +168,7 @@ function AddItemPage() {
             onKeyDown={handleKeyDown}
           />
           {tags && (
-            <div className="tagWrp">
+            <div className={styles.tagWrp}>
               {tags.map((tg) => {
                 return (
                   <Tag key={tg.id} onClick={(e) => handleTagDelete(e, tg)}>
@@ -114,6 +179,7 @@ function AddItemPage() {
             </div>
           )}
         </form>
+        {/* content end */}
       </div>
     </div>
   );
@@ -121,9 +187,9 @@ function AddItemPage() {
 
 export function Tag({ children, onClick, id }) {
   return (
-    <div className="tag" id={id}>
-      <span className="txt">#{children}</span>
-      <button className="btnDelete" onClick={onClick}>
+    <div className={styles.tag} id={id}>
+      <span className={styles.txt}>#{children}</span>
+      <button className={styles.btnDelete} onClick={onClick}>
         <span className="blind">삭제</span>
       </button>
     </div>

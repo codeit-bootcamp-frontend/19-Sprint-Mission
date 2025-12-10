@@ -1,0 +1,35 @@
+.iptBox {
+  .ipt {
+    position: relative;
+  }
+  & + .iptBox {
+    margin-top: 24px;
+  }
+  .btnEye {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/content/btn_visibility_on.png) no-repeat 0 0 / cover;
+    transform: translateY(-50%);
+    &.on {
+      background: url(../img/content/btn_visibility_off.png) no-repeat 0 0 /
+        cover;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .iptBox {
+    label {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    & + .iptBox {
+      margin-top: 16px;
+    }
+  }
+}
