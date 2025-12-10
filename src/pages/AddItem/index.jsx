@@ -94,9 +94,9 @@ function AddItemPage() {
   };
 
   // 등록버튼 활성화
-  const isFormValid = Object.entries(values)
+  const isFormValid = Object.keys(values)
     .filter(([key]) => key !== "tag")
-    .every(([key, value]) => value !== "");
+    .every((key) => values[key] !== "");
 
   // 등록
   const handleRegister = (e) => {
