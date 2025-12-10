@@ -1,10 +1,12 @@
+import { Component } from "react";
 import "./Button.scss";
 
-const Button = ({ children, onClick }) => {
+const Button = ({ as = "button", children, onClick, ...props }) => {
+  const Component = as || "button";
   return (
-    <button className="button" onClick={onClick}>
+    <Component className="button" onClick={onClick} {...props}>
       {children}
-    </button>
+    </Component>
   );
 };
 
