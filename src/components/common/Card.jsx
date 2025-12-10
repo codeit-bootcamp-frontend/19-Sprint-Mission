@@ -1,5 +1,5 @@
 import "./Card.scss";
-import heartIcon from "../assets/images/ic_heart.svg";
+import heartIcon from "@/assets/images/ic_heart.svg";
 
 const Card = (props) => {
   const { images, name, price, favoriteCount } = props;
