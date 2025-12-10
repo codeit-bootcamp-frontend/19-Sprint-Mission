@@ -5,7 +5,7 @@ import Dropdown from "../components/Dropdown";
 import { useState } from "react";
 import "./Items.scss";
 import BestProducts from "../components/BestProducts";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -21,11 +21,6 @@ const data = [
 const Items = () => {
   const [filter, setFilter] = useState("최신순");
   const [search, setSearch] = useState("");
-  const goToPage = useNavigate();
-
-  const goToAddItem = () => {
-    goToPage(`/additem`);
-  };
 
   const handleDropdown = (menu) => {
     setFilter(menu);
