@@ -22,8 +22,13 @@ export default function ItemForm({
 }) {
   // 인풋 값
   const handleChange = (e) => {
-    const val = e.target.value.trim();
-    onChange(val);
+    let val = e.target.value;
+
+    // price 필드면 숫자만 허용
+    if (name === "price") {
+      val = val.replace(/\D/g, "");
+    }
+    onChange(val.trim());
   };
   return (
     <div className={styles.iptBox}>

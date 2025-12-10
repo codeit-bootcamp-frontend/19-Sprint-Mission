@@ -8,6 +8,10 @@ function Header() {
   const location = useLocation();
   const indexPage = ["/"].includes(location.pathname);
 
+  const isItemsActive =
+    location.pathname.startsWith("/items") ||
+    location.pathname.startsWith("/additem");
+
   const navigate = useNavigate();
   const handleLink = () => navigate("/login");
   return (
@@ -29,9 +33,9 @@ function Header() {
           </NavLink>
           <NavLink
             to="/items"
-            className={({ isActive }) =>
+            className={() =>
               clsx(styles.navLink, {
-                [styles.isActive]: isActive,
+                [styles.isActive]: isItemsActive,
               })
             }
           >

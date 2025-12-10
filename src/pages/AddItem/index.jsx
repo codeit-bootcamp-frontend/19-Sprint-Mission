@@ -16,13 +16,12 @@ function AddItemPage() {
     description: "",
     name: "",
   });
-  // console.log(values);
 
   // 인풋 값 저장
-  const handleValue = (title, value) => {
+  const handleValue = (key, value) => {
     setValues((prev) => ({
       ...prev,
-      [title]: value,
+      [key]: value,
     }));
   };
 
@@ -61,16 +60,14 @@ function AddItemPage() {
   async function handleImgUpload(e) {
     const file = e.target.files[0];
     if (!file) return;
-    // 로컬 미리보기 URL 생성
-    const result = URL.createObjectURL(file);
+    const result = URL.createObjectURL(file); // 로컬 미리보기 URL 생성
 
     try {
-      const data = await PostImage(file);
+      const data = await PostImage(file); //api전달 (로그인인증필요)
       console.log(data);
     } catch (e) {
       console.log(e);
     }
-
     setValues((prev) => {
       return {
         ...prev,
@@ -89,13 +86,13 @@ function AddItemPage() {
         images: [],
       };
     });
-
+    // 한개이상일때 에러메시지
     errorMsg && setErrorMsg("");
   };
 
-  // 등록버튼 활성화
+  // 등록버튼 활성화 (이미지 제외)
   const isFormValid = Object.keys(values)
-    .filter(([key]) => key !== "tag")
+    .filter((key) => key !== "tag" && key !== "images")
     .every((key) => values[key] !== "");
 
   // 등록
@@ -152,7 +149,7 @@ function AddItemPage() {
             label="판매가격"
             name="price"
             id="price"
-            type="number"
+            type="text"
             value={values.price}
             placeholder="판매 가격을 입력해주세요"
             onChange={(value) => handleValue("price", value)}
