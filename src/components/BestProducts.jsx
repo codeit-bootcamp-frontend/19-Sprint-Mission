@@ -11,10 +11,10 @@ const params = {
 
 const BestProducts = () => {
   const { data: productData } = useQuery(getProducts, params);
-  const products = productData.list;
+  const products = productData?.list;
   return (
     <div className="best-cards-container">
-      {products.map((item) => (
+      {products?.map((item) => (
         <Card {...item} key={item.id} />
       ))}
     </div>

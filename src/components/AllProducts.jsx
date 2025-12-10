@@ -4,22 +4,29 @@ import Card from "../components/Card";
 import "./AllProducts.scss";
 import PageButtons from "./PageButtons";
 import { useQuery } from "../hooks/useQuery";
+import { useSearchParams } from "react-router-dom";
 
 const AllProducts = ({ filter, search }) => {
-  const [currentPage, setCurrentPage] = useState(1);
-
+  const [searchParams, setSearchParams] = useSearchParams({
+    page: "1",
+  });
+  const currentPage = searchParams.get("page");
   const params = {
-    page: currentPage,
+    page: Number(currentPage),
     pageSize: 10,
     orderBy: filter === "최신순" ? "recent" : "favorite",
     keyword: search,
   };
 
   const { data: productData } = useQuery(getProducts, params);
+
+  if (!productData) {
+    return null;
+  }
   const { totalCount, list } = productData;
 
   const handleClickPage = (page) => {
-    setCurrentPage(page);
+    setSearchParams({ page: String(page) });
   };
 
   return (
