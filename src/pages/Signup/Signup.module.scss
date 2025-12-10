@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+.formWrap {
+  width: 640px;
+  margin: 60px auto;
+
+  .logo {
+    margin-bottom: 40px;
+    a {
+      margin: auto;
+      display: block;
+      width: 396px;
+      height: 132px;
+      background: url(./../img/common/logo_lg.png) no-repeat 0 0 / cover;
+    }
+  }
+  .btnArea {
+    margin-top: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .formWrap {
+    width: 100%;
+    padding: 0 16px;
+    max-width: 432px;
+    margin: 24px auto;
+    box-sizing: border-box;
+    .logo {
+      margin-bottom: 24px;
+      a {
+        width: 198px;
+        height: 66px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/*============= errorPage  =============*/
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0;
+  text-align: center;
+  word-break: auto-phrase;
+  h1 {
+    margin: 15px auto;
+    font-size: 24px;
+  }
+  .btn {
+    margin-top: 30px;
+  }
+}

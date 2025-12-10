@@ -1,0 +1,214 @@
+.util {
+  display: flex;
+  gap: 12px;
+  .search {
+    position: relative;
+    width: 325px;
+    height: 42px;
+    input {
+      display: block;
+      width: 100%;
+      height: 42px;
+      padding: 0 4px 0 44px;
+      border-radius: 12px;
+      background-color: var(--gray100);
+      box-sizing: border-box;
+    }
+    button {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 9px;
+      left: 16px;
+      background: url("/img/content/ic_search.svg") no-repeat 0 0 / 24px 24px;
+    }
+  }
+  .sorting {
+    position: relative;
+    width: 130px;
+    .btnSort {
+      width: 130px;
+      height: 42px;
+      padding: 9px 20px;
+      border-radius: 12px;
+      text-align: left;
+      border: 1px solid var(--gray200);
+      background: url("/img/content/ic_arrow_down.png") no-repeat 86px 50% /
+        24px 24px;
+      &.atv {
+        background-image: url("/img/content/ic_arrow_up.png");
+      }
+    }
+    .list {
+      position: absolute;
+      top: 48px;
+      right: 0;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--gray200);
+      background-color: #fff;
+      overflow: hidden;
+      li:not(:first-child) {
+        border-top: 1px solid var(--gray200);
+      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 42px;
+      }
+    }
+  }
+}
+.prodList {
+  display: flex;
+  justify-content: space-between;
+  .prodItem {
+    flex-shrink: 1;
+    .prodThum {
+      overflow: hidden;
+      border-radius: 16px;
+      background-color: #fff;
+      border: 1px solid #dfdfdf;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .prodInfo {
+      margin-top: 16px;
+      .name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .price {
+        margin-top: 6px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      .favorite {
+        margin-top: 6px;
+        padding-left: 20px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        background: url("./../img/content/ic_heart.svg") no-repeat 0 50%;
+        background-size: 16px 16px;
+      }
+    }
+  }
+  &.best {
+    margin: 16px 0 40px;
+    .prodItem {
+      width: 282px;
+      .prodThum {
+        height: 282px;
+      }
+    }
+  }
+  &.all {
+    margin-top: 24px;
+    flex-wrap: wrap;
+    gap: 40px 0;
+    .prodItem {
+      width: 221px;
+      .prodThum {
+        height: 221px;
+      }
+    }
+  }
+}
+.secTitWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.secTit {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* Tablet */
+@media (max-width: 1236px) {
+  .secTitWrap {
+    align-items: start;
+  }
+  .util {
+    .search {
+      width: 242px;
+    }
+  }
+  .prodList.best {
+    margin: 17px 0 24px;
+    .prodItem {
+      width: calc((100% - 1.344vw) / 2);
+      .prodThum {
+        height: 46.102vw;
+      }
+    }
+  }
+  .prodList.all {
+    .prodItem {
+      width: calc((100% - (2.15vw * 2)) / 3);
+      .prodThum {
+        height: 29.704vw;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 744px) {
+  .secTitWrap {
+  }
+  .util {
+    padding-bottom: 50px;
+    .search {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% - 56px);
+    }
+    .sorting {
+      width: 42px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      .btnSort,
+      .btnSort.atv {
+        color: transparent;
+        width: 42px;
+        padding: 0;
+        background: url("/img/content/ic_sorting.svg") no-repeat 50% 50%;
+      }
+      .list {
+        width: 130px;
+      }
+    }
+  }
+  .prodList.best {
+    .prodItem {
+      width: 100%;
+      .prodThum {
+        height: 91.223vw;
+      }
+    }
+  }
+  .prodList.all {
+    gap: 32px 0;
+    .prodItem {
+      width: calc((100% - 2.339vw) / 2);
+      .prodThum {
+        height: 44.68vw;
+      }
+    }
+  }
+}

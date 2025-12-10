@@ -11,3 +11,18 @@
 ## 🌐 배포 주소
 
 ➡️ [판다마켓](https://19-sprint-mission5.vercel.app/)
+
+##
+
+스타일 : clsx
+
+============
+
+### sprint 미션5 주강사님 피드백
+
+[ ] 목록 정렬의 query를 상태값이 아닌 url 쿼리스트링으로 관리해보기 (현재는 새로고침 하면 날라감)
+[x] content.scss → 컴포넌트 기반으로 분리하기
+[x] 폰트 같은 정적 파일 public 폴더 이동
+[x] InputForm 컴포넌트 추상화 및 관심사 분리
+[x] 비밀번호 불일치 검증 로직 → useEffect에서 분리
+[x] productList → 커스텀 훅으로 변경

@@ -1,0 +1,36 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray100);
+  background: var(--blue);
+  border-radius: 8px;
+  &:hover {
+    background: #1967d6;
+  }
+  &:disabled {
+    background-color: var(--gray400);
+  }
+  &.sm {
+    width: 74px;
+    height: 42px;
+  }
+  &.mid {
+    width: 128px;
+    height: 48px;
+  }
+  &.lg {
+    width: 100%;
+    height: 56px;
+    font-size: 1.25rem;
+    border-radius: 40px;
+  }
+  &.mid2 {
+    width: 133px;
+    height: 42px;
+  }
+}

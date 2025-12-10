@@ -1,0 +1,15 @@
+.label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray800);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+}
