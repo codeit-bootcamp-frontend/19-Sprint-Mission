@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getProducts } from "../api/product";
 import Card from "../components/Card";
 import "./AllProducts.scss";
 import PageButtons from "./PageButtons";
+import { useQuery } from "../hooks/useQuery";
 
 const AllProducts = ({ filter, search }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [productData, setProductData] = useState({});
 
   const params = {
     page: currentPage,
@@ -15,17 +15,8 @@ const AllProducts = ({ filter, search }) => {
     keyword: search,
   };
 
-  const fetchProductData = async () => {
-    const data = await getProducts(params);
-    setProductData(data);
-  };
-
+  const { data: productData } = useQuery(getProducts, params);
   const { totalCount, list } = productData;
-
-  useEffect(() => {
-    fetchProductData();
-    console.log("랜더");
-  }, [currentPage, filter, search]);
 
   const handleClickPage = (page) => {
     setCurrentPage(page);

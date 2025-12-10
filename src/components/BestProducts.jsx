@@ -1,7 +1,7 @@
 import { getProducts } from "../api/product";
-import { useState, useEffect } from "react";
 import Card from "./Card";
 import "./BestProducts.scss";
+import { useQuery } from "../hooks/useQuery";
 
 const params = {
   page: 1,
@@ -10,16 +10,8 @@ const params = {
 };
 
 const BestProducts = () => {
-  const [products, setProducts] = useState([]);
-  const fetchProductData = async () => {
-    const productData = await getProducts(params);
-    setProducts(productData.list);
-  };
-
-  useEffect(() => {
-    fetchProductData();
-  }, []);
-
+  const { data: productData } = useQuery(getProducts, params);
+  const products = productData.list;
   return (
     <div className="best-cards-container">
       {products.map((item) => (
