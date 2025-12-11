@@ -1,6 +1,7 @@
 .AddItem{
   max-width: 1200px;
   margin: 24px auto;
+  padding:0 24px;
   .form-container{
     display: flex;
     flex-direction: column;
@@ -35,4 +36,10 @@
     height: 282px;
   }
   
+}
+
+@media screen and (max-width:768px) {
+  .AddItem{
+    padding:0 14px;
+  }
 }
