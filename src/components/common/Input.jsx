@@ -6,13 +6,16 @@ export default function Input({
   className,
   onChange,
 }) {
+  const handleChangeInput = (value) => {
+    onChange(value);
+  };
   return (
     <div className="Input">
       <label className="title-text">{title}</label>
       <input
         placeholder={placeholder}
         className={className}
-        onChange={onChange}
+        onChange={(e) => handleChangeInput(e.target.value)}
         type={type}
       />
     </div>
