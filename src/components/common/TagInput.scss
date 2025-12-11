@@ -1,0 +1,12 @@
+.TagInput{
+  display: flex;
+  flex-direction: column;
+  gap:14px;
+  input{
+    
+  }
+  .tags-container{
+    display: flex;
+    gap:12px
+  }
+}
