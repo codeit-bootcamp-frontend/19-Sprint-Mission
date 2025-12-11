@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>판다마켓 - 로그인</title>
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <header>
+        <a href="../">
+          <img class="main-logo" src="../images/main-logo.png" alt="판다마켓 로고" />
+        </a>
+    </header>
+
+    <main class="flex-column">
+      <form class="flex-column">
+        <div class="form-field">
+          <label for="email">이메일</label>
+          <input id="email" type="email" />
+        </div>
+
+        <div class="form-field">
+          <label for="password">비밀번호</label>
+          <div class="input-wrap">
+            <input id="password" type="password" />
+            <button type="button" class="visibility-btn"><img src="../images/btn_visibility_off.svg" alt="visibility_off"/></button>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">로그인</button>
+      </form>
+      <div class="easy-login">
+        <span>간편 로그인하기</span>
+        <ul class="easy-login__links">
+          <li ><a href="#" class="easy-login__google"><img src="../images/easy_login/google.svg" alt="구글 로그인" /></a></li>
+          <li ><a href="#" class="easy-login__kakao"><img src="../images/easy_login/kakao.svg" alt="카카오 로그인" /></a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <span>판다마켓이 처음이신가요?</span>
+      <a href="signup.html">회원가입</a>
+    </footer>
+  </div>
+</body>
+</html>
