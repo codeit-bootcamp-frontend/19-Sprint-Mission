@@ -6,17 +6,7 @@ import { useState } from "react";
 import "./Items.scss";
 import BestProducts from "../components/BestProducts";
 import { Link } from "react-router-dom";
-
-const data = [
-  {
-    id: 1,
-    content: "최신순",
-  },
-  {
-    id: 2,
-    content: "좋아요 순",
-  },
-];
+import { FILTER } from "@/constants/filter";
 
 const Items = () => {
   const [filter, setFilter] = useState("최신순");
@@ -45,7 +35,7 @@ const Items = () => {
             상품 등록하기
           </Button>
           <Dropdown
-            data={data}
+            data={FILTER}
             handleDropdown={handleDropdown}
             filter={filter}
           />
