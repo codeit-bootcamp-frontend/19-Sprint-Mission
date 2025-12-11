@@ -1,11 +1,12 @@
 import "./Header.scss";
-import pandaLoga from "@/assets/images/panda_logo.svg";
+import pandaLogo from "@/assets/images/panda_logo.svg";
 import profile from "@/assets/images/profile.svg";
-
+import pandaText from "@/assets/images/panda_text.svg";
 const Header = () => {
   return (
     <div className="Header">
-      <img className="logo-image" src={pandaLoga} />
+      <img className="logo-image" src={pandaLogo} />
+      <img className="logo-text" src={pandaText} />
       <nav className="nav">
         <ul>
           <li>
