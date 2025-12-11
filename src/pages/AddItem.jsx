@@ -58,8 +58,8 @@ const AddItem = () => {
             value={formData.price}
             name="item-price"
             type="number"
-            title="판매가격"
-            placeholder="가격을 입력해주세요"
+            title="판매 가격"
+            placeholder="판매 가격을 입력해주세요"
             onChange={(value) => handleInput(value, "price")}
           />
           <TagInput
