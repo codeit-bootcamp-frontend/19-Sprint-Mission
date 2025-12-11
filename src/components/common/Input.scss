@@ -1,14 +1,8 @@
 .Input{
   display: flex;
+  width: full;
   flex-direction: column;
   gap:16px;
-
-  label{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    color:$secondary-800
-  }
   
   input{
     padding:16px 24px;

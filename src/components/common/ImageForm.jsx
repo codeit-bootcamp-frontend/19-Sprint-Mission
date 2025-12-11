@@ -19,7 +19,7 @@ export default function ImageForm({ title, onFileChange }) {
   return (
     <div className="imageform-container">
       <label className="ImageForm">
-        <span className="imageform-title">{title}</span>
+        <span className="title-text">{title}</span>
         <input type="file" onChange={(e) => handleFileChange(e)}></input>
         {formImage ? (
           <img className="form-image" src={URL.createObjectURL(formImage)} />
