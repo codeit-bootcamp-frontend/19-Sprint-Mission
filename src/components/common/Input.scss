@@ -11,5 +11,12 @@
     border-radius: 12px;
     background-color: $cool-gray-100;
     border:none;
+    
+    &::placeholder{
+      color:$secondary-400;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+    }
   }
 }
