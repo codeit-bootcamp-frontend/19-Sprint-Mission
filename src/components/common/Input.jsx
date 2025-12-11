@@ -1,5 +1,11 @@
 import "./Input.scss";
-export default function Input({ title, placeholder, className, onChange }) {
+export default function Input({
+  title,
+  placeholder,
+  type = "text",
+  className,
+  onChange,
+}) {
   return (
     <div className="Input">
       <label className="title-text">{title}</label>
@@ -7,6 +13,7 @@ export default function Input({ title, placeholder, className, onChange }) {
         placeholder={placeholder}
         className={className}
         onChange={onChange}
+        type={type}
       />
     </div>
   );
