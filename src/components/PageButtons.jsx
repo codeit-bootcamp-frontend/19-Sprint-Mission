@@ -2,9 +2,16 @@ import { useState } from "react";
 import leftArrow from "@/assets/images/ic_arrow_left.svg";
 import rightArrow from "@/assets/images/ic_arrow_right.svg";
 import "./PageButtons.scss";
+import { useSearchParams } from "react-router-dom";
 
 const PageButtons = ({ totalCount, handleClickPage }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [searchParams] = useSearchParams({
+    page: "1",
+  });
+  const [currentPage, setCurrentPage] = useState(() => {
+    const page = searchParams.get("page");
+    return Number(page);
+  });
   const [groupNum, setGroupNum] = useState(0);
   const totalPages = Math.ceil(totalCount / 10);
 

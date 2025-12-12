@@ -1,0 +1,22 @@
+.Input{
+  display: flex;
+  width: full;
+  flex-direction: column;
+  gap:16px;
+  
+  input{
+    padding:16px 24px;
+    color: $secondary-400;
+    height: 56px;
+    border-radius: 12px;
+    background-color: $cool-gray-100;
+    border:none;
+    
+    &::placeholder{
+      color:$secondary-400;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+}

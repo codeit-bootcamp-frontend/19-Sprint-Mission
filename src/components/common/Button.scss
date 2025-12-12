@@ -6,9 +6,15 @@
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
+  text-decoration: none;
 
   background-color: #3692FF;
 
   border-radius: 8px;
   border: none;
+}
+
+.disabled{
+  background-color:$cool-gray-400;
+  color:$cool-gray-100;
 }
