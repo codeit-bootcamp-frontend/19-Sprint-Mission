@@ -5,6 +5,7 @@ import InputForm from "@/components/InputForm";
 import Button from "@/components/Button";
 import useValidation from "@/hooks/useValidation";
 import styles from "./../Signup/Signup.module.scss";
+import PasswordToggleButton from "@/components/Button/PasswordToggleButton";
 
 function Login() {
   const [authForm, setAuthForm] = useState({
@@ -26,9 +27,9 @@ function Login() {
   };
 
   // 전체 폼 에러확인
-  const hasFormError = Object.values(inputError).every(
-    (el) => el.hasError !== true
-  );
+  const hasFormError = Object.values(inputError).some((el) => {
+    return el.hasError === true || el.hasError === null;
+  });
   const handleSubmit = () => {};
 
   return (
@@ -63,9 +64,16 @@ function Login() {
           handlePassword={handlePassword}
           pwShow={pwShow}
           inputError={inputError.password}
+          suffix={
+            <PasswordToggleButton
+              name="password"
+              pwShow={pwShow}
+              onToggle={() => handlePassword("password")}
+            />
+          }
         />
         <div className={styles.btnArea}>
-          <Button size="lg" onClick={handleSubmit} disabled={!hasFormError}>
+          <Button size="lg" onClick={handleSubmit} disabled={hasFormError}>
             로그인
           </Button>
         </div>

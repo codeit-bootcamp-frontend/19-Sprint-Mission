@@ -1,0 +1,57 @@
+@mixin textarea {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  resize: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  &::placeholder,
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+    opacity: 1;
+  }
+}
+
+/* 댓글입력 */
+.commentWrite {
+  .tit {
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #111827;
+  }
+  textarea {
+    @include textarea();
+    font-size: 16px;
+    height: 104px;
+  }
+  .btnArea {
+    margin-top: 16px;
+    text-align: right;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .commentWrite {
+    textarea {
+      font-size: 14px;
+      height: 129px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+      &::-webkit-input-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+}

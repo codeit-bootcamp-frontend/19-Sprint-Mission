@@ -1,0 +1,95 @@
+@mixin textarea {
+  display: block;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  resize: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  &::placeholder,
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+    opacity: 1;
+  }
+}
+
+/* 댓글목록 */
+.commentItem {
+  position: relative;
+  margin-top: 24px;
+  padding: 0 0 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  .textarea {
+    position: relative;
+    margin-bottom: 16px;
+    textarea {
+      @include textarea();
+      font-size: 14px;
+      height: 80px;
+    }
+    .btns {
+      position: absolute;
+      right: 0;
+      bottom: -58px;
+      text-align: right;
+      button {
+        margin-left: 4px;
+      }
+    }
+  }
+  .content {
+    padding-right: 28px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1f2937;
+  }
+  .setting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    .btnSet {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      background: url("/img/content/ic_kebab.svg") no-repeat 50% 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f3f4f6;
+      }
+    }
+    .btns {
+      position: absolute;
+      top: 34px;
+      right: 0;
+      width: 139px;
+      height: 92px;
+      border-radius: 16px;
+      border: 1px solid #d1d5db;
+      background: #fff;
+      z-index: 1;
+      overflow: hidden;
+      button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        font-family: Pretendard;
+        font-weight: 400;
+        font-size: 16px;
+        color: #6b7280;
+        &:hover {
+          background-color: #f3f4f6;
+        }
+      }
+    }
+  }
+}

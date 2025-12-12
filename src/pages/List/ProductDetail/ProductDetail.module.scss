@@ -1,0 +1,183 @@
+/* 상품정보 */
+.productInfo {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e7eb;
+  .thum {
+    flex-shrink: 0;
+    display: block;
+    width: 486px;
+    height: 486px;
+    border-radius: 16px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 496px;
+    .name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1f2937;
+    }
+    .price {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1;
+      color: #1f2937;
+    }
+    .detail {
+      margin: 16px 0;
+      border-top: 1px solid #e5e7eb;
+      .tit {
+        margin-top: 24px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4b5563;
+      }
+      .data {
+        margin-top: 16px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #4b5563;
+      }
+      .tags {
+        margin-top: 16px;
+        .tag {
+          &:not(:first-child) {
+            margin-left: 6px;
+          }
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 16px;
+          height: 36px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: #1f2937;
+          border-radius: 26px;
+          background-color: #f3f4f6;
+        }
+      }
+    }
+    .meta {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .right {
+        position: relative;
+        padding-left: 24px;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          bottom: 5px;
+          left: 0;
+          width: 1px;
+          background-color: #e5e7eb;
+        }
+      }
+      .favorite {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 87px;
+        height: 40px;
+        padding: 0 12px 0 48px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        color: #6b7280;
+        border-radius: 20px;
+        border: 1px solid #e5e7eb;
+        background: url("/img/content/ic_heart_lg.svg") no-repeat 12px 50%;
+      }
+    }
+  }
+}
+
+/* 하단목록버튼 */
+.btnBottom {
+  text-align: center;
+  margin-top: 64px;
+}
+
+/* Tablet */
+@media (max-width: 1199px) {
+  .productInfo {
+    padding-bottom: 32px;
+    gap: 16px;
+    align-items: flex-start;
+    .thum {
+      width: 340px;
+      height: 340px;
+    }
+    .info {
+      min-height: 340px;
+      .name {
+        font-size: 20px;
+      }
+      .price {
+        margin-top: 8px;
+        font-size: 32px;
+      }
+      .detail {
+        margin: 16px 0 40px;
+        .tit {
+          margin-top: 16px;
+          font-size: 14px;
+        }
+        .tags {
+          margin-top: 8px;
+        }
+      }
+      .meta {
+        .favorite {
+          min-width: 79px;
+          height: 32px;
+          padding: 0 6px 0 40px;
+          border-radius: 16px;
+          background-size: 24px 24px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .productInfo {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    flex-direction: column;
+    .thum {
+      width: 100%;
+      height: 91.489vw;
+    }
+    .info {
+      min-height: inherit;
+      .name {
+        font-size: 16px;
+      }
+      .price {
+        font-size: 24px;
+      }
+    }
+  }
+}

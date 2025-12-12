@@ -3,6 +3,7 @@ import ItemForm from "./ItemForm";
 import { useRef, useState } from "react";
 import styles from "./AddItem.module.scss";
 import { PostImage } from "@/api/ImageApi";
+import ImgUpload from "@/components/Form/ImgUpload";
 
 function AddItemPage() {
   const fileInputRef = useRef(null);
@@ -46,16 +47,6 @@ function AddItemPage() {
       })
     );
   };
-
-  // 파일 선택창 열기
-  const handleFile = (e) => {
-    e.preventDefault();
-    if (values.images.length > 0) {
-      setErrorMsg("*이미지 등록은 최대 1개까지 가능합니다.");
-    } else {
-      fileInputRef.current.click();
-    }
-  };
   // 이미지 업로드
   async function handleImgUpload(e) {
     const file = e.target.files[0];
@@ -76,20 +67,6 @@ function AddItemPage() {
     });
     if (fileInputRef.current) fileInputRef.current.value = "";
   }
-
-  // 이미지 삭제
-  const handleImgDelete = (e) => {
-    e.preventDefault();
-    setValues((prev) => {
-      return {
-        ...prev,
-        images: [],
-      };
-    });
-    // 한개이상일때 에러메시지
-    errorMsg && setErrorMsg("");
-  };
-
   // 등록버튼 활성화 (이미지 제외)
   const isFormValid = Object.keys(values)
     .filter((key) => key !== "tag" && key !== "images")
@@ -116,15 +93,14 @@ function AddItemPage() {
               등록
             </Button>
           </div>
-
-          <ItemForm
+          <ImgUpload
             label="상품 이미지"
             onChange={handleImgUpload}
-            onClick={handleFile}
-            onDeleteImg={handleImgDelete}
             setErrorMsg={setErrorMsg}
-            errorMsg={errorMsg}
+            setValues={setValues}
+            values={values}
             img={values.images}
+            errorMsg={errorMsg}
             fileInputRef={fileInputRef}
           />
           <ItemForm

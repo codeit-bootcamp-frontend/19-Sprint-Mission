@@ -5,6 +5,7 @@ import InputForm from "@/components/InputForm";
 import Button from "@/components/Button";
 import useValidation from "@/hooks/useValidation";
 import styles from "./Signup.module.scss";
+import PasswordToggleButton from "@/components/Button/PasswordToggleButton";
 
 export default function Signup() {
   const [authForm, setAuthForm] = useState({
@@ -29,9 +30,9 @@ export default function Signup() {
     }));
   };
   // 전체 폼 에러확인
-  const hasFormError = Object.values(inputError).every(
-    (el) => el.hasError !== true
-  );
+  const hasFormError = Object.values(inputError).some((el) => {
+    return el.hasError === true || el.hasError === null;
+  });
   const handleSubmit = () => {};
 
   return (
@@ -74,9 +75,15 @@ export default function Signup() {
           value={authForm.password}
           onChange={(value) => handleValue("password", value)}
           handleFocus={handleFocus}
-          handlePassword={handlePassword}
           pwShow={pwShow}
           inputError={inputError.password}
+          suffix={
+            <PasswordToggleButton
+              name="password"
+              pwShow={pwShow}
+              onToggle={() => handlePassword("password")}
+            />
+          }
         />
         <InputForm
           label="비밀번호 확인"
@@ -87,13 +94,19 @@ export default function Signup() {
           value={authForm.passwordCheck}
           onChange={(value) => handleValue("passwordCheck", value)}
           handleFocus={handleFocus}
-          handlePassword={handlePassword}
           pwValue={authForm.password}
           pwShow={pwShow}
           inputError={inputError.passwordCheck}
+          suffix={
+            <PasswordToggleButton
+              name="passwordCheck"
+              pwShow={pwShow}
+              onToggle={() => handlePassword("passwordCheck")}
+            />
+          }
         />
         <div className={styles.btnArea}>
-          <Button size="lg" onClick={handleSubmit} disabled={!hasFormError}>
+          <Button size="lg" onClick={handleSubmit} disabled={hasFormError}>
             회원가입
           </Button>
         </div>
