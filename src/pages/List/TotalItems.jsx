@@ -16,7 +16,6 @@ export default function TotalItems() {
   });
 
   const [toggle, setToggle] = useState(false);
-
   const handleSort = (e) => {
     setToggle(false);
     setCurrentPage(1);
