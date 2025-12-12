@@ -1,4 +1,5 @@
 import Button from "../Button";
+import SettingBtn from "../SettingBtn";
 import User from "../User";
 import styles from "./CommentItem.module.scss";
 
@@ -59,26 +60,12 @@ export default function CommentItem({
       )}
       <User type="commenter" name={nickname} date={createdAt} image={image} />
       {!isEdit && (
-        <div className={styles.setting}>
-          <button
-            className={styles.btnSet}
-            onClick={() => handleCommentSet(id)}
-          >
-            <span className="blind">댓글 설정</span>
-          </button>
-          {isOpen && (
-            <ul className={styles.btns}>
-              <li>
-                <button onClick={() => handleCommentEditSet(id, content)}>
-                  수정하기
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleDeleteSubmit(id)}>삭제하기</button>
-              </li>
-            </ul>
-          )}
-        </div>
+        <SettingBtn
+          isOpen={isOpen}
+          onSetToggle={() => handleCommentSet(id)}
+          onEdit={() => handleCommentEditSet(id, content)}
+          onDelete={() => handleDeleteSubmit(id)}
+        />
       )}
     </li>
   );
