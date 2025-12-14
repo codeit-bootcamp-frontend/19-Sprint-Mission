@@ -1,0 +1,35 @@
+@theme {
+  --font-sans: 'NanumSquare', sans-serif;
+  --font-accent: 'HsSantoki';
+
+  --text-*: initial;
+
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+}
+
+@utility font-md-r {
+  font-size: var(--text-md);
+  font-weight: 400;
+}
+
+@utility font-md-b {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
+@utility font-md-eb {
+  font-size: var(--text-md);
+  font-weight: 800;
+}
+
+@utility font-lg-b {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+@utility font-xl-b {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}

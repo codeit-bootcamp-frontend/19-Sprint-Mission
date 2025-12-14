@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+/* font */
+@import './base/font.css';
+
+/* color */
+@import './base/color.css';
+
+/* typography */
+@import './base/typography.css';
+
+/* 공통 유틸리티 클래스 */
+@utility container {
+  @apply mx-auto w-full max-w-[1200px];
+}
+
+@utility border-style {
+  @apply rounded-[24px] border-2 border-slate-900 shadow-[4px_3.5px_0_var(--color-slate-900)] outline-0;
+}
