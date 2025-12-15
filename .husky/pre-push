@@ -1,0 +1,33 @@
+echo "🔍 pre-push 검사 시작..."
+
+# ---------------------------------------------------------
+# 1) 브랜치 검사 (main push 금지)
+# ---------------------------------------------------------
+current_branch="$(git rev-parse --abbrev-ref HEAD)"
+
+echo "🔎 현재 브랜치: $current_branch"
+
+if [ "$current_branch" = "main" ]; then
+  echo "❌ main 브랜치로 직접 push 할 수 없습니다!"
+  echo "👉 feature 또는 develop 브랜치에서 작업 후 PR을 생성해주세요."
+  exit 1
+fi
+
+echo "✅ 브랜치 검사 통과 — main 브랜치가 아닙니다."
+
+# ---------------------------------------------------------
+# 2) 타입 검사 (tsc)
+# ---------------------------------------------------------
+echo "🔎 TypeScript 타입 검사 중..."
+
+# 빌드는 필요없고, 타입 체크만 필요하니까 --noEmit 넣어줘야 함
+npx tsc --noEmit
+if [ $? -ne 0 ]; then
+  echo "❌ 타입 에러가 감지되었습니다. push가 중단됩니다."
+  exit 1
+fi
+
+echo "✅ 타입 검사 통과"
+
+
+echo "🎉 pre-push 훅 검사를 모두 통과했습니다. push를 진행합니다!"
