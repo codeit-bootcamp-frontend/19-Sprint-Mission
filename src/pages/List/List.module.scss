@@ -67,6 +67,9 @@
   justify-content: space-between;
   .prodItem {
     flex-shrink: 1;
+    a {
+      display: block;
+    }
     .prodThum {
       overflow: hidden;
       border-radius: 16px;
@@ -79,6 +82,7 @@
         object-position: center;
       }
     }
+    //
     .prodInfo {
       margin-top: 16px;
       .name {

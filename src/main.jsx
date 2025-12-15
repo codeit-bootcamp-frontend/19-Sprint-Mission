@@ -7,6 +7,8 @@ import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import NotFoundPage from "@/pages/NotFoundPage";
 import AddItemPage from "@/pages/AddItem";
+import ProductDetailPage from "@/pages/List/ProductDetail";
+import { getProductId } from "@/api/productApi";
 import "./assets/scss/style.scss";
 
 const router = createBrowserRouter([
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <MainPage /> },
       { path: "items", element: <ItemPage /> },
+      {
+        path: "items/:productId",
+        element: <ProductDetailPage />,
+        loader: getProductId,
+      },
       { path: "additem", element: <AddItemPage /> },
       { path: "login", element: <Login /> },
       { path: "signup", element: <Signup /> },

@@ -12,7 +12,8 @@ export const postProducts = async (columnsData) => {
     const res = await api.get("/products", columnsData);
     return res.data;
   } catch (e) {
-    return e.response?.data || { error: "Failed to create column" };
+    const errorMessage = e.response?.data?.message;
+    throw new Error(errorMessage);
   }
 };
 
@@ -22,7 +23,23 @@ export const getProducts = async ({ orderBy, pageSize, page }) => {
       params: { orderBy, pageSize, page },
     });
     return res.data;
-  } catch (error) {
-    throw new Error(`${error} 페이지 로드에 실패했습니다. `);
+  } catch (e) {
+    const errorMessage = e.response?.data?.message;
+    throw new Error(errorMessage);
+  }
+};
+
+export const getProductId = async ({ params }) => {
+  // console.log("params:", params);
+  // console.log("productId:", params.productId);
+  /*
+    productId : number
+  */
+  try {
+    const res = await api.get(`/products/${params.productId}`);
+    return res.data;
+  } catch (e) {
+    const errorMessage = e.response?.data?.message;
+    throw new Error(errorMessage);
   }
 };

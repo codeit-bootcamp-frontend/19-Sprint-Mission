@@ -16,7 +16,6 @@ export default function TotalItems() {
   });
 
   const [toggle, setToggle] = useState(false);
-
   const handleSort = (e) => {
     setToggle(false);
     setCurrentPage(1);
@@ -34,7 +33,7 @@ export default function TotalItems() {
               <span className="blind">검색</span>
             </button>
           </div>
-          <Button type="link" href="/additem" size="mid2">
+          <Button as="a" href="/additem" size="mid2">
             상품 등록하기
           </Button>
           <div className={styles.sorting}>

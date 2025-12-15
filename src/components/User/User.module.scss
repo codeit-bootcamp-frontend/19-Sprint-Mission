@@ -1,0 +1,55 @@
+@mixin sellerFont {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+@mixin commenterFont {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  button {
+    cursor: default;
+  }
+
+  &.seller {
+    gap: 16px;
+    button {
+      width: 40px;
+      height: 40px;
+    }
+    .name {
+      @include sellerFont;
+      color: #4b5563;
+      word-break: keep-all;
+    }
+    .date {
+      @include sellerFont;
+      margin-top: 2px;
+      color: #9ca3af;
+    }
+  }
+
+  &.commenter {
+    align-items: flex-start;
+    gap: 8px;
+    button {
+      width: 32px;
+      height: 32px;
+    }
+    .name {
+      @include commenterFont;
+      color: #4b5563;
+    }
+    .date {
+      @include commenterFont;
+      margin-top: 4px;
+      color: #9ca3af;
+    }
+  }
+}

@@ -33,4 +33,27 @@
     width: 133px;
     height: 42px;
   }
+
+  &.white {
+    background-color: #fff;
+    color: #737373;
+    &:hover {
+      background-color: #f3f4f6;
+    }
+  }
+
+  &.back {
+    &:after {
+      content: "";
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+      background: url("/img/content/ic_back.svg") no-repeat 0 0;
+    }
+    width: 280px;
+    height: 48px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 24px;
+  }
 }

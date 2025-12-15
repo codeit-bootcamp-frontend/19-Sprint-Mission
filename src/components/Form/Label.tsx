@@ -1,6 +1,11 @@
 import styles from "./Label.module.scss";
 
-export default function Label({ htmlFor, children }) {
+interface LabelProps {
+  htmlFor?: string;
+  children: React.ReactNode;
+}
+
+export default function Label({ htmlFor, children }: LabelProps) {
   return (
     <>
       {htmlFor ? (
@@ -9,7 +14,6 @@ export default function Label({ htmlFor, children }) {
         </label>
       ) : (
         <div className={styles.label}>{children}</div>
-        // <div></div>
       )}
     </>
   );

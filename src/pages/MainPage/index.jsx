@@ -12,7 +12,7 @@ function MainPage() {
               일상의 모든 물건을 <br className={styles.hiddenT} />
               거래해 보세요
             </h1>
-            <Button type="link" href="/items" size="mid">
+            <Button as="a" href="/items" size="mid">
               구경하러 가기
             </Button>
           </div>
