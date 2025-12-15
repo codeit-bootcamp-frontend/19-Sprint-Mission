@@ -1,28 +1,26 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 
 export default function ProductImageInput({ onImageUpload }) {
   const inputRef = useRef(null);
-  const [preview, setPreview] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleFile = (file) => {
-    if (!file) return;
-    if (!file.type.startsWith('image/')) return;
+  const handleFiles = (files) => {
+    const imageFiles = Array.from(files).filter((file) =>
+      file.type.startsWith("image/")
+    );
 
-    setPreview(URL.createObjectURL(file));
-    onImageUpload?.(file);
+    if (imageFiles.length === 0) return;
+    onImageUpload?.(imageFiles);
   };
 
   const handleChange = (e) => {
-    const file = e.target.files[0];
-    handleFile(file);
+    handleFiles(e.target.files);
   };
 
   const handleClick = () => {
     inputRef.current?.click();
   };
 
-  // Drag & Drop
   const handleDragOver = (e) => {
     e.preventDefault();
     setIsDragging(true);
@@ -35,9 +33,7 @@ export default function ProductImageInput({ onImageUpload }) {
   const handleDrop = (e) => {
     e.preventDefault();
     setIsDragging(false);
-
-    const file = e.dataTransfer.files[0];
-    handleFile(file);
+    handleFiles(e.dataTransfer.files);
   };
 
   return (
@@ -47,34 +43,25 @@ export default function ProductImageInput({ onImageUpload }) {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       className={`
-        w-72 h-72 rounded-lg border-2 border-dashed
+        w-42 h-42  lg:w-72 lg:h-72 rounded-lg border-2 border-dashed
         flex flex-col justify-center items-center
         cursor-pointer transition
         ${
           isDragging
-            ? 'border-blue-500 bg-blue-50'
-            : 'border-gray-300 bg-gray-200'
+            ? "border-blue-500 bg-blue-50"
+            : "border-gray-300 bg-gray-200"
         }
       `}
     >
-      {preview ? (
-        <img
-          src={preview}
-          alt="상품 이미지 미리보기"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      ) : (
-        <>
-          <span className="text-4xl text-gray-500">+</span>
-          <p className="mt-2 text-gray-500">이미지 등록</p>
-        </>
-      )}
+      <span className="text-4xl text-gray-500">+</span>
+      <p className="mt-2 text-gray-500">이미지 등록</p>
 
       <input
         ref={inputRef}
         type="file"
         accept="image/*"
-        className="hidden"
+        multiple
+        hidden
         onChange={handleChange}
       />
     </div>
