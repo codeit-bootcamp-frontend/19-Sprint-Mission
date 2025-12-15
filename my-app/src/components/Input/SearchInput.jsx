@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import SearchIcon from "../../assets/ic_search.svg?react";
 
-const Input = forwardRef(
+const SearchInput = forwardRef(
   ({ label, error, className = "", fullWidth, icon, ...props }, ref) => {
     return (
       <div className={`flex flex-col gap-1 ${fullWidth ? "w-full" : ""}`}>
@@ -39,4 +39,4 @@ const Input = forwardRef(
   }
 );
 
-export default Input;
+export default SearchInput;
