@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import MarketPage from './pages/MarketPage';
 import AddItemPage from './pages/AddItems'; 
 import Layout from './components/common/Layout'; 
+import ItemDetailPage from './pages/ItemDetailPage';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/items" element={<MarketPage />} />
           <Route path="/additem" element={<AddItemPage />} />
-          {/* 기타 경로 */}
+          <Route path="/items/:productId" element={<ItemDetailPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
