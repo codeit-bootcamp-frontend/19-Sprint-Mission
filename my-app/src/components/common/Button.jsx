@@ -19,7 +19,7 @@ const Button = forwardRef(
     const Component = as;
 
     const baseStyles = `
-      inline-flex items-center justify-center font-medium rounded-md transition
+      inline-flex items-center justify-center font-medium  transition
       disabled:opacity-50 disabled:cursor-not-allowed
     `;
 

@@ -3,7 +3,7 @@ import Input from "../components/Input/SearchInput";
 import ProductImageInput from "../components/ProductImageInput";
 import Textarea from "../components/Textarea/Textarea";
 import TagInput from "../components/Input/TagInuput";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function AddItemPage() {
   const [tags, setTags] = useState([]);
@@ -13,37 +13,60 @@ export default function AddItemPage() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
+  useEffect(() => {
+    return () => {
+      setImages((prev) => {
+        prev.forEach((image) => {
+          URL.revokeObjectURL(image.preview);
+        });
+        return prev;
+      });
+    };
+  }, []);
+
   const isFormValid =
     name.trim() !== "" && description.trim() !== "" && price.trim() !== "";
 
   return (
     <div className="container mx-auto w-full max-w-[1200px] px-4 py-8">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold mb-4"> 상품 등록하기</h2>
+        <label className="text-2xl font-bold mb-4"> 상품 등록하기</label>
         <Button Button variant="primary" disabled={!isFormValid}>
           등록
         </Button>
       </div>
 
       <div className="mt-6">
-        <h2 className="text-2xl font-bold mb-4"> 상품 이미지</h2>
-        <div className="flex gap-4 flex-wrap items-start w-full"> 
+        <label className="text-2xl font-bold mb-4"> 상품 이미지</label>
+        <div className="flex gap-4 flex-wrap items-start w-full">
           <ProductImageInput
-            onImageUpload={(files) => setImages((prev) => [...prev, ...files])}
+            onImageUpload={(files) =>
+              setImages((prev) => [
+                ...prev,
+                ...files.map((file) => ({
+                  file,
+                  preview: URL.createObjectURL(file),
+                })),
+              ])
+            }
           />
           <div className="flex gap-4  flex-wrap">
-            {images.map((file, index) => (
-              <div key={index} className="relative w-42 h-42  lg:w-72 lg:h-72 border rounded">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="relative w-42 h-42  lg:w-72 lg:h-72 border rounded"
+              >
                 <img
-                  src={URL.createObjectURL(file)}
+                  src={image.preview}
                   alt=""
                   className="w-full h-full object-cover"
                 />
                 <button
-                  onClick={() =>
-                    setImages((prev) => prev.filter((_, i) => i !== index))
-                  }
-                  className="absolute top-1 right-1 w-6 h-6 bg-gray-100/40 text-white rounded-full"
+                  onClick={() => {
+                    URL.revokeObjectURL(images[index].preview);
+                    setImages((prev) => prev.filter((_, i) => i !== index));
+                  }}
+                  className="absolute top-1 right-1 w-6 h-6 bg-gray-100/40 text-white rounded-full hover:cursor-pointer"
                 >
                   x
                 </button>
@@ -53,7 +76,7 @@ export default function AddItemPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4"> 상품명</h2>
+          <label className="text-2xl font-bold mb-4"> 상품명</label>
           <Input
             placeholder="상품명을 입력해주세요"
             value={name}
@@ -62,7 +85,7 @@ export default function AddItemPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4"> 상품 소개</h2>
+          <label className="text-2xl font-bold mb-4"> 상품 소개</label>
           <Textarea
             variant="secondary"
             size="lg"
@@ -73,7 +96,7 @@ export default function AddItemPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">판매가격</h2>
+          <label className="text-2xl font-bold mb-4">판매가격</label>
           <Input
             placeholder="판매 가격을 입력해주세요"
             value={price}
@@ -82,7 +105,7 @@ export default function AddItemPage() {
         </div>
 
         <div className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">태그</h2>
+          <label className="text-2xl font-bold mb-4">태그</label>
           <TagInput
             placeholder="태그를 입력해주세요"
             tags={tags}
