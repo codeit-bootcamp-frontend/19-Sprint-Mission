@@ -3,7 +3,9 @@ import Layout from "./components/common/Layout";
 import MarketPage from "./pages/MarketPage";
 import AddItemPage from "./pages/AddItems";
 import ItemDetailPage from "./pages/ItemDetailPage";
-import MainPage from "./pages/mainpage";
+import MainPage from "./pages/MainPage";
+import SigninPage from "./pages/SigninPage";
+import SignupPage from "./pages/SignupPage";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         {/* Layout을 사용하지 않는 페이지 */}
         <Route path="/" element={<MainPage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
         {/* Layout을 사용하는 페이지들 */}
         <Route element={<Layout />}>
