@@ -4,10 +4,10 @@ import BestItems from "../components/market/BestItems";
 import AllItems from "../components/market/Allitems";
 import SortDropdown from "../components/market/SortDropdown";
 import Input from "../components/Input/SearchInput";
-import SearchIcon from "../assets/ic_search.svg?react";
+import SearchIcon from "../assets/Icons/ic_search.svg?react";
 import Button from "../components/common/Button";
 import { useResponsiveLimit } from "../hooks/useResponsiveLimit";
-import { useProducts } from "../hooks/useProduct";
+import { useProducts } from "../hooks/useProducts";
 
 const MarketPage = () => {
   const [page, setPage] = useState(1);

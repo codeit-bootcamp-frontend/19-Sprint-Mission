@@ -7,6 +7,14 @@ export function useProducts({ page, pageSize, orderBy, keyword }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log("useProducts effect 실행", {
+      page,
+      pageSize,
+      orderBy,
+      keyword,
+    });
+    if (!pageSize) return; // ⭐ 핵심
+
     let isMounted = true;
 
     const fetchProducts = async () => {
@@ -26,7 +34,8 @@ export function useProducts({ page, pageSize, orderBy, keyword }) {
         }
       } catch (err) {
         if (isMounted) {
-          setError("상품 목록을 불러오는데 실패했습니다.",err);
+          setError("상품 목록을 불러오는데 실패했습니다.");
+          console.error(err); // 🔥 꼭 찍자
         }
       } finally {
         if (isMounted) {
@@ -41,6 +50,5 @@ export function useProducts({ page, pageSize, orderBy, keyword }) {
       isMounted = false;
     };
   }, [page, pageSize, orderBy, keyword]);
-
   return { products, loading, error };
 }

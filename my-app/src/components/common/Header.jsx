@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import ProfileIcon from "../../assets/ic_profile.svg?react";
+import ProfileIcon from "../../assets/Icons/ic_profile.svg?react";
 
 const primaryBlue = "text-blue-600";
 
