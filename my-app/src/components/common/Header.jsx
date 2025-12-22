@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.svg";
-import ProfileIcon from "../../assets/ic_profile.svg?react";
+import Logo from "../../assets/logo.svg?react";
+import ProfileIcon from "../../assets/Icons/ic_profile.svg?react";
 
 const primaryBlue = "text-blue-600";
 
@@ -32,7 +32,7 @@ const Header = () => {
           lg:ml-[200px]
         "
       >
-        <img src={logo} alt="서비스 로고" className="h-8 w-auto block" />
+        <Logo className="h-8 w-auto block" />
       </Link>
 
       {/* 내비게이션 메뉴 */}

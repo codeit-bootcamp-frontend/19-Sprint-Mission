@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import SearchIcon from "../../assets/ic_search.svg?react";
+import SearchIcon from "../../assets/Icons/ic_search.svg?react";
 
 const SearchInput = forwardRef(
   ({ label, error, className = "", fullWidth, icon, ...props }, ref) => {

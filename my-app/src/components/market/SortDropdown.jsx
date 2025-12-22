@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import ArrowDown from "../../assets/ic_arrow_down.svg?react";
-import Sort from "../../assets/ic_sort.svg?react";
+import ArrowDown from "../../assets/Icons/ic_arrow_down.svg?react";
+import Sort from "../../assets/Icons/ic_sort.svg?react";
 
 const SortDropdown = ({ currentSort, setSortType }) => {
   const [isMobile, setIsMobile] = useState(false);

@@ -6,8 +6,8 @@ import { useProductDetail } from "../hooks/useProductDetail";
 import { createQuestion } from "../services/Question";
 import { formatDate } from "../utils/formatDate";
 import { useFavorite } from "../hooks/useFavorite";
-import Heart from "../assets/ic_heart.svg?react";
-import Back from "../assets/ic_back.svg?react";
+import Heart from "../assets/Icons/ic_heart.svg?react";
+import Back from "../assets/Icons/ic_back.svg?react";
 
 const ItemDetailPage = () => {
   const { productId } = useParams();
